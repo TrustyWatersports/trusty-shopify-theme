@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0A4B78">
+  
+  <title>{{ page_title }}{% if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}</title>
+
+  {% if page_description %}
+    <meta name="description" content="{{ page_description | escape }}">
+  {% endif %}
+
+  <link rel="canonical" href="{{ canonical_url }}">
+
+  {%- if settings.favicon != blank -%}
+    <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+  {%- endif -%}
+
+  {% render 'meta-tags' %}
+
+  <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+
+  {{ content_for_header }}
+
+  <style>
+    :root {
+      --ocean-deep: #0A4B78;
+      --ocean-medium: #1E6FA8;
+      --ocean-light: #4A9CD6;
+      --sand: #E8D5B7;
+      --sunrise: #FF6B35;
+      --sunrise-light: #FF8F66;
+      --seafoam: #7FCDCD;
+      --navy: #1B3A52;
+      --white: #FFFFFF;
+      --gray-light: #F5F7FA;
+      --gray-medium: #8B9DAF;
+      --text-dark: #2C3E50;
+      --rigging-accent: #00A86B;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background: var(--white);
+    }
+
+    /* Top Bar */
+    .top-bar {
+      background: var(--rigging-accent);
+      color: var(--white);
+      padding: 10px 0;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* Quick Access Bar */
+    .quick-access {
+      background: var(--gray-light);
+      border-bottom: 1px solid #e0e0e0;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .quick-access-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .quick-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 600;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .quick-link:hover {
+      color: var(--ocean-medium);
+    }
+
+    .quick-link.primary {
+      color: var(--rigging-accent);
+    }
+
+    /* Header */
+    header {
+      background: var(--white);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 52px;
+      z-index: 998;
+    }
+
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--ocean-deep);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      transition: color 0.3s;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: var(--ocean-medium);
+    }
+
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--rigging-accent);
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 10px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .btn-primary {
+      background: var(--rigging-accent);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: #008c59;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0,168,107,0.3);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--ocean-deep);
+      border: 2px solid var(--ocean-deep);
+    }
+
+    .btn-secondary:hover {
+      background: var(--ocean-deep);
+      color: var(--white);
+    }
+
+    /* Main Content */
+    main {
+      min-height: 60vh;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      color: var(--white);
+      padding: 60px 20px 20px;
+      margin-top: 80px;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 20px;
+      color: var(--seafoam);
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-section a {
+      color: var(--white);
+      text-decoration: none;
+      opacity: 0.9;
+      transition: opacity 0.3s;
+    }
+
+    .footer-section a:hover {
+      opacity: 1;
+      color: var(--seafoam);
+    }
+
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      opacity: 0.8;
+      font-size: 14px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        width: 100%;
+      }
+
+      .header-actions {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .quick-access-content {
+        gap: 15px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body class="template-{{ template.name }}">
+  
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    🎣 Custom Kayak Rigging Experts | Free Shipping on Rigs $2,500+ | {{ shop.name }}
+  </div>
+
+  <!-- Quick Access Navigation -->
+  <div class="quick-access">
+    <div class="quick-access-content">
+      <a href="/pages/custom-rigging" class="quick-link primary">
+        🔧 Custom Rigging
+      </a>
+      <a href="/collections/fishing-kayaks" class="quick-link">
+        🎣 Shop Kayaks
+      </a>
+      <a href="/pages/rentals" class="quick-link">
+        🚣 Rentals & Tours
+      </a>
+      <a href="/collections/sailboats" class="quick-link">
+        ⛵ Sailboats
+      </a>
+      <a href="/pages/showroom" class="quick-link">
+        🏪 Visit Showroom
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">{{ shop.name }}</a>
+      
+      <nav>
+        <a href="/collections/fishing-kayaks">Fishing Kayaks</a>
+        <a href="/collections/pedal-kayaks">Pedal Kayaks</a>
+        <a href="/collections/sailboats">Sailboats</a>
+        <a href="/pages/custom-rigging">Custom Rigging</a>
+        <a href="/pages/rentals">Rentals</a>
+        <a href="/pages/about">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:252-726-7700" style="background: var(--sunrise); color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 13px; white-space: nowrap; transition: all 0.3s;">
+          <span style="font-size: 10px; opacity: 0.9; display: block; margin-bottom: 2px;">SHOP</span>
+          📞 (252) 726-7700
+        </a>
+        <a href="tel:252-726-1990" style="background: var(--ocean-medium); color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 13px; white-space: nowrap; transition: all 0.3s;">
+          <span style="font-size: 10px; opacity: 0.9; display: block; margin-bottom: 2px;">WATERFRONT</span>
+          📞 (252) 726-1990
+        </a>
+        <a href="/search">🔍</a>
+        <a href="/account">👤</a>
+        <a href="/cart" id="cart-icon">🛒 <span id="cart-count">{{ cart.item_count }}</span></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="MainContent" role="main">
+    {{ content_for_layout }}
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Trusty Sail & Paddle</h3>
+        <p>Your complete watersports outfitter on the Crystal Coast. From custom rigged fishing kayaks to sailboats, we've got you covered.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="/collections/fishing-kayaks">Fishing Kayaks</a></li>
+          <li><a href="/collections/pedal-kayaks">Pedal Kayaks</a></li>
+          <li><a href="/collections/sailboats">Sailboats</a></li>
+          <li><a href="/pages/custom-rigging">Custom Rigging</a></li>
+          <li><a href="/collections/accessories">Accessories</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Experience</h3>
+        <ul>
+          <li><a href="/pages/rentals">Kayak Rentals</a></li>
+          <li><a href="/pages/tours">Guided Tours</a></li>
+          <li><a href="/pages/showroom">Visit Our Showroom</a></li>
+          <li><a href="/pages/try-before-buy">Try Before You Buy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="/pages/contact">Contact Us</a></li>
+          <li><a href="/pages/shipping">Shipping Info</a></li>
+          <li><a href="/pages/returns">Returns</a></li>
+          <li><a href="/pages/faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ shop.name }}. All rights reserved. | Morehead City, NC</p>
+    </div>
+  </footer>
+
+  <script>
+    // Update cart count dynamically
+    fetch('/cart.js')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('cart-count').textContent = data.item_count;
+      });
+  </script>
+
+</body>
+</html>
