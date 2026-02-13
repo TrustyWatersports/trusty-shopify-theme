@@ -123,11 +123,13 @@
     }
 
     .logo {
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--ocean-deep);
-      text-decoration: none;
-      white-space: nowrap;
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 60px;
+      width: auto;
     }
 
     nav {
@@ -316,7 +318,9 @@
   <!-- Main Header -->
   <header>
     <div class="header-content">
-      <a href="/" class="logo">{{ shop.name }}</a>
+      <a href="/" class="logo">
+        <img src="https://images.squarespace-cdn.com/content/v1/6192794d1d9bc87b9719f93c/d75cec6a-478b-4fff-b3ae-bd24f8e06d8c/LOGO3.jpg?format=300w" alt="{{ shop.name }}">
+      </a>
       
       <nav>
         <a href="/collections/fishing-kayaks">Fishing Kayaks</a>
@@ -328,6 +332,9 @@
       </nav>
 
       <div class="header-actions">
+        <a href="tel:252-726-7700" style="background: var(--sunrise); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 14px; white-space: nowrap; transition: all 0.3s;">
+          📞 (252) 726-7700
+        </a>
         <a href="/search">🔍</a>
         <a href="/account">👤</a>
         <a href="/cart" id="cart-icon">🛒 <span id="cart-count">{{ cart.item_count }}</span></a>
