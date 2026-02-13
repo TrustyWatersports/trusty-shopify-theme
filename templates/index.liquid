@@ -1,23 +1,39 @@
-<!-- Hero Section -->
-<div style="background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-medium) 100%); color: var(--white); padding: 80px 20px; text-align: center;">
-  <div style="max-width: 900px; margin: 0 auto;">
-    <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 20px; line-height: 1.2;">
+<!-- Hero Section with Background Image -->
+<div style="background: linear-gradient(rgba(10, 75, 120, 0.7), rgba(30, 111, 168, 0.85)), url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1600&q=80') center/cover; color: var(--white); padding: 120px 20px; text-align: center; position: relative;">
+  <div style="max-width: 1000px; margin: 0 auto; position: relative; z-index: 2;">
+    <h1 style="font-size: 56px; font-weight: 800; line-height: 1.1; margin-bottom: 20px; animation: fadeInUp 0.8s ease-out;">
       Get Your Perfect Fishing Kayak<br>
-      <span style="color: var(--seafoam);">Custom Rigged & Ready to Fish</span>
+      <span style="color: var(--seafoam); font-weight: 900;">Custom Rigged & Ready to Fish</span>
     </h1>
-    <p style="font-size: 20px; margin-bottom: 30px; opacity: 0.95;">
-      From tournament-ready rigs to beginner setups. We build what you need.
+    <p style="font-size: 22px; margin-bottom: 35px; opacity: 0.95; max-width: 750px; margin-left: auto; margin-right: auto; animation: fadeInUp 0.8s ease-out 0.2s both;">
+      From tournament-ready rigs to beginner setups. Expert installation, pro-grade components, built for how you fish.
     </p>
-    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-      <a href="/pages/custom-rigging" class="btn btn-primary" style="font-size: 18px; padding: 16px 32px;">
-        Build Your Custom Rig →
+    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; animation: fadeInUp 0.8s ease-out 0.4s both;">
+      <a href="/pages/custom-rigging" class="btn btn-primary" style="font-size: 18px; padding: 16px 40px; background: var(--sunrise); border: none;">
+        🔧 Build Your Custom Rig
       </a>
-      <a href="/collections/fishing-kayaks" class="btn btn-secondary" style="font-size: 18px; padding: 16px 32px;">
-        Shop Kayaks
+      <a href="/collections/fishing-kayaks" class="btn btn-secondary" style="font-size: 18px; padding: 16px 40px;">
+        Shop Kayaks →
+      </a>
+      <a href="tel:252-726-7700" class="btn btn-secondary" style="font-size: 18px; padding: 16px 40px;">
+        📞 (252) 726-7700
       </a>
     </div>
   </div>
 </div>
+
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
 
 <!-- Trust Indicators -->
 <div style="background: var(--gray-light); padding: 40px 20px;">
@@ -200,6 +216,36 @@
           "Worth every penny. Caught more fish in my first month than the whole previous year."
         </p>
         <div style="font-weight: 600;">- James R., Weekend Warrior</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Testimonials -->
+<div style="background: var(--navy); color: var(--white); padding: 80px 20px;">
+  <div class="container">
+    <h2 style="font-size: 36px; text-align: center; margin-bottom: 50px;">What Anglers Say</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+      <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 12px;">
+        <div style="font-size: 32px; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+        <p style="font-style: italic; margin-bottom: 15px; line-height: 1.7;">
+          "Best rigged kayak I've ever fished from. They thought of everything - even stuff I didn't know I needed. Caught more fish in the first month than all last year."
+        </p>
+        <div style="font-weight: 600;">- Mike T., Tournament Angler</div>
+      </div>
+      <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 12px;">
+        <div style="font-size: 32px; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+        <p style="font-style: italic; margin-bottom: 15px; line-height: 1.7;">
+          "Rented first, loved it, bought it rigged. The team knows these waters and knows what works. Worth every penny and then some."
+        </p>
+        <div style="font-weight: 600;">- Sarah K., Local Angler</div>
+      </div>
+      <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 12px;">
+        <div style="font-size: 32px; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+        <p style="font-style: italic; margin-bottom: 15px; line-height: 1.7;">
+          "I fish tournaments all over the coast. Trusty's rigs are as good as anything I've seen, and their local knowledge is priceless."
+        </p>
+        <div style="font-weight: 600;">- James R., Pro Angler</div>
       </div>
     </div>
   </div>
