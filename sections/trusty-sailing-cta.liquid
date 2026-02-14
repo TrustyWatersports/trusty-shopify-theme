@@ -1,0 +1,70 @@
+<section class="trusty-sailing">
+  <div class="trusty-sailing__container">
+    <div class="trusty-sailing__badge">{{ section.settings.badge }}</div>
+    <h2>{{ section.settings.heading }}</h2>
+    <p class="trusty-sailing__description">{{ section.settings.description }}</p>
+    <div class="trusty-sailing__ctas">
+      <a href="{{ section.settings.primary_button_link }}" class="btn-primary">
+        {{ section.settings.primary_button_text }}
+      </a>
+      <a href="{{ section.settings.secondary_button_link }}" class="btn-secondary">
+        {{ section.settings.secondary_button_text }}
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sailing CTA",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Badge Text",
+      "default": "US Distributor"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Official Topper & Topaz Sailboat Distributor"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "We're proud to be the United States distributor for Topper and Topaz sailboats - the UK's finest small sailing dinghies and catamarans. Perfect for beginners, families, and sailing programs."
+    },
+    {
+      "type": "text",
+      "id": "primary_button_text",
+      "label": "Primary Button Text",
+      "default": "Explore Sailboats"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_link",
+      "label": "Primary Button Link",
+      "default": "/collections/sailboats"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_text",
+      "label": "Secondary Button Text",
+      "default": "Sailing Lessons"
+    },
+    {
+      "type": "url",
+      "id": "secondary_button_link",
+      "label": "Secondary Button Link",
+      "default": "/pages/sailing-lessons"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sailing CTA"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,102 @@
+<section class="trusty-why">
+  <div class="trusty-why__container">
+    <div class="trusty-why__header">
+      <h2>{{ section.settings.heading }}</h2>
+      <p class="trusty-why__subtitle">{{ section.settings.subtitle }}</p>
+    </div>
+    <div class="trusty-why__grid">
+      {% for block in section.blocks %}
+        <div class="trusty-why__item" {{ block.shopify_attributes }}>
+          <div class="trusty-why__item-icon">{{ block.settings.icon }}</div>
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Why Trusty",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why Trusty Sail & Paddle?"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "More than a shop - your complete Crystal Coast watersports partner"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (emoji)",
+          "default": "⚡"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Rigging Expertise"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "We've rigged hundreds of kayaks for Crystal Coast anglers. Professional installation, tournament-tested setups, shipped nationwide."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why Trusty",
+      "blocks": [
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "⚡",
+            "title": "Rigging Expertise",
+            "description": "We've rigged hundreds of kayaks for Crystal Coast anglers. Professional installation, tournament-tested setups, shipped nationwide."
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "🎓",
+            "title": "Local Knowledge",
+            "description": "We fish and sail these waters daily. Get expert recommendations for Bogue Sound, Atlantic Beach, Cape Lookout, and beyond."
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "🚣",
+            "title": "Try Before You Buy",
+            "description": "Rent the exact kayak or sailboat you're considering. Test it on the water at our waterfront location. Love it? Your rental credits toward purchase."
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "✓",
+            "title": "Complete Ecosystem",
+            "description": "From your first rental to your custom tournament rig. Lessons, tours, sales, rigging, service - we support your entire watersports journey."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
