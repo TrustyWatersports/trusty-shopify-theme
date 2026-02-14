@@ -1,1 +1,65 @@
-{"sections":{"hero":{"type":"trusty-hero-fixed"},"trustbar":{"type":"trusty-trustbar"},"pathways":{"type":"trusty-pathways"},"why":{"type":"trusty-why-trusty"},"sailing":{"type":"trusty-sailing-cta"}},"order":["hero","trustbar","pathways","why","sailing"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "trusty-hero-fixed",
+      "settings": {
+        "hero_image": "shopify://shop_images/9U8A8101.jpg",
+        "badge_text": "⚡ Custom Rigging Experts",
+        "heading_part1": "Tournament-Ready",
+        "heading_part2": "Fishing Kayaks",
+        "heading_part3": "Shipped Nationwide",
+        "description": "Professional rigging by Crystal Coast experts. Turnkey builds from $3k to $13k+ delivered to your door.",
+        "primary_button_text": "Browse Rigging Packages",
+        "primary_button_link": "",
+        "secondary_button_text": "Build Custom Rig",
+        "secondary_button_link": ""
+      }
+    },
+    "trustbar": {
+      "type": "trusty-trustbar",
+      "settings": {}
+    },
+    "pathways": {
+      "type": "trusty-pathways",
+      "settings": {
+        "heading": "Choose Your Path",
+        "subtitle": "Whether you want a turnkey rig, prefer to shop in person, or want to try first - we've got you covered"
+      }
+    },
+    "why": {
+      "type": "trusty-why-trusty",
+      "settings": {
+        "heading": "Why Trusty Sail & Paddle?",
+        "subtitle": "More than a shop - your complete Crystal Coast watersports partner"
+      }
+    },
+    "sailing": {
+      "type": "trusty-sailing-cta",
+      "settings": {
+        "badge": "US Distributor",
+        "heading": "Official Topper & Topaz Sailboat Distributor",
+        "description": "We're proud to be the United States distributor for Topper and Topaz sailboats - the UK's finest small sailing dinghies and catamarans. Perfect for beginners, families, and sailing programs.",
+        "primary_button_text": "Explore Sailboats",
+        "primary_button_link": "",
+        "secondary_button_text": "Sailing Lessons",
+        "secondary_button_link": ""
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "trustbar",
+    "pathways",
+    "why",
+    "sailing"
+  ]
+}
