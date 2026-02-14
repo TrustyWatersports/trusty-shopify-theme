@@ -1,0 +1,95 @@
+<section class="trusty-hero">
+  <div class="trusty-hero__background" style="background-image: url('{{ section.settings.hero_image | image_url: width: 1600 }}');"></div>
+  <div class="trusty-hero__content">
+    <div class="trusty-hero__badge">
+      {{ section.settings.badge_text }}
+    </div>
+    <h1>
+      {{ section.settings.heading_part1 }} <span class="highlight">{{ section.settings.heading_part2 }}</span> {{ section.settings.heading_part3 }}
+    </h1>
+    <p class="trusty-hero__description">
+      {{ section.settings.description }}
+    </p>
+    <div class="trusty-hero__ctas">
+      <a href="{{ section.settings.primary_button_link }}" class="btn btn-primary">
+        {{ section.settings.primary_button_text }}
+      </a>
+      <a href="{{ section.settings.secondary_button_link }}" class="btn btn-secondary">
+        {{ section.settings.secondary_button_text }}
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Background Image",
+      "info": "Recommended: 1600x600px fishing kayak image"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "⚡ Custom Rigging Experts"
+    },
+    {
+      "type": "text",
+      "id": "heading_part1",
+      "label": "Heading - Part 1",
+      "default": "Tournament-Ready"
+    },
+    {
+      "type": "text",
+      "id": "heading_part2",
+      "label": "Heading - Part 2 (Highlighted)",
+      "default": "Fishing Kayaks"
+    },
+    {
+      "type": "text",
+      "id": "heading_part3",
+      "label": "Heading - Part 3",
+      "default": "Shipped Nationwide"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Professional rigging by Crystal Coast experts. Turnkey builds from $3k to $13k+ delivered to your door."
+    },
+    {
+      "type": "text",
+      "id": "primary_button_text",
+      "label": "Primary Button Text",
+      "default": "Browse Rigging Packages"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_link",
+      "label": "Primary Button Link",
+      "default": "/pages/custom-rigging"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_text",
+      "label": "Secondary Button Text",
+      "default": "Build Custom Rig"
+    },
+    {
+      "type": "url",
+      "id": "secondary_button_link",
+      "label": "Secondary Button Link",
+      "default": "/collections/fishing-kayaks"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Section"
+    }
+  ]
+}
+{% endschema %}
