@@ -1,0 +1,201 @@
+<section class="trusty-pathways">
+  <div class="trusty-pathways__container">
+    <div class="trusty-pathways__header">
+      <h2>{{ section.settings.heading }}</h2>
+      <p class="trusty-pathways__subtitle">{{ section.settings.subtitle }}</p>
+    </div>
+    
+    <div class="trusty-pathways__grid">
+      {% for block in section.blocks %}
+        <div class="pathway-card pathway-card--{{ block.settings.style }}" {{ block.shopify_attributes }}>
+          <div class="pathway-card__icon">{{ block.settings.icon }}</div>
+          <div class="pathway-card__label">{{ block.settings.label }}</div>
+          <h3>{{ block.settings.title }}</h3>
+          <p class="pathway-card__description">{{ block.settings.description }}</p>
+          <ul class="pathway-card__features">
+            {% if block.settings.feature_1 != blank %}
+              <li>✓ {{ block.settings.feature_1 }}</li>
+            {% endif %}
+            {% if block.settings.feature_2 != blank %}
+              <li>✓ {{ block.settings.feature_2 }}</li>
+            {% endif %}
+            {% if block.settings.feature_3 != blank %}
+              <li>✓ {{ block.settings.feature_3 }}</li>
+            {% endif %}
+            {% if block.settings.feature_4 != blank %}
+              <li>✓ {{ block.settings.feature_4 }}</li>
+            {% endif %}
+            {% if block.settings.feature_5 != blank %}
+              <li>✓ {{ block.settings.feature_5 }}</li>
+            {% endif %}
+          </ul>
+          <a href="{{ block.settings.button_link }}" class="pathway-card__cta">
+            {{ block.settings.button_text }}
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Three Pathways",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Choose Your Path"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Whether you want a turnkey rig, prefer to shop in person, or want to try first - we've got you covered"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "pathway",
+      "name": "Pathway Card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "style",
+          "label": "Card Style",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary (Green)"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary (Blue)"
+            }
+          ],
+          "default": "secondary"
+        },
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (emoji)",
+          "default": "🎣"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "For Serious Anglers"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Custom Rigged"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Get a tournament-ready fishing kayak professionally rigged and shipped to your door."
+        },
+        {
+          "type": "text",
+          "id": "feature_1",
+          "label": "Feature 1"
+        },
+        {
+          "type": "text",
+          "id": "feature_2",
+          "label": "Feature 2"
+        },
+        {
+          "type": "text",
+          "id": "feature_3",
+          "label": "Feature 3"
+        },
+        {
+          "type": "text",
+          "id": "feature_4",
+          "label": "Feature 4"
+        },
+        {
+          "type": "text",
+          "id": "feature_5",
+          "label": "Feature 5"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Learn More →"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Three Pathways",
+      "blocks": [
+        {
+          "type": "pathway",
+          "settings": {
+            "style": "primary",
+            "icon": "🎣",
+            "label": "For Serious Anglers",
+            "title": "Custom Rigged",
+            "description": "Get a tournament-ready fishing kayak professionally rigged and shipped to your door. Skip the DIY frustration.",
+            "feature_1": "Professional component selection",
+            "feature_2": "Expert installation & wiring",
+            "feature_3": "Fish finder setup",
+            "feature_4": "Rigging packages from $1,499",
+            "feature_5": "Ships nationwide",
+            "button_text": "Browse Rigging Packages →",
+            "button_link": "/pages/custom-rigging"
+          }
+        },
+        {
+          "type": "pathway",
+          "settings": {
+            "style": "secondary",
+            "icon": "📍",
+            "label": "For Smart Shoppers",
+            "title": "Visit Our Showroom",
+            "description": "See, touch, and compare 60+ kayaks and sailboats. Get expert advice from locals who fish these waters daily.",
+            "feature_1": "60+ models in stock",
+            "feature_2": "Compare side-by-side",
+            "feature_3": "Expert local guidance",
+            "feature_4": "Take home today or add rigging",
+            "feature_5": "Morehead City, NC",
+            "button_text": "Plan Your Visit →",
+            "button_link": "/pages/showroom"
+          }
+        },
+        {
+          "type": "pathway",
+          "settings": {
+            "style": "secondary",
+            "icon": "🚣",
+            "label": "For First-Timers",
+            "title": "Rent First, Buy Smart",
+            "description": "Try the exact kayak you're considering on Crystal Coast waters. Rental fees credit toward your purchase.",
+            "feature_1": "Test on actual local waters",
+            "feature_2": "Pedal kayaks available",
+            "feature_3": "Guided tours offered",
+            "feature_4": "Rental credit toward purchase",
+            "feature_5": "Waterfront location",
+            "button_text": "Book a Rental →",
+            "button_link": "/pages/rentals"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

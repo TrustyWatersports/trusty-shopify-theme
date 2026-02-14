@@ -123,11 +123,13 @@
     }
 
     .logo {
-      font-size: 32px;
-      font-weight: 700;
-      color: var(--ocean-deep);
-      text-decoration: none;
-      white-space: nowrap;
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 60px;
+      width: auto;
     }
 
     nav {
@@ -316,7 +318,9 @@
   <!-- Main Header -->
   <header>
     <div class="header-content">
-      <a href="/" class="logo">{{ shop.name }}</a>
+      <a href="/" class="logo">
+        <img src="https://images.squarespace-cdn.com/content/v1/6192794d1d9bc87b9719f93c/d75cec6a-478b-4fff-b3ae-bd24f8e06d8c/LOGO3.jpg?format=300w" alt="{{ shop.name }}">
+      </a>
       
       <nav>
         <a href="/collections/fishing-kayaks">Fishing Kayaks</a>
@@ -324,17 +328,13 @@
         <a href="/collections/sailboats">Sailboats</a>
         <a href="/pages/custom-rigging">Custom Rigging</a>
         <a href="/pages/rentals">Rentals</a>
+        <a href="/pages/showroom">Showroom</a>
         <a href="/pages/about">About</a>
       </nav>
 
       <div class="header-actions">
-        <a href="tel:252-726-7700" style="background: var(--sunrise); color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 13px; white-space: nowrap; transition: all 0.3s;">
-          <span style="font-size: 10px; opacity: 0.9; display: block; margin-bottom: 2px;">SHOP</span>
+        <a href="tel:252-726-7700" style="background: var(--sunrise); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 14px; white-space: nowrap; transition: all 0.3s;">
           📞 (252) 726-7700
-        </a>
-        <a href="tel:252-726-1990" style="background: var(--ocean-medium); color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 13px; white-space: nowrap; transition: all 0.3s;">
-          <span style="font-size: 10px; opacity: 0.9; display: block; margin-bottom: 2px;">WATERFRONT</span>
-          📞 (252) 726-1990
         </a>
         <a href="/search">🔍</a>
         <a href="/account">👤</a>

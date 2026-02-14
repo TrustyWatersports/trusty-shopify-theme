@@ -1,0 +1,447 @@
+/* Trusty Sail & Paddle - Homepage Styles */
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero Section */
+.trusty-hero {
+  height: 500px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--ocean-deep) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.trusty-hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.35;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.trusty-hero__content {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+  z-index: 2;
+}
+
+.trusty-hero__badge {
+  display: inline-block;
+  background: var(--rigging-accent);
+  color: var(--white);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+  width: fit-content;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.trusty-hero h1 {
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 15px;
+  max-width: 800px;
+  animation: fadeInUp 0.8s ease-out 0.1s both;
+}
+
+.trusty-hero h1 .highlight {
+  color: var(--sunrise);
+}
+
+.trusty-hero__description {
+  font-size: 20px;
+  margin-bottom: 30px;
+  max-width: 750px;
+  opacity: 0.95;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.trusty-hero__ctas {
+  display: flex;
+  gap: 15px;
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+  flex-wrap: wrap;
+}
+
+.trusty-hero .btn {
+  padding: 16px 32px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.trusty-hero .btn-primary {
+  background: var(--rigging-accent);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 168, 107, 0.3);
+}
+
+.trusty-hero .btn-primary:hover {
+  background: #00C77F;
+  transform: translateY(-2px);
+}
+
+.trusty-hero .btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.trusty-hero .btn-secondary:hover {
+  background: white;
+  color: var(--ocean-deep);
+}
+
+/* Trust Bar */
+.trusty-trustbar {
+  background: white;
+  padding: 30px 20px;
+  border-bottom: 2px solid var(--gray-light);
+}
+
+.trusty-trustbar__content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.trusty-trustbar__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trusty-trustbar__icon {
+  width: 45px;
+  height: 45px;
+  background: var(--ocean-medium);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.trusty-trustbar__text {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+/* Pathways Section */
+.trusty-pathways {
+  padding: 80px 20px;
+  background: var(--gray-light);
+}
+
+.trusty-pathways__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.trusty-pathways__header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.trusty-pathways h2 {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--ocean-deep);
+  margin-bottom: 15px;
+}
+
+.trusty-pathways__subtitle {
+  font-size: 20px;
+  color: var(--gray-medium);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.trusty-pathways__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+}
+
+.pathway-card {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.pathway-card--primary {
+  border-top: 5px solid var(--rigging-accent);
+}
+
+.pathway-card--secondary {
+  border-top: 5px solid var(--ocean-medium);
+}
+
+.pathway-card__icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+
+.pathway-card--primary .pathway-card__icon {
+  background: linear-gradient(135deg, var(--rigging-accent) 0%, #00C77F 100%);
+}
+
+.pathway-card--secondary .pathway-card__icon {
+  background: linear-gradient(135deg, var(--ocean-light) 0%, var(--ocean-medium) 100%);
+}
+
+.pathway-card__label {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.pathway-card--primary .pathway-card__label {
+  color: var(--rigging-accent);
+}
+
+.pathway-card--secondary .pathway-card__label {
+  color: var(--ocean-medium);
+}
+
+.pathway-card h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: var(--ocean-deep);
+}
+
+.pathway-card__description {
+  color: var(--gray-medium);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.pathway-card__features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.pathway-card__features li {
+  padding: 8px 0;
+  color: var(--text-dark);
+}
+
+.pathway-card__cta {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.pathway-card--primary .pathway-card__cta {
+  background: var(--rigging-accent);
+}
+
+.pathway-card--secondary .pathway-card__cta {
+  background: var(--ocean-medium);
+}
+
+.pathway-card__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Why Trusty Section */
+.trusty-why {
+  padding: 80px 20px;
+  background: white;
+}
+
+.trusty-why__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.trusty-why__header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.trusty-why h2 {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--ocean-deep);
+  margin-bottom: 15px;
+}
+
+.trusty-why__subtitle {
+  font-size: 20px;
+  color: var(--gray-medium);
+}
+
+.trusty-why__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.trusty-why__item {
+  text-align: center;
+}
+
+.trusty-why__item-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.trusty-why__item h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: var(--ocean-deep);
+}
+
+.trusty-why__item p {
+  color: var(--gray-medium);
+  line-height: 1.7;
+}
+
+/* Sailing CTA Section */
+.trusty-sailing {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #D32F2F 0%, #B71C1C 100%);
+  color: white;
+  text-align: center;
+}
+
+.trusty-sailing__container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.trusty-sailing__badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.trusty-sailing h2 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.trusty-sailing__description {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.95;
+  line-height: 1.7;
+}
+
+.trusty-sailing__ctas {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.trusty-sailing .btn-primary {
+  padding: 16px 32px;
+  background: white;
+  color: #D32F2F;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.trusty-sailing .btn-secondary {
+  padding: 16px 32px;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.trusty-sailing .btn-primary:hover,
+.trusty-sailing .btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .trusty-hero h1 {
+    font-size: 36px;
+  }
+  
+  .trusty-hero__description {
+    font-size: 16px;
+  }
+  
+  .trusty-pathways h2,
+  .trusty-why h2 {
+    font-size: 32px;
+  }
+  
+  .trusty-sailing h2 {
+    font-size: 32px;
+  }
+  
+  .trusty-pathways__grid,
+  .trusty-why__grid {
+    grid-template-columns: 1fr;
+  }
+}

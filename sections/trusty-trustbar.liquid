@@ -1,0 +1,79 @@
+<div class="trusty-trustbar">
+  <div class="trusty-trustbar__content">
+    {% for block in section.blocks %}
+      <div class="trusty-trustbar__item" {{ block.shopify_attributes }}>
+        <div class="trusty-trustbar__icon">{{ block.settings.icon }}</div>
+        <div class="trusty-trustbar__text">{{ block.settings.text }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Trust Bar",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "trust_item",
+      "name": "Trust Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (emoji)",
+          "default": "⚡"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Custom Rigging Experts"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trust Bar",
+      "blocks": [
+        {
+          "type": "trust_item",
+          "settings": {
+            "icon": "⚡",
+            "text": "Custom Rigging Experts"
+          }
+        },
+        {
+          "type": "trust_item",
+          "settings": {
+            "icon": "✓",
+            "text": "60+ Boats In Stock"
+          }
+        },
+        {
+          "type": "trust_item",
+          "settings": {
+            "icon": "📍",
+            "text": "Two Morehead Locations"
+          }
+        },
+        {
+          "type": "trust_item",
+          "settings": {
+            "icon": "🚣",
+            "text": "Try Before You Buy"
+          }
+        },
+        {
+          "type": "trust_item",
+          "settings": {
+            "icon": "⛵",
+            "text": "US Sailboat Distributor"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
