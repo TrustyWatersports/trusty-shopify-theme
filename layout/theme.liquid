@@ -316,6 +316,44 @@
       .dropdown-content a {
         padding: 10px 15px;
       }
+
+      /* Mobile header layout */
+      .header-content {
+        gap: 15px;
+      }
+
+      .logo-text {
+        display: none;
+      }
+
+      .logo img {
+        height: 45px;
+      }
+
+      .header-actions {
+        gap: 8px;
+        flex: 1;
+        justify-content: flex-end;
+      }
+
+      .header-actions a[href^="tel"] {
+        padding: 8px 12px;
+        font-size: 11px;
+        margin-right: 0;
+      }
+
+      .header-actions a[href^="tel"] span {
+        display: none;
+      }
+
+      .header-actions a[href="/search"],
+      .header-actions a[href="/account"] {
+        display: none;
+      }
+
+      .header-actions #cart-icon {
+        font-size: 20px;
+      }
     }
 
     .header-actions {
