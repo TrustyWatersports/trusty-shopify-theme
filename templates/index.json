@@ -9,9 +9,21 @@
  */
 {
   "sections": {
-    "hero": {
-      "type": "trusty-hero-fixed",
-      "settings": {}
+    "trusty_hero_78gxMM": {
+      "type": "trusty-hero",
+      "name": "Hero Section",
+      "settings": {
+        "hero_image": "shopify://shop_images/DSC01283_-_Large_5e96b3b9-3d0e-4de4-a92f-d8f062bf1f67.png",
+        "badge_text": "⚡ Custom Rigging Experts",
+        "heading_part1": "Tournament-Ready",
+        "heading_part2": "Fishing Kayaks",
+        "heading_part3": "Shipped Nationwide",
+        "description": "Professional rigging by Crystal Coast experts. Turnkey builds from $3k to $13k+ delivered to your door.",
+        "primary_button_text": "Browse Rigging Packages",
+        "primary_button_link": "",
+        "secondary_button_text": "Build Custom Rig",
+        "secondary_button_link": ""
+      }
     },
     "trustbar": {
       "type": "trusty-trustbar",
@@ -19,19 +31,33 @@
     },
     "pathways": {
       "type": "trusty-pathways",
-      "settings": {}
+      "settings": {
+        "heading": "Choose Your Path",
+        "subtitle": "Whether you want a turnkey rig, prefer to shop in person, or want to try first - we've got you covered"
+      }
     },
     "why": {
       "type": "trusty-why-trusty",
-      "settings": {}
+      "settings": {
+        "heading": "Why Trusty Sail & Paddle?",
+        "subtitle": "More than a shop - your complete Crystal Coast watersports partner"
+      }
     },
     "sailing": {
       "type": "trusty-sailing-cta",
-      "settings": {}
+      "settings": {
+        "badge": "US Distributor",
+        "heading": "Official Topper & Topaz Sailboat Distributor",
+        "description": "We're proud to be the United States distributor for Topper and Topaz sailboats - the UK's finest small sailing dinghies and catamarans. Perfect for beginners, families, and sailing programs.",
+        "primary_button_text": "Explore Sailboats",
+        "primary_button_link": "",
+        "secondary_button_text": "Sailing Lessons",
+        "secondary_button_link": ""
+      }
     }
   },
   "order": [
-    "hero",
+    "trusty_hero_78gxMM",
     "trustbar",
     "pathways",
     "why",
