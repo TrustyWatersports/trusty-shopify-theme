@@ -1,5 +1,17 @@
-<section class="trusty-hero">
-  <div class="trusty-hero__background" style="background-image: url('{{ section.settings.hero_image | image_url: width: 1600 }}');"></div>
+<section class="trusty-hero" data-interval="{{ section.settings.interval_ms }}">
+  <!-- Carousel slides -->
+  <div class="trusty-hero__slides">
+    {% if section.blocks.size > 0 %}
+      {% for block in section.blocks %}
+        {% assign is_first = forloop.first %}
+        <div class="trusty-hero__slide{% if is_first %} is-active{% endif %}" {{ block.shopify_attributes }} style="background-image: url('{% if block.settings.slide_image != blank %}{{ block.settings.slide_image | image_url: width: 1600 }}{% endif %}');"></div>
+      {% endfor %}
+    {% else %}
+      <!-- Fallback to single image if no blocks -->
+      <div class="trusty-hero__slide is-active" style="background-image: url('{{ section.settings.hero_image | image_url: width: 1600 }}');"></div>
+    {% endif %}
+  </div>
+
   <div class="trusty-hero__content">
     <div class="trusty-hero__badge">
       {{ section.settings.badge_text }}
@@ -21,6 +33,42 @@
   </div>
 </section>
 
+<style>
+  .trusty-hero__slides {
+    position: absolute;
+    inset: 0;
+  }
+  .trusty-hero__slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 750ms ease;
+  }
+  .trusty-hero__slide.is-active {
+    opacity: 0.35;
+  }
+</style>
+
+<script>
+  (function(){
+    const hero = document.currentScript.previousElementSibling?.previousElementSibling;
+    if(!hero || !hero.classList.contains('trusty-hero')) return;
+
+    const slides = Array.from(hero.querySelectorAll('.trusty-hero__slide'));
+    if(slides.length <= 1) return;
+
+    const interval = parseInt(hero.getAttribute('data-interval') || '5000', 10);
+    let i = 0;
+
+    setInterval(() => {
+      slides.forEach((s, n) => s.classList.toggle('is-active', n === i));
+      i = (i + 1) % slides.length;
+    }, interval);
+  })();
+</script>
+
 {% schema %}
 {
   "name": "Hero Section",
@@ -28,8 +76,18 @@
     {
       "type": "image_picker",
       "id": "hero_image",
-      "label": "Background Image",
-      "info": "Recommended: 1600x600px fishing kayak image"
+      "label": "Background Image (Fallback)",
+      "info": "Used if no image blocks are added. Recommended: 1600x600px"
+    },
+    {
+      "type": "range",
+      "id": "interval_ms",
+      "label": "Carousel Speed (seconds)",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "s"
     },
     {
       "type": "text",
@@ -84,9 +142,25 @@
       "label": "Secondary Button Link"
     }
   ],
+  "blocks": [
+    {
+      "type": "image_slide",
+      "name": "Image Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slide_image",
+          "label": "Slide Image"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "Hero Section"
+      "name": "Hero Section",
+      "blocks": [
+        { "type": "image_slide" }
+      ]
     }
   ]
 }
