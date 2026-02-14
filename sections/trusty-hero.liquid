@@ -67,28 +67,40 @@
 </style>
 
 <script>
-  (function(){
-    const hero = document.currentScript.previousElementSibling?.previousElementSibling?.previousElementSibling;
-    if(!hero || !hero.classList.contains('trusty-hero')) return;
+  document.addEventListener('DOMContentLoaded', function() {
+    const heroes = document.querySelectorAll('.trusty-hero');
+    
+    heroes.forEach(function(hero) {
+      const slides = hero.querySelectorAll('.trusty-hero__slide');
+      
+      if (slides.length <= 1) {
+        console.log('Only 1 slide, carousel disabled');
+        return;
+      }
 
-    const slides = Array.from(hero.querySelectorAll('.trusty-hero__slide'));
-    if(slides.length <= 1) return;
+      const intervalSeconds = parseInt(hero.getAttribute('data-interval') || '5', 10);
+      let currentIndex = 0;
 
-    const intervalSeconds = parseInt(hero.getAttribute('data-interval') || '5', 10);
-    let currentIndex = 0;
+      console.log('Carousel starting with', slides.length, 'slides, interval:', intervalSeconds, 'seconds');
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('is-active', i === index);
-      });
-    }
+      function showSlide(index) {
+        slides.forEach(function(slide, i) {
+          if (i === index) {
+            slide.classList.add('is-active');
+          } else {
+            slide.classList.remove('is-active');
+          }
+        });
+        console.log('Showing slide', index);
+      }
 
-    // Start carousel
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      showSlide(currentIndex);
-    }, intervalSeconds * 1000);
-  })();
+      // Start carousel
+      setInterval(function() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      }, intervalSeconds * 1000);
+    });
+  });
 </script>
 
 {% schema %}
