@@ -1,6 +1,13 @@
-﻿[
+[
   {
     "name": "Theme settings",
-    "settings": []
+    "settings": [
+      {
+        "type": "color",
+        "id": "brand_accent",
+        "label": "Brand accent color",
+        "default": "#00A86B"
+      }
+    ]
   }
 ]
