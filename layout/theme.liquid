@@ -161,47 +161,6 @@
       background: var(--rigging-accent);
     }
 
-    /* Dropdown Navigation */
-    .nav-item {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background: white;
-      min-width: 200px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-      z-index: 1000;
-      border-radius: 6px;
-      padding: 10px 0;
-      top: 100%;
-      left: 0;
-    }
-
-    .dropdown-content a {
-      display: block;
-      padding: 12px 20px;
-      text-decoration: none;
-      color: var(--text-dark);
-      font-weight: 500;
-      transition: all 0.3s;
-    }
-
-    .dropdown-content a:hover {
-      background: var(--gray-light);
-      color: var(--ocean-medium);
-    }
-
-    .nav-item:hover .dropdown-content {
-      display: block;
-    }
-
-    .nav-item > a {
-      cursor: pointer;
-    }
-
     .header-actions {
       display: flex;
       gap: 20px;
@@ -333,7 +292,7 @@
   
   <!-- Top Announcement Bar -->
   <div class="top-bar">
-    🎣 Custom Kayak Rigging Experts | Discounted Nationwide Shipping | {{ shop.name }}
+    🎣 Custom Kayak Rigging Experts | Free Shipping on Rigs $2,500+ | {{ shop.name }}
   </div>
 
   <!-- Quick Access Navigation -->
@@ -365,30 +324,15 @@
       </a>
       
       <nav>
-        <div class="nav-item dropdown">
-          <a href="/collections/all">SHOP ▾</a>
-          <div class="dropdown-content">
-            <a href="/collections/pedal-kayaks">Pedal Kayaks</a>
-            <a href="/collections/paddle-kayaks">Paddle Kayaks</a>
-            <a href="/collections/sailboats">Sailboats</a>
-          </div>
-        </div>
-        <a href="/pages/custom-rigging">CUSTOM RIGGING</a>
-        <div class="nav-item dropdown">
-          <a href="#">EXPERIENCE ▾</a>
-          <div class="dropdown-content">
-            <a href="/pages/rentals">Rentals</a>
-            <a href="/pages/programs-events">Programs & Events</a>
-            <a href="/pages/locations">Locations</a>
-          </div>
-        </div>
-        <div class="nav-item dropdown">
-          <a href="/pages/about">ABOUT ▾</a>
-          <div class="dropdown-content">
-            <a href="/pages/about">About Us</a>
-            <a href="/pages/blog">Blog</a>
-          </div>
-        </div>
+        <a href="/collections/pedal-kayaks">Pedal Kayaks</a>
+        <a href="/collections/paddle-kayaks">Paddle Kayaks</a>
+        <a href="/collections/sailboats">Sailboats</a>
+        <a href="/pages/custom-rigging">Custom Rigging</a>
+        <a href="/pages/rentals">Rentals</a>
+        <a href="/pages/locations">Locations</a>
+        <a href="/pages/programs-events">Programs & Events</a>
+        <a href="/pages/about">About</a>
+        <a href="/pages/blog">Blog</a>
       </nav>
 
       <div class="header-actions">
