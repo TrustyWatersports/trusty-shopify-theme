@@ -284,6 +284,8 @@
         transition: right 0.3s ease;
         z-index: 1000;
         overflow-y: auto;
+        display: flex;
+        flex-direction: column;
       }
 
       nav.active {
@@ -295,6 +297,7 @@
         display: block;
         padding: 15px 25px;
         border-bottom: 1px solid var(--gray-light);
+        order: initial;
       }
 
       .nav-item > a {
@@ -319,7 +322,7 @@
 
       /* Mobile header layout */
       .header-content {
-        gap: 6px;
+        gap: 10px;
         flex-wrap: nowrap;
         padding: 12px 15px;
       }
@@ -335,14 +338,11 @@
         padding: 5px;
       }
 
-      nav {
-        order: 3;
-      }
-
       .header-actions {
         order: 2;
         gap: 5px;
-        flex: 0 0 auto;
+        flex: 1;
+        justify-content: flex-end;
       }
 
       .logo-text {
@@ -350,15 +350,14 @@
       }
 
       .logo img {
-        height: 35px;
+        height: 40px;
       }
 
       .header-actions a[href^="tel"] {
-        padding: 6px 8px;
+        padding: 8px 10px;
         font-size: 10px;
         margin-right: 0;
         white-space: nowrap;
-        min-width: auto;
       }
 
       .header-actions a[href^="tel"] span {
