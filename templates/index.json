@@ -26,10 +26,104 @@
     },
     "trustbar": {
       "type": "trusty-trustbar",
+      "blocks": {
+        "trust_item_66xtFw": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "⚡",
+            "text": "Custom Rigging Experts"
+          }
+        },
+        "trust_item_UpfN8N": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "⚡",
+            "text": "Custom Rigging Experts"
+          }
+        },
+        "trust_item_8aJVgD": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "⚡",
+            "text": "Custom Rigging Experts"
+          }
+        },
+        "trust_item_e83zRP": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "⚡",
+            "text": "Custom Rigging Experts"
+          }
+        }
+      },
+      "block_order": [
+        "trust_item_66xtFw",
+        "trust_item_UpfN8N",
+        "trust_item_8aJVgD",
+        "trust_item_e83zRP"
+      ],
       "settings": {}
     },
     "pathways": {
       "type": "trusty-pathways",
+      "blocks": {
+        "pathway_imG3mY": {
+          "type": "pathway",
+          "settings": {
+            "style": "secondary",
+            "icon": "🎣",
+            "label": "For Serious Anglers",
+            "title": "Custom Rigged",
+            "description": "Get a tournament-ready fishing kayak professionally rigged and shipped to your door.",
+            "feature_1": "",
+            "feature_2": "",
+            "feature_3": "",
+            "feature_4": "",
+            "feature_5": "",
+            "button_text": "Learn More →",
+            "button_link": ""
+          }
+        },
+        "pathway_CzUJQB": {
+          "type": "pathway",
+          "settings": {
+            "style": "secondary",
+            "icon": "🎣",
+            "label": "For Serious Anglers",
+            "title": "Custom Rigged",
+            "description": "Get a tournament-ready fishing kayak professionally rigged and shipped to your door.",
+            "feature_1": "",
+            "feature_2": "",
+            "feature_3": "",
+            "feature_4": "",
+            "feature_5": "",
+            "button_text": "Learn More →",
+            "button_link": ""
+          }
+        },
+        "pathway_hipzwk": {
+          "type": "pathway",
+          "settings": {
+            "style": "secondary",
+            "icon": "🎣",
+            "label": "For Serious Anglers",
+            "title": "Custom Rigged",
+            "description": "Get a tournament-ready fishing kayak professionally rigged and shipped to your door.",
+            "feature_1": "",
+            "feature_2": "",
+            "feature_3": "",
+            "feature_4": "",
+            "feature_5": "",
+            "button_text": "Learn More →",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "pathway_imG3mY",
+        "pathway_CzUJQB",
+        "pathway_hipzwk"
+      ],
       "settings": {
         "heading": "Choose Your Path",
         "subtitle": "Whether you want a turnkey rig, prefer to shop in person, or want to try first - we've got you covered"
@@ -37,6 +131,37 @@
     },
     "why": {
       "type": "trusty-why-trusty",
+      "blocks": {
+        "benefit_Jiw9Rg": {
+          "type": "benefit",
+          "settings": {
+            "icon": "⚡",
+            "title": "Rigging Expertise",
+            "description": "We've rigged hundreds of kayaks for Crystal Coast anglers. Professional installation, tournament-tested setups, shipped nationwide."
+          }
+        },
+        "benefit_Kmzg9M": {
+          "type": "benefit",
+          "settings": {
+            "icon": "⚡",
+            "title": "Rigging Expertise",
+            "description": "We've rigged hundreds of kayaks for Crystal Coast anglers. Professional installation, tournament-tested setups, shipped nationwide."
+          }
+        },
+        "benefit_EzJymJ": {
+          "type": "benefit",
+          "settings": {
+            "icon": "⚡",
+            "title": "Rigging Expertise",
+            "description": "We've rigged hundreds of kayaks for Crystal Coast anglers. Professional installation, tournament-tested setups, shipped nationwide."
+          }
+        }
+      },
+      "block_order": [
+        "benefit_Jiw9Rg",
+        "benefit_Kmzg9M",
+        "benefit_EzJymJ"
+      ],
       "settings": {
         "heading": "Why Trusty Sail & Paddle?",
         "subtitle": "More than a shop - your complete Crystal Coast watersports partner"
