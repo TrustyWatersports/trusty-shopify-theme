@@ -1,0 +1,214 @@
+{% comment %}
+Trusty Hero Carousel (Images + Video)
+- Uses blocks as slides
+- Supports: image, Shopify-hosted video, YouTube/Vimeo URL
+- Fade transition
+{% endcomment %}
+
+<section class="trusty-hero" data-interval="{{ section.settings.interval_ms }}">
+  <div class="trusty-hero__slides">
+    {% for block in section.blocks %}
+      {% assign is_first = forloop.first %}
+      <div class="trusty-hero__slide{% if is_first %} is-active{% endif %}" {{ block.shopify_attributes }}>
+        {% case block.type %}
+          {% when 'image_slide' %}
+            {% if block.settings.image != blank %}
+              <div class="trusty-hero__bg"
+                   style="background-image:url('{{ block.settings.image | image_url: width: 2400 }}');"></div>
+            {% else %}
+              <div class="trusty-hero__bg trusty-hero__bg--fallback"></div>
+            {% endif %}
+
+          {% when 'video_slide' %}
+            {% if block.settings.video != blank %}
+              {{ block.settings.video | video_tag: autoplay: true, loop: true, muted: true, controls: false, playsinline: true, class: 'trusty-hero__video' }}
+            {% elsif block.settings.video_url != blank %}
+              {%- assign url = block.settings.video_url -%}
+              {%- if url.type == 'youtube' -%}
+                {%- assign yid = url.id -%}
+                <iframe
+                  class="trusty-hero__iframe"
+                  src="https://www.youtube.com/embed/{{ yid }}?autoplay=1&mute=1&loop=1&playlist={{ yid }}&controls=0&showinfo=0&rel=0&playsinline=1"
+                  title="Hero video"
+                  frameborder="0"
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              {%- elsif url.type == 'vimeo' -%}
+                {%- assign vid = url.id -%}
+                <iframe
+                  class="trusty-hero__iframe"
+                  src="https://player.vimeo.com/video/{{ vid }}?autoplay=1&muted=1&loop=1&background=1"
+                  title="Hero video"
+                  frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              {%- endif -%}
+            {% else %}
+              <div class="trusty-hero__bg trusty-hero__bg--fallback"></div>
+            {% endif %}
+        {% endcase %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="trusty-hero__overlay" style="opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};"></div>
+
+  <div class="trusty-hero__inner">
+    {% if section.settings.badge_text != blank %}
+      <div class="trusty-hero__badge">{{ section.settings.badge_text }}</div>
+    {% endif %}
+
+    <h1 class="trusty-hero__title">
+      {{ section.settings.heading_part1 }}
+      <span class="trusty-hero__highlight">{{ section.settings.heading_part2 }}</span>
+      {{ section.settings.heading_part3 }}
+    </h1>
+
+    {% if section.settings.description != blank %}
+      <p class="trusty-hero__desc">{{ section.settings.description }}</p>
+    {% endif %}
+
+    <div class="trusty-hero__buttons">
+      {% if section.settings.primary_button_link != blank and section.settings.primary_button_text != blank %}
+        <a class="trusty-btn trusty-btn--primary" href="{{ section.settings.primary_button_link }}">
+          {{ section.settings.primary_button_text }}
+        </a>
+      {% endif %}
+      {% if section.settings.secondary_button_link != blank and section.settings.secondary_button_text != blank %}
+        <a class="trusty-btn trusty-btn--secondary" href="{{ section.settings.secondary_button_link }}">
+          {{ section.settings.secondary_button_text }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .trusty-hero { position: relative; min-height: 520px; overflow: hidden; background:#0A4B78; }
+  .trusty-hero__slides { position: absolute; inset: 0; }
+  .trusty-hero__slide { position: absolute; inset: 0; opacity: 0; transition: opacity 750ms ease; }
+  .trusty-hero__slide.is-active { opacity: 1; }
+
+  .trusty-hero__bg { position:absolute; inset:0; background-size:cover; background-position:center; background-repeat:no-repeat; transform: scale(1.02); }
+  .trusty-hero__bg--fallback { background: linear-gradient(135deg, #1B3A52, #0A4B78); }
+
+  .trusty-hero__video,
+  .trusty-hero__iframe {
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit: cover;
+    transform: scale(1.02);
+  }
+  .trusty-hero__iframe { border: 0; }
+
+  .trusty-hero__overlay {
+    position:absolute; inset:0;
+    background: linear-gradient(135deg, rgba(27,58,82,1), rgba(10,75,120,1));
+    pointer-events:none;
+  }
+
+  .trusty-hero__inner {
+    position: relative; z-index: 2;
+    max-width: 1400px; margin: 0 auto;
+    padding: 72px 20px; color: #fff;
+  }
+  .trusty-hero__badge {
+    display:inline-block; background:#00A86B; color:#fff;
+    padding: 8px 18px; border-radius: 999px;
+    font-size: 13px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: .3px; margin-bottom: 14px;
+  }
+  .trusty-hero__title { font-size: clamp(34px, 4.2vw, 58px); line-height: 1.08; font-weight: 900; margin: 0 0 14px; max-width: 900px; }
+  .trusty-hero__highlight { color:#FF6B35; }
+  .trusty-hero__desc { font-size: 18px; line-height: 1.6; opacity: .95; max-width: 820px; margin: 0 0 26px; }
+  .trusty-hero__buttons { display:flex; gap: 12px; flex-wrap:wrap; }
+  .trusty-btn { display:inline-block; padding: 14px 22px; border-radius: 8px; font-weight: 800; text-decoration:none; }
+  .trusty-btn--primary { background:#00A86B; color:#fff; }
+  .trusty-btn--secondary { border:2px solid #fff; color:#fff; background:transparent; }
+
+  @media (max-width: 768px) {
+    .trusty-hero { min-height: 460px; }
+    .trusty-hero__inner { padding: 56px 16px; }
+  }
+</style>
+
+<script>
+  (function(){
+    const hero = document.currentScript.previousElementSibling?.previousElementSibling?.previousElementSibling;
+    if(!hero || !hero.classList.contains('trusty-hero')) return;
+
+    const slides = Array.from(hero.querySelectorAll('.trusty-hero__slide'));
+    if(slides.length <= 1) return;
+
+    const interval = parseInt(hero.getAttribute('data-interval') || '5000', 10);
+    let i = 0;
+
+    function activate(idx){
+      slides.forEach((s, n) => s.classList.toggle('is-active', n === idx));
+
+      // Pause videos on non-active slides (Shopify video_tag outputs <video>)
+      slides.forEach((s, n) => {
+        const v = s.querySelector('video');
+        if(!v) return;
+        try {
+          if(n === idx) v.play();
+          else v.pause();
+        } catch(e) {}
+      });
+    }
+
+    setInterval(() => {
+      i = (i + 1) % slides.length;
+      activate(i);
+    }, interval);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Trusty Hero Carousel",
+  "settings": [
+    { "type": "text", "id": "badge_text", "label": "Badge text", "default": "⚡ Custom Rigging Experts" },
+    { "type": "text", "id": "heading_part1", "label": "Heading part 1", "default": "Tournament-Ready" },
+    { "type": "text", "id": "heading_part2", "label": "Heading part 2 (highlight)", "default": "Fishing Kayaks" },
+    { "type": "text", "id": "heading_part3", "label": "Heading part 3", "default": "Shipped Nationwide" },
+    { "type": "textarea", "id": "description", "label": "Description", "default": "Professional rigging by Crystal Coast experts. Turnkey builds from $3k to $13k+ delivered to your door." },
+
+    { "type": "range", "id": "overlay_opacity", "label": "Overlay strength", "min": 0, "max": 90, "step": 5, "default": 35 },
+    { "type": "range", "id": "interval_ms", "label": "Slide interval (ms)", "min": 2000, "max": 9000, "step": 500, "default": 5000 },
+
+    { "type": "text", "id": "primary_button_text", "label": "Primary button text", "default": "Browse Rigging Packages" },
+    { "type": "url", "id": "primary_button_link", "label": "Primary button link" },
+    { "type": "text", "id": "secondary_button_text", "label": "Secondary button text", "default": "Build Custom Rig" },
+    { "type": "url", "id": "secondary_button_link", "label": "Secondary button link" }
+  ],
+  "blocks": [
+    {
+      "type": "image_slide",
+      "name": "Image slide",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Slide image" }
+      ]
+    },
+    {
+      "type": "video_slide",
+      "name": "Video slide",
+      "settings": [
+        { "type": "video", "id": "video", "label": "Shopify hosted video" },
+        { "type": "video_url", "id": "video_url", "label": "YouTube or Vimeo URL", "accept": ["youtube", "vimeo"] }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trusty Hero Carousel",
+      "blocks": [
+        { "type": "image_slide" },
+        { "type": "image_slide" }
+      ]
+    }
+  ]
+}
+{% endschema %}
