@@ -19,6 +19,11 @@
 
   {% render 'meta-tags' %}
 
+  <!-- Cooper Black font (using closest web-safe alternative) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Fredoka:wght@700&display=swap" rel="stylesheet">
+
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
   {{ 'trusty-home.css' | asset_url | stylesheet_tag }}
 
@@ -143,6 +148,9 @@
 
     .logo-text .trusty {
       color: var(--ocean-deep);
+      font-family: 'Fredoka', 'Cooper Black', 'Cooper Std', Georgia, serif;
+      font-weight: 700;
+      letter-spacing: -0.5px;
     }
 
     .logo-text .sail {
