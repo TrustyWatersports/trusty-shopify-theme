@@ -12,6 +12,9 @@
     {% endif %}
   </div>
 
+  <!-- Overlay for darkening -->
+  <div class="trusty-hero__overlay"></div>
+
   <div class="trusty-hero__content">
     <div class="trusty-hero__badge">
       {{ section.settings.badge_text }}
@@ -44,28 +47,47 @@
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: opacity 750ms ease;
+    transition: opacity 1000ms ease;
   }
   .trusty-hero__slide.is-active {
-    opacity: 0.35;
+    opacity: 1;
+  }
+  .trusty-hero__content {
+    position: relative;
+    z-index: 10;
+  }
+  .trusty-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(27,58,82,0.7), rgba(10,75,120,0.7));
+    opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    pointer-events: none;
+    z-index: 5;
   }
 </style>
 
 <script>
   (function(){
-    const hero = document.currentScript.previousElementSibling?.previousElementSibling;
+    const hero = document.currentScript.previousElementSibling?.previousElementSibling?.previousElementSibling;
     if(!hero || !hero.classList.contains('trusty-hero')) return;
 
     const slides = Array.from(hero.querySelectorAll('.trusty-hero__slide'));
     if(slides.length <= 1) return;
 
-    const interval = parseInt(hero.getAttribute('data-interval') || '5000', 10);
-    let i = 0;
+    const intervalSeconds = parseInt(hero.getAttribute('data-interval') || '5', 10);
+    let currentIndex = 0;
 
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('is-active', i === index);
+      });
+    }
+
+    // Start carousel
     setInterval(() => {
-      slides.forEach((s, n) => s.classList.toggle('is-active', n === i));
-      i = (i + 1) % slides.length;
-    }, interval);
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }, intervalSeconds * 1000);
   })();
 </script>
 
@@ -88,6 +110,17 @@
       "step": 1,
       "default": 5,
       "unit": "s"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay Darkness",
+      "info": "0 = bright images, 100 = very dark",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40,
+      "unit": "%"
     },
     {
       "type": "text",
