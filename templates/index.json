@@ -9,10 +9,11 @@
  */
 {
   "sections": {
-    "hero": {
-      "type": "trusty-hero-fixed",
+    "trusty_hero_RGX3bg": {
+      "type": "trusty-hero",
+      "name": "Hero Section",
       "settings": {
-        "hero_image": "shopify://shop_images/9U8A8101.jpg",
+        "hero_image": "shopify://shop_images/DSC01283_-_Large_5e96b3b9-3d0e-4de4-a92f-d8f062bf1f67.png",
         "badge_text": "⚡ Custom Rigging Experts",
         "heading_part1": "Tournament-Ready",
         "heading_part2": "Fishing Kayaks",
@@ -27,6 +28,13 @@
     "trustbar": {
       "type": "trusty-trustbar",
       "blocks": {
+        "trust_item_zdbceY": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "⛵️",
+            "text": "US Sailboat Distributor"
+          }
+        },
         "trust_item_66xtFw": {
           "type": "trust_item",
           "settings": {
@@ -37,26 +45,27 @@
         "trust_item_UpfN8N": {
           "type": "trust_item",
           "settings": {
-            "icon": "⚡",
-            "text": "Custom Rigging Experts"
+            "icon": "🛶",
+            "text": "80+ Boats in Stock"
           }
         },
         "trust_item_8aJVgD": {
           "type": "trust_item",
           "settings": {
-            "icon": "⚡",
-            "text": "Custom Rigging Experts"
+            "icon": "📍",
+            "text": "Two Morehead City Locations"
           }
         },
         "trust_item_e83zRP": {
           "type": "trust_item",
           "settings": {
-            "icon": "⚡",
-            "text": "Custom Rigging Experts"
+            "icon": "🚣🏼‍♂️",
+            "text": "Try Before You Buy"
           }
         }
       },
       "block_order": [
+        "trust_item_zdbceY",
         "trust_item_66xtFw",
         "trust_item_UpfN8N",
         "trust_item_8aJVgD",
@@ -181,7 +190,7 @@
     }
   },
   "order": [
-    "hero",
+    "trusty_hero_RGX3bg",
     "trustbar",
     "pathways",
     "why",
