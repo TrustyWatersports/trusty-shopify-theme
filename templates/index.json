@@ -11,9 +11,42 @@
   "sections": {
     "trusty_hero_78gxMM": {
       "type": "trusty-hero",
+      "blocks": {
+        "image_slide_jUUttQ": {
+          "type": "image_slide",
+          "settings": {
+            "slide_image": "shopify://shop_images/DSC01336_-_Large_4125405f-df95-4e9c-acf1-33342118b51f.png"
+          }
+        },
+        "image_slide_tPrmNw": {
+          "type": "image_slide",
+          "settings": {
+            "slide_image": "shopify://shop_images/Knarr_Will.jpg"
+          }
+        },
+        "image_slide_JBV6yC": {
+          "type": "image_slide",
+          "settings": {
+            "slide_image": "shopify://shop_images/DSC01283_-_Large_5e96b3b9-3d0e-4de4-a92f-d8f062bf1f67.png"
+          }
+        },
+        "image_slide_zahd6z": {
+          "type": "image_slide",
+          "settings": {
+            "slide_image": "shopify://shop_images/6__1728_-_Large_5131436a-c383-4b4b-b658-88474cdd526c.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_slide_jUUttQ",
+        "image_slide_tPrmNw",
+        "image_slide_JBV6yC",
+        "image_slide_zahd6z"
+      ],
       "name": "Hero Section",
       "settings": {
         "hero_image": "shopify://shop_images/DSC01283_-_Large_5e96b3b9-3d0e-4de4-a92f-d8f062bf1f67.png",
+        "interval_ms": 4,
         "badge_text": "⚡ Custom Rigging Experts",
         "heading_part1": "Tournament-Ready",
         "heading_part2": "Fishing Kayaks",
