@@ -1,5 +1,3 @@
-{{ 'trusty-home.css' | asset_url | stylesheet_tag }}
-
 <section class="trusty-hero">
   <div class="trusty-hero__background" style="background-image: url('{{ section.settings.hero_image | image_url: width: 1600 }}');"></div>
   <div class="trusty-hero__content">
@@ -72,8 +70,7 @@
     {
       "type": "url",
       "id": "primary_button_link",
-      "label": "Primary Button Link",
-      "default": "/pages/custom-rigging"
+      "label": "Primary Button Link"
     },
     {
       "type": "text",
@@ -84,8 +81,7 @@
     {
       "type": "url",
       "id": "secondary_button_link",
-      "label": "Secondary Button Link",
-      "default": "/collections/fishing-kayaks"
+      "label": "Secondary Button Link"
     }
   ],
   "presets": [
