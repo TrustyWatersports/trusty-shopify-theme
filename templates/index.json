@@ -1,0 +1,10 @@
+﻿{
+  "sections": {
+    "hero": { "type": "trusty-hero-fixed" },
+    "trustbar": { "type": "trusty-trustbar" },
+    "pathways": { "type": "trusty-pathways" },
+    "why": { "type": "trusty-why-trusty" },
+    "sailing": { "type": "trusty-sailing-cta" }
+  },
+  "order": ["hero", "trustbar", "pathways", "why", "sailing"]
+}
