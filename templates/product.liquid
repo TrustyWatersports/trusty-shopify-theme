@@ -1,4 +1,4 @@
-<div class="container" style="padding: 40px 20px;">
+﻿<div class="container" style="padding: 40px 20px;">
   
   <!-- Breadcrumbs -->
   <div style="margin-bottom: 30px; font-size: 14px;">
@@ -78,7 +78,7 @@
       <!-- Stock Status -->
       {% if product.available %}
         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 25px; color: var(--rigging-accent); font-weight: 600;">
-          <span style="font-size: 20px;">✓</span>
+          <span style="font-size: 20px;">âœ“</span>
           <span>In Stock - Ready to Ship or Rig</span>
         </div>
       {% else %}
@@ -140,13 +140,13 @@
 
       <!-- Custom Rigging CTA -->
       <div style="background: linear-gradient(135deg, var(--rigging-accent) 0%, #008c59 100%); color: white; padding: 25px; border-radius: 12px; margin-bottom: 30px;">
-        <h3 style="font-size: 22px; margin-bottom: 12px;">🔧 Want This Custom Rigged?</h3>
+        <h3 style="font-size: 22px; margin-bottom: 12px;">ðŸ”§ Want This Custom Rigged?</h3>
         <p style="margin-bottom: 15px; opacity: 0.95; line-height: 1.6;">
           Turn this kayak into your perfect fishing machine. Our expert rigging includes rod holders, electronics, premium accessories, and professional installation.
         </p>
         <a href="/pages/custom-rigging?kayak={{ product.handle }}" class="btn" 
            style="background: white; color: var(--rigging-accent); font-weight: 700;">
-          Configure Your Custom Rig →
+          Configure Your Custom Rig â†’
         </a>
       </div>
 
@@ -155,19 +155,19 @@
         <h3 style="font-size: 20px; margin-bottom: 15px; color: var(--ocean-deep);">Key Features:</h3>
         <ul style="list-style: none; padding: 0;">
           <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light); display: flex; align-items: start; gap: 10px;">
-            <span style="color: var(--rigging-accent); font-size: 18px;">✓</span>
+            <span style="color: var(--rigging-accent); font-size: 18px;">âœ“</span>
             <span>Stable fishing platform with ample deck space</span>
           </li>
           <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light); display: flex; align-items: start; gap: 10px;">
-            <span style="color: var(--rigging-accent); font-size: 18px;">✓</span>
+            <span style="color: var(--rigging-accent); font-size: 18px;">âœ“</span>
             <span>Multiple rod holder positions available</span>
           </li>
           <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light); display: flex; align-items: start; gap: 10px;">
-            <span style="color: var(--rigging-accent); font-size: 18px;">✓</span>
+            <span style="color: var(--rigging-accent); font-size: 18px;">âœ“</span>
             <span>Comfortable seating for all-day fishing</span>
           </li>
           <li style="padding: 10px 0; display: flex; align-items: start; gap: 10px;">
-            <span style="color: var(--rigging-accent); font-size: 18px;">✓</span>
+            <span style="color: var(--rigging-accent); font-size: 18px;">âœ“</span>
             <span>Easy to transport and launch</span>
           </li>
         </ul>
@@ -176,17 +176,17 @@
       <!-- Trust Badges -->
       <div style="display: flex; gap: 20px; flex-wrap: wrap; padding: 20px; background: var(--gray-light); border-radius: 8px;">
         <div style="flex: 1; min-width: 150px; text-align: center;">
-          <div style="font-size: 24px; margin-bottom: 5px;">🚚</div>
+          <div style="font-size: 24px; margin-bottom: 5px;">ðŸšš</div>
           <div style="font-size: 13px; font-weight: 600;">Free Shipping</div>
           <div style="font-size: 11px; color: var(--gray-medium);">On orders $1,000+</div>
         </div>
         <div style="flex: 1; min-width: 150px; text-align: center;">
-          <div style="font-size: 24px; margin-bottom: 5px;">🔧</div>
+          <div style="font-size: 24px; margin-bottom: 5px;">ðŸ”§</div>
           <div style="font-size: 13px; font-weight: 600;">Expert Support</div>
           <div style="font-size: 11px; color: var(--gray-medium);">15+ years experience</div>
         </div>
         <div style="flex: 1; min-width: 150px; text-align: center;">
-          <div style="font-size: 24px; margin-bottom: 5px;">↩️</div>
+          <div style="font-size: 24px; margin-bottom: 5px;">â†©ï¸</div>
           <div style="font-size: 13px; font-weight: 600;">Easy Returns</div>
           <div style="font-size: 11px; color: var(--gray-medium);">30-day policy</div>
         </div>
@@ -242,9 +242,3 @@
   }
 </style>
 
-{% schema %}
-{
-  "name": "Product",
-  "settings": []
-}
-{% endschema %}
