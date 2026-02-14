@@ -1,102 +1,125 @@
 <section class="trusty-hero">
-  <div class="trusty-hero__background" style="background-image: url('{{ section.settings.hero_image | image_url: width: 1600 }}');"></div>
-  <div class="trusty-hero__content">
-    <div class="trusty-hero__badge">
-      {{ section.settings.badge_text }}
-    </div>
-    <h1>
-      {{ section.settings.heading_part1 }} <span class="highlight">{{ section.settings.heading_part2 }}</span> {{ section.settings.heading_part3 }}
+  <div class="trusty-hero__bg"
+       {% if section.settings.hero_image != blank %}
+         style="background-image:url('{{ section.settings.hero_image | image_url: width: 2000 }}');"
+       {% endif %}></div>
+
+  <div class="trusty-hero__overlay"></div>
+
+  <div class="trusty-hero__inner page-width">
+    {% if section.settings.badge_text != blank %}
+      <div class="trusty-hero__badge">{{ section.settings.badge_text }}</div>
+    {% endif %}
+
+    <h1 class="trusty-hero__title">
+      {{ section.settings.heading_part1 }}
+      <span class="trusty-hero__highlight">{{ section.settings.heading_part2 }}</span>
+      {{ section.settings.heading_part3 }}
     </h1>
-    <p class="trusty-hero__description">
-      {{ section.settings.description }}
-    </p>
-    <div class="trusty-hero__ctas">
-      <a href="{{ section.settings.primary_button_link }}" class="btn btn-primary">
-        {{ section.settings.primary_button_text }}
-      </a>
-      <a href="{{ section.settings.secondary_button_link }}" class="btn btn-secondary">
-        {{ section.settings.secondary_button_text }}
-      </a>
+
+    {% if section.settings.description != blank %}
+      <p class="trusty-hero__desc">{{ section.settings.description }}</p>
+    {% endif %}
+
+    <div class="trusty-hero__buttons">
+      {% if section.settings.primary_button_link != blank and section.settings.primary_button_text != blank %}
+        <a class="trusty-btn trusty-btn--primary" href="{{ section.settings.primary_button_link }}">
+          {{ section.settings.primary_button_text }}
+        </a>
+      {% endif %}
+
+      {% if section.settings.secondary_button_link != blank and section.settings.secondary_button_text != blank %}
+        <a class="trusty-btn trusty-btn--secondary" href="{{ section.settings.secondary_button_link }}">
+          {{ section.settings.secondary_button_text }}
+        </a>
+      {% endif %}
     </div>
   </div>
 </section>
 
+<style>
+  .trusty-hero { position: relative; min-height: 520px; overflow: hidden; }
+  .trusty-hero__bg {
+    position: absolute; inset: 0;
+    background-position: center; background-size: cover; background-repeat: no-repeat;
+    background-color: #0A4B78;
+    transform: scale(1.02);
+  }
+  .trusty-hero__overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(27,58,82,.92), rgba(10,75,120,.88));
+  }
+  .trusty-hero__inner {
+    position: relative;
+    z-index: 2;
+    padding: 72px 20px;
+    color: #fff;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .trusty-hero__badge {
+    display: inline-block;
+    background: #00A86B;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .trusty-hero__title {
+    font-size: clamp(34px, 4.2vw, 58px);
+    line-height: 1.08;
+    font-weight: 900;
+    margin: 0 0 14px;
+    max-width: 900px;
+  }
+  .trusty-hero__highlight { color: #FF6B35; }
+  .trusty-hero__desc {
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: .95;
+    max-width: 820px;
+    margin: 0 0 26px;
+  }
+  .trusty-hero__buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+  .trusty-btn {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 8px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .trusty-btn--primary { background: #00A86B; color: #fff; box-shadow: 0 8px 24px rgba(0,168,107,.25); }
+  .trusty-btn--secondary { border: 2px solid #fff; color: #fff; background: transparent; }
+  .trusty-btn:hover { transform: translateY(-1px); box-shadow: 0 10px 28px rgba(0,0,0,.20); }
+</style>
+
 {% schema %}
 {
-  "name": "Hero Section",
+  "name": "Trusty Hero (Fixed)",
   "settings": [
-<<<<<<< HEAD
-    { "type": "image_picker", "id": "hero_image", "label": "Background Image", "info": "Recommended: 1600x600px fishing kayak image" },
-    { "type": "text", "id": "badge_text", "label": "Badge Text", "default": "⚡ Custom Rigging Experts" },
-    { "type": "text", "id": "heading_part1", "label": "Heading - Part 1", "default": "Tournament-Ready" },
-    { "type": "text", "id": "heading_part2", "label": "Heading - Part 2 (Highlighted)", "default": "Fishing Kayaks" },
-    { "type": "text", "id": "heading_part3", "label": "Heading - Part 3", "default": "Shipped Nationwide" },
+    { "type": "image_picker", "id": "hero_image", "label": "Background image" },
+
+    { "type": "text", "id": "badge_text", "label": "Badge text", "default": "⚡ Custom Rigging Experts" },
+
+    { "type": "text", "id": "heading_part1", "label": "Heading part 1", "default": "Tournament-Ready" },
+    { "type": "text", "id": "heading_part2", "label": "Heading part 2 (highlight)", "default": "Fishing Kayaks" },
+    { "type": "text", "id": "heading_part3", "label": "Heading part 3", "default": "Shipped Nationwide" },
+
     { "type": "textarea", "id": "description", "label": "Description", "default": "Professional rigging by Crystal Coast experts. Turnkey builds from $3k to $13k+ delivered to your door." },
-    { "type": "text", "id": "primary_button_text", "label": "Primary Button Text", "default": "Browse Rigging Packages" },
-    { "type": "url", "id": "primary_button_link", "label": "Primary Button Link" },
-    { "type": "text", "id": "secondary_button_text", "label": "Secondary Button Text", "default": "Build Custom Rig" },
-    { "type": "url", "id": "secondary_button_link", "label": "Secondary Button Link" }
-=======
-    {
-      "type": "image_picker",
-      "id": "hero_image",
-      "label": "Background Image",
-      "info": "Recommended: 1600x600px fishing kayak image"
-    },
-    {
-      "type": "text",
-      "id": "badge_text",
-      "label": "Badge Text",
-      "default": "⚡ Custom Rigging Experts"
-    },
-    {
-      "type": "text",
-      "id": "heading_part1",
-      "label": "Heading - Part 1",
-      "default": "Tournament-Ready"
-    },
-    {
-      "type": "text",
-      "id": "heading_part2",
-      "label": "Heading - Part 2 (Highlighted)",
-      "default": "Fishing Kayaks"
-    },
-    {
-      "type": "text",
-      "id": "heading_part3",
-      "label": "Heading - Part 3",
-      "default": "Shipped Nationwide"
-    },
-    {
-      "type": "textarea",
-      "id": "description",
-      "label": "Description",
-      "default": "Professional rigging by Crystal Coast experts. Turnkey builds from $3k to $13k+ delivered to your door."
-    },
-    {
-      "type": "text",
-      "id": "primary_button_text",
-      "label": "Primary Button Text",
-      "default": "Browse Rigging Packages"
-    },
-    {
-      "type": "url",
-      "id": "primary_button_link",
-      "label": "Primary Button Link",
-    },
-    {
-      "type": "text",
-      "id": "secondary_button_text",
-      "label": "Secondary Button Text",
-      "default": "Build Custom Rig"
-    },
-    {
-      "type": "url",
-      "id": "secondary_button_link",
-      "label": "Secondary Button Link",
-    }
->>>>>>> 2df9c0baf5f6df8a60950053c8b0a8b2ba2fbe2c
+
+    { "type": "text", "id": "primary_button_text", "label": "Primary button text", "default": "Browse Rigging Packages" },
+    { "type": "url",  "id": "primary_button_link", "label": "Primary button link" },
+
+    { "type": "text", "id": "secondary_button_text", "label": "Secondary button text", "default": "Build Custom Rig" },
+    { "type": "url",  "id": "secondary_button_link", "label": "Secondary button link" }
   ],
-  "presets": [{ "name": "Hero Section" }]
+  "presets": [
+    { "name": "Trusty Hero (Fixed)" }
+  ]
 }
 {% endschema %}
