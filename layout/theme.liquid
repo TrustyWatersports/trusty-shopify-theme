@@ -320,6 +320,26 @@
       /* Mobile header layout */
       .header-content {
         gap: 15px;
+        flex-wrap: nowrap;
+      }
+
+      .logo {
+        order: 1;
+      }
+
+      .hamburger {
+        order: 4;
+      }
+
+      nav {
+        order: 3;
+      }
+
+      .header-actions {
+        order: 2;
+        gap: 8px;
+        flex: 0 0 auto;
+        justify-content: flex-end;
       }
 
       .logo-text {
@@ -330,16 +350,11 @@
         height: 45px;
       }
 
-      .header-actions {
-        gap: 8px;
-        flex: 1;
-        justify-content: flex-end;
-      }
-
       .header-actions a[href^="tel"] {
-        padding: 8px 12px;
-        font-size: 11px;
+        padding: 6px 10px;
+        font-size: 10px;
         margin-right: 0;
+        white-space: nowrap;
       }
 
       .header-actions a[href^="tel"] span {
@@ -352,7 +367,7 @@
       }
 
       .header-actions #cart-icon {
-        font-size: 20px;
+        font-size: 18px;
       }
     }
 
