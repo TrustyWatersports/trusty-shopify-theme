@@ -319,16 +319,18 @@
 
       /* Mobile header layout */
       .header-content {
-        gap: 15px;
+        gap: 8px;
         flex-wrap: nowrap;
       }
 
       .logo {
         order: 1;
+        flex-shrink: 0;
       }
 
       .hamburger {
         order: 4;
+        flex-shrink: 0;
       }
 
       nav {
@@ -337,7 +339,7 @@
 
       .header-actions {
         order: 2;
-        gap: 8px;
+        gap: 6px;
         flex: 0 0 auto;
         justify-content: flex-end;
       }
@@ -347,18 +349,18 @@
       }
 
       .logo img {
-        height: 45px;
+        height: 40px;
       }
 
       .header-actions a[href^="tel"] {
-        padding: 6px 10px;
-        font-size: 10px;
+        padding: 8px 8px;
+        font-size: 11px;
         margin-right: 0;
         white-space: nowrap;
       }
 
       .header-actions a[href^="tel"] span {
-        display: none;
+        font-size: 8px;
       }
 
       .header-actions a[href="/search"],
@@ -367,7 +369,7 @@
       }
 
       .header-actions #cart-icon {
-        font-size: 18px;
+        display: none;
       }
     }
 
