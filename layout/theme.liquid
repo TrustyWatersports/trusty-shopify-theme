@@ -319,8 +319,9 @@
 
       /* Mobile header layout */
       .header-content {
-        gap: 8px;
+        gap: 6px;
         flex-wrap: nowrap;
+        padding: 12px 15px;
       }
 
       .logo {
@@ -331,6 +332,7 @@
       .hamburger {
         order: 4;
         flex-shrink: 0;
+        padding: 5px;
       }
 
       nav {
@@ -339,9 +341,8 @@
 
       .header-actions {
         order: 2;
-        gap: 6px;
+        gap: 5px;
         flex: 0 0 auto;
-        justify-content: flex-end;
       }
 
       .logo-text {
@@ -349,25 +350,23 @@
       }
 
       .logo img {
-        height: 40px;
+        height: 35px;
       }
 
       .header-actions a[href^="tel"] {
-        padding: 8px 8px;
-        font-size: 11px;
+        padding: 6px 8px;
+        font-size: 10px;
         margin-right: 0;
         white-space: nowrap;
+        min-width: auto;
       }
 
       .header-actions a[href^="tel"] span {
-        font-size: 8px;
-      }
-
-      .header-actions a[href="/search"],
-      .header-actions a[href="/account"] {
         display: none;
       }
 
+      .header-actions a[href="/search"],
+      .header-actions a[href="/account"],
       .header-actions #cart-icon {
         display: none;
       }
