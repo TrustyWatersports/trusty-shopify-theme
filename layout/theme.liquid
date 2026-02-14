@@ -202,6 +202,90 @@
       cursor: pointer;
     }
 
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--ocean-deep);
+      transition: all 0.3s;
+      border-radius: 3px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    /* Mobile Navigation */
+    @media (max-width: 968px) {
+      .hamburger {
+        display: flex;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: white;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        padding: 80px 0 20px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        overflow-y: auto;
+      }
+
+      nav.active {
+        right: 0;
+      }
+
+      nav > a,
+      nav > .nav-item {
+        display: block;
+        padding: 15px 25px;
+        border-bottom: 1px solid var(--gray-light);
+      }
+
+      .nav-item > a {
+        display: block;
+      }
+
+      .dropdown-content {
+        position: static;
+        display: none;
+        box-shadow: none;
+        padding: 0 0 0 20px;
+        background: var(--gray-light);
+      }
+
+      .nav-item.open .dropdown-content {
+        display: block;
+      }
+
+      .dropdown-content a {
+        padding: 10px 15px;
+      }
+    }
+
     .header-actions {
       display: flex;
       gap: 20px;
@@ -333,7 +417,7 @@
   
   <!-- Top Announcement Bar -->
   <div class="top-bar">
-    🎣 Custom Kayak Rigging Experts | Discounted Nationwide Shipping | {{ shop.name }}
+    🎣 Custom Kayak Rigging Experts | Free Shipping on Rigs $2,500+ | {{ shop.name }}
   </div>
 
   <!-- Quick Access Navigation -->
@@ -364,7 +448,14 @@
         <img src="https://images.squarespace-cdn.com/content/v1/6192794d1d9bc87b9719f93c/d75cec6a-478b-4fff-b3ae-bd24f8e06d8c/LOGO3.jpg?format=300w" alt="{{ shop.name }}">
       </a>
       
-      <nav>
+      <!-- Hamburger Menu Button (Mobile Only) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="main-nav">
         <div class="nav-item dropdown">
           <a href="/collections/all">SHOP ▾</a>
           <div class="dropdown-content">
@@ -473,6 +564,39 @@
       .then(data => {
         document.getElementById('cart-count').textContent = data.item_count;
       });
+
+    // Hamburger Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('main-nav');
+    
+    if (hamburger && nav) {
+      hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+          hamburger.classList.remove('active');
+          nav.classList.remove('active');
+        }
+      });
+
+      // Mobile dropdown toggle
+      const navItems = nav.querySelectorAll('.nav-item');
+      navItems.forEach(item => {
+        const link = item.querySelector('a');
+        if (link && link.textContent.includes('▾')) {
+          link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 968) {
+              e.preventDefault();
+              item.classList.toggle('open');
+            }
+          });
+        }
+      });
+    }
   </script>
 
 </body>
