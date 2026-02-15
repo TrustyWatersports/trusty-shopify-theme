@@ -1,0 +1,34 @@
+{
+  "sections": {
+    "hero": {
+      "type": "custom-rigging-hero"
+    },
+    "how-it-works": {
+      "type": "custom-rigging-how-it-works"
+    },
+    "packages": {
+      "type": "custom-rigging-packages"
+    },
+    "why-us": {
+      "type": "custom-rigging-why-us"
+    },
+    "gallery": {
+      "type": "custom-rigging-gallery"
+    },
+    "faq": {
+      "type": "custom-rigging-faq"
+    },
+    "cta": {
+      "type": "custom-rigging-cta"
+    }
+  },
+  "order": [
+    "hero",
+    "how-it-works",
+    "packages",
+    "why-us",
+    "gallery",
+    "faq",
+    "cta"
+  ]
+}

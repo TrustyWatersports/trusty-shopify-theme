@@ -1,0 +1,100 @@
+<div style="max-width: 900px; margin: 100px auto; padding: 0 20px;">
+  <div style="text-align: center; margin-bottom: 60px;">
+    <h2 style="font-size: 48px; font-weight: 900; color: var(--ocean-deep); margin-bottom: 20px;">{{ section.settings.heading }}</h2>
+  </div>
+
+  <div style="display: grid; gap: 20px;">
+    {% for block in section.blocks %}
+    <details style="background: white; border-radius: 12px; padding: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); cursor: pointer;" {{ block.shopify_attributes }}>
+      <summary style="font-size: 20px; font-weight: 700; color: var(--ocean-deep); cursor: pointer;">{{ block.settings.question }}</summary>
+      <p style="margin-top: 15px; line-height: 1.7; color: var(--text-dark);">{{ block.settings.answer }}</p>
+    </details>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  details summary {
+    list-style: none;
+  }
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+  details[open] summary {
+    color: var(--rigging-accent);
+  }
+</style>
+
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Common Questions"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ",
+      "blocks": [
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I bring my own kayak to be rigged?",
+            "answer": "Absolutely! Many customers ship us their kayak to rig, or drop it off at our shop. We work with all major brands."
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long does a custom build take?",
+            "answer": "Typical turnaround is 2-3 weeks from when we receive the kayak and components. Rush builds available for additional fee."
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "What's included in shipping?",
+            "answer": "We professionally package and ship your rig via freight. Typical cost is $200-400 depending on location. Free shipping on Elite+ packages!"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I customize the packages?",
+            "answer": "Yes! Our packages are starting points. Add or remove components, upgrade electronics, change colors - we'll build exactly what you want."
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you offer financing?",
+            "answer": "Yes! We offer financing options through Affirm. Flexible payment plans available - apply at checkout or call for details."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

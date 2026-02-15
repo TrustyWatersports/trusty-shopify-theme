@@ -1,0 +1,237 @@
+<div id="packages" style="background: var(--gray-light); padding: 100px 20px; margin: 0 -20px;">
+  <div style="max-width: 1400px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 60px;">
+      <h2 style="font-size: 48px; font-weight: 900; color: var(--ocean-deep); margin-bottom: 20px;">{{ section.settings.heading }}</h2>
+      <p style="font-size: 20px; color: var(--gray-medium); max-width: 700px; margin: 0 auto;">{{ section.settings.description }}</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+      {% for block in section.blocks %}
+        {% if block.type == 'package' %}
+        <div style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 {% if block.settings.featured %}8{% else %}4{% endif %}px {% if block.settings.featured %}35{% else %}25{% endif %}px rgba({% if block.settings.featured %}0,168,107,0.25{% else %}0,0,0,0.1{% endif %}); position: relative; border-top: 6px solid {{ block.settings.color }}; {% if block.settings.featured %}transform: scale(1.05);{% endif %}" {{ block.shopify_attributes }}>
+          
+          {% if block.settings.badge != blank %}
+          <div style="position: absolute; top: -15px; right: 30px; background: {{ block.settings.color }}; color: white; padding: 8px 20px; border-radius: 20px; font-size: 12px; font-weight: 800; text-transform: uppercase;">{{ block.settings.badge }}</div>
+          {% endif %}
+          
+          <h3 style="font-size: 32px; font-weight: 900; color: var(--ocean-deep); margin-bottom: 10px;">{{ block.settings.name }}</h3>
+          
+          <div style="font-size: 48px; font-weight: 900; color: {{ block.settings.color }}; margin-bottom: 5px;">
+            ${{ block.settings.price }}{% if block.settings.show_plus %}<span style="font-size: 20px; color: var(--gray-medium);">+</span>{% endif %}
+          </div>
+          
+          {% if block.settings.price_note != blank %}
+          <p style="color: var(--gray-medium); margin-bottom: 30px; font-size: 14px;">{{ block.settings.price_note }}</p>
+          {% endif %}
+          
+          {% if block.settings.features != blank %}
+          <ul style="list-style: none; padding: 0; margin-bottom: 30px;">
+            {% assign features = block.settings.features | newline_to_br | split: '<br />' %}
+            {% for feature in features %}
+              {% if feature != blank %}
+              <li style="padding: 12px 0; {% unless forloop.last %}border-bottom: 1px solid var(--gray-light);{% endunless %} display: flex; align-items: flex-start;">
+                <span style="color: var(--rigging-accent); margin-right: 10px; font-size: 20px;">✓</span>
+                <span>{{ feature }}</span>
+              </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          <a href="{{ block.settings.cta_link }}" style="display: block; width: 100%; padding: 16px; background: {{ block.settings.color }}; color: white; text-align: center; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 16px; transition: all 0.3s; {% if block.settings.featured %}box-shadow: 0 4px 15px rgba(0,168,107,0.3);{% endif %}">{{ block.settings.cta_text }}</a>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- Fully Custom Option -->
+    {% if section.settings.show_custom_option %}
+    <div style="background: linear-gradient(135deg, var(--ocean-deep), var(--navy)); color: white; border-radius: 16px; padding: 50px 40px; text-align: center;">
+      <h3 style="font-size: 36px; font-weight: 900; margin-bottom: 15px;">{{ section.settings.custom_title }}</h3>
+      <p style="font-size: 18px; opacity: 0.95; margin-bottom: 25px; max-width: 700px; margin-left: auto; margin-right: auto;">
+        {{ section.settings.custom_description }}
+      </p>
+      <div style="font-size: 20px; margin-bottom: 30px;"><strong>{{ section.settings.custom_price }}</strong></div>
+      <a href="{{ section.settings.custom_link }}" style="display: inline-block; padding: 16px 36px; background: white; color: var(--ocean-deep); text-decoration: none; border-radius: 8px; font-weight: 800; font-size: 16px;">{{ section.settings.custom_cta }}</a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  @media (max-width: 768px) {
+    div[style*="grid-template-columns"] {
+      grid-template-columns: 1fr !important;
+    }
+    div[style*="transform: scale(1.05)"] {
+      transform: scale(1) !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Rigging Packages",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Rigging Packages"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Section Description",
+      "default": "Professional rigging packages for every fishing style and budget"
+    },
+    {
+      "type": "header",
+      "content": "Fully Custom Option"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_custom_option",
+      "label": "Show Fully Custom Option",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "custom_title",
+      "label": "Custom Option Title",
+      "default": "🏆 Fully Custom Build"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_description",
+      "label": "Custom Option Description",
+      "default": "Want something completely unique? We'll design and build your dream fishing kayak from the ground up. No limits, no compromises."
+    },
+    {
+      "type": "text",
+      "id": "custom_price",
+      "label": "Custom Option Price",
+      "default": "Starting at $6,000+ (kayak + rigging)"
+    },
+    {
+      "type": "url",
+      "id": "custom_link",
+      "label": "Custom Option Link",
+      "default": "tel:252-499-9911"
+    },
+    {
+      "type": "text",
+      "id": "custom_cta",
+      "label": "Custom Option Button Text",
+      "default": "Schedule Consultation"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "package",
+      "name": "Rigging Package",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Package Name",
+          "default": "Pro"
+        },
+        {
+          "type": "number",
+          "id": "price",
+          "label": "Price (numbers only)",
+          "default": 2999
+        },
+        {
+          "type": "checkbox",
+          "id": "show_plus",
+          "label": "Show '+' after price",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "price_note",
+          "label": "Price Note (e.g., 'Plus kayak cost')",
+          "default": "Plus kayak cost"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Package Color",
+          "default": "#00A86B"
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge Text (optional)",
+          "info": "e.g., 'Most Popular', 'Best Value'"
+        },
+        {
+          "type": "checkbox",
+          "id": "featured",
+          "label": "Featured Package (larger, highlighted)",
+          "default": false
+        },
+        {
+          "type": "textarea",
+          "id": "features",
+          "label": "Features (one per line)",
+          "info": "Enter each feature on a new line. Will show with checkmarks.",
+          "default": "<strong>Everything in Essential</strong> - Full basic rigging\n<strong>Fish Finder</strong> - Garmin or Humminbird installed\n<strong>Power System</strong> - 12V battery & wiring harness"
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "Button Text",
+          "default": "Start Your Build →"
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "Button Link",
+          "default": "tel:252-499-9911"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rigging Packages",
+      "blocks": [
+        {
+          "type": "package",
+          "settings": {
+            "name": "Essential",
+            "price": 1499,
+            "color": "#1E6FA8",
+            "badge": "Best Value",
+            "features": "<strong>Professional Installation</strong> - All components installed & wired\n<strong>Rod Holders (3)</strong> - Flush mount behind seat\n<strong>RAM Mounting System</strong> - Electronics ready\n<strong>Anchor Trolley</strong> - Wind positioning system\n<strong>Paddle Leash & Accessories</strong> - Everything secured"
+          }
+        },
+        {
+          "type": "package",
+          "settings": {
+            "name": "Pro",
+            "price": 2999,
+            "color": "#00A86B",
+            "badge": "Most Popular",
+            "featured": true,
+            "features": "<strong>Everything in Essential</strong> - Full basic rigging\n<strong>Fish Finder</strong> - Garmin or Humminbird installed\n<strong>Power System</strong> - 12V battery & wiring harness\n<strong>Advanced Rod Management</strong> - 5+ rod holders\n<strong>Lighting Package</strong> - Navigation & work lights\n<strong>Crate & Storage</strong> - Custom milk crate setup"
+          }
+        },
+        {
+          "type": "package",
+          "settings": {
+            "name": "Elite",
+            "price": 4999,
+            "color": "#FF6B35",
+            "badge": "Tournament Ready",
+            "features": "<strong>Everything in Pro</strong> - Complete pro setup\n<strong>Premium Fish Finder</strong> - Garmin Echomap Ultra or HELIX\n<strong>LiveScope / 360 Imaging</strong> - Professional sonar\n<strong>Dual Battery System</strong> - Extended power & redundancy\n<strong>Full LED Lighting</strong> - 360° nav + underwater\n<strong>Custom Touches</strong> - Tournament flag, measuring board"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

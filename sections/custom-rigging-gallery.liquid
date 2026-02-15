@@ -1,0 +1,147 @@
+<div style="background: var(--ocean-deep); color: white; padding: 100px 20px; margin: 0 -20px;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 60px;">
+      <h2 style="font-size: 48px; font-weight: 900; margin-bottom: 20px;">{{ section.settings.heading }}</h2>
+      <p style="font-size: 20px; opacity: 0.9;">{{ section.settings.description }}</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 40px;">
+      {% for block in section.blocks %}
+      <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.2);" {{ block.shopify_attributes }}>
+        {% if block.settings.image %}
+          <!-- Real uploaded image -->
+          <img src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.title }}" style="width: 100%; height: 220px; object-fit: cover; display: block;">
+        {% else %}
+          <!-- Placeholder with icon and gradient -->
+          <div style="height: 220px; background: {{ block.settings.gradient }}; display: flex; align-items: center; justify-content: center; font-size: 64px;">{{ block.settings.icon }}</div>
+        {% endif %}
+        <div style="padding: 25px; color: var(--text-dark);">
+          <h4 style="font-size: 20px; font-weight: 800; color: var(--ocean-deep); margin-bottom: 10px;">{{ block.settings.title }}</h4>
+          <p style="font-size: 14px; line-height: 1.6; color: var(--gray-medium);">{{ block.settings.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if section.settings.show_note %}
+    <div style="text-align: center;">
+      <p style="font-size: 16px; opacity: 0.9;">{{ section.settings.note_text }}</p>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  @media (max-width: 768px) {
+    div[style*="grid-template-columns"] {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Recent Builds Gallery",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Recent Builds"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "See what we've built for anglers across the country"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_note",
+      "label": "Show Note Below Gallery",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "note_text",
+      "label": "Note Text",
+      "default": "📸 Upload your custom rig photos!"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "build",
+      "name": "Build",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Build Image",
+          "info": "Upload a photo of the custom rig. If no image, placeholder with icon will show."
+        },
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (if no image uploaded)",
+          "default": "🎣",
+          "info": "Emoji shown if no photo uploaded"
+        },
+        {
+          "type": "text",
+          "id": "gradient",
+          "label": "Background Gradient (if no image)",
+          "default": "linear-gradient(135deg, var(--ocean-light), var(--ocean-medium))",
+          "info": "CSS gradient for placeholder background"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Build Title",
+          "default": "Custom Fishing Kayak Build"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Build Description",
+          "default": "Garmin fish finder, rod holders, power system, custom lighting."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Recent Builds Gallery",
+      "blocks": [
+        {
+          "type": "build",
+          "settings": {
+            "icon": "🎣",
+            "gradient": "linear-gradient(135deg, var(--ocean-light), var(--ocean-medium))",
+            "title": "Hobie Pro Angler Tournament Rig",
+            "description": "Garmin Echomap Ultra, LiveScope, dual batteries, LED lighting, custom crate. Shipped to Texas."
+          }
+        },
+        {
+          "type": "build",
+          "settings": {
+            "icon": "🐟",
+            "gradient": "linear-gradient(135deg, var(--rigging-accent), #00C77F)",
+            "title": "Native Slayer Inshore Setup",
+            "description": "Humminbird HELIX 7, power system, rod holders, anchor trolley. Ready for redfish and speckled trout."
+          }
+        },
+        {
+          "type": "build",
+          "settings": {
+            "icon": "🏆",
+            "gradient": "linear-gradient(135deg, var(--sunrise), #FF8F66)",
+            "title": "Old Town Sportsman Elite Build",
+            "description": "Full tournament setup with 360 imaging, premium lighting, measuring board. Competition ready."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

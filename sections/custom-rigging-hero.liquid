@@ -1,0 +1,291 @@
+<section class="custom-rigging-hero" data-interval="{{ section.settings.carousel_speed }}">
+  <!-- Carousel Background Images -->
+  <div class="hero-slides">
+    {% if section.blocks.size > 0 %}
+      {% for block in section.blocks %}
+        {% if block.type == 'hero_image' %}
+          {% assign is_first = forloop.first %}
+          <div class="hero-slide{% if is_first %} is-active{% endif %}" {{ block.shopify_attributes }} style="background-image: url('{% if block.settings.image != blank %}{{ block.settings.image | image_url: width: 1600 }}{% endif %}');"></div>
+        {% endif %}
+      {% endfor %}
+    {% elsif section.settings.fallback_image %}
+      <!-- Fallback single image if no blocks -->
+      <div class="hero-slide is-active" style="background-image: url('{{ section.settings.fallback_image | image_url: width: 1600 }}');"></div>
+    {% endif %}
+  </div>
+
+  <!-- Overlay -->
+  <div class="hero-overlay" style="opacity: {{ section.settings.overlay_opacity }};"></div>
+
+  <!-- Content -->
+  <div class="hero-content">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 80px 40px; text-align: center; width: 100%;">
+      {% if section.settings.badge_text != blank %}
+      <div style="display: inline-block; background: var(--rigging-accent); padding: 10px 24px; border-radius: 30px; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">
+        {{ section.settings.badge_text }}
+      </div>
+      {% endif %}
+      
+      <h1 style="font-size: clamp(42px, 6vw, 72px); font-weight: 900; line-height: 1.1; margin-bottom: 25px;">
+        {{ section.settings.heading_line1 }}<br>
+        <span style="color: var(--sunrise);">{{ section.settings.heading_line2 }}</span>
+      </h1>
+      
+      <p style="font-size: 22px; line-height: 1.6; max-width: 800px; margin: 0 auto 35px; opacity: 0.95;">
+        {{ section.settings.description }}
+      </p>
+      
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+        {% if section.settings.primary_btn_text != blank %}
+        <a href="{{ section.settings.primary_btn_link }}" style="display: inline-block; padding: 18px 36px; background: var(--rigging-accent); color: white; text-decoration: none; border-radius: 8px; font-weight: 800; font-size: 18px; box-shadow: 0 4px 15px rgba(0,168,107,0.4); transition: all 0.3s;">{{ section.settings.primary_btn_text }}</a>
+        {% endif %}
+        {% if section.settings.secondary_btn_text != blank %}
+        <a href="{{ section.settings.secondary_btn_link }}" style="display: inline-block; padding: 18px 36px; background: white; color: var(--ocean-deep); text-decoration: none; border-radius: 8px; font-weight: 800; font-size: 18px; transition: all 0.3s;">{{ section.settings.secondary_btn_text }}</a>
+        {% endif %}
+      </div>
+      
+      <!-- Social Proof Stats -->
+      <div style="display: flex; gap: 50px; justify-content: center; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2);">
+        {% for block in section.blocks %}
+          {% if block.type == 'stat' %}
+          <div {{ block.shopify_attributes }}>
+            <div style="font-size: 48px; font-weight: 900; color: var(--sunrise);">{{ block.settings.stat }}</div>
+            <div style="font-size: 14px; text-transform: uppercase; opacity: 0.9;">{{ block.settings.label }}</div>
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .custom-rigging-hero {
+    position: relative;
+    min-height: {{ section.settings.min_height }}px;
+    display: flex;
+    align-items: center;
+    color: white;
+    margin: -20px -20px 60px;
+    overflow: hidden;
+  }
+
+  .hero-slides {
+    position: absolute;
+    inset: 0;
+  }
+
+  .hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1000ms ease;
+  }
+
+  .hero-slide.is-active {
+    opacity: 1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(10,75,120,0.95), rgba(27,58,82,0.95));
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const heroes = document.querySelectorAll('.custom-rigging-hero');
+    
+    heroes.forEach(function(hero) {
+      const slides = hero.querySelectorAll('.hero-slide');
+      
+      if (slides.length <= 1) {
+        return;
+      }
+
+      const intervalSeconds = parseInt(hero.getAttribute('data-interval') || '5', 10);
+      let currentIndex = 0;
+
+      function showSlide(index) {
+        slides.forEach(function(slide, i) {
+          if (i === index) {
+            slide.classList.add('is-active');
+          } else {
+            slide.classList.remove('is-active');
+          }
+        });
+      }
+
+      setInterval(function() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      }, intervalSeconds * 1000);
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Rigging Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "fallback_image",
+      "label": "Fallback Background Image",
+      "info": "Used if no image blocks are added"
+    },
+    {
+      "type": "range",
+      "id": "carousel_speed",
+      "label": "Carousel Speed (seconds)",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "s"
+    },
+    {
+      "type": "range",
+      "id": "min_height",
+      "label": "Section Height",
+      "min": 400,
+      "max": 800,
+      "step": 50,
+      "default": 600,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay Darkness",
+      "info": "0 = bright images, 100 = very dark",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40,
+      "unit": "%"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "⚡ Tournament-Ready Builds"
+    },
+    {
+      "type": "text",
+      "id": "heading_line1",
+      "label": "Heading Line 1",
+      "default": "Custom Rigged Fishing Kayaks"
+    },
+    {
+      "type": "text",
+      "id": "heading_line2",
+      "label": "Heading Line 2 (Orange)",
+      "default": "Shipped Nationwide"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Professional rigging by Crystal Coast experts. Skip the DIY frustration and get a turnkey fishing machine delivered to your door."
+    },
+    {
+      "type": "text",
+      "id": "primary_btn_text",
+      "label": "Primary Button Text",
+      "default": "View Packages →"
+    },
+    {
+      "type": "text",
+      "id": "primary_btn_link",
+      "label": "Primary Button Link",
+      "default": "#packages"
+    },
+    {
+      "type": "text",
+      "id": "secondary_btn_text",
+      "label": "Secondary Button Text",
+      "default": "How It Works"
+    },
+    {
+      "type": "text",
+      "id": "secondary_btn_link",
+      "label": "Secondary Button Link",
+      "default": "#how-it-works"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero_image",
+      "name": "Hero Background Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Background Image"
+        }
+      ]
+    },
+    {
+      "type": "stat",
+      "name": "Social Proof Stat",
+      "settings": [
+        {
+          "type": "text",
+          "id": "stat",
+          "label": "Stat (e.g., 200+)",
+          "default": "200+"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Custom Rigs Built"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Rigging Hero",
+      "blocks": [
+        {
+          "type": "hero_image"
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "stat": "200+",
+            "label": "Custom Rigs Built"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "stat": "15+",
+            "label": "Years Experience"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "stat": "⭐⭐⭐⭐⭐",
+            "label": "5-Star Reviews"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
