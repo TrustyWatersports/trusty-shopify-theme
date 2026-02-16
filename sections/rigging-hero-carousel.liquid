@@ -1,0 +1,113 @@
+{% comment %}
+  Rigging Hero Carousel (OS2 section)
+{% endcomment %}
+
+<section class="rigging-hero" style="position:relative;">
+  <div class="rigging-hero__slides" data-hero-carousel>
+    {% for block in section.blocks %}
+      {% if block.type == 'slide' and block.settings.image != blank %}
+        <div class="rigging-hero__slide" {{ block.shopify_attributes }}>
+          <img
+            src="{{ block.settings.image | image_url: width: 2400 }}"
+            alt="{{ block.settings.image.alt | escape }}"
+            loading="lazy"
+            style="width:100%;height:{{ section.settings.height }}px;object-fit:cover;display:block;"
+          >
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="rigging-hero__overlay"
+       style="position:absolute;inset:0;background:rgba(0,40,70,{{ section.settings.overlay_opacity | times: 0.01 }});">
+  </div>
+
+  <div class="rigging-hero__content"
+       style="position:absolute;inset:0;display:flex;align-items:center;">
+    <div style="max-width:1100px;margin:0 auto;padding:24px;">
+      {% if section.settings.badge_text != blank %}
+        <div style="display:inline-block;padding:8px 14px;border-radius:999px;background:#1aa06a;color:#fff;font-weight:700;font-size:12px;letter-spacing:.04em;">
+          {{ section.settings.badge_text }}
+        </div>
+      {% endif %}
+
+      <h1 style="margin:16px 0 10px;color:#fff;font-size:52px;line-height:1.05;font-weight:800;">
+        {{ section.settings.heading_1 }}
+        <span style="color:#ff6a2a;">{{ section.settings.heading_2 }}</span>
+        {{ section.settings.heading_3 }}
+      </h1>
+
+      {% if section.settings.description != blank %}
+        <p style="margin:0 0 18px;color:#e6f0ff;max-width:720px;font-size:16px;">
+          {{ section.settings.description }}
+        </p>
+      {% endif %}
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        {% if section.settings.primary_button_text != blank %}
+          <a href="{{ section.settings.primary_button_link }}"
+             style="display:inline-block;background:#1aa06a;color:#fff;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none;">
+            {{ section.settings.primary_button_text }}
+          </a>
+        {% endif %}
+        {% if section.settings.secondary_button_text != blank %}
+          <a href="{{ section.settings.secondary_button_link }}"
+             style="display:inline-block;background:transparent;color:#fff;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none;border:2px solid rgba(255,255,255,.65);">
+            {{ section.settings.secondary_button_text }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  const root = document.querySelector('[data-hero-carousel]');
+  if(!root) return;
+
+  const slides = Array.from(root.children).filter(Boolean);
+  if(slides.length <= 1) return;
+
+  let idx = 0;
+  slides.forEach((s,i)=>{ s.style.display = i===0 ? 'block' : 'none'; });
+
+  setInterval(()=>{
+    slides[idx].style.display = 'none';
+    idx = (idx + 1) % slides.length;
+    slides[idx].style.display = 'block';
+  }, 4500);
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Rigging Carousel",
+  "settings": [
+    { "type": "range", "id": "height", "label": "Height", "min": 320, "max": 760, "step": 10, "default": 520 },
+    { "type": "range", "id": "overlay_opacity", "label": "Overlay %", "min": 0, "max": 85, "step": 5, "default": 55 },
+    { "type": "text", "id": "badge_text", "label": "Badge text", "default": "Custom Rigging Experts" },
+    { "type": "text", "id": "heading_1", "label": "Heading 1", "default": "Tournament-Ready" },
+    { "type": "text", "id": "heading_2", "label": "Heading 2", "default": "Fishing Kayaks" },
+    { "type": "text", "id": "heading_3", "label": "Heading 3", "default": "Shipped Nationwide" },
+    { "type": "textarea", "id": "description", "label": "Description", "default": "Professional rigging by Crystal Coast experts. Turnkey builds from $3k to $13k+ delivered to your door." },
+    { "type": "text", "id": "primary_button_text", "label": "Primary button text", "default": "Browse Rigging Packages" },
+    { "type": "url", "id": "primary_button_link", "label": "Primary button link" },
+    { "type": "text", "id": "secondary_button_text", "label": "Secondary button text", "default": "Build Custom Rig" },
+    { "type": "url", "id": "secondary_button_link", "label": "Secondary button link" }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    { "name": "Rigging Carousel" }
+  ]
+}
+{% endschema %}
