@@ -1,0 +1,49 @@
+{% schema %}
+{
+  "name": "Rigging Packages Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Choose Your Package"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Professional rigging packages designed for different fishing styles and budgets."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "package",
+      "name": "Package",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Package Name",
+          "default": "Tournament Ready"
+        },
+        {
+          "type": "text",
+          "id": "tagline",
+          "label": "Tagline",
+          "default": "For serious anglers"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "default": "$12,995"
+        },
+        {
+          "type": "text",
+          "id": "price_note",
+          "label": "Price Note",
+          "default": "Plus kayak cost"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
