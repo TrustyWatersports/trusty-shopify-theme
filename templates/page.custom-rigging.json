@@ -1,13 +1,96 @@
 {
   "sections": {
     "hero": {
-      "type": "custom-rigging-hero-carousel"
+      "type": "rigging-hero-carousel",
+      "blocks": {
+        "slide1": {
+          "type": "slide",
+          "settings": {
+            "image": ""
+          }
+        },
+        "slide2": {
+          "type": "slide",
+          "settings": {
+            "image": ""
+          }
+        },
+        "slide3": {
+          "type": "slide",
+          "settings": {
+            "image": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide1",
+        "slide2",
+        "slide3"
+      ],
+      "settings": {
+        "height": 520,
+        "overlay_opacity": 55,
+        "badge_text": "Custom Rigging Experts",
+        "heading_1": "Tournament-Ready",
+        "heading_2": "Fishing Kayaks",
+        "heading_3": "Shipped Nationwide",
+        "description": "Professional rigging by Crystal Coast experts. Turnkey builds from $3k to $13k+ delivered to your door.",
+        "primary_button_text": "Browse Rigging Packages",
+        "primary_button_link": "",
+        "secondary_button_text": "Build Custom Rig",
+        "secondary_button_link": ""
+      }
     },
     "options": {
-      "type": "rigging-options-grid"
+      "type": "rigging-options-grid",
+      "blocks": {
+        "opt1": {
+          "type": "option",
+          "settings": {
+            "title": "Bass Boat Style Electronics",
+            "text": "Live imaging, wiring clean-up, transducer mounts, NMEA networks.",
+            "image": ""
+          }
+        },
+        "opt2": {
+          "type": "option",
+          "settings": {
+            "title": "Pedal & Motor Setup",
+            "text": "Trolling motors, mounts, wiring, lithium conversions.",
+            "image": ""
+          }
+        },
+        "opt3": {
+          "type": "option",
+          "settings": {
+            "title": "Safety & Storage",
+            "text": "Lighting, power management, crate systems, gear tracks.",
+            "image": ""
+          }
+        }
+      },
+      "block_order": [
+        "opt1",
+        "opt2",
+        "opt3"
+      ],
+      "settings": {
+        "heading": "Choose Your Rigging Path",
+        "subheading": "Select an option to explore packages or request a build.",
+        "bg": "#0a2f3f"
+      }
+    },
+    "how": {
+      "type": "custom-rigging-how-it-works"
     },
     "packages": {
       "type": "custom-rigging-packages"
+    },
+    "gallery": {
+      "type": "custom-rigging-gallery"
+    },
+    "faq": {
+      "type": "custom-rigging-faq"
     },
     "cta": {
       "type": "custom-rigging-cta"
@@ -16,7 +99,10 @@
   "order": [
     "hero",
     "options",
+    "how",
     "packages",
+    "gallery",
+    "faq",
     "cta"
   ]
 }
