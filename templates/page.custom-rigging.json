@@ -1,8 +1,7 @@
 {
   "sections": {
-    "hero": { "type": "trusty-hero" },
-    "packages": { "type": "custom-rigging-packages" },
-    "cta": { "type": "custom-rigging-cta" }
+    "hero": { "type": "custom-rigging-hero-carousel" },
+    "packages": { "type": "custom-rigging-packages" }
   },
-  "order": ["hero", "packages", "cta"]
+  "order": ["hero", "packages"]
 }
