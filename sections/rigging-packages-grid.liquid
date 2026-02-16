@@ -47,3 +47,118 @@
         {
           "type": "image_picker",
           "id": "image",
+          "label": "Package Image"
+        },
+        {
+          "type": "textarea",
+          "id": "features",
+          "label": "Features (one per line)",
+          "default": "Garmin Livescope Plus\nUltra 106sv fishfinder\nTrolling motor with lithium\nPremium crate system\nComplete wiring & install"
+        },
+        {
+          "type": "checkbox",
+          "id": "featured",
+          "label": "Featured Package",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "Button Text",
+          "default": "View Details"
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rigging Packages Grid"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="rigging-packages-section" style="padding: 80px 20px; background: #f8f9fa;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto;">
+    
+    {% if section.settings.heading != blank %}
+      <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #0a2f3f;">
+        {{ section.settings.heading }}
+      </h2>
+    {% endif %}
+    
+    {% if section.settings.subheading != blank %}
+      <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+        {{ section.settings.subheading }}
+      </p>
+    {% endif %}
+
+    <div class="packages-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+      {% for block in section.blocks %}
+        <div class="package-card" style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); position: relative; {% if block.settings.featured %}border: 3px solid #ff6b35;{% endif %}">
+          
+          {% if block.settings.featured %}
+            <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #ff6b35; color: white; padding: 0.5rem 1.5rem; border-radius: 20px; font-weight: bold; font-size: 0.9rem;">
+              MOST POPULAR
+            </div>
+          {% endif %}
+
+          {% if block.settings.image %}
+            <img src="{{ block.settings.image | img_url: '400x' }}" alt="{{ block.settings.name }}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+          {% endif %}
+
+          <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: #0a2f3f;">
+            {{ block.settings.name }}
+          </h3>
+
+          {% if block.settings.tagline != blank %}
+            <p style="color: #666; margin-bottom: 1rem; font-style: italic;">
+              {{ block.settings.tagline }}
+            </p>
+          {% endif %}
+
+          <div style="margin-bottom: 1.5rem;">
+            <span style="font-size: 2.5rem; font-weight: bold; color: #ff6b35;">
+              {{ block.settings.price }}
+            </span>
+            {% if block.settings.price_note != blank %}
+              <span style="display: block; font-size: 0.9rem; color: #666; margin-top: 0.25rem;">
+                {{ block.settings.price_note }}
+              </span>
+            {% endif %}
+          </div>
+
+          {% if block.settings.features != blank %}
+            <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+              {% assign features_list = block.settings.features | newline_to_br | split: '<br />' %}
+              {% for feature in features_list %}
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; color: #333;">
+                  ✓ {{ feature }}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+
+          <a href="{{ block.settings.cta_link }}" style="display: block; text-align: center; background: #00a86b; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; transition: all 0.3s;">
+            {{ block.settings.cta_text }}
+          </a>
+
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<style>
+.package-card a:hover {
+  background: #008c5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+</style>
