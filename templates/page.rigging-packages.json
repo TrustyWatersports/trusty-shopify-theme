@@ -39,4 +39,25 @@
             "price": "$13,000+",
             "price_note": "Plus kayak cost",
             "image": "",
-            "features": "Full Garmin Livescope Plus\nDual fishfinders\nTroll
+            "features": "Full Garmin Livescope Plus\nDual fishfinders\nTrolling motor with lithium\nCustom crate & storage\nComplete electronics suite\nNMEA networking\nWhite-glove delivery",
+            "featured": false,
+            "cta_text": "Go Premium",
+            "cta_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "package1",
+        "package2",
+        "package3"
+      ],
+      "settings": {
+        "heading": "Rigging Packages",
+        "subheading": "Choose a package that matches your fishing style and budget. Every rig is built by our Crystal Coast experts and shipped nationwide."
+      }
+    }
+  },
+  "order": [
+    "packages_grid"
+  ]
+}
