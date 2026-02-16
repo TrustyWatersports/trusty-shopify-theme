@@ -19,6 +19,7 @@
             "tagline": "Perfect for weekend warriors",
             "price": "$3,500",
             "price_note": "Plus kayak cost",
+            "image": "shopify://shop_images/DSC01336_-_Large_4125405f-df95-4e9c-acf1-33342118b51f.png",
             "features": "Basic fishfinder (Helix 7)\nRod holders & gear tracks\nBasic lighting\nPower management\nProfessional installation",
             "featured": false,
             "cta_text": "Get Started",
@@ -32,6 +33,7 @@
             "tagline": "For serious competitors",
             "price": "$8,500",
             "price_note": "Plus kayak cost",
+            "image": "shopify://shop_images/9U8A8101.jpg",
             "features": "Garmin Livescope setup\nUltra 106sv fishfinder\nTrolling motor prep\nPremium crate system\nComplete wiring & install\nLithium battery option",
             "featured": true,
             "cta_text": "Most Popular",
@@ -45,6 +47,7 @@
             "tagline": "The ultimate fishing machine",
             "price": "$13,000+",
             "price_note": "Plus kayak cost",
+            "image": "shopify://shop_images/6__2061_-_Large_741e17ea-7138-4f89-9806-7e43e56e8cef.jpg",
             "features": "Full Garmin Livescope Plus\nDual fishfinders\nTrolling motor with lithium\nCustom crate & storage\nComplete electronics suite\nNMEA networking\nWhite-glove delivery",
             "featured": false,
             "cta_text": "Go Premium",
@@ -61,60 +64,9 @@
         "heading": "Rigging Packages",
         "subheading": "Choose a package that matches your fishing style and budget. Every rig is built by our Crystal Coast experts and shipped nationwide."
       }
-    },
-    "custom_rigging_hero_zxKFKz": {
-      "type": "custom-rigging-hero",
-      "blocks": {
-        "hero_image_czdDdF": {
-          "type": "hero_image",
-          "settings": {}
-        },
-        "stat_GgrLwA": {
-          "type": "stat",
-          "settings": {
-            "stat": "200+",
-            "label": "Custom Rigs Built"
-          }
-        },
-        "stat_Tr9cDn": {
-          "type": "stat",
-          "settings": {
-            "stat": "15+",
-            "label": "Years Experience"
-          }
-        },
-        "stat_Mbmw6a": {
-          "type": "stat",
-          "settings": {
-            "stat": "⭐⭐⭐⭐⭐",
-            "label": "5-Star Reviews"
-          }
-        }
-      },
-      "block_order": [
-        "hero_image_czdDdF",
-        "stat_GgrLwA",
-        "stat_Tr9cDn",
-        "stat_Mbmw6a"
-      ],
-      "name": "Custom Rigging Hero",
-      "settings": {
-        "carousel_speed": 5,
-        "min_height": 600,
-        "overlay_opacity": 40,
-        "badge_text": "⚡ Tournament-Ready Builds",
-        "heading_line1": "Custom Rigged Fishing Kayaks",
-        "heading_line2": "Shipped Nationwide",
-        "description": "Professional rigging by Crystal Coast experts. Skip the DIY frustration and get a turnkey fishing machine delivered to your door.",
-        "primary_btn_text": "View Packages →",
-        "primary_btn_link": "#packages",
-        "secondary_btn_text": "How It Works",
-        "secondary_btn_link": "#how-it-works"
-      }
     }
   },
   "order": [
-    "custom_rigging_hero_zxKFKz",
     "packages_grid"
   ]
 }
