@@ -1,5 +1,9 @@
 {
   "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
     "packages_grid": {
       "type": "rigging-packages-grid",
       "blocks": {
@@ -11,7 +15,7 @@
             "price": "$3,500",
             "price_note": "Plus kayak cost",
             "image": "",
-            "features": "Basic fishfinder (Helix 7)\nRod holders & gear tracks\nBasic lighting\nPower management\nProfessional installation",
+            "features": "Basic fishfinder\nRod holders\nBasic lighting\nPower management\nProfessional installation",
             "featured": false,
             "cta_text": "Get Started",
             "cta_link": ""
@@ -25,7 +29,7 @@
             "price": "$8,500",
             "price_note": "Plus kayak cost",
             "image": "",
-            "features": "Garmin Livescope setup\nUltra 106sv fishfinder\nTrolling motor prep\nPremium crate system\nComplete wiring & install\nLithium battery option",
+            "features": "Garmin Livescope\nUltra fishfinder\nTrolling motor prep\nPremium crate\nComplete wiring\nLithium battery",
             "featured": true,
             "cta_text": "Most Popular",
             "cta_link": ""
@@ -39,25 +43,19 @@
             "price": "$13,000+",
             "price_note": "Plus kayak cost",
             "image": "",
-            "features": "Full Garmin Livescope Plus\nDual fishfinders\nTrolling motor with lithium\nCustom crate & storage\nComplete electronics suite\nNMEA networking\nWhite-glove delivery",
+            "features": "Garmin Livescope Plus\nDual fishfinders\nTrolling motor\nCustom storage\nComplete electronics\nNMEA network\nWhite-glove delivery",
             "featured": false,
             "cta_text": "Go Premium",
             "cta_link": ""
           }
         }
       },
-      "block_order": [
-        "package1",
-        "package2",
-        "package3"
-      ],
+      "block_order": ["package1", "package2", "package3"],
       "settings": {
         "heading": "Rigging Packages",
-        "subheading": "Choose a package that matches your fishing style and budget. Every rig is built by our Crystal Coast experts and shipped nationwide."
+        "subheading": "Choose a package that matches your fishing style and budget."
       }
     }
   },
-  "order": [
-    "packages_grid"
-  ]
+  "order": ["main", "packages_grid"]
 }
