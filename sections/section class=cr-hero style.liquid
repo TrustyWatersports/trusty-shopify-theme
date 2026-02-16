@@ -1,0 +1,192 @@
+<section class="cr-hero" style="--overlay: {{ section.settings.overlay_opacity | divided_by: 100.0 }};">
+  <div class="cr-hero__media">
+    <div class="cr-hero__track" id="crHeroTrack-{{ section.id }}">
+      {% for block in section.blocks %}
+        {% assign is_video = block.settings.video_url != blank %}
+        <div class="cr-hero__slide" data-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+          {% if is_video %}
+            <video class="cr-hero__video" autoplay muted loop playsinline preload="metadata">
+              <source src="{{ block.settings.video_url | escape }}" type="video/mp4">
+            </video>
+          {% elsif block.settings.image != blank %}
+            <img
+              class="cr-hero__image"
+              src="{{ block.settings.image | image_url: width: 2400 }}"
+              alt="{{ block.settings.image.alt | escape }}"
+              loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+            >
+          {% else %}
+            <div class="cr-hero__placeholder"></div>
+          {% endif %}
+
+          <div class="cr-hero__overlay"></div>
+
+          <div class="cr-hero__content container">
+            {% if block.settings.badge_text != blank %}
+              <div class="cr-hero__badge">{{ block.settings.badge_text }}</div>
+            {% endif %}
+
+            <h1 class="cr-hero__title">
+              {{ block.settings.heading_1 | escape }}
+              {% if block.settings.heading_2 != blank %}
+                <span class="cr-hero__highlight">{{ block.settings.heading_2 | escape }}</span>
+              {% endif %}
+              {% if block.settings.heading_3 != blank %}
+                {{ block.settings.heading_3 | escape }}
+              {% endif %}
+            </h1>
+
+            {% if block.settings.description != blank %}
+              <p class="cr-hero__desc">{{ block.settings.description }}</p>
+            {% endif %}
+
+            <div class="cr-hero__buttons">
+              {% if block.settings.primary_btn_text != blank and block.settings.primary_btn_link != blank %}
+                <a class="cr-btn cr-btn--primary" href="{{ block.settings.primary_btn_link }}">
+                  {{ block.settings.primary_btn_text | escape }}
+                </a>
+              {% endif %}
+
+              {% if block.settings.secondary_btn_text != blank and block.settings.secondary_btn_link != blank %}
+                <a class="cr-btn cr-btn--secondary" href="{{ block.settings.secondary_btn_link }}">
+                  {{ block.settings.secondary_btn_text | escape }}
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if section.blocks.size > 1 %}
+      <button class="cr-hero__nav cr-hero__nav--prev" type="button" aria-label="Previous slide">‹</button>
+      <button class="cr-hero__nav cr-hero__nav--next" type="button" aria-label="Next slide">›</button>
+
+      <div class="cr-hero__dots" aria-label="Hero carousel pagination">
+        {% for block in section.blocks %}
+          <button class="cr-hero__dot" type="button" aria-label="Go to slide {{ forloop.index }}" data-dot="{{ forloop.index0 }}"></button>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+  .container{max-width:1400px;margin:0 auto;padding:0 20px;}
+  .cr-hero{position:relative;height:{{ section.settings.height }}px;overflow:hidden;background:#0A4B78;}
+  @media (max-width: 768px){ .cr-hero{height:{{ section.settings.height_mobile }}px;} }
+
+  .cr-hero__media{position:relative;width:100%;height:100%;}
+  .cr-hero__track{display:flex;width:100%;height:100%;transition:transform .6s ease;}
+  .cr-hero__slide{position:relative;min-width:100%;height:100%;}
+  .cr-hero__image,.cr-hero__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .cr-hero__placeholder{position:absolute;inset:0;background:linear-gradient(135deg,#1B3A52,#0A4B78);}
+  .cr-hero__overlay{position:absolute;inset:0;background:rgba(10,75,120,var(--overlay));}
+
+  .cr-hero__content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;color:#fff;gap:14px;}
+  .cr-hero__badge{display:inline-flex;align-items:center;gap:8px;background:#00A86B;color:#fff;padding:8px 18px;border-radius:999px;font-weight:800;font-size:12px;letter-spacing:.4px;text-transform:uppercase;width:fit-content;}
+  .cr-hero__title{font-size:56px;line-height:1.08;font-weight:900;max-width:900px;margin:0;}
+  .cr-hero__highlight{color:#FF6B35;}
+  .cr-hero__desc{font-size:18px;max-width:760px;opacity:.95;margin:0;}
+  .cr-hero__buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;}
+
+  .cr-btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 24px;border-radius:8px;font-weight:800;text-decoration:none;transition:transform .2s ease, box-shadow .2s ease;}
+  .cr-btn--primary{background:#00A86B;color:#fff;box-shadow:0 8px 22px rgba(0,168,107,.25);}
+  .cr-btn--primary:hover{transform:translateY(-1px);box-shadow:0 10px 26px rgba(0,168,107,.35);}
+  .cr-btn--secondary{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.9);}
+  .cr-btn--secondary:hover{transform:translateY(-1px);}
+
+  .cr-hero__nav{position:absolute;top:50%;transform:translateY(-50%);z-index:3;border:none;border-radius:999px;width:44px;height:44px;
+    background:rgba(0,0,0,.35);color:#fff;font-size:28px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+  .cr-hero__nav--prev{left:16px;}
+  .cr-hero__nav--next{right:16px;}
+
+  .cr-hero__dots{position:absolute;left:0;right:0;bottom:14px;z-index:3;display:flex;gap:8px;justify-content:center;}
+  .cr-hero__dot{width:10px;height:10px;border-radius:999px;border:1px solid rgba(255,255,255,.7);background:rgba(255,255,255,.25);cursor:pointer;}
+  .cr-hero__dot.is-active{background:#fff;border-color:#fff;}
+
+  @media (max-width: 768px){
+    .cr-hero__title{font-size:34px;}
+    .cr-hero__desc{font-size:16px;}
+  }
+</style>
+
+<script>
+  (function() {
+    const root = document.getElementById('crHeroTrack-{{ section.id }}');
+    if (!root) return;
+
+    const slides = root.querySelectorAll('.cr-hero__slide');
+    const dots = root.closest('.cr-hero__media')?.querySelectorAll('.cr-hero__dot') || [];
+    const prev = root.closest('.cr-hero__media')?.querySelector('.cr-hero__nav--prev');
+    const next = root.closest('.cr-hero__media')?.querySelector('.cr-hero__nav--next');
+
+    if (slides.length <= 1) return;
+
+    let idx = 0;
+    const intervalMs = {{ section.settings.autoplay_seconds | times: 1000 }};
+    let timer = null;
+
+    function render() {
+      root.style.transform = `translateX(${-idx * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+    }
+
+    function go(n) {
+      idx = (n + slides.length) % slides.length;
+      render();
+    }
+
+    function start() {
+      if ({{ section.settings.autoplay | json }} !== true) return;
+      stop();
+      timer = setInterval(() => go(idx + 1), intervalMs);
+    }
+    function stop() { if (timer) clearInterval(timer); timer = null; }
+
+    prev?.addEventListener('click', () => { stop(); go(idx - 1); start(); });
+    next?.addEventListener('click', () => { stop(); go(idx + 1); start(); });
+    dots.forEach((d) => d.addEventListener('click', () => { stop(); go(parseInt(d.dataset.dot, 10)); start(); }));
+
+    render();
+    start();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Custom Rigging Hero Carousel",
+  "settings": [
+    { "type": "range", "id": "height", "label": "Height (desktop)", "min": 360, "max": 760, "step": 20, "default": 520 },
+    { "type": "range", "id": "height_mobile", "label": "Height (mobile)", "min": 300, "max": 640, "step": 20, "default": 420 },
+    { "type": "range", "id": "overlay_opacity", "label": "Overlay opacity (%)", "min": 0, "max": 80, "step": 5, "default": 35 },
+    { "type": "checkbox", "id": "autoplay", "label": "Autoplay", "default": true },
+    { "type": "range", "id": "autoplay_seconds", "label": "Autoplay seconds", "min": 3, "max": 10, "step": 1, "default": 6 }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Background image" },
+        { "type": "text", "id": "video_url", "label": "Optional MP4 video URL (overrides image)", "default": "" },
+        { "type": "text", "id": "badge_text", "label": "Badge text", "default": "⚡ Custom Rigging Experts" },
+        { "type": "text", "id": "heading_1", "label": "Heading part 1", "default": "Tournament-Ready" },
+        { "type": "text", "id": "heading_2", "label": "Heading part 2 (highlight)", "default": "Fishing Kayaks" },
+        { "type": "text", "id": "heading_3", "label": "Heading part 3", "default": "Built & Shipped Nationwide" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "Professional rigging by Crystal Coast experts. Turnkey builds from $3k to $13k+ delivered to your door." },
+        { "type": "text", "id": "primary_btn_text", "label": "Primary button text", "default": "Browse Rigging Packages" },
+        { "type": "url", "id": "primary_btn_link", "label": "Primary button link", "default": "/pages/custom-rigging" },
+        { "type": "text", "id": "secondary_btn_text", "label": "Secondary button text", "default": "Build Custom Rig" },
+        { "type": "url", "id": "secondary_btn_link", "label": "Secondary button link", "default": "/pages/contact" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Rigging Hero Carousel",
+      "blocks": [{ "type": "slide" }, { "type": "slide" }]
+    }
+  ]
+}
+{% endschema %}
