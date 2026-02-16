@@ -1,34 +1,8 @@
 {
   "sections": {
-    "hero": {
-      "type": "trusty-hero-carousel"
-    },
-    "how-it-works": {
-      "type": "custom-rigging-how-it-works"
-    },
-    "packages": {
-      "type": "custom-rigging-packages"
-    },
-    "why-us": {
-      "type": "custom-rigging-why-us"
-    },
-    "gallery": {
-      "type": "custom-rigging-gallery"
-    },
-    "faq": {
-      "type": "custom-rigging-faq"
-    },
-    "cta": {
-      "type": "custom-rigging-cta"
-    }
+    "hero": { "type": "trusty-hero" },
+    "packages": { "type": "custom-rigging-packages" },
+    "cta": { "type": "custom-rigging-cta" }
   },
-  "order": [
-    "hero",
-    "how-it-works",
-    "packages",
-    "why-us",
-    "gallery",
-    "faq",
-    "cta"
-  ]
+  "order": ["hero", "packages", "cta"]
 }

@@ -1,115 +1,77 @@
-<section class="custom-rigging-packages section-{{ section.id }}" id="rigging-packages">
+<section class="cr-packages">
   <div class="page-width">
-    {% if section.settings.heading != blank %}
-      <div class="head">
-        <h2>{{ section.settings.heading }}</h2>
-        {% if section.settings.subheading != blank %}
-          <p>{{ section.settings.subheading }}</p>
+
+    {% for block in section.blocks %}
+      <div class="cr-package">
+
+        {% if block.settings.image != blank %}
+          <img src="{{ block.settings.image | image_url }}" alt="">
         {% endif %}
+
+        <h3>{{ block.settings.title }}</h3>
+        <p>{{ block.settings.description }}</p>
+
+        {% if block.settings.cta_link != blank %}
+          <a class="button" href="{{ block.settings.cta_link }}">
+            {{ block.settings.cta_text }}
+          </a>
+        {% endif %}
+
       </div>
-    {% endif %}
+    {% endfor %}
 
-    <div class="grid">
-      {% for block in section.blocks %}
-        {% assign href = block.settings.cta_href | strip %}
-        <div class="card" {{ block.shopify_attributes }}>
-          {% if block.settings.image != blank %}
-            <div class="img">
-              <img
-                src="{{ block.settings.image | image_url: width: 1000 }}"
-                alt="{{ block.settings.title | escape }}"
-                loading="lazy"
-                width="1000"
-                height="650"
-              >
-            </div>
-          {% endif %}
-
-          <div class="body">
-            {% if block.settings.badge != blank %}
-              <div class="badge">{{ block.settings.badge }}</div>
-            {% endif %}
-
-            {% if block.settings.title != blank %}
-              <h3>{{ block.settings.title }}</h3>
-            {% endif %}
-
-            {% if block.settings.description != blank %}
-              <div class="desc rte">{{ block.settings.description }}</div>
-            {% endif %}
-
-            {% if block.settings.price_note != blank %}
-              <div class="price">{{ block.settings.price_note }}</div>
-            {% endif %}
-
-            {% if block.settings.cta_text != blank and href != blank %}
-              <a class="btn" href="{{ href }}">{{ block.settings.cta_text }}</a>
-            {% endif %}
-          </div>
-        </div>
-      {% endfor %}
-    </div>
   </div>
-
-  <style>
-    .custom-rigging-packages .page-width{max-width:1200px;margin:0 auto;padding:0 20px}
-    .custom-rigging-packages{padding:70px 0;background:#F5F7FA}
-    .custom-rigging-packages .head{text-align:center;margin-bottom:32px}
-    .custom-rigging-packages h2{font-size:40px;line-height:1.1;margin:0 0 10px;font-weight:900;color:#0A4B78}
-    .custom-rigging-packages .head p{margin:0 auto;max-width:760px;color:#6b7a89;font-size:18px}
-
-    .custom-rigging-packages .grid{
-      display:grid;gap:18px;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    }
-    .custom-rigging-packages .card{
-      background:#fff;border-radius:14px;overflow:hidden;
-      box-shadow:0 8px 24px rgba(0,0,0,.08);
-      display:flex;flex-direction:column
-    }
-    .custom-rigging-packages .img{aspect-ratio:16/10;background:#e9eef4}
-    .custom-rigging-packages .img img{width:100%;height:100%;object-fit:cover;display:block}
-    .custom-rigging-packages .body{padding:18px}
-    .custom-rigging-packages .badge{
-      display:inline-block;background:#00A86B;color:#fff;
-      font-weight:900;font-size:12px;padding:6px 10px;border-radius:999px;margin-bottom:10px
-    }
-    .custom-rigging-packages h3{margin:0 0 8px;font-size:20px;font-weight:900;color:#1B3A52}
-    .custom-rigging-packages .desc{color:#516272;line-height:1.7;margin-bottom:10px}
-    .custom-rigging-packages .price{font-weight:900;color:#0A4B78;margin-bottom:12px}
-    .custom-rigging-packages .btn{
-      display:block;text-decoration:none;text-align:center;
-      background:#0A4B78;color:#fff;font-weight:900;
-      padding:12px 14px;border-radius:10px
-    }
-  </style>
 </section>
 
 {% schema %}
 {
-  "name": "Custom Rigging Packages",
-  "settings": [
-    { "type": "text", "id": "heading", "label": "Heading", "default": "Rigging Options" },
-    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Pick a starting point — we can customize any package." }
-  ],
+  "name": "Rigging Packages",
   "blocks": [
     {
       "type": "package",
       "name": "Package",
       "settings": [
-        { "type": "image_picker", "id": "image", "label": "Package image" },
-        { "type": "text", "id": "badge", "label": "Badge text", "default": "Most Popular" },
-        { "type": "text", "id": "title", "label": "Title", "default": "Turnkey Tournament Rig" },
-        { "type": "richtext", "id": "description", "label": "Description", "default": "<p>Electronics, power management, mounts, wiring, and pro install — dialed for your style.</p>" },
-        { "type": "text", "id": "price_note", "label": "Price note", "default": "Packages from $1,499 (plus components)" },
-        { "type": "text", "id": "cta_text", "label": "Button text", "default": "Get Details" },
-        { "type": "text", "id": "cta_href", "label": "Button link (supports /pages/... or full URL)", "default": "" }
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Package Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Tournament Package"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Fully wired and ready to fish."
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "Button Text",
+          "default": "View Package"
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "Button Link",
+          "default": ""
+        }
       ]
     }
   ],
-  "max_blocks": 8,
   "presets": [
-    { "name": "Custom Rigging Packages", "blocks": [ { "type": "package" }, { "type": "package" }, { "type": "package" } ] }
+    {
+      "name": "Rigging Packages",
+      "blocks": [
+        { "type": "package" },
+        { "type": "package" },
+        { "type": "package" }
+      ]
+    }
   ]
 }
 {% endschema %}

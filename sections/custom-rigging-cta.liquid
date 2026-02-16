@@ -1,89 +1,67 @@
-<section class="custom-rigging-cta section-{{ section.id }}">
+<section class="cr-cta">
   <div class="page-width">
-    <div class="cta-card">
-      <div class="cta-left">
-        {% if section.settings.heading != blank %}
-          <h2 class="cta-title">{{ section.settings.heading }}</h2>
-        {% endif %}
+    <h2>{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.text }}</p>
 
-        {% if section.settings.subheading != blank %}
-          <div class="cta-sub">{{ section.settings.subheading }}</div>
-        {% endif %}
+    {% if section.settings.primary_btn_link != blank %}
+      <a class="button" href="{{ section.settings.primary_btn_link }}">
+        {{ section.settings.primary_btn_text }}
+      </a>
+    {% endif %}
 
-        {% if section.settings.body != blank %}
-          <div class="cta-body rte">{{ section.settings.body }}</div>
-        {% endif %}
-      </div>
-
-      <div class="cta-right">
-        <div class="cta-buttons">
-          {% assign primary_href = section.settings.primary_btn_href | strip %}
-          {% if section.settings.primary_btn_text != blank and primary_href != blank %}
-            <a class="cta-btn cta-btn--primary" href="{{ primary_href }}">
-              {{ section.settings.primary_btn_text }}
-            </a>
-          {% endif %}
-
-          {% assign secondary_href = section.settings.secondary_btn_href | strip %}
-          {% if section.settings.secondary_btn_text != blank and secondary_href != blank %}
-            <a class="cta-btn cta-btn--secondary" href="{{ secondary_href }}">
-              {{ section.settings.secondary_btn_text }}
-            </a>
-          {% endif %}
-        </div>
-
-        {% if section.settings.note != blank %}
-          <div class="cta-note">{{ section.settings.note }}</div>
-        {% endif %}
-      </div>
-    </div>
+    {% if section.settings.secondary_btn_link != blank %}
+      <a class="button button--secondary" href="{{ section.settings.secondary_btn_link }}">
+        {{ section.settings.secondary_btn_text }}
+      </a>
+    {% endif %}
   </div>
-
-  <style>
-    .custom-rigging-cta .page-width{max-width:1200px;margin:0 auto;padding:0 20px}
-    .custom-rigging-cta{padding:60px 0}
-    .custom-rigging-cta .cta-card{
-      display:grid;grid-template-columns:1.2fr .8fr;gap:30px;
-      border-radius:14px;padding:36px;
-      background:linear-gradient(135deg,#0A4B78 0%,#1B3A52 100%);
-      color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.12)
-    }
-    .custom-rigging-cta .cta-title{font-size:34px;line-height:1.15;margin:0 0 10px;font-weight:800}
-    .custom-rigging-cta .cta-sub{opacity:.95;font-weight:700;margin-bottom:12px}
-    .custom-rigging-cta .cta-body{opacity:.92;line-height:1.7}
-    .custom-rigging-cta .cta-right{display:flex;flex-direction:column;justify-content:center}
-    .custom-rigging-cta .cta-buttons{display:flex;flex-direction:column;gap:12px}
-    .custom-rigging-cta .cta-btn{
-      display:block;text-align:center;text-decoration:none;
-      padding:14px 16px;border-radius:10px;font-weight:800
-    }
-    .custom-rigging-cta .cta-btn--primary{background:#00A86B;color:#fff}
-    .custom-rigging-cta .cta-btn--secondary{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.85)}
-    .custom-rigging-cta .cta-note{margin-top:12px;opacity:.85;font-size:13px}
-    @media (max-width: 900px){
-      .custom-rigging-cta .cta-card{grid-template-columns:1fr}
-    }
-  </style>
 </section>
 
 {% schema %}
 {
   "name": "Custom Rigging CTA",
   "settings": [
-    { "type": "text", "id": "heading", "label": "Heading", "default": "Ready to Build Your Dream Rig?" },
-    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Talk to a rigging specialist today" },
-    { "type": "richtext", "id": "body", "label": "Body", "default": "<p>We’ll help you spec the perfect setup for your fishing style, budget, and waters.</p>" },
-
-    { "type": "text", "id": "primary_btn_text", "label": "Primary button text", "default": "Call for a Quote" },
-    { "type": "text", "id": "primary_btn_href", "label": "Primary button href (supports tel:, mailto:, /pages/...)", "default": "tel:252-726-7700" },
-
-    { "type": "text", "id": "secondary_btn_text", "label": "Secondary button text", "default": "Start With Packages" },
-    { "type": "text", "id": "secondary_btn_href", "label": "Secondary button href", "default": "#rigging-packages" },
-
-    { "type": "text", "id": "note", "label": "Note (small text)", "default": "Nationwide shipping available for turnkey builds." }
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Ready to Build Your Dream Rig?"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Talk with our rigging team today."
+    },
+    {
+      "type": "text",
+      "id": "primary_btn_text",
+      "label": "Primary Button Text",
+      "default": "Start Your Build"
+    },
+    {
+      "type": "url",
+      "id": "primary_btn_link",
+      "label": "Primary Button Link",
+      "default": ""
+    },
+    {
+      "type": "text",
+      "id": "secondary_btn_text",
+      "label": "Secondary Button Text",
+      "default": "Browse Packages"
+    },
+    {
+      "type": "url",
+      "id": "secondary_btn_link",
+      "label": "Secondary Button Link",
+      "default": ""
+    }
   ],
   "presets": [
-    { "name": "Custom Rigging CTA" }
+    {
+      "name": "Custom Rigging CTA"
+    }
   ]
 }
 {% endschema %}
