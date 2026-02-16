@@ -1,32 +1,47 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "hero": {
+    "rigging_hero_carousel_wkJKeQ": {
       "type": "rigging-hero-carousel",
       "blocks": {
-        "slide1": {
+        "slide_FhGygc": {
           "type": "slide",
           "settings": {
-            "image": ""
+            "image": "shopify://shop_images/DSC00231_-_Large_0eb92c52-7550-4555-8e83-2497f24e6dbc.png"
           }
         },
-        "slide2": {
+        "slide_GXLARj": {
           "type": "slide",
           "settings": {
-            "image": ""
+            "image": "shopify://shop_images/DSC00372_-_Large_c7b32b22-f34e-4861-9a9a-de6cfe7e104f.png"
           }
         },
-        "slide3": {
+        "slide_gxdeei": {
           "type": "slide",
           "settings": {
-            "image": ""
+            "image": "shopify://shop_images/BSB-Angler-Forest-4.png"
           }
+        },
+        "slide_JazQWw": {
+          "type": "slide",
+          "settings": {}
         }
       },
       "block_order": [
-        "slide1",
-        "slide2",
-        "slide3"
+        "slide_FhGygc",
+        "slide_GXLARj",
+        "slide_gxdeei",
+        "slide_JazQWw"
       ],
+      "name": "Rigging Carousel",
       "settings": {
         "height": 520,
         "overlay_opacity": 55,
@@ -41,68 +56,256 @@
         "secondary_button_link": ""
       }
     },
-    "options": {
+    "rigging_options_grid_nVb7Q4": {
       "type": "rigging-options-grid",
       "blocks": {
-        "opt1": {
+        "option_YQ3cCh": {
           "type": "option",
           "settings": {
-            "title": "Bass Boat Style Electronics",
+            "title": "Bass Boat Style Electronics:",
             "text": "Live imaging, wiring clean-up, transducer mounts, NMEA networks.",
-            "image": ""
+            "image": "shopify://shop_images/Knarrr_Jameson.jpg",
+            "link": ""
           }
         },
-        "opt2": {
+        "option_KXYF3H": {
           "type": "option",
           "settings": {
-            "title": "Pedal & Motor Setup",
-            "text": "Trolling motors, mounts, wiring, lithium conversions.",
-            "image": ""
+            "title": "Pedal & Motor Setup:",
+            "text": "Trolling motors, mounts, wiring, lithium conversions",
+            "image": "shopify://shop_images/DSC_7135_-_Large_6c2547fb-4236-42a3-bce1-6783e8e24738.jpg",
+            "link": ""
           }
         },
-        "opt3": {
+        "option_znKVWD": {
           "type": "option",
           "settings": {
             "title": "Safety & Storage",
-            "text": "Lighting, power management, crate systems, gear tracks.",
-            "image": ""
+            "text": "Lighting, power management, crate systems, gear tracks",
+            "image": "shopify://shop_images/9U8A8101.jpg",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "opt1",
-        "opt2",
-        "opt3"
+        "option_YQ3cCh",
+        "option_KXYF3H",
+        "option_znKVWD"
       ],
+      "name": "Rigging Options",
       "settings": {
         "heading": "Choose Your Rigging Path",
         "subheading": "Select an option to explore packages or request a build.",
         "bg": "#0a2f3f"
       }
     },
-    "how": {
-      "type": "custom-rigging-how-it-works"
+    "custom_rigging_how_it_works_YzPLGY": {
+      "type": "custom-rigging-how-it-works",
+      "blocks": {
+        "step_6L3mYt": {
+          "type": "step",
+          "settings": {
+            "number": "1",
+            "title": "Choose Your Kayak",
+            "description": "Select from premium fishing kayak models or bring your own. We work with all major brands including Hobie, Old Town, Native, and more.",
+            "gradient": "linear-gradient(135deg, var(--rigging-accent), #00C77F)"
+          }
+        },
+        "step_QC4tXn": {
+          "type": "step",
+          "settings": {
+            "number": "2",
+            "title": "Customize Your Rig",
+            "description": "Pick your rigging package or go fully custom. Fish finders, rod holders, lighting, power systems - we install it all professionally.",
+            "gradient": "linear-gradient(135deg, var(--ocean-medium), var(--ocean-deep))"
+          }
+        },
+        "step_HADTVM": {
+          "type": "step",
+          "settings": {
+            "number": "3",
+            "title": "Ship & Fish",
+            "description": "We ship your turnkey rig nationwide. Unbox it, hit the water, and start catching. No DIY stress, no missing parts, no regrets.",
+            "gradient": "linear-gradient(135deg, var(--sunrise), #FF8F66)"
+          }
+        }
+      },
+      "block_order": [
+        "step_6L3mYt",
+        "step_QC4tXn",
+        "step_HADTVM"
+      ],
+      "name": "How It Works",
+      "settings": {
+        "heading": "How It Works",
+        "description": "Three simple steps from choosing your kayak to catching fish"
+      }
     },
-    "packages": {
-      "type": "custom-rigging-packages"
+    "custom_rigging_packages_3qFCp8": {
+      "type": "custom-rigging-packages",
+      "blocks": {
+        "package_hgGhQF": {
+          "type": "package",
+          "settings": {
+            "image": "shopify://shop_images/DSC_0258_-_Large_c5233571-01c8-4cd2-a329-40abe57ecf77.jpg",
+            "title": "Tournament Ready",
+            "desc": "Electronics, power, storage, and install.",
+            "cta_text": "Learn more",
+            "cta_link": "/pages/custom-rigging"
+          }
+        },
+        "package_rJ7PAJ": {
+          "type": "package",
+          "settings": {
+            "image": "shopify://shop_images/Bite-Angler-Tempest-01.png",
+            "title": "Tournament Ready",
+            "desc": "Electronics, power, storage, and install.",
+            "cta_text": "Learn more",
+            "cta_link": "/pages/custom-rigging"
+          }
+        },
+        "package_kWiNMX": {
+          "type": "package",
+          "settings": {
+            "image": "shopify://shop_images/6__1728_-_Large_5131436a-c383-4b4b-b658-88474cdd526c.jpg",
+            "title": "Tournament Ready",
+            "desc": "Electronics, power, storage, and install.",
+            "cta_text": "Learn more",
+            "cta_link": "/pages/custom-rigging"
+          }
+        }
+      },
+      "block_order": [
+        "package_hgGhQF",
+        "package_rJ7PAJ",
+        "package_kWiNMX"
+      ],
+      "name": "Rigging Packages",
+      "settings": {
+        "heading": "Rigging Packages",
+        "custom_title": "Want something custom?",
+        "custom_text": "We can build a rig around your fishing style and budget.",
+        "custom_link_label": "Call us to spec it out",
+        "custom_link": "tel:252-499-9911"
+      }
     },
-    "gallery": {
-      "type": "custom-rigging-gallery"
-    },
-    "faq": {
-      "type": "custom-rigging-faq"
+    "custom_rigging_gallery_eVhUqU": {
+      "type": "custom-rigging-gallery",
+      "blocks": {
+        "build_QyJF8m": {
+          "type": "build",
+          "settings": {
+            "image": "shopify://shop_images/DSC_7422_-_Large_8a93e6e3-9bfe-4038-8003-7f74d3892a36.jpg",
+            "icon": "🎣",
+            "gradient": "linear-gradient(135deg, var(--ocean-light), var(--ocean-medium))",
+            "title": "Hobie Pro Angler Tournament Rig",
+            "description": "Garmin Echomap Ultra, LiveScope, dual batteries, LED lighting, custom crate. Shipped to Texas."
+          }
+        },
+        "build_GFGgHX": {
+          "type": "build",
+          "settings": {
+            "image": "shopify://shop_images/6__2061_-_Large_741e17ea-7138-4f89-9806-7e43e56e8cef.jpg",
+            "icon": "🐟",
+            "gradient": "linear-gradient(135deg, var(--rigging-accent), #00C77F)",
+            "title": "Native Slayer Inshore Setup",
+            "description": "Humminbird HELIX 7, power system, rod holders, anchor trolley. Ready for redfish and speckled trout."
+          }
+        },
+        "build_LYr9M4": {
+          "type": "build",
+          "settings": {
+            "image": "shopify://shop_images/Knarr_Lifestyle_2.jpg",
+            "icon": "🏆",
+            "gradient": "linear-gradient(135deg, var(--sunrise), #FF8F66)",
+            "title": "Old Town Sportsman Elite Build",
+            "description": "Full tournament setup with 360 imaging, premium lighting, measuring board. Competition ready."
+          }
+        }
+      },
+      "block_order": [
+        "build_QyJF8m",
+        "build_GFGgHX",
+        "build_LYr9M4"
+      ],
+      "name": "Recent Builds Gallery",
+      "settings": {
+        "heading": "Recent Builds",
+        "description": "See what we've built for anglers across the country",
+        "show_note": false,
+        "note_text": "📸 Upload your custom rig photos!"
+      }
     },
     "cta": {
-      "type": "custom-rigging-cta"
+      "type": "custom-rigging-cta",
+      "settings": {
+        "heading": "Ready to Build Your Dream Rig?",
+        "subheading": "Call or email us and we’ll help you spec it out.",
+        "primary_btn_text": "Call Rigging",
+        "primary_btn_link": "tel:252-499-9911",
+        "secondary_btn_text": "Email Rigging",
+        "secondary_btn_link": "mailto:rigging@trustysailandpaddle.com"
+      }
+    },
+    "custom_rigging_faq_94i3Jj": {
+      "type": "custom-rigging-faq",
+      "blocks": {
+        "faq_item_pxX7MV": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I bring my own kayak to be rigged?",
+            "answer": "Absolutely! Many customers ship us their kayak to rig, or drop it off at our shop. We work with all major brands."
+          }
+        },
+        "faq_item_tPJear": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long does a custom build take?",
+            "answer": "Typical turnaround is 2-3 weeks from when we receive the kayak and components. Rush builds available for additional fee."
+          }
+        },
+        "faq_item_xBhfzp": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What's included in shipping?",
+            "answer": "We professionally package and ship your rig via freight. Typical cost is $200-400 depending on location. Free shipping on Elite+ packages!"
+          }
+        },
+        "faq_item_kfP93P": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I customize the packages?",
+            "answer": "Yes! Our packages are starting points. Add or remove components, upgrade electronics, change colors - we'll build exactly what you want."
+          }
+        },
+        "faq_item_eeMD4m": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you offer financing?",
+            "answer": "Yes! We offer financing options through Affirm. Flexible payment plans available - apply at checkout or call for details."
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_pxX7MV",
+        "faq_item_tPJear",
+        "faq_item_xBhfzp",
+        "faq_item_kfP93P",
+        "faq_item_eeMD4m"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "heading": "Common Questions"
+      }
     }
   },
   "order": [
-    "hero",
-    "options",
-    "how",
-    "packages",
-    "gallery",
-    "faq",
-    "cta"
+    "rigging_hero_carousel_wkJKeQ",
+    "rigging_options_grid_nVb7Q4",
+    "custom_rigging_how_it_works_YzPLGY",
+    "custom_rigging_packages_3qFCp8",
+    "custom_rigging_gallery_eVhUqU",
+    "cta",
+    "custom_rigging_faq_94i3Jj"
   ]
 }
