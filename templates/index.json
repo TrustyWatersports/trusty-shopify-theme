@@ -108,6 +108,72 @@
       "name": "Trust Bar",
       "settings": {}
     },
+    "trusty_pathways_CPfqNk": {
+      "type": "trusty-pathways",
+      "blocks": {
+        "pathway_7Yq7zB": {
+          "type": "pathway",
+          "settings": {
+            "style": "primary",
+            "icon": "🎣",
+            "label": "For Serious Anglers",
+            "title": "Custom Rigged",
+            "description": "Get a tournament-ready fishing kayak professionally rigged and shipped to your door. Skip the DIY frustration.",
+            "feature_1": "Professional component selection",
+            "feature_2": "Expert installation & wiring",
+            "feature_3": "Fish finder setup",
+            "feature_4": "Rigging packages from $1,499",
+            "feature_5": "Ships nationwide",
+            "button_text": "Learn More About Custom Rigging",
+            "button_link": "/pages/custom-rigging"
+          }
+        },
+        "pathway_wfai9T": {
+          "type": "pathway",
+          "settings": {
+            "style": "secondary",
+            "icon": "📍",
+            "label": "For Smart Shoppers",
+            "title": "Visit Our Showroom",
+            "description": "See, touch, and compare 60+ kayaks and sailboats. Get expert advice from locals who fish these waters daily.",
+            "feature_1": "60+ models in stock",
+            "feature_2": "Compare side-by-side",
+            "feature_3": "Expert local guidance",
+            "feature_4": "Take home today or add rigging",
+            "feature_5": "Morehead City, NC",
+            "button_text": "Plan Your Visit →",
+            "button_link": "/pages/showroom"
+          }
+        },
+        "pathway_hrFRJR": {
+          "type": "pathway",
+          "settings": {
+            "style": "secondary",
+            "icon": "🚣",
+            "label": "For First-Timers",
+            "title": "Rent First, Buy Smart",
+            "description": "Try the exact kayak you're considering on Crystal Coast waters. Rental fees credit toward your purchase.",
+            "feature_1": "Test on actual local waters",
+            "feature_2": "Pedal kayaks available",
+            "feature_3": "Guided tours offered",
+            "feature_4": "Rental credit toward purchase",
+            "feature_5": "Waterfront location",
+            "button_text": "Book a Rental →",
+            "button_link": "/pages/rentals"
+          }
+        }
+      },
+      "block_order": [
+        "pathway_7Yq7zB",
+        "pathway_wfai9T",
+        "pathway_hrFRJR"
+      ],
+      "name": "Three Pathways",
+      "settings": {
+        "heading": "Choose Your Path",
+        "subtitle": "Whether you want a turnkey rig, prefer to shop in person, or want to try first - we've got you covered"
+      }
+    },
     "brands_carousel_DndhH9": {
       "type": "brands-carousel",
       "blocks": {
@@ -231,72 +297,6 @@
         "autoplay_speed": 5
       }
     },
-    "trusty_pathways_CPfqNk": {
-      "type": "trusty-pathways",
-      "blocks": {
-        "pathway_7Yq7zB": {
-          "type": "pathway",
-          "settings": {
-            "style": "primary",
-            "icon": "🎣",
-            "label": "For Serious Anglers",
-            "title": "Custom Rigged",
-            "description": "Get a tournament-ready fishing kayak professionally rigged and shipped to your door. Skip the DIY frustration.",
-            "feature_1": "Professional component selection",
-            "feature_2": "Expert installation & wiring",
-            "feature_3": "Fish finder setup",
-            "feature_4": "Rigging packages from $1,499",
-            "feature_5": "Ships nationwide",
-            "button_text": "Learn More About Custom Rigging",
-            "button_link": "/pages/custom-rigging"
-          }
-        },
-        "pathway_wfai9T": {
-          "type": "pathway",
-          "settings": {
-            "style": "secondary",
-            "icon": "📍",
-            "label": "For Smart Shoppers",
-            "title": "Visit Our Showroom",
-            "description": "See, touch, and compare 60+ kayaks and sailboats. Get expert advice from locals who fish these waters daily.",
-            "feature_1": "60+ models in stock",
-            "feature_2": "Compare side-by-side",
-            "feature_3": "Expert local guidance",
-            "feature_4": "Take home today or add rigging",
-            "feature_5": "Morehead City, NC",
-            "button_text": "Plan Your Visit →",
-            "button_link": "/pages/showroom"
-          }
-        },
-        "pathway_hrFRJR": {
-          "type": "pathway",
-          "settings": {
-            "style": "secondary",
-            "icon": "🚣",
-            "label": "For First-Timers",
-            "title": "Rent First, Buy Smart",
-            "description": "Try the exact kayak you're considering on Crystal Coast waters. Rental fees credit toward your purchase.",
-            "feature_1": "Test on actual local waters",
-            "feature_2": "Pedal kayaks available",
-            "feature_3": "Guided tours offered",
-            "feature_4": "Rental credit toward purchase",
-            "feature_5": "Waterfront location",
-            "button_text": "Book a Rental →",
-            "button_link": "/pages/rentals"
-          }
-        }
-      },
-      "block_order": [
-        "pathway_7Yq7zB",
-        "pathway_wfai9T",
-        "pathway_hrFRJR"
-      ],
-      "name": "Three Pathways",
-      "settings": {
-        "heading": "Choose Your Path",
-        "subtitle": "Whether you want a turnkey rig, prefer to shop in person, or want to try first - we've got you covered"
-      }
-    },
     "trusty_sailing_cta_VGa3zk": {
       "type": "trusty-sailing-cta",
       "name": "Sailing CTA",
@@ -362,8 +362,8 @@
   "order": [
     "trusty_hero_78gxMM",
     "trusty_trustbar_QzbjeE",
-    "brands_carousel_DndhH9",
     "trusty_pathways_CPfqNk",
+    "brands_carousel_DndhH9",
     "trusty_sailing_cta_VGa3zk",
     "trusty_why_trusty_TU4aTV"
   ]
