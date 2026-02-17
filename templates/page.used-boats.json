@@ -14,13 +14,59 @@
       "settings": {
         "hero_title": "Used Boats & Consignment",
         "hero_subtitle": "Quality pre-owned kayaks and sailboats at great prices",
-        "background_color": "#0A4B78"
+        "background_color": "#0a4b78"
       }
     },
     "used-boats-grid": {
       "type": "used-boats-grid",
+      "blocks": {
+        "boat_XazJAr": {
+          "type": "boat",
+          "settings": {
+            "boat_name": "",
+            "boat_brand": "",
+            "boat_year": "",
+            "boat_condition": "good",
+            "boat_description": "",
+            "boat_price": "",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
+        "boat_yJEtJy": {
+          "type": "boat",
+          "settings": {
+            "boat_name": "",
+            "boat_brand": "",
+            "boat_year": "",
+            "boat_condition": "good",
+            "boat_description": "",
+            "boat_price": "",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
+        "boat_k7LhrH": {
+          "type": "boat",
+          "settings": {
+            "boat_name": "",
+            "boat_brand": "",
+            "boat_year": "",
+            "boat_condition": "good",
+            "boat_description": "",
+            "boat_price": "",
+            "contact_info": "",
+            "is_sold": false
+          }
+        }
+      },
+      "block_order": [
+        "boat_XazJAr",
+        "boat_yJEtJy",
+        "boat_k7LhrH"
+      ],
       "settings": {
-        "background_color": "#F5F7FA"
+        "background_color": "#f5f7fa"
       }
     }
   },
