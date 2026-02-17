@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "programs-hero": {
+      "type": "programs-hero",
+      "settings": {
+        "hero_title": "Programs & Events",
+        "hero_subtitle": "Sailing lessons, guided tours, and Crystal Coast watersports experiences",
+        "show_icon": true,
+        "hero_icon": "⛵",
+        "hero_color_start": "#D32F2F",
+        "hero_color_end": "#B71C1C"
+      }
+    }
+  },
+  "order": [
+    "programs-hero"
+  ]
+}

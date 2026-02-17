@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "sailing-hero": {
+      "type": "sailing-hero-carousel",
+      "settings": {
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "show_arrows": true,
+        "show_indicators": true
+      }
+    }
+  },
+  "order": [
+    "sailing-hero"
+  ]
+}
