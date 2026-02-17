@@ -111,6 +111,14 @@
     "brands_carousel_4qaEKA": {
       "type": "brands-carousel",
       "blocks": {
+        "brand_9WYqQ8": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/Astral.webp",
+            "brand_name": "Astral",
+            "brand_link": ""
+          }
+        },
         "brand_p8DLG9": {
           "type": "brand",
           "settings": {
@@ -137,6 +145,7 @@
         }
       },
       "block_order": [
+        "brand_9WYqQ8",
         "brand_p8DLG9",
         "brand_r7UCbY",
         "brand_JatECL"
