@@ -236,7 +236,8 @@
         "brand_6cjmLT": {
           "type": "brand",
           "settings": {
-            "brand_name": "",
+            "brand_logo": "shopify://shop_images/Topaz.webp",
+            "brand_name": "Topaz Sailboats",
             "brand_link": ""
           }
         },
@@ -313,7 +314,7 @@
       "settings": {
         "section_title": "Shop By Brand",
         "section_subtitle": "",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "autoplay": true,
         "autoplay_speed": 5
       }
