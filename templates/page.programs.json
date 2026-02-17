@@ -1,0 +1,27 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "programs-hero": {
+      "type": "programs-hero",
+      "settings": {
+        "hero_title": "Programs & Events",
+        "hero_subtitle": "Sailing lessons, guided tours, and Crystal Coast watersports experiences",
+        "show_icon": true,
+        "hero_icon": "⛵",
+        "hero_color_start": "#D32F2F",
+        "hero_color_end": "#B71C1C"
+      }
+    }
+  },
+  "order": [
+    "programs-hero"
+  ]
+}

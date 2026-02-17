@@ -1,0 +1,53 @@
+{% schema %}
+{
+  "name": "Programs Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero Title",
+      "default": "Programs & Events"
+    },
+    {
+      "type": "text",
+      "id": "hero_subtitle",
+      "label": "Hero Subtitle",
+      "default": "Sailing lessons, guided tours, and Crystal Coast watersports experiences"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_icon",
+      "label": "Show Icon",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "hero_icon",
+      "label": "Hero Icon (emoji)",
+      "default": "⛵"
+    },
+    {
+      "type": "color",
+      "id": "hero_color_start",
+      "label": "Gradient Start Color",
+      "default": "#D32F2F"
+    },
+    {
+      "type": "color",
+      "id": "hero_color_end",
+      "label": "Gradient End Color",
+      "default": "#B71C1C"
+    }
+  ]
+}
+{% endschema %}
+
+<section style="background: linear-gradient(135deg, {{ section.settings.hero_color_start }} 0%, {{ section.settings.hero_color_end }} 100%); padding: 80px 20px; text-align: center; color: white;">
+  <div style="max-width: 800px; margin: 0 auto;">
+    {% if section.settings.show_icon %}
+      <div style="font-size: 4rem; margin-bottom: 1rem;">{{ section.settings.hero_icon }}</div>
+    {% endif %}
+    <h1 style="font-size: 3rem; margin-bottom: 1rem; font-weight: bold;">{{ section.settings.hero_title }}</h1>
+    <p style="font-size: 1.3rem; opacity: 0.95;">{{ section.settings.hero_subtitle }}</p>
+  </div>
+</section>
