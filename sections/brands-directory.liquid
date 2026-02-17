@@ -1,0 +1,119 @@
+{% schema %}
+{
+  "name": "Brands Directory",
+  "settings": [
+    {
+      "type": "text",
+      "id": "page_title",
+      "label": "Page Title",
+      "default": "Our Brands"
+    },
+    {
+      "type": "textarea",
+      "id": "page_subtitle",
+      "label": "Page Subtitle"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Brand Category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "category_name",
+          "label": "Category Name"
+        },
+        {
+          "type": "color",
+          "id": "category_color",
+          "label": "Category Color",
+          "default": "#0A4B78"
+        }
+      ]
+    },
+    {
+      "type": "brand",
+      "name": "Brand",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "brand_logo",
+          "label": "Brand Logo"
+        },
+        {
+          "type": "text",
+          "id": "brand_name",
+          "label": "Brand Name"
+        },
+        {
+          "type": "textarea",
+          "id": "brand_description",
+          "label": "Brand Description"
+        },
+        {
+          "type": "url",
+          "id": "brand_link",
+          "label": "Link to Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brands Directory"
+    }
+  ]
+}
+{% endschema %}
+
+<section style="padding: 80px 20px; background: #F5F7FA;">
+  <div style="max-width: 1400px; margin: 0 auto;">
+    
+    <div style="text-align: center; margin-bottom: 4rem;">
+      <h1 style="font-size: 3rem; color: #0a4b78; margin-bottom: 1rem;">{{ section.settings.page_title }}</h1>
+      {% if section.settings.page_subtitle != blank %}
+        <p style="font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto;">{{ section.settings.page_subtitle }}</p>
+      {% endif %}
+    </div>
+    
+    {% assign current_category = "" %}
+    {% for block in section.blocks %}
+      
+      {% if block.type == "category" %}
+        {% assign current_category = block.settings.category_name %}
+        <h2 style="font-size: 2rem; color: {{ block.settings.category_color }}; margin: 3rem 0 2rem; padding-bottom: 1rem; border-bottom: 3px solid {{ block.settings.category_color }};">{{ block.settings.category_name }}</h2>
+        <div class="brands-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; margin-bottom: 3rem;">
+      {% endif %}
+      
+      {% if block.type == "brand" %}
+        <a href="{{ block.settings.brand_link }}" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); text-decoration: none; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+          {% if block.settings.brand_logo %}
+            <div style="height: 100px; width: 100%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+              <img src="{{ block.settings.brand_logo | img_url: '300x' }}" alt="{{ block.settings.brand_name }}" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            </div>
+          {% endif %}
+          <h3 style="color: #0a4b78; font-size: 1.2rem; margin-bottom: 0.5rem;">{{ block.settings.brand_name }}</h3>
+          {% if block.settings.brand_description != blank %}
+            <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">{{ block.settings.brand_description }}</p>
+          {% endif %}
+        </a>
+      {% endif %}
+      
+    {% endfor %}
+    </div>
+    
+  </div>
+</section>
+
+<style>
+.brands-grid a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+@media (max-width: 768px) {
+  .brands-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>

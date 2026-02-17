@@ -1,0 +1,418 @@
+{
+  "sections": {
+    "brands-hero": {
+      "type": "blog-hero",
+      "settings": {
+        "hero_height": 400
+      }
+    },
+    "brands-directory": {
+      "type": "brands-directory",
+      "blocks": {
+        "category-kayaks": {
+          "type": "category",
+          "settings": {
+            "category_name": "Kayaks",
+            "category_color": "#0A4B78"
+          }
+        },
+        "brand-jackson": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Jackson Kayak",
+            "brand_description": "Premium whitewater and fishing kayaks",
+            "brand_link": "/collections/jackson-kayak"
+          }
+        },
+        "brand-perception": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Perception Kayaks",
+            "brand_description": "Recreational and fishing kayaks for all skill levels",
+            "brand_link": "/collections/perception-kayaks"
+          }
+        },
+        "brand-wilderness": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Wilderness Systems",
+            "brand_description": "Touring and fishing kayaks built for performance",
+            "brand_link": "/collections/wilderness-systems"
+          }
+        },
+        "brand-native": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Native Watercraft",
+            "brand_description": "Innovative pedal-drive fishing kayaks",
+            "brand_link": "/collections/native-watercraft"
+          }
+        },
+        "brand-bonafide": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Bonafide Kayaks",
+            "brand_description": "Stable, feature-rich fishing kayaks",
+            "brand_link": "/collections/bonafide-kayaks"
+          }
+        },
+        "brand-liquid-logic": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Liquid Logic Kayaks",
+            "brand_description": "Whitewater and recreational kayaks",
+            "brand_link": "/collections/liquid-logic"
+          }
+        },
+        "brand-nucanoe": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "NuCanoe",
+            "brand_description": "Hybrid kayak-canoe fishing platforms",
+            "brand_link": "/collections/nucanoe"
+          }
+        },
+        "brand-eddyline": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Eddyline Kayaks",
+            "brand_description": "Lightweight touring kayaks",
+            "brand_link": "/collections/eddyline"
+          }
+        },
+        "brand-oldtown": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Old Town",
+            "brand_description": "Classic canoes and kayaks since 1898",
+            "brand_link": "/collections/old-town"
+          }
+        },
+        "category-sailboats": {
+          "type": "category",
+          "settings": {
+            "category_name": "Sailboats",
+            "category_color": "#D32F2F"
+          }
+        },
+        "brand-topaz": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Topaz Sailboats",
+            "brand_description": "Small dinghies and catamarans from the UK",
+            "brand_link": "/collections/topaz-sailboats"
+          }
+        },
+        "brand-nacra": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Nacra Sailboats",
+            "brand_description": "High-performance racing catamarans",
+            "brand_link": "/collections/nacra"
+          }
+        },
+        "brand-weta": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Weta Trimarans",
+            "brand_description": "Fast, stable trimarans for all conditions",
+            "brand_link": "/collections/weta"
+          }
+        },
+        "category-apparel": {
+          "type": "category",
+          "settings": {
+            "category_name": "Apparel & Safety Gear",
+            "category_color": "#00A86B"
+          }
+        },
+        "brand-astral": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Astral",
+            "brand_description": "PFDs and water sports footwear",
+            "brand_link": "/collections/astral"
+          }
+        },
+        "brand-zhik": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Zhik",
+            "brand_description": "Technical sailing apparel",
+            "brand_link": "/collections/zhik"
+          }
+        },
+        "brand-kavu": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Kavu",
+            "brand_description": "Outdoor lifestyle apparel",
+            "brand_link": "/collections/kavu"
+          }
+        },
+        "brand-nrs": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "NRS",
+            "brand_description": "Paddling apparel and safety gear",
+            "brand_link": "/collections/nrs"
+          }
+        },
+        "brand-sunbum": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Sun Bum",
+            "brand_description": "Sun protection and skincare",
+            "brand_link": "/collections/sunbum"
+          }
+        },
+        "category-accessories": {
+          "type": "category",
+          "settings": {
+            "category_name": "Kayak & Sailing Accessories",
+            "category_color": "#FF6B35"
+          }
+        },
+        "brand-yakattack": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "YakAttack",
+            "brand_description": "Kayak fishing accessories and mounts",
+            "brand_link": "/collections/yakattack"
+          }
+        },
+        "brand-harken": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Harken",
+            "brand_description": "Premium sailing hardware",
+            "brand_link": "/collections/harken"
+          }
+        },
+        "brand-ronstan": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Ronstan",
+            "brand_description": "Sailing blocks and fittings",
+            "brand_link": "/collections/ronstan"
+          }
+        },
+        "brand-allen": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Allen Sailing",
+            "brand_description": "Sailing hardware and rigging",
+            "brand_link": "/collections/allen"
+          }
+        },
+        "brand-berlypro": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "BerleyPro",
+            "brand_description": "Kayak accessories and electronics mounts",
+            "brand_link": "/collections/berlypro"
+          }
+        },
+        "brand-powerpole": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Power-Pole",
+            "brand_description": "Shallow water anchors",
+            "brand_link": "/collections/power-pole"
+          }
+        },
+        "brand-minnkota": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Minn Kota",
+            "brand_description": "Trolling motors",
+            "brand_link": "/collections/minn-kota"
+          }
+        },
+        "category-ropes": {
+          "type": "category",
+          "settings": {
+            "category_name": "Ropes & Lines",
+            "category_color": "#8B4513"
+          }
+        },
+        "brand-ner": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "New England Ropes",
+            "brand_description": "Premium sailing and marine rope",
+            "brand_link": "/collections/new-england-ropes"
+          }
+        },
+        "brand-marlow": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Marlow Ropes",
+            "brand_description": "High-performance sailing lines",
+            "brand_link": "/collections/marlow-ropes"
+          }
+        },
+        "category-transport": {
+          "type": "category",
+          "settings": {
+            "category_name": "Racks, Trailers & Storage",
+            "category_color": "#4A9CD6"
+          }
+        },
+        "brand-dynamic": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Dynamic Dollies",
+            "brand_description": "Boat dollies and launching systems",
+            "brand_link": "/collections/dynamic-dollies"
+          }
+        },
+        "brand-yakima": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Yakima",
+            "brand_description": "Roof racks and cargo systems",
+            "brand_link": "/collections/yakima"
+          }
+        },
+        "brand-suspenz": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Suspenz",
+            "brand_description": "Kayak and SUP storage solutions",
+            "brand_link": "/collections/suspenz"
+          }
+        },
+        "brand-loadrite": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "LoadRite Trailers",
+            "brand_description": "Boat trailers",
+            "brand_link": "/collections/loadrite"
+          }
+        },
+        "brand-malone": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Malone",
+            "brand_description": "Kayak racks and trailers",
+            "brand_link": "/collections/malone"
+          }
+        },
+        "category-electronics": {
+          "type": "category",
+          "settings": {
+            "category_name": "Electronics & Motors",
+            "category_color": "#1E6FA8"
+          }
+        },
+        "brand-garmin": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Garmin",
+            "brand_description": "Marine electronics and fish finders",
+            "brand_link": "/collections/garmin"
+          }
+        },
+        "brand-yamaha": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Yamaha / Torqeedo",
+            "brand_description": "Electric outboard motors",
+            "brand_link": "/collections/motors"
+          }
+        },
+        "category-outdoor": {
+          "type": "category",
+          "settings": {
+            "category_name": "Camping & Outdoor",
+            "category_color": "#2E7D32"
+          }
+        },
+        "brand-ketch": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Ketch Outdoors",
+            "brand_description": "Outdoor gear and accessories",
+            "brand_link": "/collections/ketch"
+          }
+        },
+        "brand-ikamper": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "iKamper",
+            "brand_description": "Rooftop tents",
+            "brand_link": "/collections/ikamper"
+          }
+        },
+        "category-other": {
+          "type": "category",
+          "settings": {
+            "category_name": "Deck & Specialty",
+            "category_color": "#666666"
+          }
+        },
+        "brand-seadek": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "SeaDek Mid-Atlantic",
+            "brand_description": "Custom marine flooring",
+            "brand_link": "/collections/seadek"
+          }
+        }
+      },
+      "block_order": [
+        "category-kayaks",
+        "brand-jackson",
+        "brand-perception",
+        "brand-wilderness",
+        "brand-native",
+        "brand-bonafide",
+        "brand-liquid-logic",
+        "brand-nucanoe",
+        "brand-eddyline",
+        "brand-oldtown",
+        "category-sailboats",
+        "brand-topaz",
+        "brand-nacra",
+        "brand-weta",
+        "category-apparel",
+        "brand-astral",
+        "brand-zhik",
+        "brand-kavu",
+        "brand-nrs",
+        "brand-sunbum",
+        "category-accessories",
+        "brand-yakattack",
+        "brand-harken",
+        "brand-ronstan",
+        "brand-allen",
+        "brand-berlypro",
+        "brand-powerpole",
+        "brand-minnkota",
+        "category-ropes",
+        "brand-ner",
+        "brand-marlow",
+        "category-transport",
+        "brand-dynamic",
+        "brand-yakima",
+        "brand-suspenz",
+        "brand-loadrite",
+        "brand-malone",
+        "category-electronics",
+        "brand-garmin",
+        "brand-yamaha",
+        "category-outdoor",
+        "brand-ketch",
+        "brand-ikamper",
+        "category-other",
+        "brand-seadek"
+      ],
+      "settings": {
+        "page_title": "Our Brands",
+        "page_subtitle": "We proudly carry the finest brands in paddlesports, sailing, and outdoor adventure"
+      }
+    }
+  },
+  "order": ["brands-hero", "brands-directory"]
+}
