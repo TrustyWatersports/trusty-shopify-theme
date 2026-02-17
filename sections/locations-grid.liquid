@@ -1,0 +1,203 @@
+{% schema %}
+{
+  "name": "Locations Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Page Heading",
+      "default": "Our Locations"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Two convenient Morehead City locations to serve you"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "location",
+      "name": "Location",
+      "settings": [
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge Text",
+          "default": "MAIN LOCATION"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Location Title",
+          "default": "Shop & Showroom"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Location Image"
+        },
+        {
+          "type": "text",
+          "id": "address_line1",
+          "label": "Address Line 1",
+          "default": "4856 Arendell Street"
+        },
+        {
+          "type": "text",
+          "id": "address_line2",
+          "label": "Address Line 2",
+          "default": "Morehead City, NC 28557"
+        },
+        {
+          "type": "text",
+          "id": "maps_link",
+          "label": "Google Maps Link",
+          "default": "https://maps.google.com"
+        },
+        {
+          "type": "text",
+          "id": "phone",
+          "label": "Phone Number",
+          "default": "(252) 499-9911"
+        },
+        {
+          "type": "text",
+          "id": "email",
+          "label": "Email",
+          "default": "info@trustysailandpaddle.com"
+        },
+        {
+          "type": "textarea",
+          "id": "hours",
+          "label": "Hours (one per line)",
+          "default": "Monday - Saturday: 10:00 AM - 5:00 PM\nSunday: Closed"
+        },
+        {
+          "type": "textarea",
+          "id": "features",
+          "label": "What's Here (one per line)",
+          "default": "60+ Kayaks & Sailboats on Display\nCustom Rigging Workshop\nPaddling & Sailing Gear"
+        },
+        {
+          "type": "text",
+          "id": "note",
+          "label": "Special Note",
+          "default": ""
+        },
+        {
+          "type": "color",
+          "id": "accent_color",
+          "label": "Accent Color",
+          "default": "#ff6b35"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Locations Grid"
+    }
+  ]
+}
+{% endschema %}
+
+<section style="padding: 60px 20px 80px; background: #f8f9fa;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    
+    <div style="background: linear-gradient(135deg, #0a2f3f 0%, #1a4f5f 100%); padding: 60px 40px; border-radius: 12px; text-align: center; margin-bottom: 60px;">
+      <h1 style="color: white; font-size: 3rem; margin-bottom: 1rem;">
+        {{ section.settings.heading }}
+      </h1>
+      <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+        {{ section.settings.subheading }}
+      </p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 3rem;">
+      {% for block in section.blocks %}
+        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          
+          {% if block.settings.image %}
+            <img src="{{ block.settings.image | img_url: '800x' }}" alt="{{ block.settings.title }}" style="width: 100%; height: 250px; object-fit: cover;">
+          {% endif %}
+
+          <div style="padding: 2rem;">
+            
+            <div style="margin-bottom: 1.5rem;">
+              <span style="display: inline-block; background: {{ block.settings.accent_color }}; color: white; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.75rem; font-weight: bold; margin-bottom: 0.5rem;">
+                {{ block.settings.badge }}
+              </span>
+              <h2 style="font-size: 2rem; color: #0a2f3f; margin: 0;">
+                {{ block.settings.title }}
+              </h2>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <h3 style="color: {{ block.settings.accent_color }}; font-size: 1rem; margin-bottom: 0.5rem; display: flex; align-items: center;">
+                📍 Address
+              </h3>
+              <p style="margin: 0; color: #333; line-height: 1.6;">
+                {{ block.settings.address_line1 }}<br>
+                {{ block.settings.address_line2 }}
+              </p>
+              <a href="{{ block.settings.maps_link }}" target="_blank" style="color: #00a86b; text-decoration: none; font-weight: 500; margin-top: 0.5rem; display: inline-block;">
+                Get Directions →
+              </a>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <h3 style="color: {{ block.settings.accent_color }}; font-size: 1rem; margin-bottom: 0.5rem; display: flex; align-items: center;">
+                📞 Contact
+              </h3>
+              <p style="margin: 0; color: #333; line-height: 1.8;">
+                <strong>Phone:</strong> <a href="tel:{{ block.settings.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}" style="color: #ff6b35; text-decoration: none;">{{ block.settings.phone }}</a><br>
+                <strong>Email:</strong> <a href="mailto:{{ block.settings.email }}" style="color: #00a86b; text-decoration: none;">{{ block.settings.email }}</a>
+              </p>
+            </div>
+
+            {% if block.settings.hours != blank %}
+              <div style="margin-bottom: 1.5rem;">
+                <h3 style="color: {{ block.settings.accent_color }}; font-size: 1rem; margin-bottom: 0.5rem; display: flex; align-items: center;">
+                  🕒 Hours
+                </h3>
+                <div style="color: #333; line-height: 1.8;">
+                  {% assign hours_list = block.settings.hours | newline_to_br | split: '<br />' %}
+                  {% for hour in hours_list %}
+                    {{ hour }}<br>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if block.settings.note != blank %}
+              <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 0.75rem 1rem; margin-bottom: 1.5rem; border-radius: 4px;">
+                <p style="margin: 0; color: #856404; font-size: 0.9rem;">
+                  ⚠️ {{ block.settings.note }}
+                </p>
+              </div>
+            {% endif %}
+
+            {% if block.settings.features != blank %}
+              <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px;">
+                <h3 style="font-size: 1rem; margin-bottom: 1rem; color: #0a2f3f;">
+                  What's Here:
+                </h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                  {% assign features_list = block.settings.features | newline_to_br | split: '<br />' %}
+                  {% for feature in features_list %}
+                    <li style="padding: 0.25rem 0; color: #333;">
+                      ✓ {{ feature }}
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

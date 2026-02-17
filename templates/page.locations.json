@@ -1,0 +1,53 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "locations": {
+      "type": "locations-grid",
+      "blocks": {
+        "retail": {
+          "type": "location",
+          "settings": {
+            "badge": "MAIN LOCATION",
+            "title": "Shop & Showroom",
+            "image": "",
+            "address_line1": "5300 Highway 70 West",
+            "address_line2": "Morehead City, NC 28557",
+            "maps_link": "https://maps.google.com/?q=5300+Highway+70+West+Morehead+City+NC+28557",
+            "phone": "(252) 499-9911",
+            "email": "info@trustysailandpaddle.com",
+            "hours": "Monday - Saturday: 10:00 AM - 5:00 PM\nSunday: Closed",
+            "features": "60+ Kayaks & Sailboats on Display\nCustom Rigging Workshop\nPaddling & Sailing Gear\nExpert Staff Consultation",
+            "note": "",
+            "accent_color": "#ff6b35"
+          }
+        },
+        "rental": {
+          "type": "location",
+          "settings": {
+            "badge": "WATERFRONT",
+            "title": "Rental Location",
+            "image": "",
+            "address_line1": "815 Shepard Street",
+            "address_line2": "Morehead City, NC 28557",
+            "maps_link": "https://maps.google.com/?q=815+Shepard+Street+Morehead+City+NC+28557",
+            "phone": "(252) 515-4866",
+            "email": "rentals@trustysailandpaddle.com",
+            "hours": "Tuesday - Saturday: 10:00 AM - 5:00 PM\nSunday - Monday: Closed",
+            "features": "Kayak & SUP Rentals\nSailboat Rentals\nGuided Tours & Lessons",
+            "note": "Special event schedule varies",
+            "accent_color": "#00a86b"
+          }
+        }
+      },
+      "block_order": ["retail", "rental"],
+      "settings": {
+        "heading": "Our Locations",
+        "subheading": "Two convenient Morehead City locations to serve you"
+      }
+    }
+  },
+  "order": ["main", "locations"]
+}
