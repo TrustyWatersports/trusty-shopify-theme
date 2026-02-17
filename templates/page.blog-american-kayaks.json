@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "blog-post-hero": {
+      "type": "blog-post-hero",
+      "settings": {
+        "post_title": "Proudly Paddling Forward: The Power of Choosing American-Made Kayaks",
+        "author": "Written By Heather Fournel",
+        "hero_height": 500
+      }
+    },
+    "blog-post-content": {
+      "type": "blog-post-content",
+      "settings": {
+        "post_content": "<p>When you buy a Made in USA kayak, you're not just purchasing a piece of gear—you're investing in the heart of American values. U.S. paddlesports represent the essence of our national pride, symbolizing the best of who we are: innovation, craftsmanship, economic opportunity, and a deep respect for our environment. From every rivet to every paddle stroke, American-made kayaks embody the resilience, ingenuity, and spirit that define our country.</p><p>Supporting American kayak manufacturing means fueling economic opportunity right here at home. It's about creating jobs for American workers, driving technological innovation, and maintaining high labor standards that protect people, not just profits. When you choose a kayak made on American soil, you're choosing to boost our economy and safeguard the livelihoods of your neighbors—people who take pride in producing the highest quality products.</p><p>And it's not just about economics—it's about preserving our environment. Most U.S.-made kayaks are crafted from high-density polyethylene (HDPE), one of the most durable and recyclable plastics. HDPE reduces the need for virgin materials like petroleum and natural gas, cutting down on energy use by up to 50%. That means less environmental impact, less waste, and more sustainability for our planet. By investing in a kayak made with readily recyclable materials, you're helping to protect the waterways and natural wonders you love to explore.</p><p>With Hobie stepping away from domestic production, a new era of American kayak manufacturing is rising. Companies like Jackson Kayak are leading the way, employing American workers and actively involving veterans in the paddlesports industry, both during and after their service. These are companies that embody the values we hold dear—dedication, hard work, and the relentless pursuit of innovation.</p><p>Kayak fishing, a sport with deep American roots, is thriving like never before. The best innovations, designs, and products come from American kayak anglers, made by American hands for American waters. When you buy a kayak made here, you're not just buying a boat—you're investing in the future of this all-American sport and in the beauty of our natural resources.</p><p>The lower price tag on foreign-made kayaks cannot compare to what you gain when you choose American. It's a choice that goes beyond dollars—it's about values, pride, and legacy. By paying a little more, you're honoring the American worker, supporting local businesses, protecting the environment, and standing by the ideals that make our country great.</p><p><strong>So, when you're ready to hit the water, make a choice that's bigger than the kayak you paddle.</strong> Choose American-made. Choose to support our economy, our environment, and our way of life. Choose a kayak that will carry you through the beauty of this land, crafted by the hands of those who share your love for it.</p><p style='margin-top: 3rem; font-weight: 600;'>Heather Fournel</p>",
+        "background_color": "#E8F4F8"
+      }
+    }
+  },
+  "order": ["blog-post-hero", "blog-post-content"]
+}
