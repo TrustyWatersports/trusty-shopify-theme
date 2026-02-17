@@ -111,6 +111,14 @@
     "brands_carousel_4qaEKA": {
       "type": "brands-carousel",
       "blocks": {
+        "brand_p8DLG9": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/BonaFide.webp",
+            "brand_name": "BonaFide",
+            "brand_link": ""
+          }
+        },
         "brand_r7UCbY": {
           "type": "brand",
           "settings": {
@@ -129,6 +137,7 @@
         }
       },
       "block_order": [
+        "brand_p8DLG9",
         "brand_r7UCbY",
         "brand_JatECL"
       ],
