@@ -111,6 +111,14 @@
     "brands_carousel_DndhH9": {
       "type": "brands-carousel",
       "blocks": {
+        "brand_KMa6pK": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/LoadRite.webp",
+            "brand_name": "LoadRite Trailers",
+            "brand_link": ""
+          }
+        },
         "brand_m9P9dD": {
           "type": "brand",
           "settings": {
@@ -193,6 +201,7 @@
         }
       },
       "block_order": [
+        "brand_KMa6pK",
         "brand_m9P9dD",
         "brand_BJ8DL9",
         "brand_gpGkkK",
