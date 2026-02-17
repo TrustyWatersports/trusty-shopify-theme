@@ -84,6 +84,15 @@
         "stat3_label": "In the UK"
       }
     },
+    "sailing-video": {
+      "type": "video-section",
+      "settings": {
+        "video_title": "See Topaz Sailboats in Action",
+        "video_description": "Watch how these incredible boats perform on the water",
+        "vimeo_url": "https://vimeo.com/1142619905/323502ecbc",
+        "background_color": "#FFFFFF"
+      }
+    },
     "sailing-benefits": {
       "type": "sailing-benefits",
       "blocks": {
@@ -173,5 +182,5 @@
       }
     }
   },
-  "order": ["sailing-hero", "sailing-about", "sailing-benefits", "sailing-shop-cta"]
+  "order": ["sailing-hero", "sailing-about", "sailing-video", "sailing-benefits", "sailing-shop-cta"]
 }
