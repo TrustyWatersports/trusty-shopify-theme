@@ -111,6 +111,14 @@
     "brands_carousel_4qaEKA": {
       "type": "brands-carousel",
       "blocks": {
+        "brand_PGWmCc": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/NuCanoe.webp",
+            "brand_name": "NuCanoe",
+            "brand_link": ""
+          }
+        },
         "brand_FemBFX": {
           "type": "brand",
           "settings": {
@@ -153,6 +161,7 @@
         }
       },
       "block_order": [
+        "brand_PGWmCc",
         "brand_FemBFX",
         "brand_9WYqQ8",
         "brand_p8DLG9",
