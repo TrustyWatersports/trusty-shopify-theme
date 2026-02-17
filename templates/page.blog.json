@@ -23,7 +23,7 @@
           "settings": {
             "post_title": "Yes, Kids Can Do Hard Things",
             "post_excerpt": "Kids can do hard things. Griffin (12) and Grayson (9) sailed their new Topaz Taz from Emerald Isle to Long Island on their own. They capsized, righted the boat together, and made it home—proud, confident, and grinning ear to ear. No screen time has ever done that. Let's say yes to adventure. Let's trust our kids more. Let's give them the tools to do real, hard, unforgettable things. 💪⛵💙",
-            "post_link": "/pages/blog-1",
+            "post_link": "shopify://pages/blog-post",
             "button_text": "Read More"
           }
         },
@@ -55,11 +55,19 @@
           }
         }
       },
-      "block_order": ["post-1", "post-2", "post-3", "post-4"],
+      "block_order": [
+        "post-1",
+        "post-2",
+        "post-3",
+        "post-4"
+      ],
       "settings": {
-        "background_color": "#E8F4F8"
+        "background_color": "#e8f4f8"
       }
     }
   },
-  "order": ["blog-hero", "blog-posts"]
+  "order": [
+    "blog-hero",
+    "blog-posts"
+  ]
 }
