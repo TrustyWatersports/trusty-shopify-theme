@@ -1,0 +1,26 @@
+{% schema %}
+{
+  "name": "Blog Post Content",
+  "settings": [
+    {
+      "type": "html",
+      "id": "post_content",
+      "label": "Post Content (HTML)"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#E8F4F8"
+    }
+  ]
+}
+{% endschema %}
+
+<section style="padding: 80px 20px; background: {{ section.settings.background_color }};">
+  <div style="max-width: 900px; margin: 0 auto; background: white; padding: 60px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+    <div style="font-size: 1.2rem; line-height: 1.9; color: #333;">
+      {{ section.settings.post_content }}
+    </div>
+  </div>
+</section>
