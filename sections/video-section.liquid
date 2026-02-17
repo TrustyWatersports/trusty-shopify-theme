@@ -1,0 +1,52 @@
+{% schema %}
+{
+  "name": "Video Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "video_title",
+      "label": "Section Title",
+      "default": "Watch Our Video"
+    },
+    {
+      "type": "textarea",
+      "id": "video_description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "vimeo_url",
+      "label": "Vimeo Video URL",
+      "info": "Full Vimeo URL including share code"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#F5F7FA"
+    }
+  ]
+}
+{% endschema %}
+
+{% assign video_id = section.settings.vimeo_url | split: '/' | last | split: '?' | first %}
+
+<section style="padding: 80px 20px; background: {{ section.settings.background_color }};">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    
+    {% if section.settings.video_title != blank %}
+      <h2 style="text-align: center; font-size: 2.5rem; color: #0a4b78; margin-bottom: 1rem;">{{ section.settings.video_title }}</h2>
+    {% endif %}
+    
+    {% if section.settings.video_description != blank %}
+      <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto 3rem;">{{ section.settings.video_description }}</p>
+    {% endif %}
+    
+    {% if video_id != blank %}
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+        <iframe src="https://player.vimeo.com/video/{{ video_id }}?h={{ section.settings.vimeo_url | split: '/' | last | split: '?' | last }}&title=0&byline=0&portrait=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    {% endif %}
+    
+  </div>
+</section>
