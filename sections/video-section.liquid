@@ -14,10 +14,16 @@
       "label": "Description"
     },
     {
-      "type": "url",
-      "id": "vimeo_url",
-      "label": "Vimeo Video URL",
-      "info": "Full Vimeo URL including share code"
+      "type": "text",
+      "id": "vimeo_id",
+      "label": "Vimeo Video ID",
+      "info": "Just the video ID number (e.g., 1142619905)"
+    },
+    {
+      "type": "text",
+      "id": "vimeo_hash",
+      "label": "Vimeo Privacy Hash (optional)",
+      "info": "The code after the slash if video is private (e.g., 323502ecbc)"
     },
     {
       "type": "color",
@@ -28,8 +34,6 @@
   ]
 }
 {% endschema %}
-
-{% assign video_id = section.settings.vimeo_url | split: '/' | last | split: '?' | first %}
 
 <section style="padding: 80px 20px; background: {{ section.settings.background_color }};">
   <div style="max-width: 1200px; margin: 0 auto;">
@@ -42,10 +46,11 @@
       <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto 3rem;">{{ section.settings.video_description }}</p>
     {% endif %}
     
-    {% if video_id != blank %}
+    {% if section.settings.vimeo_id != blank %}
       <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
-        <iframe src="https://player.vimeo.com/video/{{ video_id }}?h={{ section.settings.vimeo_url | split: '/' | last | split: '?' | last }}&title=0&byline=0&portrait=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/{{ section.settings.vimeo_id }}{% if section.settings.vimeo_hash != blank %}?h={{ section.settings.vimeo_hash }}{% endif %}&title=0&byline=0&portrait=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
       </div>
+      <script src="https://player.vimeo.com/api/player.js"></script>
     {% endif %}
     
   </div>
