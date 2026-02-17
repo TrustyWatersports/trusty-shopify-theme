@@ -1,0 +1,99 @@
+{
+  "sections": {
+    "about-hero": {
+      "type": "about-hero",
+      "settings": {
+        "year": "2025",
+        "family_title": "The Fournel Family",
+        "family_members": "Andrew, Heather, Abraham, Thomas & Rose",
+        "overlay_color": "#0A4B78",
+        "overlay_opacity": 40
+      }
+    },
+    "about-mission": {
+      "type": "about-mission",
+      "settings": {
+        "greeting": "Welcome to Trusty Sail and Paddle, how can we help you?",
+        "mission_text": "<p>We are a small, locally and family owned and operated kayak and sail shop with a focus on you, our community and our environment. We want to get you in the boat you've always wanted based on your unique needs. We develop programs to spark community interest and we hope that through enjoyment of the water, all of our customers and friends gain a deeper appreciation for our natural resources.</p><p>We know all the questions to ask to match you with your right thing, provide all appropriate gear and accessories, stand behind your purchase with service and support, and stand behind our community as we all grow and chart a course together.</p>",
+        "background_color": "#FFFFFF",
+        "text_color": "#333333"
+      }
+    },
+    "brand-story-video": {
+      "type": "video-section",
+      "settings": {
+        "video_title": "Our Story",
+        "video_description": "Learn about the Trusty family and our passion for watersports on the Crystal Coast",
+        "vimeo_id": "1144729646",
+        "vimeo_hash": "b4f1200637",
+        "background_color": "#F5F7FA"
+      }
+    },
+    "testimonials": {
+      "type": "about-testimonials",
+      "blocks": {
+        "testimonial-1": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Knowledgable owners. Amazing selection. A definite plus to the community. Can't wait to shop again!",
+            "author": "Lexan Blanchard"
+          }
+        },
+        "testimonial-2": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Amazing owners and staff. They really know their products",
+            "author": "Bethina S Kepler"
+          }
+        },
+        "testimonial-3": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Very cool new store for anyone who sails, paddles, etc. Proprietors Andrew and Heather are super-helpful, friendly and professional. I'll definitely be back",
+            "author": "Andrew Mylander"
+          }
+        },
+        "testimonial-4": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Absolutely 5 star experience with the Trusty family. Knowledgeable and friendly. The demo day was important to us as newbies. Highly recommend Trusty.",
+            "author": "Jeffrey Shingelton"
+          }
+        },
+        "testimonial-5": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Andrew was professional, knowledgeable, and all around fantastic to work with. Trusty Sail and Paddle sets a real example of why we need local shops!",
+            "author": "Andrew Freeman"
+          }
+        },
+        "testimonial-6": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "We had an exceptional experience buying our Topaz Argo. Heather and Andrew are fantastic!",
+            "author": "Dee Stephens"
+          }
+        }
+      },
+      "block_order": ["testimonial-1", "testimonial-2", "testimonial-3", "testimonial-4", "testimonial-5", "testimonial-6"],
+      "settings": {
+        "section_title": "What People In The Community Are Saying About Trusty!",
+        "background_color": "#F5F7FA"
+      }
+    },
+    "about-contact": {
+      "type": "about-contact",
+      "settings": {
+        "shop_title": "SHOP at 5300 HWY 70W",
+        "rental_title": "WATERFRONT RENTALS at 815 Shepard Street",
+        "city": "Morehead City, NC",
+        "email": "trustywatersports@gmail.com",
+        "shop_phone": "(252)499-9911",
+        "dock_phone": "(252)515-4866",
+        "hours": "<p><strong>Our Hours:</strong></p><p>Monday - Saturday: 10am-5pm</p><p>Sunday: CLOSED</p>",
+        "background_color": "#0A4B78"
+      }
+    }
+  },
+  "order": ["about-hero", "about-mission", "brand-story-video", "testimonials", "about-contact"]
+}
