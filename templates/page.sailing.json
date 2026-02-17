@@ -9,59 +9,30 @@
  */
 {
   "sections": {
-    "sailing-hero": {
+    "sailing_hero_carousel_9yQmyc": {
       "type": "sailing-hero-carousel",
       "blocks": {
-        "slide-1": {
+        "slide_aBrMfJ": {
           "type": "slide",
           "settings": {
             "show_badge": true,
             "badge_text": "US DISTRIBUTOR",
             "badge_color": "#D32F2F",
             "slide_title": "Topper & Topaz Sailboats",
-            "slide_subtitle": "Official US distributor for the UK's finest small sailing dinghies and catamarans",
+            "slide_subtitle": "Official US distributor",
             "show_buttons": true,
             "primary_button_text": "Shop Sailboats",
-            "primary_button_link": "/collections/sailboats",
+            "primary_button_link": "",
             "primary_button_color": "#D32F2F",
             "secondary_button_text": "Learn to Sail",
-            "secondary_button_link": "/pages/programs"
-          }
-        },
-        "slide-2": {
-          "type": "slide",
-          "settings": {
-            "show_badge": true,
-            "badge_text": "BEGINNER FRIENDLY",
-            "badge_color": "#00A86B",
-            "slide_title": "Perfect for Learning",
-            "slide_subtitle": "Stable, forgiving boats designed to build confidence on the water",
-            "show_buttons": true,
-            "primary_button_text": "Sailing Lessons",
-            "primary_button_link": "/pages/programs",
-            "primary_button_color": "#00A86B",
-            "secondary_button_text": "View Boats",
-            "secondary_button_link": "/collections/sailboats"
-          }
-        },
-        "slide-3": {
-          "type": "slide",
-          "settings": {
-            "show_badge": true,
-            "badge_text": "RACE READY",
-            "badge_color": "#FF6B35",
-            "slide_title": "Built for Competition",
-            "slide_subtitle": "One-design racing classes trusted by sailors worldwide",
-            "show_buttons": true,
-            "primary_button_text": "Racing Sailboats",
-            "primary_button_link": "/collections/sailboats",
-            "primary_button_color": "#FF6B35",
-            "secondary_button_text": "Join Our Series",
-            "secondary_button_link": "/pages/programs"
+            "secondary_button_link": ""
           }
         }
       },
-      "block_order": ["slide-1", "slide-2", "slide-3"],
+      "block_order": [
+        "slide_aBrMfJ"
+      ],
+      "name": "Sailing Hero Carousel",
       "settings": {
         "autoplay": true,
         "autoplay_speed": 5,
@@ -74,16 +45,16 @@
       "settings": {
         "show_badge": true,
         "badge_text": "OFFICIAL US DISTRIBUTOR",
-        "badge_color": "#D32F2F",
+        "badge_color": "#d32f2f",
         "section_title": "Topper & Topaz Sailboats",
         "section_subtitle": "Premium small dinghies and catamarans from the United Kingdom",
-        "title_color": "#0A4B78",
+        "title_color": "#0a4b78",
         "content_title": "Built for Sailors of All Levels",
-        "content_text": "<p>Topper and Topaz sailboats represent the pinnacle of small boat design from the United Kingdom. With over 50 years of innovation, these boats are trusted by sailing schools, racing programs, and recreational sailors worldwide.</p><p>Perfect for beginners learning to sail, experienced racers competing in one-design classes, and families enjoying weekend adventures on the water.</p><p>At Trusty Sail & Paddle, we're proud to be the official US distributor, bringing these exceptional boats to American waters and supporting the Crystal Coast sailing community.</p>",
+        "content_text": "<p>Topper and Topaz sailboats represent the pinnacle of small boat design from the United Kingdom. With over 50 years of innovation, these boats are trusted by sailing schools, racing programs, and recreational sailors worldwide.</p><p>Perfect for beginners learning to sail, experienced racers competing in one-design classes, and families enjoying weekend adventures on the water.</p><p>At Trusty Sail &amp; Paddle, we're proud to be the official US distributor, bringing these exceptional boats to American waters and supporting the Crystal Coast sailing community.</p>",
         "show_button": true,
         "button_text": "Shop Sailboats",
         "button_link": "/collections/sailboats",
-        "button_color": "#D32F2F",
+        "button_color": "#d32f2f",
         "show_stats": true,
         "stat1_number": "50+",
         "stat1_label": "Years of Innovation",
@@ -100,7 +71,7 @@
           "type": "benefit",
           "settings": {
             "benefit_icon": "🎓",
-            "icon_color": "#00A86B",
+            "icon_color": "#00a86b",
             "benefit_title": "Easy to Learn",
             "benefit_description": "Stable, forgiving designs perfect for beginners. Build confidence quickly with responsive handling and predictable performance."
           }
@@ -109,7 +80,7 @@
           "type": "benefit",
           "settings": {
             "benefit_icon": "🏆",
-            "icon_color": "#D32F2F",
+            "icon_color": "#d32f2f",
             "benefit_title": "Race Ready",
             "benefit_description": "Competitive one-design classes with active racing communities. Fair, close competition where skill matters most."
           }
@@ -118,7 +89,7 @@
           "type": "benefit",
           "settings": {
             "benefit_icon": "👨‍👩‍👧‍👦",
-            "icon_color": "#1E6FA8",
+            "icon_color": "#1e6fa8",
             "benefit_title": "Family Fun",
             "benefit_description": "Safe, enjoyable boats for sailors of all ages. Single and double-handed options perfect for family sailing."
           }
@@ -127,7 +98,7 @@
           "type": "benefit",
           "settings": {
             "benefit_icon": "🔧",
-            "icon_color": "#FF6B35",
+            "icon_color": "#ff6b35",
             "benefit_title": "Low Maintenance",
             "benefit_description": "Durable construction and simple rigging means more time sailing, less time maintaining. Built to last for years."
           }
@@ -136,7 +107,7 @@
           "type": "benefit",
           "settings": {
             "benefit_icon": "💰",
-            "icon_color": "#8B4513",
+            "icon_color": "#8b4513",
             "benefit_title": "Affordable",
             "benefit_description": "High-quality boats at accessible prices. Lower cost of ownership compared to larger sailboats."
           }
@@ -145,18 +116,25 @@
           "type": "benefit",
           "settings": {
             "benefit_icon": "🌊",
-            "icon_color": "#4A9CD6",
+            "icon_color": "#4a9cd6",
             "benefit_title": "Perfect for Bogue Sound",
             "benefit_description": "Ideal for our local waters - shallow draft, easy launching, and perfect for Crystal Coast conditions."
           }
         }
       },
-      "block_order": ["benefit-1", "benefit-2", "benefit-3", "benefit-4", "benefit-5", "benefit-6"],
+      "block_order": [
+        "benefit-1",
+        "benefit-2",
+        "benefit-3",
+        "benefit-4",
+        "benefit-5",
+        "benefit-6"
+      ],
       "settings": {
         "section_title": "Why Sail with Trusty?",
         "section_subtitle": "Everything you need to start your sailing journey on the Crystal Coast",
-        "title_color": "#0A4B78",
-        "background_color": "#F5F7FA"
+        "title_color": "#0a4b78",
+        "background_color": "#f5f7fa"
       }
     },
     "sailing-shop-cta": {
@@ -166,14 +144,14 @@
         "cta_icon": "⛵",
         "cta_title": "Ready to Start Sailing?",
         "cta_description": "Browse our complete selection of Topper and Topaz sailboats. From beginner dinghies to racing catamarans, we have the perfect boat for you. Visit our showroom or shop online today!",
-        "gradient_start": "#D32F2F",
-        "gradient_end": "#B71C1C",
+        "gradient_start": "#d32f2f",
+        "gradient_end": "#b71c1c",
         "show_pattern": true,
         "show_primary_button": true,
         "primary_text": "Shop All Sailboats",
         "primary_link": "/collections/sailboats",
-        "primary_button_color": "#FFFFFF",
-        "primary_text_color": "#D32F2F",
+        "primary_button_color": "#ffffff",
+        "primary_text_color": "#d32f2f",
         "show_secondary_button": true,
         "secondary_text": "Book Sailing Lessons",
         "secondary_link": "/pages/programs",
@@ -182,5 +160,10 @@
       }
     }
   },
-  "order": ["sailing-hero", "sailing-about", "sailing-benefits", "sailing-shop-cta"]
+  "order": [
+    "sailing_hero_carousel_9yQmyc",
+    "sailing-about",
+    "sailing-benefits",
+    "sailing-shop-cta"
+  ]
 }
