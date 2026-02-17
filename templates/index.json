@@ -108,129 +108,6 @@
       "name": "Trust Bar",
       "settings": {}
     },
-    "brands_carousel_4qaEKA": {
-      "type": "brands-carousel",
-      "blocks": {
-        "brand_RJx9dc": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/BerleyPro.webp",
-            "brand_name": "BerleyPro",
-            "brand_link": ""
-          }
-        },
-        "brand_pVWdC3": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/LoadRite.webp",
-            "brand_name": "LoadRite Trailers",
-            "brand_link": ""
-          }
-        },
-        "brand_QUaF8p": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/Torqeedo.webp",
-            "brand_name": "Torqeedo",
-            "brand_link": ""
-          }
-        },
-        "brand_MnVB3a": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/PowerPole.webp",
-            "brand_name": "Power-Pole",
-            "brand_link": ""
-          }
-        },
-        "brand_t8JBAd": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/Native_Watercraft.webp",
-            "brand_name": "Native Watercraft",
-            "brand_link": ""
-          }
-        },
-        "brand_d3M6eW": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/Wilderness_Systems.webp",
-            "brand_name": "Wilderness Systems",
-            "brand_link": ""
-          }
-        },
-        "brand_PGWmCc": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/NuCanoe.webp",
-            "brand_name": "NuCanoe",
-            "brand_link": ""
-          }
-        },
-        "brand_FemBFX": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/YakAttack.webp",
-            "brand_name": "YakAttack",
-            "brand_link": ""
-          }
-        },
-        "brand_9WYqQ8": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/Astral.webp",
-            "brand_name": "Astral",
-            "brand_link": ""
-          }
-        },
-        "brand_p8DLG9": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/BonaFide.webp",
-            "brand_name": "BonaFide",
-            "brand_link": ""
-          }
-        },
-        "brand_r7UCbY": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/Topaz.webp",
-            "brand_name": "Topaz Sailboats",
-            "brand_link": ""
-          }
-        },
-        "brand_JatECL": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/Perception.webp",
-            "brand_name": "Perception",
-            "brand_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "brand_RJx9dc",
-        "brand_pVWdC3",
-        "brand_QUaF8p",
-        "brand_MnVB3a",
-        "brand_t8JBAd",
-        "brand_d3M6eW",
-        "brand_PGWmCc",
-        "brand_FemBFX",
-        "brand_9WYqQ8",
-        "brand_p8DLG9",
-        "brand_r7UCbY",
-        "brand_JatECL"
-      ],
-      "name": "Brands Carousel",
-      "settings": {
-        "section_title": "Shop By Brand",
-        "section_subtitle": "",
-        "background_color": "#FFFFFF",
-        "autoplay": true,
-        "autoplay_speed": 3
-      }
-    },
     "trusty_pathways_CPfqNk": {
       "type": "trusty-pathways",
       "blocks": {
@@ -295,6 +172,54 @@
       "settings": {
         "heading": "Choose Your Path",
         "subtitle": "Whether you want a turnkey rig, prefer to shop in person, or want to try first - we've got you covered"
+      }
+    },
+    "custom_rigging_packages_W967ik": {
+      "type": "custom-rigging-packages",
+      "blocks": {
+        "package_8Dngpb": {
+          "type": "package",
+          "settings": {
+            "image": "shopify://shop_images/DSC01283_-_Large_5e96b3b9-3d0e-4de4-a92f-d8f062bf1f67.png",
+            "title": "Basic Package",
+            "desc": "Electronics, power, storage, and install.",
+            "cta_text": "Learn more",
+            "cta_link": "/pages/custom-rigging"
+          }
+        },
+        "package_yTftrN": {
+          "type": "package",
+          "settings": {
+            "image": "shopify://shop_images/DSC01336_-_Large_4125405f-df95-4e9c-acf1-33342118b51f.png",
+            "title": "Motor Up!",
+            "desc": "Electronics, power, storage, and install.",
+            "cta_text": "Learn more",
+            "cta_link": "/pages/custom-rigging"
+          }
+        },
+        "package_wEEx9n": {
+          "type": "package",
+          "settings": {
+            "image": "shopify://shop_images/DSC_0436_-_Large_3f3f7274-d373-41af-a690-6d6a75e12bc5.jpg",
+            "title": "Tournament Ready",
+            "desc": "Electronics, power, storage, and install.",
+            "cta_text": "Learn more",
+            "cta_link": "/pages/custom-rigging"
+          }
+        }
+      },
+      "block_order": [
+        "package_8Dngpb",
+        "package_yTftrN",
+        "package_wEEx9n"
+      ],
+      "name": "Rigging Packages",
+      "settings": {
+        "heading": "Rigging Packages",
+        "custom_title": "Want something custom?",
+        "custom_text": "We can build a rig around your fishing style and budget.",
+        "custom_link_label": "Call us to spec it out",
+        "custom_link": "tel:252-499-9911"
       }
     },
     "trusty_sailing_cta_VGa3zk": {
@@ -362,8 +287,8 @@
   "order": [
     "trusty_hero_78gxMM",
     "trusty_trustbar_QzbjeE",
-    "brands_carousel_4qaEKA",
     "trusty_pathways_CPfqNk",
+    "custom_rigging_packages_W967ik",
     "trusty_sailing_cta_VGa3zk",
     "trusty_why_trusty_TU4aTV"
   ]
