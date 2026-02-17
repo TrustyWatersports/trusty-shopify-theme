@@ -1,0 +1,178 @@
+{% schema %}
+{
+  "name": "Programs Sailing",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_icon",
+      "label": "Section Icon (emoji)",
+      "default": "⛵"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Sailing Lessons"
+    },
+    {
+      "type": "textarea",
+      "id": "section_description",
+      "label": "Section Description"
+    },
+    {
+      "type": "color",
+      "id": "section_color",
+      "label": "Section Color",
+      "default": "#D32F2F"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "sailing_program",
+      "name": "Sailing Program",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "program_image",
+          "label": "Program Image (optional)"
+        },
+        {
+          "type": "text",
+          "id": "program_icon",
+          "label": "Icon (emoji)",
+          "default": "🎓"
+        },
+        {
+          "type": "text",
+          "id": "program_name",
+          "label": "Program Name",
+          "default": "Beginner Course"
+        },
+        {
+          "type": "text",
+          "id": "program_tagline",
+          "label": "Tagline"
+        },
+        {
+          "type": "text",
+          "id": "feature_1",
+          "label": "Feature 1"
+        },
+        {
+          "type": "text",
+          "id": "feature_2",
+          "label": "Feature 2"
+        },
+        {
+          "type": "text",
+          "id": "feature_3",
+          "label": "Feature 3"
+        },
+        {
+          "type": "text",
+          "id": "feature_4",
+          "label": "Feature 4"
+        },
+        {
+          "type": "text",
+          "id": "feature_5",
+          "label": "Feature 5"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "default": "$350"
+        },
+        {
+          "type": "color",
+          "id": "card_color",
+          "label": "Card Accent Color",
+          "default": "#D32F2F"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Book Now"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Programs Sailing"
+    }
+  ]
+}
+{% endschema %}
+
+<section style="padding: 80px 20px; background: white;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    
+    <div style="text-align: center; margin-bottom: 60px;">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">{{ section.settings.section_icon }}</div>
+      <h2 style="font-size: 2.5rem; color: {{ section.settings.section_color }}; margin-bottom: 1rem;">{{ section.settings.section_title }}</h2>
+      {% if section.settings.section_description != blank %}
+        <p style="font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto;">{{ section.settings.section_description }}</p>
+      {% endif %}
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+      {% for block in section.blocks %}
+        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: all 0.3s; border-top: 4px solid {{ block.settings.card_color }};">
+          
+          {% if block.settings.program_image %}
+            <img src="{{ block.settings.program_image | img_url: '600x' }}" alt="{{ block.settings.program_name }}" style="width: 100%; height: 200px; object-fit: cover;">
+          {% endif %}
+          
+          <div style="padding: 2rem;">
+            <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">{{ block.settings.program_icon }}</div>
+            <h3 style="font-size: 1.8rem; color: #0a4b78; margin-bottom: 0.5rem; text-align: center;">{{ block.settings.program_name }}</h3>
+            {% if block.settings.program_tagline != blank %}
+              <p style="text-align: center; color: #666; font-style: italic; margin-bottom: 1.5rem;">{{ block.settings.program_tagline }}</p>
+            {% endif %}
+            
+            <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
+              {% if block.settings.feature_1 != blank %}
+                <li style="padding: 0.5rem 0; color: #333; border-bottom: 1px solid #f0f0f0;">✓ {{ block.settings.feature_1 }}</li>
+              {% endif %}
+              {% if block.settings.feature_2 != blank %}
+                <li style="padding: 0.5rem 0; color: #333; border-bottom: 1px solid #f0f0f0;">✓ {{ block.settings.feature_2 }}</li>
+              {% endif %}
+              {% if block.settings.feature_3 != blank %}
+                <li style="padding: 0.5rem 0; color: #333; border-bottom: 1px solid #f0f0f0;">✓ {{ block.settings.feature_3 }}</li>
+              {% endif %}
+              {% if block.settings.feature_4 != blank %}
+                <li style="padding: 0.5rem 0; color: #333; border-bottom: 1px solid #f0f0f0;">✓ {{ block.settings.feature_4 }}</li>
+              {% endif %}
+              {% if block.settings.feature_5 != blank %}
+                <li style="padding: 0.5rem 0; color: #333; border-bottom: 1px solid #f0f0f0;">✓ {{ block.settings.feature_5 }}</li>
+              {% endif %}
+            </ul>
+            
+            <div style="text-align: center; margin: 1.5rem 0;">
+              <div style="font-size: 2rem; font-weight: bold; color: {{ block.settings.card_color }};">{{ block.settings.price }}</div>
+            </div>
+            
+            <a href="{{ block.settings.button_link }}" style="display: block; background: {{ block.settings.card_color }}; color: white; text-align: center; padding: 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s;">{{ block.settings.button_text }}</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<style>
+@media (max-width: 768px) {
+  section > div > div:last-child {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>

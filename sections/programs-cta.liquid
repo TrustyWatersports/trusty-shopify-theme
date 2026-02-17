@@ -1,0 +1,126 @@
+{% schema %}
+{
+  "name": "Programs CTA",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_icon",
+      "label": "Show Icon",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "cta_icon",
+      "label": "Icon (emoji)",
+      "default": "📞"
+    },
+    {
+      "type": "text",
+      "id": "cta_title",
+      "label": "Title",
+      "default": "Questions About Our Programs?"
+    },
+    {
+      "type": "textarea",
+      "id": "cta_description",
+      "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "gradient_start",
+      "label": "Gradient Start Color",
+      "default": "#0A4B78"
+    },
+    {
+      "type": "color",
+      "id": "gradient_end",
+      "label": "Gradient End Color",
+      "default": "#1E6FA8"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_primary_button",
+      "label": "Show Primary Button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "primary_text",
+      "label": "Primary Button Text",
+      "default": "📞 (252) 515-4866"
+    },
+    {
+      "type": "url",
+      "id": "primary_link",
+      "label": "Primary Button Link"
+    },
+    {
+      "type": "color",
+      "id": "primary_button_color",
+      "label": "Primary Button Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "primary_text_color",
+      "label": "Primary Text Color",
+      "default": "#0A4B78"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_button",
+      "label": "Show Secondary Button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "secondary_text",
+      "label": "Secondary Button Text",
+      "default": "Visit Our Locations"
+    },
+    {
+      "type": "url",
+      "id": "secondary_link",
+      "label": "Secondary Button Link"
+    },
+    {
+      "type": "color",
+      "id": "secondary_button_color",
+      "label": "Secondary Button Color",
+      "default": "#00A86B"
+    },
+    {
+      "type": "color",
+      "id": "secondary_text_color",
+      "label": "Secondary Text Color",
+      "default": "#FFFFFF"
+    }
+  ]
+}
+{% endschema %}
+
+<section style="padding: 80px 20px; background: linear-gradient(135deg, {{ section.settings.gradient_start }} 0%, {{ section.settings.gradient_end }} 100%); color: white;">
+  <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+    
+    {% if section.settings.show_icon %}
+      <div style="font-size: 4rem; margin-bottom: 1rem;">{{ section.settings.cta_icon }}</div>
+    {% endif %}
+    
+    <h2 style="font-size: 2.5rem; margin-bottom: 1rem; font-weight: bold;">{{ section.settings.cta_title }}</h2>
+    
+    {% if section.settings.cta_description != blank %}
+      <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">{{ section.settings.cta_description }}</p>
+    {% endif %}
+    
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      {% if section.settings.show_primary_button %}
+        <a href="{{ section.settings.primary_link }}" style="background: {{ section.settings.primary_button_color }}; color: {{ section.settings.primary_text_color }}; padding: 1rem 2.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s; display: inline-block;">{{ section.settings.primary_text }}</a>
+      {% endif %}
+      
+      {% if section.settings.show_secondary_button %}
+        <a href="{{ section.settings.secondary_link }}" style="background: {{ section.settings.secondary_button_color }}; color: {{ section.settings.secondary_text_color }}; padding: 1rem 2.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s; display: inline-block;">{{ section.settings.secondary_text }}</a>
+      {% endif %}
+    </div>
+    
+  </div>
+</section>
