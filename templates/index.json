@@ -111,6 +111,14 @@
     "brands_carousel_DndhH9": {
       "type": "brands-carousel",
       "blocks": {
+        "brand_ytEitN": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/PowerPole.webp",
+            "brand_name": "PowerPole",
+            "brand_link": ""
+          }
+        },
         "brand_KMa6pK": {
           "type": "brand",
           "settings": {
@@ -201,6 +209,7 @@
         }
       },
       "block_order": [
+        "brand_ytEitN",
         "brand_KMa6pK",
         "brand_m9P9dD",
         "brand_BJ8DL9",
