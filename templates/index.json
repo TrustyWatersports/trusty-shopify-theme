@@ -244,7 +244,8 @@
         "brand_A3nkTh": {
           "type": "brand",
           "settings": {
-            "brand_name": "",
+            "brand_logo": "shopify://shop_images/BonaFide.webp",
+            "brand_name": "BonaFide",
             "brand_link": ""
           }
         },
