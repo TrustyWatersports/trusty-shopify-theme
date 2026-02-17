@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "blog-post-hero": {
+      "type": "blog-post-hero",
+      "settings": {
+        "post_title": "Yes, Kids Can Do Hard Things",
+        "author": "Written By Heather Fournel",
+        "hero_height": 500
+      }
+    },
+    "blog-post-content": {
+      "type": "blog-post-content",
+      "settings": {
+        "post_content": "<p>There's a lot of noise out there about how dangerous the world is for kids. That they need to be watched constantly. That risk is everywhere. But what if the real danger isn't out there—what if it's the glowing screen in their hands?</p><p>Online, it's far too easy for strangers to get close. Algorithms feed illusion, not truth. And behind a screen, kids are passive. Tuned out. Vulnerable in ways we rarely talk about.</p><p>But on the water? That's where kids wake up.</p><p>We recently met two brothers—Griffin (12) and Grayson (9)—who had just wrapped up a week at a junior sailing camp in Beaufort. They were lit up from the inside, buzzing with stories and new skills. They wanted more. Not just another week at camp—but a boat of their own. A vessel for freedom.</p><p>Their family showed up together—parents, grandparents, all in. I watched their mom, who had never sailed, beam with pride as her sons taught her about halyards and tillers and points of sail. There was no doubt in their minds that this was a good idea. No undercurrent of fear. Just full-throated support: \"You can do this.\"</p><p>We decided on the Topaz Taz—small, fast, forgiving, and tough as nails. Perfect for first-time skippers with something to prove.</p><p>They left with that boat strapped to the roof of the car. As always, we offered a few tips, gave them our best, and hoped we'd hear how it all turned out.</p><p>And this time, we did.</p><blockquote style='margin: 2rem 0; padding: 2rem; background: #f5f7fa; border-left: 4px solid #0a4b78; font-style: italic;'><p>I wanted to follow up with some pictures of just how much fun Griffin and Grayson had with their new Topaz Taz! They sailed it from our place in Emerald Isle all the way to Long Island, pulled it up on shore and even ventured around the island and home. They capsized, but were able to work together to right the boat themselves, and after a little help to get out of the shallow water, were able to make it upwind and home! They both commented on how great it felt to be able to be independent, and all of the adults noticed the way they worked together and the confidence they felt on their new watercraft. Thank you for encouraging them, getting us the equipment we needed, and offering such a valuable service. We look forward to visiting again when we are back on the island!</p></blockquote><p><strong>This is why we do what we do.</strong></p><p>Not just to sell boats—but to hand kids the tools to do hard things. Real things. Things that build character, courage, and confidence.</p><p>No screen will ever give them that.</p><p>So let's trust our kids more. Let's believe in their resilience. Let's meet their craving for adventure with a resounding yes—and trust that the world, and the people in it, will show up to help when it counts.</p><p>Because they can do hard things.</p><p>And sometimes, all they need is a boat.</p><p style='margin-top: 3rem; font-weight: 600;'>Heather Fournel</p>",
+        "background_color": "#E8F4F8"
+      }
+    }
+  },
+  "order": ["blog-post-hero", "blog-post-content"]
+}
