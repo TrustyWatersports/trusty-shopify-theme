@@ -111,6 +111,22 @@
     "brands_carousel_DndhH9": {
       "type": "brands-carousel",
       "blocks": {
+        "brand_m9P9dD": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/BerleyPro.webp",
+            "brand_name": "BerleyPro",
+            "brand_link": ""
+          }
+        },
+        "brand_BJ8DL9": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/Torqeedo.webp",
+            "brand_name": "Torqeedo",
+            "brand_link": ""
+          }
+        },
         "brand_gpGkkK": {
           "type": "brand",
           "settings": {
@@ -177,6 +193,8 @@
         }
       },
       "block_order": [
+        "brand_m9P9dD",
+        "brand_BJ8DL9",
         "brand_gpGkkK",
         "brand_fkFHAk",
         "brand_y8PaAR",
