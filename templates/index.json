@@ -252,7 +252,8 @@
         "brand_xkjFta": {
           "type": "brand",
           "settings": {
-            "brand_name": "",
+            "brand_logo": "shopify://shop_images/Astral.webp",
+            "brand_name": "Astral",
             "brand_link": ""
           }
         },
