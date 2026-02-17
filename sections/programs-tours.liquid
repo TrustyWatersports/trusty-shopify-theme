@@ -1,0 +1,183 @@
+{% schema %}
+{
+  "name": "Programs Tours",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_icon",
+      "label": "Section Icon (emoji)",
+      "default": "🚣"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Guided Kayak Tours"
+    },
+    {
+      "type": "textarea",
+      "id": "section_description",
+      "label": "Section Description"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#F5F7FA"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#0A4B78"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_cta_button",
+      "label": "Show Section CTA Button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Button Text",
+      "default": "Book a Tour"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA Button Link"
+    },
+    {
+      "type": "color",
+      "id": "cta_button_color",
+      "label": "CTA Button Color",
+      "default": "#0A4B78"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tour",
+      "name": "Tour",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "tour_image",
+          "label": "Tour Image (optional)"
+        },
+        {
+          "type": "text",
+          "id": "tour_icon",
+          "label": "Icon (emoji)",
+          "default": "🛶"
+        },
+        {
+          "type": "text",
+          "id": "tour_name",
+          "label": "Tour Name"
+        },
+        {
+          "type": "text",
+          "id": "tour_duration",
+          "label": "Duration/Schedule"
+        },
+        {
+          "type": "text",
+          "id": "tour_price",
+          "label": "Price"
+        },
+        {
+          "type": "color",
+          "id": "price_color",
+          "label": "Price Color",
+          "default": "#1E6FA8"
+        },
+        {
+          "type": "textarea",
+          "id": "tour_description",
+          "label": "Description"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_button",
+          "label": "Show Button",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Book Tour"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Programs Tours"
+    }
+  ]
+}
+{% endschema %}
+
+<section style="padding: 80px 20px; background: {{ section.settings.background_color }};">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    
+    <div style="text-align: center; margin-bottom: 60px;">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">{{ section.settings.section_icon }}</div>
+      <h2 style="font-size: 2.5rem; color: {{ section.settings.title_color }}; margin-bottom: 1rem;">{{ section.settings.section_title }}</h2>
+      {% if section.settings.section_description != blank %}
+        <p style="font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto;">{{ section.settings.section_description }}</p>
+      {% endif %}
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 40px;">
+      {% for block in section.blocks %}
+        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: all 0.3s;">
+          
+          {% if block.settings.tour_image %}
+            <img src="{{ block.settings.tour_image | img_url: '600x' }}" alt="{{ block.settings.tour_name }}" style="width: 100%; height: 200px; object-fit: cover;">
+          {% endif %}
+          
+          <div style="padding: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+              <span style="font-size: 2.5rem;">{{ block.settings.tour_icon }}</span>
+              <h3 style="font-size: 1.5rem; color: #0a4b78; margin: 0;">{{ block.settings.tour_name }}</h3>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 2px solid #f0f0f0;">
+              <span style="color: #666; font-size: 0.95rem;">{{ block.settings.tour_duration }}</span>
+              <span style="font-weight: bold; color: {{ block.settings.price_color }}; font-size: 1.1rem;">{{ block.settings.tour_price }}</span>
+            </div>
+            
+            <p style="color: #333; line-height: 1.6; margin-bottom: 1.5rem;">{{ block.settings.tour_description }}</p>
+            
+            {% if block.settings.show_button %}
+              <a href="{{ block.settings.button_link }}" style="display: block; background: {{ section.settings.title_color }}; color: white; text-align: center; padding: 0.875rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s;">{{ block.settings.button_text }}</a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if section.settings.show_cta_button %}
+      <div style="text-align: center;">
+        <a href="{{ section.settings.cta_link }}" style="display: inline-block; background: {{ section.settings.cta_button_color }}; color: white; padding: 1.25rem 3rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s;">{{ section.settings.cta_text }}</a>
+      </div>
+    {% endif %}
+
+  </div>
+</section>
+
+<style>
+@media (max-width: 768px) {
+  section > div > div:nth-child(2) {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>

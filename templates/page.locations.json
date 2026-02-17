@@ -1,9 +1,14 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {}
-    },
     "locations": {
       "type": "locations-grid",
       "blocks": {
@@ -12,15 +17,13 @@
           "settings": {
             "badge": "MAIN LOCATION",
             "title": "Shop & Showroom",
-            "image": "",
             "address_line1": "5300 Highway 70 West",
             "address_line2": "Morehead City, NC 28557",
             "maps_link": "https://maps.google.com/?q=5300+Highway+70+West+Morehead+City+NC+28557",
             "phone": "(252) 499-9911",
             "email": "info@trustysailandpaddle.com",
             "hours": "Monday - Saturday: 10:00 AM - 5:00 PM\nSunday: Closed",
-            "features": "60+ Kayaks & Sailboats on Display\nCustom Rigging Workshop\nPaddling & Sailing Gear\nExpert Staff Consultation",
-            "note": "",
+            "features": "60+ Kayaks & Sailboats\nCustom Rigging Workshop\nPaddling & Sailing Gear",
             "accent_color": "#ff6b35"
           }
         },
@@ -29,15 +32,19 @@
           "settings": {
             "badge": "WATERFRONT",
             "title": "Rental Location",
-            "image": "",
             "address_line1": "815 Shepard Street",
             "address_line2": "Morehead City, NC 28557",
             "maps_link": "https://maps.google.com/?q=815+Shepard+Street+Morehead+City+NC+28557",
             "phone": "(252) 515-4866",
             "email": "rentals@trustysailandpaddle.com",
             "hours": "Tuesday - Saturday: 10:00 AM - 5:00 PM\nSunday - Monday: Closed",
+<<<<<<< HEAD
             "features": "Kayak & SUP Rentals\nSailboat Rentals\nGuided Tours & Lessons",
             "note": "Special event schedule varies",
+=======
+            "features": "Kayak & SUP Rentals\nSailboat Rentals\nGuided Tours",
+            "note": "Special hours vary",
+>>>>>>> 3b0a5e505f1577da6b5c9f636cc80ba23c7afdce
             "accent_color": "#00a86b"
           }
         }
@@ -45,9 +52,13 @@
       "block_order": ["retail", "rental"],
       "settings": {
         "heading": "Our Locations",
-        "subheading": "Two convenient Morehead City locations to serve you"
+        "subheading": "Two convenient Morehead City locations"
       }
     }
   },
+<<<<<<< HEAD
   "order": ["main", "locations"]
+=======
+  "order": ["locations"]
+>>>>>>> 3b0a5e505f1577da6b5c9f636cc80ba23c7afdce
 }
