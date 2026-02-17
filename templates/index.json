@@ -111,6 +111,14 @@
     "brands_carousel_DndhH9": {
       "type": "brands-carousel",
       "blocks": {
+        "brand_VihW6r": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/Topaz.webp",
+            "brand_name": "Topaz Sailboats",
+            "brand_link": ""
+          }
+        },
         "brand_jfwYtJ": {
           "type": "brand",
           "settings": {
@@ -121,6 +129,7 @@
         }
       },
       "block_order": [
+        "brand_VihW6r",
         "brand_jfwYtJ"
       ],
       "name": "Brands Carousel",
