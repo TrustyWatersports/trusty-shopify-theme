@@ -78,16 +78,22 @@
     </div>
     
     {% assign current_category = "" %}
+    {% assign grid_open = false %}
+    
     {% for block in section.blocks %}
       
       {% if block.type == "category" %}
+        {% if grid_open %}
+          </div>
+        {% endif %}
         {% assign current_category = block.settings.category_name %}
         <h2 style="font-size: 2rem; color: {{ block.settings.category_color }}; margin: 3rem 0 2rem; padding-bottom: 1rem; border-bottom: 3px solid {{ block.settings.category_color }};">{{ block.settings.category_name }}</h2>
-        <div class="brands-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; margin-bottom: 3rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 3rem;">
+        {% assign grid_open = true %}
       {% endif %}
       
       {% if block.type == "brand" %}
-        <a href="{{ block.settings.brand_link }}" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); text-decoration: none; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+        <a href="{{ block.settings.brand_link }}" class="brand-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); text-decoration: none; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
           {% if block.settings.brand_logo %}
             <div style="height: 100px; width: 100%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
               <img src="{{ block.settings.brand_logo | img_url: '300x' }}" alt="{{ block.settings.brand_name }}" style="max-width: 100%; max-height: 100%; object-fit: contain;">
@@ -101,18 +107,21 @@
       {% endif %}
       
     {% endfor %}
-    </div>
+    
+    {% if grid_open %}
+      </div>
+    {% endif %}
     
   </div>
 </section>
 
 <style>
-.brands-grid a:hover {
+.brand-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 @media (max-width: 768px) {
-  .brands-grid {
+  section > div > div {
     grid-template-columns: 1fr !important;
   }
 }
