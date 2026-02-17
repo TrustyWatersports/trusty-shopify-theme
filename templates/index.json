@@ -111,6 +111,22 @@
     "brands_carousel_4qaEKA": {
       "type": "brands-carousel",
       "blocks": {
+        "brand_MnVB3a": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/PowerPole.webp",
+            "brand_name": "Power-Pole",
+            "brand_link": ""
+          }
+        },
+        "brand_t8JBAd": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/Native_Watercraft.webp",
+            "brand_name": "Native Watercraft",
+            "brand_link": ""
+          }
+        },
         "brand_d3M6eW": {
           "type": "brand",
           "settings": {
@@ -169,6 +185,8 @@
         }
       },
       "block_order": [
+        "brand_MnVB3a",
+        "brand_t8JBAd",
         "brand_d3M6eW",
         "brand_PGWmCc",
         "brand_FemBFX",
