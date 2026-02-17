@@ -1,0 +1,56 @@
+{
+  "sections": {
+    "blog-hero": {
+      "type": "blog-hero",
+      "settings": {
+        "hero_height": 500
+      }
+    },
+    "blog-posts": {
+      "type": "blog-posts-grid",
+      "blocks": {
+        "post-1": {
+          "type": "blog_post",
+          "settings": {
+            "post_title": "Yes, Kids Can Do Hard Things",
+            "post_excerpt": "Kids can do hard things. Griffin (12) and Grayson (9) sailed their new Topaz Taz from Emerald Isle to Long Island on their own. They capsized, righted the boat together, and made it home—proud, confident, and grinning ear to ear. No screen time has ever done that. Let's say yes to adventure. Let's trust our kids more. Let's give them the tools to do real, hard, unforgettable things. 💪⛵💙",
+            "post_link": "/pages/blog-1",
+            "button_text": "Read More"
+          }
+        },
+        "post-2": {
+          "type": "blog_post",
+          "settings": {
+            "post_title": "Hooked by the Truth: What it's like Being a Small Sailboat Dealer in a Big Fish Industry",
+            "post_excerpt": "The truth about what it's like being a small sailboat dealer in today's industry. Spoiler: it's not all smooth sailing.",
+            "post_link": "#",
+            "button_text": "Read More"
+          }
+        },
+        "post-3": {
+          "type": "blog_post",
+          "settings": {
+            "post_title": "Proudly Paddling Forward: The Power of Choosing American-Made Kayaks",
+            "post_excerpt": "Why choosing American-made kayaks matters for our community, economy, and the future of watersports.",
+            "post_link": "#",
+            "button_text": "Read More"
+          }
+        },
+        "post-4": {
+          "type": "blog_post",
+          "settings": {
+            "post_title": "Reviving Connection: The Essential Role of Independent Specialty Retailers in Our Communities",
+            "post_excerpt": "How independent retailers build stronger communities and why they matter more than ever.",
+            "post_link": "#",
+            "button_text": "Read More"
+          }
+        }
+      },
+      "block_order": ["post-1", "post-2", "post-3", "post-4"],
+      "settings": {
+        "background_color": "#E8F4F8"
+      }
+    }
+  },
+  "order": ["blog-hero", "blog-posts"]
+}
