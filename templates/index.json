@@ -222,6 +222,102 @@
         "custom_link": "tel:252-499-9911"
       }
     },
+    "brands_carousel_7nVxLn": {
+      "type": "brands-carousel",
+      "blocks": {
+        "brand_U8Pgyx": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/Perception.webp",
+            "brand_name": "Perception",
+            "brand_link": ""
+          }
+        },
+        "brand_6cjmLT": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "brand_link": ""
+          }
+        },
+        "brand_A3nkTh": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "brand_link": ""
+          }
+        },
+        "brand_xkjFta": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "brand_link": ""
+          }
+        },
+        "brand_FtkHXw": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "brand_link": ""
+          }
+        },
+        "brand_ip3Xra": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "brand_link": ""
+          }
+        },
+        "brand_rmx3Gm": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "brand_link": ""
+          }
+        },
+        "brand_849LyB": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "brand_link": ""
+          }
+        },
+        "brand_pUmMzw": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "brand_link": ""
+          }
+        },
+        "brand_LzXXf4": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "brand_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "brand_U8Pgyx",
+        "brand_6cjmLT",
+        "brand_A3nkTh",
+        "brand_xkjFta",
+        "brand_FtkHXw",
+        "brand_ip3Xra",
+        "brand_rmx3Gm",
+        "brand_849LyB",
+        "brand_pUmMzw",
+        "brand_LzXXf4"
+      ],
+      "name": "Brands Carousel",
+      "settings": {
+        "section_title": "Shop By Brand",
+        "section_subtitle": "",
+        "background_color": "#FFFFFF",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
     "trusty_sailing_cta_VGa3zk": {
       "type": "trusty-sailing-cta",
       "name": "Sailing CTA",
@@ -289,6 +385,7 @@
     "trusty_trustbar_QzbjeE",
     "trusty_pathways_CPfqNk",
     "custom_rigging_packages_W967ik",
+    "brands_carousel_7nVxLn",
     "trusty_sailing_cta_VGa3zk",
     "trusty_why_trusty_TU4aTV"
   ]
