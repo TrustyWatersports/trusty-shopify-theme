@@ -22,8 +22,8 @@
           "type": "blog_post",
           "settings": {
             "post_title": "Yes, Kids Can Do Hard Things",
-            "post_excerpt": "Kids can do hard things. Griffin (12) and Grayson (9) sailed their new Topaz Taz from Emerald Isle to Long Island on their own. They capsized, righted the boat together, and made it home—proud, confident, and grinning ear to ear. No screen time has ever done that. Let's say yes to adventure. Let's trust our kids more. Let's give them the tools to do real, hard, unforgettable things. 💪⛵💙",
-            "post_link": "shopify://pages/blog-post",
+            "post_excerpt": "Griffin (12) and Grayson (9) sailed their new Topaz Taz from Emerald Isle to Long Island on their own. They capsized, righted the boat together, and made it home—proud, confident, and grinning ear to ear. No screen time has ever done that. Let's say yes to adventure. Let's trust our kids more. Let's give them the tools to do real, hard, unforgettable things.",
+            "post_link": "/pages/blog-yes-kids-can-do-hard-things",
             "button_text": "Read More"
           }
         },
@@ -31,8 +31,8 @@
           "type": "blog_post",
           "settings": {
             "post_title": "Hooked by the Truth: What it's like Being a Small Sailboat Dealer in a Big Fish Industry",
-            "post_excerpt": "The truth about what it's like being a small sailboat dealer in today's industry. Spoiler: it's not all smooth sailing.",
-            "post_link": "#",
+            "post_excerpt": "Being a small dealer is hard. Being a small sailboat dealer? It's damn near impossible. If it weren't for kayaks, Trusty Sail & Paddle wouldn't still be afloat. Here's the raw truth about what it's like being a small dealer in an industry that forgot us.",
+            "post_link": "/pages/blog-hooked-by-the-truth",
             "button_text": "Read More"
           }
         },
@@ -40,8 +40,8 @@
           "type": "blog_post",
           "settings": {
             "post_title": "Proudly Paddling Forward: The Power of Choosing American-Made Kayaks",
-            "post_excerpt": "Why choosing American-made kayaks matters for our community, economy, and the future of watersports.",
-            "post_link": "#",
+            "post_excerpt": "When you buy a Made in USA kayak, you're not just purchasing gear—you're investing in American values. From innovation and craftsmanship to environmental stewardship, American-made kayaks embody the resilience and spirit that define our country.",
+            "post_link": "/pages/blog-american-made-kayaks",
             "button_text": "Read More"
           }
         },
@@ -49,25 +49,26 @@
           "type": "blog_post",
           "settings": {
             "post_title": "Reviving Connection: The Essential Role of Independent Specialty Retailers in Our Communities",
-            "post_excerpt": "How independent retailers build stronger communities and why they matter more than ever.",
-            "post_link": "#",
+            "post_excerpt": "Independent specialty retailers aren't just places to shop—they're spaces where people gather, share, and connect. In a world where so much is automated and impersonal, we remind you of the power of human connection and the value of a community that cares.",
+            "post_link": "/pages/blog-specialty-retailers",
+            "button_text": "Read More"
+          }
+        },
+        "post-5": {
+          "type": "blog_post",
+          "settings": {
+            "post_title": "Every Story Matters: Embracing the Gift of Genuine Customer Interactions",
+            "post_excerpt": "When customers apologize for 'taking up my time,' my response is always the same: 'There is nothing I would rather be doing.' Every interaction is a privilege. None of you have ever stolen my time—you've given me gifts of knowledge, experience, and insights that have enriched my life beyond measure.",
+            "post_link": "/pages/blog-every-story-matters",
             "button_text": "Read More"
           }
         }
       },
-      "block_order": [
-        "post-1",
-        "post-2",
-        "post-3",
-        "post-4"
-      ],
+      "block_order": ["post-1", "post-2", "post-3", "post-4", "post-5"],
       "settings": {
-        "background_color": "#e8f4f8"
+        "background_color": "#E8F4F8"
       }
     }
   },
-  "order": [
-    "blog-hero",
-    "blog-posts"
-  ]
+  "order": ["blog-hero", "blog-posts"]
 }
