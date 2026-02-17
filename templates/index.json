@@ -111,6 +111,14 @@
     "brands_carousel_4qaEKA": {
       "type": "brands-carousel",
       "blocks": {
+        "brand_QUaF8p": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/Torqeedo.webp",
+            "brand_name": "Torqeedo",
+            "brand_link": ""
+          }
+        },
         "brand_MnVB3a": {
           "type": "brand",
           "settings": {
@@ -185,6 +193,7 @@
         }
       },
       "block_order": [
+        "brand_QUaF8p",
         "brand_MnVB3a",
         "brand_t8JBAd",
         "brand_d3M6eW",
