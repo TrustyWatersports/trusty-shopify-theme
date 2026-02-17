@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "sailing-hero": {
@@ -52,7 +61,11 @@
           }
         }
       },
-      "block_order": ["slide-1", "slide-2", "slide-3"],
+      "block_order": [
+        "slide-1",
+        "slide-2",
+        "slide-3"
+      ],
       "settings": {
         "autoplay": true,
         "autoplay_speed": 5,
@@ -89,7 +102,6 @@
       "settings": {
         "video_title": "See Topaz Sailboats in Action",
         "video_description": "Watch how these incredible boats perform on the water",
-        "vimeo_url": "https://vimeo.com/1142619905/323502ecbc",
         "background_color": "#FFFFFF"
       }
     },
@@ -151,7 +163,14 @@
           }
         }
       },
-      "block_order": ["benefit-1", "benefit-2", "benefit-3", "benefit-4", "benefit-5", "benefit-6"],
+      "block_order": [
+        "benefit-1",
+        "benefit-2",
+        "benefit-3",
+        "benefit-4",
+        "benefit-5",
+        "benefit-6"
+      ],
       "settings": {
         "section_title": "Why Sail with Trusty?",
         "section_subtitle": "Everything you need to start your sailing journey on the Crystal Coast",
@@ -182,5 +201,11 @@
       }
     }
   },
-  "order": ["sailing-hero", "sailing-about", "sailing-video", "sailing-benefits", "sailing-shop-cta"]
+  "order": [
+    "sailing-hero",
+    "sailing-about",
+    "sailing-video",
+    "sailing-benefits",
+    "sailing-shop-cta"
+  ]
 }

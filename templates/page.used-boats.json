@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "used-boats-hero": {
@@ -10,12 +19,13 @@
     },
     "used-boats-grid": {
       "type": "used-boats-grid",
-      "blocks": {},
-      "block_order": [],
       "settings": {
         "background_color": "#F5F7FA"
       }
     }
   },
-  "order": ["used-boats-hero", "used-boats-grid"]
+  "order": [
+    "used-boats-hero",
+    "used-boats-grid"
+  ]
 }
