@@ -1,0 +1,29 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "blog-post-hero": {
+      "type": "blog-post-hero",
+      "settings": {
+        "post_title": "Hooked by the Truth: What it's like Being a Small Sailboat Dealer in a Big Fish Industry",
+        "author": "Written By Heather Fournel",
+        "hero_height": 500
+      }
+    },
+    "blog-post-content": {
+      "type": "blog-post-content",
+      "settings": {
+        "post_content": "<p>You know that feeling when you hit \"reply\" on a social media post and immediately regret it?</p><p>Yeah. Me too.</p><p>Recently, one of our sailboat manufacturers posted something online, patting themselves on the back for their \"loyalty to small dealers.\" It was the kind of shiny, hollow sentiment that looks great in a hashtag—but doesn't hold water when you're out here actually trying to be a small dealer. And honestly? It struck a nerve.</p><p><strong>Because being a small dealer is hard.<br>Being a small sailboat dealer? It's damn near impossible.<br>If it weren't for kayaks, Trusty Sail & Paddle wouldn't still be afloat.</strong></p><p>There's a long list of reasons sailing is declining in the U.S.—and I should know, I've lived it. It's seen as elitist, lacks visibility, has a high cost of entry, and very few people are willing (or able) to donate the time to teach what is, let's face it, a methodical and often frustrating sport. Most programs are underfunded. Few can afford new fleets. The well-heeled clubs attract all the attention and all the deals, while small local shops like ours are treated like filler in a dying catalog.</p><p>We went to a US Sailing event not long ago and watched the game unfold in real-time. On one side of the room were the programs and checkbooks. On the other, the manufacturers. Small dealers? We weren't even part of the conversation. These programs were getting offers just a few hairs off wholesale—leaving us wondering how we're supposed to sell boats, provide service, support, and community... while being cut off at the knees.</p><p>Last year, we hosted a free sailing series—over 30 hours of time, effort, teaching, and support poured into our community. Want to know how many dollars it generated? Zero. Not a t-shirt sale, not a paddle accessory. I followed up with a simple request for feedback—and only one person responded.</p><p>It's enough to make even the most idealistic among us wonder, <em>What the hell are we doing?</em></p><p><strong>So, yes—I replied to that post.</strong><br>Andrew (my partner in business and life) gave me the look. You know the one. He was already mentally preparing for the fallout.</p><p>But I said what we think—and what a lot of small dealers wish they could say:<br>Stop selling directly to the programs. Stop undercutting the very people you claim to support. Start acting like partners instead of platforms.</p><p>I pointed out that we work tirelessly to support customers after the sale. That it feels like a dagger when we hear about nearby programs buying direct because \"the pricing is better.\" I didn't name names. I kept it factual. Honest. Frustrated, yes—but respectful.</p><p><strong>And then?</strong></p><p>The phone rings. Two minutes flat.<br>It's the new sales director—fresh off the resume rollercoaster of big-name sailing companies.</p><p>He tells me to take the post down.</p><p>And then—this part still floors me—he says:<br><em>\"How would you like it if I went on your Facebook page and said you and Andrew are MEAN people?\"</em></p><p>I took a breath I didn't know I had left and said, \"That is a threat. And I would find it very difficult to continue doing business with someone prepared to behave like that.\"</p><p>I could feel my heart beating in my neck, but I stayed composed. Because someone had to.</p><p><strong>So here's the truth:</strong> We're still here, still working, still teaching, still advocating for the sport we love.<br>We show up.<br>We answer the phone.<br>We patch the fiberglass and the frustrations.<br>We build the community the industry forgot.</p><p>And if that makes us \"mean\" people?</p><p>Well, I guess I'd rather be mean and honest than quiet and complicit.</p><p style='margin-top: 3rem; font-weight: 600;'>Heather Fournel</p>",
+        "background_color": "#E8F4F8"
+      }
+    }
+  },
+  "order": ["blog-post-hero", "blog-post-content"]
+}
