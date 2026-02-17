@@ -111,6 +111,14 @@
     "brands_carousel_4qaEKA": {
       "type": "brands-carousel",
       "blocks": {
+        "brand_RJx9dc": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/BerleyPro.webp",
+            "brand_name": "BerleyPro",
+            "brand_link": ""
+          }
+        },
         "brand_pVWdC3": {
           "type": "brand",
           "settings": {
@@ -201,6 +209,7 @@
         }
       },
       "block_order": [
+        "brand_RJx9dc",
         "brand_pVWdC3",
         "brand_QUaF8p",
         "brand_MnVB3a",
