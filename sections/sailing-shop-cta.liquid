@@ -1,0 +1,137 @@
+{% schema %}
+{
+  "name": "Sailing Shop CTA",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_icon",
+      "label": "Show Icon",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "cta_icon",
+      "label": "Icon (emoji)",
+      "default": "⛵"
+    },
+    {
+      "type": "text",
+      "id": "cta_title",
+      "label": "Title",
+      "default": "Ready to Start Sailing?"
+    },
+    {
+      "type": "textarea",
+      "id": "cta_description",
+      "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "gradient_start",
+      "label": "Gradient Start Color",
+      "default": "#D32F2F"
+    },
+    {
+      "type": "color",
+      "id": "gradient_end",
+      "label": "Gradient End Color",
+      "default": "#B71C1C"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_pattern",
+      "label": "Show Background Pattern",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_primary_button",
+      "label": "Show Primary Button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "primary_text",
+      "label": "Primary Button Text",
+      "default": "Shop All Sailboats"
+    },
+    {
+      "type": "url",
+      "id": "primary_link",
+      "label": "Primary Button Link"
+    },
+    {
+      "type": "color",
+      "id": "primary_button_color",
+      "label": "Primary Button Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "primary_text_color",
+      "label": "Primary Button Text Color",
+      "default": "#D32F2F"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_button",
+      "label": "Show Secondary Button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "secondary_text",
+      "label": "Secondary Button Text",
+      "default": "Book Sailing Lessons"
+    },
+    {
+      "type": "url",
+      "id": "secondary_link",
+      "label": "Secondary Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_extra_info",
+      "label": "Show Extra Info",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "extra_info",
+      "label": "Extra Info Text"
+    }
+  ]
+}
+{% endschema %}
+
+<section style="position: relative; padding: 80px 20px; background: linear-gradient(135deg, {{ section.settings.gradient_start }} 0%, {{ section.settings.gradient_end }} 100%); color: white; overflow: hidden;">
+  {% if section.settings.show_pattern %}
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px);"></div>
+  {% endif %}
+  
+  <div style="max-width: 900px; margin: 0 auto; text-align: center; position: relative; z-index: 2;">
+    {% if section.settings.show_icon %}
+      <div style="font-size: 4rem; margin-bottom: 1rem;">{{ section.settings.cta_icon }}</div>
+    {% endif %}
+    
+    <h2 style="font-size: 2.5rem; margin-bottom: 1rem; font-weight: bold;">{{ section.settings.cta_title }}</h2>
+    
+    {% if section.settings.cta_description != blank %}
+      <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95; max-width: 700px; margin-left: auto; margin-right: auto;">{{ section.settings.cta_description }}</p>
+    {% endif %}
+    
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+      {% if section.settings.show_primary_button %}
+        <a href="{{ section.settings.primary_link }}" style="background: {{ section.settings.primary_button_color }}; color: {{ section.settings.primary_text_color }}; padding: 1rem 2.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s; display: inline-block;">{{ section.settings.primary_text }}</a>
+      {% endif %}
+      
+      {% if section.settings.show_secondary_button %}
+        <a href="{{ section.settings.secondary_link }}" style="background: rgba(255,255,255,0.2); color: white; padding: 1rem 2.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s; display: inline-block; border: 2px solid white;">{{ section.settings.secondary_text }}</a>
+      {% endif %}
+    </div>
+    
+    {% if section.settings.show_extra_info and section.settings.extra_info != blank %}
+      <p style="font-size: 1rem; opacity: 0.9;">{{ section.settings.extra_info }}</p>
+    {% endif %}
+  </div>
+</section>

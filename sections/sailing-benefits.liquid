@@ -1,0 +1,98 @@
+{% schema %}
+{
+  "name": "Sailing Benefits",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Why Sail with Trusty?"
+    },
+    {
+      "type": "text",
+      "id": "section_subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#0A4B78"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#F5F7FA"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "benefit_image",
+          "label": "Image (optional)"
+        },
+        {
+          "type": "text",
+          "id": "benefit_icon",
+          "label": "Icon (emoji)",
+          "default": "✓"
+        },
+        {
+          "type": "color",
+          "id": "icon_color",
+          "label": "Icon Color",
+          "default": "#00A86B"
+        },
+        {
+          "type": "text",
+          "id": "benefit_title",
+          "label": "Title",
+          "default": "Easy to Learn"
+        },
+        {
+          "type": "textarea",
+          "id": "benefit_description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sailing Benefits"
+    }
+  ]
+}
+{% endschema %}
+
+<section style="padding: 80px 20px; background: {{ section.settings.background_color }};">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    
+    <div style="text-align: center; margin-bottom: 60px;">
+      <h2 style="font-size: 2.5rem; color: {{ section.settings.title_color }}; margin-bottom: 1rem;">{{ section.settings.section_title }}</h2>
+      {% if section.settings.section_subtitle != blank %}
+        <p style="font-size: 1.2rem; color: #666;">{{ section.settings.section_subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+      {% for block in section.blocks %}
+        <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: all 0.3s;">
+          {% if block.settings.benefit_image %}
+            <img src="{{ block.settings.benefit_image | img_url: '400x' }}" alt="{{ block.settings.benefit_title }}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+          {% else %}
+            <div style="width: 80px; height: 80px; background: {{ block.settings.icon_color }}; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin: 0 auto 1.5rem;">{{ block.settings.benefit_icon }}</div>
+          {% endif %}
+          <h3 style="font-size: 1.3rem; color: #0a4b78; margin-bottom: 1rem;">{{ block.settings.benefit_title }}</h3>
+          <p style="color: #666; line-height: 1.6;">{{ block.settings.benefit_description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

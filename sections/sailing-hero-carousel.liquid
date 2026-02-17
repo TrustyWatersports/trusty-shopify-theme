@@ -1,0 +1,204 @@
+{% schema %}
+{
+  "name": "Sailing Hero Carousel",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Auto-rotate slides",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "label": "Autoplay speed (seconds)",
+      "default": 5
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "Show navigation arrows",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_indicators",
+      "label": "Show slide indicators",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slide_image",
+          "label": "Background Image (optional)"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_badge",
+          "label": "Show Badge",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Badge Text",
+          "default": "US DISTRIBUTOR"
+        },
+        {
+          "type": "color",
+          "id": "badge_color",
+          "label": "Badge Color",
+          "default": "#D32F2F"
+        },
+        {
+          "type": "text",
+          "id": "slide_title",
+          "label": "Title",
+          "default": "Topper & Topaz Sailboats"
+        },
+        {
+          "type": "textarea",
+          "id": "slide_subtitle",
+          "label": "Subtitle",
+          "default": "Official US distributor"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_buttons",
+          "label": "Show Buttons",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "primary_button_text",
+          "label": "Primary Button Text",
+          "default": "Shop Sailboats"
+        },
+        {
+          "type": "url",
+          "id": "primary_button_link",
+          "label": "Primary Button Link"
+        },
+        {
+          "type": "color",
+          "id": "primary_button_color",
+          "label": "Primary Button Color",
+          "default": "#D32F2F"
+        },
+        {
+          "type": "text",
+          "id": "secondary_button_text",
+          "label": "Secondary Button Text",
+          "default": "Learn to Sail"
+        },
+        {
+          "type": "url",
+          "id": "secondary_button_link",
+          "label": "Secondary Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sailing Hero Carousel"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+.sailing-carousel { position: relative; overflow: hidden; min-height: 500px; }
+.sailing-slide { display: none; position: relative; min-height: 500px; }
+.sailing-slide.active { display: block; }
+.sailing-slide-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #0a4b78 0%, #1e6fa8 100%); }
+.sailing-slide-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.3; }
+.sailing-slide-content { position: relative; z-index: 2; padding: 80px 20px; text-align: center; color: white; max-width: 900px; margin: 0 auto; }
+.sailing-badge { display: inline-block; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.875rem; font-weight: bold; margin-bottom: 1rem; }
+.sailing-title { font-size: 3.5rem; font-weight: bold; margin: 1rem 0; line-height: 1.2; }
+.sailing-subtitle { font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.95; }
+.sailing-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.sailing-btn { display: inline-block; padding: 1rem 2rem; border-radius: 6px; font-weight: 600; text-decoration: none; transition: all 0.3s; }
+.sailing-btn-primary { color: white; }
+.sailing-btn-secondary { background: white; color: #0a4b78; }
+.sailing-arrows { position: absolute; top: 50%; width: 100%; display: flex; justify-content: space-between; padding: 0 20px; z-index: 3; transform: translateY(-50%); }
+.sailing-arrow { background: rgba(255,255,255,0.9); border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; transition: all 0.3s; }
+.sailing-arrow:hover { background: white; transform: scale(1.1); }
+.sailing-indicators { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 3; }
+.sailing-indicator { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.5); border: none; cursor: pointer; transition: all 0.3s; }
+.sailing-indicator.active { background: white; transform: scale(1.3); }
+</style>
+
+<div class="sailing-carousel">
+  {% for block in section.blocks %}
+    <div class="sailing-slide {% if forloop.first %}active{% endif %}" data-slide="{{ forloop.index0 }}">
+      <div class="sailing-slide-bg"></div>
+      {% if block.settings.slide_image %}
+        <img src="{{ block.settings.slide_image | img_url: '2048x' }}" class="sailing-slide-image" alt="{{ block.settings.slide_title }}">
+      {% endif %}
+      <div class="sailing-slide-content">
+        {% if block.settings.show_badge %}
+          <div class="sailing-badge" style="background: {{ block.settings.badge_color }};">{{ block.settings.badge_text }}</div>
+        {% endif %}
+        <h1 class="sailing-title">{{ block.settings.slide_title }}</h1>
+        <p class="sailing-subtitle">{{ block.settings.slide_subtitle }}</p>
+        {% if block.settings.show_buttons %}
+          <div class="sailing-buttons">
+            <a href="{{ block.settings.primary_button_link }}" class="sailing-btn sailing-btn-primary" style="background: {{ block.settings.primary_button_color }};">{{ block.settings.primary_button_text }}</a>
+            <a href="{{ block.settings.secondary_button_link }}" class="sailing-btn sailing-btn-secondary">{{ block.settings.secondary_button_text }}</a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+  
+  {% if section.settings.show_arrows and section.blocks.size > 1 %}
+    <div class="sailing-arrows">
+      <button class="sailing-arrow" onclick="sailingPrev()">‹</button>
+      <button class="sailing-arrow" onclick="sailingNext()">›</button>
+    </div>
+  {% endif %}
+  
+  {% if section.settings.show_indicators and section.blocks.size > 1 %}
+    <div class="sailing-indicators">
+      {% for block in section.blocks %}
+        <button class="sailing-indicator {% if forloop.first %}active{% endif %}" onclick="sailingGoTo({{ forloop.index0 }})"></button>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+<script>
+let sailingCurrentSlide = 0;
+const sailingSlides = document.querySelectorAll('.sailing-slide');
+const sailingIndicators = document.querySelectorAll('.sailing-indicator');
+const sailingAutoplay = {{ section.settings.autoplay }};
+const sailingSpeed = {{ section.settings.autoplay_speed }} * 1000;
+let sailingInterval;
+
+function sailingShowSlide(n) {
+  sailingSlides.forEach(s => s.classList.remove('active'));
+  sailingIndicators.forEach(i => i.classList.remove('active'));
+  sailingCurrentSlide = (n + sailingSlides.length) % sailingSlides.length;
+  sailingSlides[sailingCurrentSlide].classList.add('active');
+  if (sailingIndicators[sailingCurrentSlide]) sailingIndicators[sailingCurrentSlide].classList.add('active');
+}
+
+function sailingNext() { sailingShowSlide(sailingCurrentSlide + 1); }
+function sailingPrev() { sailingShowSlide(sailingCurrentSlide - 1); }
+function sailingGoTo(n) { sailingShowSlide(n); }
+
+if (sailingAutoplay && sailingSlides.length > 1) {
+  sailingInterval = setInterval(sailingNext, sailingSpeed);
+  document.querySelector('.sailing-carousel').addEventListener('mouseenter', () => clearInterval(sailingInterval));
+  document.querySelector('.sailing-carousel').addEventListener('mouseleave', () => sailingInterval = setInterval(sailingNext, sailingSpeed));
+}
+</script>
