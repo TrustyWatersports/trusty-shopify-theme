@@ -1,0 +1,73 @@
+{% schema %}
+{
+  "name": "About Contact Info",
+  "settings": [
+    {
+      "type": "text",
+      "id": "shop_title",
+      "label": "Shop Title",
+      "default": "SHOP at 5300 HWY 70W"
+    },
+    {
+      "type": "text",
+      "id": "rental_title",
+      "label": "Rental Title",
+      "default": "WATERFRONT RENTALS at 815 Shepard Street"
+    },
+    {
+      "type": "text",
+      "id": "city",
+      "label": "City",
+      "default": "Morehead City, NC"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email",
+      "default": "trustywatersports@gmail.com"
+    },
+    {
+      "type": "text",
+      "id": "shop_phone",
+      "label": "Shop Phone",
+      "default": "(252)499-9911"
+    },
+    {
+      "type": "text",
+      "id": "dock_phone",
+      "label": "Dock Phone",
+      "default": "(252)515-4866"
+    },
+    {
+      "type": "html",
+      "id": "hours",
+      "label": "Hours (HTML)",
+      "default": "<p><strong>Our Hours:</strong></p><p>Monday - Saturday: 10am-5pm</p><p>Sunday: CLOSED</p>"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#0A4B78"
+    }
+  ]
+}
+{% endschema %}
+
+<section style="padding: 80px 20px; background: {{ section.settings.background_color }}; color: white;">
+  <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+    
+    <div style="margin-bottom: 2rem;">
+      {{ section.settings.hours }}
+    </div>
+    
+    <div style="font-size: 1.2rem; line-height: 2; margin: 2rem 0;">
+      <div style="font-weight: bold; margin-bottom: 0.5rem;">{{ section.settings.shop_title }}</div>
+      <div style="font-weight: bold; margin-bottom: 0.5rem;">{{ section.settings.rental_title }}</div>
+      <div style="margin: 1rem 0;">{{ section.settings.city }}</div>
+      <div style="margin: 0.5rem 0;">{{ section.settings.email }}</div>
+      <div>{{ section.settings.shop_phone }} shop phone / {{ section.settings.dock_phone }} dock phone</div>
+    </div>
+    
+  </div>
+</section>

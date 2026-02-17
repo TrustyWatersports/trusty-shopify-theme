@@ -1,0 +1,39 @@
+{% schema %}
+{
+  "name": "About Mission",
+  "settings": [
+    {
+      "type": "text",
+      "id": "greeting",
+      "label": "Greeting",
+      "default": "Welcome to Trusty Sail and Paddle, how can we help you?"
+    },
+    {
+      "type": "html",
+      "id": "mission_text",
+      "label": "Mission Statement (HTML)"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#333333"
+    }
+  ]
+}
+{% endschema %}
+
+<section style="padding: 80px 20px; background: {{ section.settings.background_color }}; color: {{ section.settings.text_color }};">
+  <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 2.5rem; color: #0a4b78; margin-bottom: 2rem; line-height: 1.3;">{{ section.settings.greeting }}</h2>
+    <div style="font-size: 1.2rem; line-height: 1.8;">
+      {{ section.settings.mission_text }}
+    </div>
+  </div>
+</section>
