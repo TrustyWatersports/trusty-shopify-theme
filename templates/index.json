@@ -111,6 +111,14 @@
     "brands_carousel_DndhH9": {
       "type": "brands-carousel",
       "blocks": {
+        "brand_fkFHAk": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/Wilderness_Systems.webp",
+            "brand_name": "Wilderness Systems",
+            "brand_link": ""
+          }
+        },
         "brand_y8PaAR": {
           "type": "brand",
           "settings": {
@@ -161,6 +169,7 @@
         }
       },
       "block_order": [
+        "brand_fkFHAk",
         "brand_y8PaAR",
         "brand_fVFAGK",
         "brand_emynwM",
