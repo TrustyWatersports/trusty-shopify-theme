@@ -1,0 +1,139 @@
+{% schema %}
+{
+  "name": "Used Boats Grid",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#F5F7FA"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "boat",
+      "name": "Used Boat",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "boat_image",
+          "label": "Boat Image"
+        },
+        {
+          "type": "text",
+          "id": "boat_name",
+          "label": "Boat Name/Model"
+        },
+        {
+          "type": "text",
+          "id": "boat_brand",
+          "label": "Brand"
+        },
+        {
+          "type": "text",
+          "id": "boat_year",
+          "label": "Year"
+        },
+        {
+          "type": "select",
+          "id": "boat_condition",
+          "label": "Condition",
+          "options": [
+            { "value": "excellent", "label": "Excellent" },
+            { "value": "good", "label": "Good" },
+            { "value": "fair", "label": "Fair" },
+            { "value": "as-is", "label": "As-Is" }
+          ],
+          "default": "good"
+        },
+        {
+          "type": "textarea",
+          "id": "boat_description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "boat_price",
+          "label": "Price (e.g., $500 or Call for Price)"
+        },
+        {
+          "type": "text",
+          "id": "contact_info",
+          "label": "Contact Info (optional)"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_sold",
+          "label": "Mark as SOLD",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Used Boats Grid"
+    }
+  ]
+}
+{% endschema %}
+
+<section style="padding: 80px 20px; background: {{ section.settings.background_color }};">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 40px;">
+      {% for block in section.blocks %}
+        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); position: relative;">
+          
+          {% if block.settings.is_sold %}
+            <div style="position: absolute; top: 20px; right: 20px; background: #D32F2F; color: white; padding: 8px 16px; border-radius: 6px; font-weight: bold; z-index: 10;">SOLD</div>
+          {% endif %}
+          
+          {% if block.settings.boat_image %}
+            <img src="{{ block.settings.boat_image | img_url: '600x' }}" alt="{{ block.settings.boat_name }}" style="width: 100%; height: 250px; object-fit: cover;">
+          {% else %}
+            <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #0A4B78 0%, #1E6FA8 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🚤</div>
+          {% endif %}
+          
+          <div style="padding: 2rem;">
+            <h3 style="font-size: 1.5rem; color: #0a4b78; margin-bottom: 0.5rem;">{{ block.settings.boat_name }}</h3>
+            
+            <div style="display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
+              {% if block.settings.boat_brand != blank %}
+                <span style="color: #666; font-size: 0.9rem;">📍 {{ block.settings.boat_brand }}</span>
+              {% endif %}
+              {% if block.settings.boat_year != blank %}
+                <span style="color: #666; font-size: 0.9rem;">📅 {{ block.settings.boat_year }}</span>
+              {% endif %}
+              <span style="color: #666; font-size: 0.9rem; text-transform: capitalize;">✓ {{ block.settings.boat_condition }}</span>
+            </div>
+            
+            <p style="color: #333; line-height: 1.7; margin-bottom: 1.5rem;">{{ block.settings.boat_description }}</p>
+            
+            <div style="border-top: 1px solid #eee; padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+              <p style="font-size: 1.8rem; font-weight: bold; color: #00A86B; margin: 0;">{{ block.settings.boat_price }}</p>
+              {% if block.settings.contact_info != blank %}
+                <p style="color: #666; font-size: 0.9rem; margin: 0;">{{ block.settings.contact_info }}</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    
+    {% if section.blocks.size == 0 %}
+      <div style="text-align: center; padding: 60px 20px;">
+        <p style="font-size: 1.2rem; color: #666;">No used boats available at the moment. Check back soon!</p>
+      </div>
+    {% endif %}
+    
+  </div>
+</section>
+
+<style>
+@media (max-width: 768px) {
+  section > div > div {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>

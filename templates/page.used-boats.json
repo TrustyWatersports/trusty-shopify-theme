@@ -1,0 +1,31 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "used-boats-hero": {
+      "type": "used-boats-hero",
+      "settings": {
+        "hero_title": "Used Boats & Consignment",
+        "hero_subtitle": "Quality pre-owned kayaks and sailboats at great prices",
+        "background_color": "#0A4B78"
+      }
+    },
+    "used-boats-grid": {
+      "type": "used-boats-grid",
+      "settings": {
+        "background_color": "#F5F7FA"
+      }
+    }
+  },
+  "order": [
+    "used-boats-hero",
+    "used-boats-grid"
+  ]
+}

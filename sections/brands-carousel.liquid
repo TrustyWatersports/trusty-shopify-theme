@@ -1,0 +1,152 @@
+{% schema %}
+{
+  "name": "Brands Carousel",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Shop By Brand"
+    },
+    {
+      "type": "textarea",
+      "id": "section_subtitle",
+      "label": "Section Subtitle"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Auto-scroll",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "label": "Auto-scroll Speed",
+      "default": 5
+    }
+  ],
+  "blocks": [
+    {
+      "type": "brand",
+      "name": "Brand",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "brand_logo",
+          "label": "Brand Logo"
+        },
+        {
+          "type": "text",
+          "id": "brand_name",
+          "label": "Brand Name"
+        },
+        {
+          "type": "url",
+          "id": "brand_link",
+          "label": "Link to Collection/Products"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brands Carousel"
+    }
+  ]
+}
+{% endschema %}
+
+<section style="padding: 80px 20px; background: {{ section.settings.background_color }};">
+  <div style="max-width: 1400px; margin: 0 auto;">
+    
+    {% if section.settings.section_title != blank %}
+      <h2 style="text-align: center; font-size: 2.5rem; color: #0a4b78; margin-bottom: 1rem;">{{ section.settings.section_title }}</h2>
+    {% endif %}
+    
+    {% if section.settings.section_subtitle != blank %}
+      <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto 3rem;">{{ section.settings.section_subtitle }}</p>
+    {% endif %}
+    
+    <div class="brands-carousel-wrapper" style="position: relative;">
+      <button class="carousel-prev" style="position: absolute; left: -50px; top: 50%; transform: translateY(-50%); background: white; border: 2px solid #0a4b78; color: #0a4b78; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10; font-size: 1.5rem; display: flex; align-items: center; justify-content: center;">‹</button>
+      
+      <div class="brands-carousel" style="overflow: hidden;">
+        <div class="brands-track" style="display: flex; gap: 40px; transition: transform 0.5s ease;">
+          {% for block in section.blocks %}
+            <a href="{{ block.settings.brand_link }}" class="brand-item" style="flex: 0 0 200px; text-decoration: none; text-align: center; transition: transform 0.3s ease;">
+              {% if block.settings.brand_logo %}
+                <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                  <img src="{{ block.settings.brand_logo | img_url: '300x' }}" alt="{{ block.settings.brand_name }}" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                </div>
+              {% endif %}
+              <p style="color: #0a4b78; font-weight: 600; font-size: 1rem;">{{ block.settings.brand_name }}</p>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+      
+      <button class="carousel-next" style="position: absolute; right: -50px; top: 50%; transform: translateY(-50%); background: white; border: 2px solid #0a4b78; color: #0a4b78; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10; font-size: 1.5rem; display: flex; align-items: center; justify-content: center;">›</button>
+    </div>
+    
+  </div>
+</section>
+
+<style>
+.brand-item:hover {
+  transform: translateY(-5px);
+}
+@media (max-width: 768px) {
+  .carousel-prev, .carousel-next {
+    display: none !important;
+  }
+}
+</style>
+
+<script>
+(function() {
+  const track = document.querySelector('.brands-track');
+  const items = document.querySelectorAll('.brand-item');
+  const prevBtn = document.querySelector('.carousel-prev');
+  const nextBtn = document.querySelector('.carousel-next');
+  
+  if (!track || items.length === 0) return;
+  
+  let currentIndex = 0;
+  const itemWidth = 240; // 200px + 40px gap
+  const visibleItems = Math.floor(window.innerWidth / itemWidth);
+  const maxIndex = Math.max(0, items.length - visibleItems);
+  
+  function updateCarousel() {
+    const offset = -currentIndex * itemWidth;
+    track.style.transform = `translateX(${offset}px)`;
+  }
+  
+  prevBtn.addEventListener('click', () => {
+    currentIndex = Math.max(0, currentIndex - 1);
+    updateCarousel();
+  });
+  
+  nextBtn.addEventListener('click', () => {
+    currentIndex = Math.min(maxIndex, currentIndex + 1);
+    updateCarousel();
+  });
+  
+  {% if section.settings.autoplay %}
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) > maxIndex ? 0 : currentIndex + 1;
+    updateCarousel();
+  }, {{ section.settings.autoplay_speed | times: 1000 }});
+  {% endif %}
+})();
+</script>

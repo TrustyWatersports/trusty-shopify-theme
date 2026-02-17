@@ -1,0 +1,32 @@
+{% schema %}
+{
+  "name": "Used Boats Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Title",
+      "default": "Used Boats & Consignment"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_subtitle",
+      "label": "Subtitle",
+      "default": "Quality pre-owned kayaks and sailboats"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#0A4B78"
+    }
+  ]
+}
+{% endschema %}
+
+<section style="padding: 80px 20px; background: {{ section.settings.background_color }}; color: white; text-align: center;">
+  <div style="max-width: 900px; margin: 0 auto;">
+    <h1 style="font-size: 3rem; margin-bottom: 1rem;">{{ section.settings.hero_title }}</h1>
+    <p style="font-size: 1.3rem; opacity: 0.95;">{{ section.settings.hero_subtitle }}</p>
+  </div>
+</section>
