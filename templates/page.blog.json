@@ -50,7 +50,7 @@
           "settings": {
             "post_title": "Reviving Connection: The Essential Role of Independent Specialty Retailers in Our Communities",
             "post_excerpt": "Independent specialty retailers aren't just places to shop—they're spaces where people gather, share, and connect. In a world where so much is automated and impersonal, we remind you of the power of human connection and the value of a community that cares.",
-            "post_link": "/pages/blog-specialty-retailers",
+            "post_link": "shopify://pages/blog-post-specialty-retailers",
             "button_text": "Read More"
           }
         },
