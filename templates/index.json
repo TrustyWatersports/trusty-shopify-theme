@@ -111,6 +111,28 @@
     "brands_carousel_DndhH9": {
       "type": "brands-carousel",
       "blocks": {
+        "brand_fVFAGK": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/Astral.webp",
+            "brand_name": "Astral",
+            "brand_link": ""
+          }
+        },
+        "brand_emynwM": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "brand_link": ""
+          }
+        },
+        "brand_dgngPp": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "brand_link": ""
+          }
+        },
         "brand_VihW6r": {
           "type": "brand",
           "settings": {
@@ -129,6 +151,9 @@
         }
       },
       "block_order": [
+        "brand_fVFAGK",
+        "brand_emynwM",
+        "brand_dgngPp",
         "brand_VihW6r",
         "brand_jfwYtJ"
       ],
