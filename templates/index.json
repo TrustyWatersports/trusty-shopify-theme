@@ -111,6 +111,14 @@
     "brands_carousel_4qaEKA": {
       "type": "brands-carousel",
       "blocks": {
+        "brand_FemBFX": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/YakAttack.webp",
+            "brand_name": "YakAttack",
+            "brand_link": ""
+          }
+        },
         "brand_9WYqQ8": {
           "type": "brand",
           "settings": {
@@ -145,6 +153,7 @@
         }
       },
       "block_order": [
+        "brand_FemBFX",
         "brand_9WYqQ8",
         "brand_p8DLG9",
         "brand_r7UCbY",
