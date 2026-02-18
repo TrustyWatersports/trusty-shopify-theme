@@ -238,6 +238,14 @@
     "brands_carousel_home": {
       "type": "brands-carousel",
       "blocks": {
+        "brand_8fhDFG": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/BerleyPro.webp",
+            "brand_name": "BerleyPro",
+            "brand_link": ""
+          }
+        },
         "brand_native": {
           "type": "brand",
           "settings": {
@@ -288,20 +296,22 @@
         "brand_topper": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/Topaz.webp",
-            "brand_name": "Topper Sailboats",
+            "brand_logo": "shopify://shop_images/LoadRite.webp",
+            "brand_name": "LoadRite",
             "brand_link": ""
           }
         },
         "brand_topaz": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/Topaz.webp",
             "brand_name": "Topaz Sailboats",
             "brand_link": ""
           }
         }
       },
       "block_order": [
+        "brand_8fhDFG",
         "brand_native",
         "brand_hobie",
         "brand_perception",
