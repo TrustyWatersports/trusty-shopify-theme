@@ -17,6 +17,7 @@
           "settings": {
             "badge": "MAIN LOCATION",
             "title": "Shop & Showroom",
+            "image": "shopify://shop_images/IMG_4026.jpg",
             "address_line1": "5300 Highway 70 West",
             "address_line2": "Morehead City, NC 28557",
             "maps_link": "https://maps.google.com/?q=5300+Highway+70+West+Morehead+City+NC+28557",
