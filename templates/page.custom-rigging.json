@@ -62,10 +62,10 @@
         "option_YQ3cCh": {
           "type": "option",
           "settings": {
-            "title": "Bass Boat Style Electronics:",
-            "text": "Live imaging, wiring clean-up, transducer mounts, NMEA networks.",
+            "title": "Kayak Electronics Information",
+            "text": "Fish Finders, Lighting, Batteries and more.",
             "image": "shopify://shop_images/Knarrr_Jameson.jpg",
-            "link": "shopify://pages/rigging-packages"
+            "link": "shopify://pages/kayak-electronics"
           }
         },
         "option_KXYF3H": {
