@@ -272,6 +272,7 @@
         "brand_wilderness": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/Wilderness_Systems.webp",
             "brand_name": "Wilderness Systems",
             "brand_link": ""
           }
@@ -279,6 +280,7 @@
         "brand_bonafide": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/BonaFide.webp",
             "brand_name": "Bonafide",
             "brand_link": ""
           }
@@ -286,6 +288,7 @@
         "brand_topper": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/Topaz.webp",
             "brand_name": "Topper Sailboats",
             "brand_link": ""
           }
