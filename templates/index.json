@@ -284,7 +284,8 @@
         "brand_849LyB": {
           "type": "brand",
           "settings": {
-            "brand_name": "",
+            "brand_logo": "shopify://shop_images/Native_Watercraft.webp",
+            "brand_name": "Native Watercraft",
             "brand_link": ""
           }
         },
