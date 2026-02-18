@@ -292,7 +292,8 @@
         "brand_pUmMzw": {
           "type": "brand",
           "settings": {
-            "brand_name": "",
+            "brand_logo": "shopify://shop_images/PowerPole.webp",
+            "brand_name": "Power-Pole",
             "brand_link": ""
           }
         },
