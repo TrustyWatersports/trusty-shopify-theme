@@ -1,0 +1,19 @@
+<section style="background: linear-gradient(135deg, {{ section.settings.gradient_start }} 0%, {{ section.settings.gradient_end }} 100%); color: white; padding: 80px 20px; text-align: center;">
+  <div style="max-width: 900px; margin: 0 auto;">
+    <h1 style="font-size: 48px; font-weight: 800; margin-bottom: 20px;">{{ section.settings.heading }}</h1>
+    <p style="font-size: 20px; opacity: 0.95; max-width: 700px; margin: 0 auto;">{{ section.settings.subheading }}</p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rentals Hero",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Kayak Rentals & Guided Tours" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Experience Crystal Coast waters from our waterfront location. Try before you buy - rental fees credit toward purchase!" },
+    { "type": "color", "id": "gradient_start", "label": "Gradient start", "default": "#0A4B78" },
+    { "type": "color", "id": "gradient_end", "label": "Gradient end", "default": "#1E6FA8" }
+  ],
+  "presets": [{ "name": "Rentals Hero" }]
+}
+{% endschema %}

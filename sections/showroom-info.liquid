@@ -1,0 +1,89 @@
+<section style="padding: 80px 20px; background: {{ section.settings.background_color }};">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    {% if section.settings.heading != blank %}
+      <div style="text-align: center; margin-bottom: 50px;">
+        <h1 style="font-size: 42px; font-weight: 800; color: var(--ocean-deep); margin-bottom: 15px;">{{ section.settings.heading }}</h1>
+        <p style="font-size: 18px; color: var(--gray-medium); max-width: 700px; margin: 0 auto;">{{ section.settings.subheading }}</p>
+      </div>
+    {% endif %}
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 40px; margin-bottom: 60px;">
+      <div style="background: var(--gray-light); padding: 40px; border-radius: 12px;">
+        <div style="font-size: 32px; margin-bottom: 15px;">🏪</div>
+        <h2 style="font-size: 26px; margin-bottom: 8px; color: var(--ocean-deep);">{{ section.settings.shop_title }}</h2>
+        <p style="color: var(--gray-medium); margin-bottom: 20px;">{{ section.settings.shop_description }}</p>
+        <div style="margin-bottom: 10px;"><strong style="color: var(--ocean-deep);">Address:</strong><br>{{ section.settings.shop_address }}</div>
+        <div style="margin-bottom: 10px;"><strong style="color: var(--ocean-deep);">Phone:</strong><br><a href="tel:{{ section.settings.shop_phone }}" style="color: var(--ocean-medium); text-decoration: none; font-weight: 600;">{{ section.settings.shop_phone }}</a></div>
+        <div style="margin-bottom: 20px;"><strong style="color: var(--ocean-deep);">Hours:</strong><br>{{ section.settings.shop_hours }}</div>
+        {% if section.settings.shop_directions_url != blank %}<a href="{{ section.settings.shop_directions_url }}" target="_blank" style="display: inline-block; padding: 12px 24px; background: var(--ocean-medium); color: white; text-decoration: none; border-radius: 6px; font-weight: 700;">Get Directions →</a>{% endif %}
+      </div>
+      <div style="background: var(--gray-light); padding: 40px; border-radius: 12px;">
+        <div style="font-size: 32px; margin-bottom: 15px;">🌊</div>
+        <h2 style="font-size: 26px; margin-bottom: 8px; color: var(--ocean-deep);">{{ section.settings.waterfront_title }}</h2>
+        <p style="color: var(--gray-medium); margin-bottom: 20px;">{{ section.settings.waterfront_description }}</p>
+        <div style="margin-bottom: 10px;"><strong style="color: var(--ocean-deep);">Address:</strong><br>{{ section.settings.waterfront_address }}</div>
+        <div style="margin-bottom: 10px;"><strong style="color: var(--ocean-deep);">Phone:</strong><br><a href="tel:{{ section.settings.waterfront_phone }}" style="color: var(--ocean-medium); text-decoration: none; font-weight: 600;">{{ section.settings.waterfront_phone }}</a></div>
+        <div style="margin-bottom: 20px;"><strong style="color: var(--ocean-deep);">Hours:</strong><br>{{ section.settings.waterfront_hours }}</div>
+        {% if section.settings.waterfront_directions_url != blank %}<a href="{{ section.settings.waterfront_directions_url }}" target="_blank" style="display: inline-block; padding: 12px 24px; background: var(--ocean-medium); color: white; text-decoration: none; border-radius: 6px; font-weight: 700;">Get Directions →</a>{% endif %}
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; margin-bottom: 60px;">
+      {% for block in section.blocks %}
+        <div {{ block.shopify_attributes }} style="text-align: center; padding: 20px;">
+          <div style="font-size: 48px; margin-bottom: 15px;">{{ block.settings.emoji }}</div>
+          <h3 style="font-size: 20px; margin-bottom: 10px; color: var(--ocean-deep);">{{ block.settings.title }}</h3>
+          <p style="color: var(--gray-medium); line-height: 1.7;">{{ block.settings.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+    <div style="background: var(--ocean-deep); color: white; padding: 40px; border-radius: 12px; display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; text-align: center;">
+      <div><div style="font-size: 36px; font-weight: 800; margin-bottom: 5px;">{{ section.settings.stat_1_number }}</div><div style="opacity: 0.85;">{{ section.settings.stat_1_label }}</div></div>
+      <div><div style="font-size: 36px; font-weight: 800; margin-bottom: 5px;">{{ section.settings.stat_2_number }}</div><div style="opacity: 0.85;">{{ section.settings.stat_2_label }}</div></div>
+      <div><div style="font-size: 36px; font-weight: 800; margin-bottom: 5px;">{{ section.settings.stat_3_number }}</div><div style="opacity: 0.85;">{{ section.settings.stat_3_label }}</div></div>
+      <div><div style="font-size: 36px; font-weight: 800; margin-bottom: 5px;">{{ section.settings.stat_4_number }}</div><div style="opacity: 0.85;">{{ section.settings.stat_4_label }}</div></div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Showroom Info",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Page heading", "default": "Visit Trusty Sail & Paddle" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Two locations in Morehead City — a full showroom and a waterfront rental facility on Bogue Sound." },
+    { "type": "color", "id": "background_color", "label": "Background color", "default": "#FFFFFF" },
+    { "type": "header", "content": "Main Shop" },
+    { "type": "text", "id": "shop_title", "label": "Title", "default": "Main Showroom" },
+    { "type": "textarea", "id": "shop_description", "label": "Description", "default": "60+ kayaks and sailboats on display. Custom rigging shop on-site." },
+    { "type": "text", "id": "shop_address", "label": "Address", "default": "5300 Hwy 70W, Morehead City, NC 28557" },
+    { "type": "text", "id": "shop_phone", "label": "Phone", "default": "(252) 499-9911" },
+    { "type": "text", "id": "shop_hours", "label": "Hours", "default": "Monday–Saturday: 10am–5pm | Sunday: Closed" },
+    { "type": "url", "id": "shop_directions_url", "label": "Directions link" },
+    { "type": "header", "content": "Waterfront Location" },
+    { "type": "text", "id": "waterfront_title", "label": "Title", "default": "Waterfront Rentals" },
+    { "type": "textarea", "id": "waterfront_description", "label": "Description", "default": "Launch directly from Bogue Sound. Rentals, tours, and try-before-you-buy." },
+    { "type": "text", "id": "waterfront_address", "label": "Address", "default": "815 Shepard St, Morehead City, NC 28557" },
+    { "type": "text", "id": "waterfront_phone", "label": "Phone", "default": "(252) 515-4866" },
+    { "type": "text", "id": "waterfront_hours", "label": "Hours", "default": "Daily: 9am–6pm (Seasonal) | Call ahead in winter" },
+    { "type": "url", "id": "waterfront_directions_url", "label": "Directions link" },
+    { "type": "header", "content": "Stats Bar" },
+    { "type": "text", "id": "stat_1_number", "label": "Stat 1 number", "default": "15+" },
+    { "type": "text", "id": "stat_1_label", "label": "Stat 1 label", "default": "Years Experience" },
+    { "type": "text", "id": "stat_2_number", "label": "Stat 2 number", "default": "200+" },
+    { "type": "text", "id": "stat_2_label", "label": "Stat 2 label", "default": "Custom Rigs Built" },
+    { "type": "text", "id": "stat_3_number", "label": "Stat 3 number", "default": "60+" },
+    { "type": "text", "id": "stat_3_label", "label": "Stat 3 label", "default": "Boats In Stock" },
+    { "type": "text", "id": "stat_4_number", "label": "Stat 4 number", "default": "100%" },
+    { "type": "text", "id": "stat_4_label", "label": "Stat 4 label", "default": "Local Experts" }
+  ],
+  "blocks": [{
+    "type": "highlight",
+    "name": "Highlight",
+    "settings": [
+      { "type": "text", "id": "emoji", "label": "Emoji", "default": "🚣" },
+      { "type": "text", "id": "title", "label": "Title", "default": "60+ Boats In Stock" },
+      { "type": "textarea", "id": "description", "label": "Description", "default": "Compare kayaks side-by-side. We stock what works on these waters." }
+    ]
+  }],
+  "presets": [{ "name": "Showroom Info" }]
+}
+{% endschema %}

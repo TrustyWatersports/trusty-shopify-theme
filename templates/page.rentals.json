@@ -1,0 +1,58 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rentals-hero": {
+      "type": "rentals-hero",
+      "settings": {
+        "heading": "Kayak Rentals & Guided Tours",
+        "subheading": "Experience Crystal Coast waters from our waterfront location. Try before you buy — rental fees credit toward purchase!",
+        "gradient_start": "#0A4B78",
+        "gradient_end": "#1E6FA8"
+      }
+    },
+    "rentals-pricing": {
+      "type": "rentals-pricing",
+      "blocks": {
+        "single": { "type": "rental", "settings": { "name": "Single Kayak", "half_day_price": "$40", "half_day_hours": "4", "full_day_price": "$60", "feature_1": "Recreational or touring kayaks", "feature_2": "Perfect for solo paddling", "feature_3": "Great for exploration", "featured": false } },
+        "tandem": { "type": "rental", "settings": { "name": "Tandem Kayak", "half_day_price": "$60", "half_day_hours": "4", "full_day_price": "$90", "feature_1": "Two-person kayak", "feature_2": "Ideal for couples & families", "feature_3": "Extra stability", "featured": false } },
+        "pedal": { "type": "rental", "settings": { "name": "Pedal Drive Kayak", "half_day_price": "$80", "half_day_hours": "4", "full_day_price": "$120", "feature_1": "Hands-free pedal propulsion", "feature_2": "Try before you buy!", "feature_3": "Perfect for fishing", "featured": true } }
+      },
+      "block_order": ["single", "tandem", "pedal"],
+      "settings": { "heading": "Kayak Rentals", "subheading": "All rentals include paddle, PFD, and basic instruction", "background_color": "#FFFFFF", "try_before_buy_text": "Love what you rented? Your rental fee credits toward purchasing that kayak! Test it on the water, then take it home." }
+    },
+    "rentals-tours": {
+      "type": "rentals-tours",
+      "blocks": {
+        "wild-horse": { "type": "tour", "settings": { "emoji": "🐴", "name": "Wild Horse Tour", "price": "$75/person", "description": "3-hour guided paddle to see the famous Shackleford Banks wild horses. Includes kayak, gear, and guide.", "feature_1": "3 hours guided", "feature_2": "All equipment included", "feature_3": "Expert naturalist guide", "feature_4": "Small group (max 8)" } },
+        "sunset": { "type": "tour", "settings": { "emoji": "🌅", "name": "Sunset Paddle", "price": "$55/person", "description": "2-hour evening paddle through Bogue Sound. Watch the sunset from the water with local wildlife.", "feature_1": "2 hours guided", "feature_2": "Sunset timing", "feature_3": "Calm protected waters", "feature_4": "Great for beginners" } },
+        "fishing": { "type": "tour", "settings": { "emoji": "🎣", "name": "Fishing Charter", "price": "$150/person", "description": "4-hour guided fishing trip. Learn local techniques and hotspots from expert kayak anglers.", "feature_1": "4 hours guided", "feature_2": "Fishing gear provided", "feature_3": "Expert angler guide", "feature_4": "Rigged kayak included" } }
+      },
+      "block_order": ["wild-horse", "sunset", "fishing"],
+      "settings": { "heading": "Guided Tours", "subheading": "Explore Crystal Coast with expert local guides", "background_color": "#F5F7FA" }
+    },
+    "rentals-booking": {
+      "type": "rentals-booking",
+      "settings": { "background_color": "#FFFFFF", "heading": "Ready to Get on the Water?", "subheading": "Book online or give us a call — we'll get you set up.", "booking_button_text": "📅 Book a Rental", "phone": "(252) 515-4866", "address": "815 Shepard St, Morehead City, NC", "hours": "Daily 9am–6pm (Seasonal)" }
+    },
+    "rentals-faq": {
+      "type": "rentals-faq",
+      "blocks": {
+        "faq1": { "type": "faq", "settings": { "question": "What should I bring?", "answer": "Water bottle, sunscreen, hat, and appropriate clothing. We provide kayak, paddle, and PFD. Dry bags available for rent." } },
+        "faq2": { "type": "faq", "settings": { "question": "Do I need experience?", "answer": "No! We provide basic instruction before every rental. Protected waters perfect for beginners. Guided tours recommended for first-timers." } },
+        "faq3": { "type": "faq", "settings": { "question": "Can I rent for multiple days?", "answer": "Yes! Multi-day rentals available at discounted rates. Contact us for pricing." } },
+        "faq4": { "type": "faq", "settings": { "question": "What if I want to buy after renting?", "answer": "Your rental fee credits toward the purchase! Test the exact kayak on actual Crystal Coast waters." } }
+      },
+      "block_order": ["faq1", "faq2", "faq3", "faq4"],
+      "settings": { "heading": "Rental FAQ", "background_color": "#F5F7FA" }
+    }
+  },
+  "order": ["rentals-hero", "rentals-pricing", "rentals-tours", "rentals-booking", "rentals-faq"]
+}

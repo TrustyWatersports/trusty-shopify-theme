@@ -1,0 +1,43 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "showroom-info": {
+      "type": "showroom-info",
+      "blocks": {
+        "highlight-1": { "type": "highlight", "settings": { "emoji": "🚣", "title": "60+ Boats In Stock", "description": "Compare kayaks side-by-side. Fishing, pedal drive, recreational, touring — we stock what works on these waters." } },
+        "highlight-2": { "type": "highlight", "settings": { "emoji": "🎓", "title": "Expert Guidance", "description": "Our staff fish and paddle these waters daily. Get honest recommendations based on how and where you'll use it." } },
+        "highlight-3": { "type": "highlight", "settings": { "emoji": "🏠", "title": "Take Home Today", "description": "Most kayaks in stock ready to go. Or schedule custom rigging and pickup when it's ready." } },
+        "highlight-4": { "type": "highlight", "settings": { "emoji": "⛵", "title": "Sailboats Too", "description": "US distributor for Topper & Topaz dinghies. Perfect for families, beginners, and sailing programs." } }
+      },
+      "block_order": ["highlight-1", "highlight-2", "highlight-3", "highlight-4"],
+      "settings": {
+        "heading": "Visit Trusty Sail & Paddle",
+        "subheading": "Two locations in Morehead City — a full showroom and a waterfront rental facility on Bogue Sound.",
+        "background_color": "#FFFFFF",
+        "shop_title": "Main Showroom",
+        "shop_description": "60+ kayaks and sailboats on display. Custom rigging shop on-site.",
+        "shop_address": "5300 Hwy 70W, Morehead City, NC 28557",
+        "shop_phone": "(252) 499-9911",
+        "shop_hours": "Monday–Saturday: 10am–5pm | Sunday: Closed",
+        "waterfront_title": "Waterfront Rentals",
+        "waterfront_description": "Launch directly from Bogue Sound. Rentals, tours, and try-before-you-buy.",
+        "waterfront_address": "815 Shepard St, Morehead City, NC 28557",
+        "waterfront_phone": "(252) 515-4866",
+        "waterfront_hours": "Daily: 9am–6pm (Seasonal) | Call ahead in winter",
+        "stat_1_number": "15+", "stat_1_label": "Years Experience",
+        "stat_2_number": "200+", "stat_2_label": "Custom Rigs Built",
+        "stat_3_number": "60+", "stat_3_label": "Boats In Stock",
+        "stat_4_number": "100%", "stat_4_label": "Local Experts"
+      }
+    }
+  },
+  "order": ["showroom-info"]
+}

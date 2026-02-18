@@ -174,129 +174,6 @@
         "subtitle": "Whether you want a turnkey rig, prefer to shop in person, or want to try first - we've got you covered"
       }
     },
-    "brands_carousel_DndhH9": {
-      "type": "brands-carousel",
-      "blocks": {
-        "brand_ytEitN": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/PowerPole.webp",
-            "brand_name": "PowerPole",
-            "brand_link": ""
-          }
-        },
-        "brand_KMa6pK": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/LoadRite.webp",
-            "brand_name": "LoadRite Trailers",
-            "brand_link": ""
-          }
-        },
-        "brand_m9P9dD": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/BerleyPro.webp",
-            "brand_name": "BerleyPro",
-            "brand_link": ""
-          }
-        },
-        "brand_BJ8DL9": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/Torqeedo.webp",
-            "brand_name": "Torqeedo",
-            "brand_link": ""
-          }
-        },
-        "brand_gpGkkK": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/YakAttack.webp",
-            "brand_name": "YakAttack",
-            "brand_link": ""
-          }
-        },
-        "brand_fkFHAk": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/Wilderness_Systems.webp",
-            "brand_name": "Wilderness Systems",
-            "brand_link": ""
-          }
-        },
-        "brand_y8PaAR": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/NuCanoe.webp",
-            "brand_name": "NuCanoe",
-            "brand_link": ""
-          }
-        },
-        "brand_fVFAGK": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/Astral.webp",
-            "brand_name": "Astral",
-            "brand_link": ""
-          }
-        },
-        "brand_emynwM": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/Native_Watercraft.webp",
-            "brand_name": "Native Watercraft",
-            "brand_link": ""
-          }
-        },
-        "brand_dgngPp": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/BonaFide.webp",
-            "brand_name": "BonaFide",
-            "brand_link": ""
-          }
-        },
-        "brand_VihW6r": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/Topaz.webp",
-            "brand_name": "Topaz Sailboats",
-            "brand_link": ""
-          }
-        },
-        "brand_jfwYtJ": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/Perception.webp",
-            "brand_name": "Perception",
-            "brand_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "brand_ytEitN",
-        "brand_KMa6pK",
-        "brand_m9P9dD",
-        "brand_BJ8DL9",
-        "brand_gpGkkK",
-        "brand_fkFHAk",
-        "brand_y8PaAR",
-        "brand_fVFAGK",
-        "brand_emynwM",
-        "brand_dgngPp",
-        "brand_VihW6r",
-        "brand_jfwYtJ"
-      ],
-      "name": "Brands Carousel",
-      "settings": {
-        "section_title": "Shop By Brand",
-        "section_subtitle": "",
-        "background_color": "#FFFFFF",
-        "autoplay": true,
-        "autoplay_speed": 5
-      }
-    },
     "trusty_sailing_cta_VGa3zk": {
       "type": "trusty-sailing-cta",
       "name": "Sailing CTA",
@@ -430,7 +307,6 @@
     "trusty_hero_78gxMM",
     "trusty_trustbar_QzbjeE",
     "trusty_pathways_CPfqNk",
-    "brands_carousel_DndhH9",
     "trusty_sailing_cta_VGa3zk",
     "trusty_why_trusty_TU4aTV",
     "brands_carousel_home",
