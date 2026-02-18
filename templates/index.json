@@ -300,7 +300,8 @@
         "brand_LzXXf4": {
           "type": "brand",
           "settings": {
-            "brand_name": "",
+            "brand_logo": "shopify://shop_images/Torqeedo.webp",
+            "brand_name": "Torqeedo",
             "brand_link": ""
           }
         }
