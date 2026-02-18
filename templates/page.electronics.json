@@ -1,0 +1,138 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "electronics-hero": {
+      "type": "electronics-hero",
+      "settings": {
+        "badge": "KAYAK ELECTRONICS",
+        "heading": "Bass Boat Electronics on a Kayak",
+        "subheading": "Live imaging, fishfinders, NMEA networks, and complete wiring — professionally installed by Crystal Coast experts.",
+        "primary_cta_text": "Get a Quote",
+        "secondary_cta_text": "Shop Electronics"
+      }
+    },
+    "electronics-options": {
+      "type": "electronics-options",
+      "blocks": {
+        "livescope": {
+          "type": "option",
+          "settings": {
+            "emoji": "📡",
+            "category": "Garmin",
+            "title": "Livescope Plus System",
+            "description": "Real-time live sonar that shows fish swimming in real time. The gold standard for tournament kayak fishing. See structure, bait, and fish with incredible clarity.",
+            "specs": "LVS34 transducer, GLS 10 black box, compatible chartplotter mount and wiring"
+          }
+        },
+        "fishfinder": {
+          "type": "option",
+          "settings": {
+            "emoji": "🎯",
+            "category": "Garmin / Humminbird",
+            "title": "Chartplotter & Fishfinder",
+            "description": "GPS chartplotters with traditional and down/side imaging sonar. Navigate to your spots and mark waypoints on the water.",
+            "specs": "Garmin ECHOMAP, Humminbird HELIX series — mount, wiring, transducer install"
+          }
+        },
+        "lowrance": {
+          "type": "option",
+          "settings": {
+            "emoji": "🌊",
+            "category": "Lowrance",
+            "title": "ActiveTarget Live Sonar",
+            "description": "Lowrance's live sonar system gives you real-time forward and down-looking imaging. A top choice for structure fishing and tracking fish movement.",
+            "specs": "ActiveTarget transducer, compatible HDS display, bracket mount and wiring"
+          }
+        },
+        "nmea": {
+          "type": "option",
+          "settings": {
+            "emoji": "🔗",
+            "category": "Integration",
+            "title": "NMEA 2000 Network",
+            "description": "Connect all your electronics on a single network — chartplotter, fishfinder, motor, and more all share data and display on one screen.",
+            "specs": "NMEA 2000 backbone, T-connectors, power tap, device integration"
+          }
+        },
+        "power": {
+          "type": "option",
+          "settings": {
+            "emoji": "🔋",
+            "category": "Power",
+            "title": "Lithium Power Systems",
+            "description": "Lightweight lithium batteries with proper fusing, wiring, and charge management. Never worry about running out of power mid-trip.",
+            "specs": "Dakota Lithium or equivalent, bus bar wiring, inline fuses, charge port"
+          }
+        },
+        "lighting": {
+          "type": "option",
+          "settings": {
+            "emoji": "💡",
+            "category": "Lighting",
+            "title": "Navigation & Safety Lighting",
+            "description": "LED navigation lights for dawn, dusk, and low-light fishing. Properly wired and waterproofed for saltwater use.",
+            "specs": "Bow/stern LED lights, switch panel, waterproof wiring harness"
+          }
+        }
+      },
+      "block_order": ["livescope", "fishfinder", "lowrance", "nmea", "power", "lighting"],
+      "settings": {
+        "heading": "Electronics We Install",
+        "subheading": "From entry-level fishfinders to full Livescope setups — we spec, source, and install it all.",
+        "background_color": "#F5F7FA"
+      }
+    },
+    "electronics-why-pro": {
+      "type": "electronics-why-pro",
+      "blocks": {
+        "wiring": {
+          "type": "reason",
+          "settings": {
+            "emoji": "⚡",
+            "title": "Clean Wiring",
+            "description": "Proper fusing, routing, and waterproofing. No rats nest of wires causing intermittent failures on the water."
+          }
+        },
+        "waterproof": {
+          "type": "reason",
+          "settings": {
+            "emoji": "💧",
+            "title": "Saltwater Safe",
+            "description": "We use marine-grade connectors and dielectric grease on every connection. Built to handle Crystal Coast saltwater conditions."
+          }
+        },
+        "mount": {
+          "type": "reason",
+          "settings": {
+            "emoji": "🔧",
+            "title": "Proper Mounting",
+            "description": "Transducers, displays, and cables mounted in the right positions for accurate readings and secure placement at speed."
+          }
+        },
+        "warranty": {
+          "type": "reason",
+          "settings": {
+            "emoji": "✓",
+            "title": "Backed by Us",
+            "description": "We stand behind every install. If something isn't working right after your first trip, bring it back and we'll make it right."
+          }
+        }
+      },
+      "block_order": ["wiring", "waterproof", "mount", "warranty"],
+      "settings": {
+        "heading": "Why Professional Installation Matters",
+        "subheading": "A bad wiring job can fry your electronics or drain your battery mid-trip. Don't risk it.",
+        "background_color": "#FFFFFF"
+      }
+    }
+  },
+  "order": ["electronics-hero", "electronics-options", "electronics-why-pro"]
+}

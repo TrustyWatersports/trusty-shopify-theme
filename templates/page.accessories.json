@@ -1,0 +1,89 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "accessories-hero": {
+      "type": "accessories-hero",
+      "settings": {
+        "badge": "RIGGING ACCESSORIES",
+        "heading": "Gear Tracks, Crates & Transport",
+        "subheading": "Rod holders, crate systems, gear tracks, lighting, and transport solutions — everything to complete your rig.",
+        "primary_cta_text": "Get a Quote",
+        "secondary_cta_text": "Shop Accessories"
+      }
+    },
+    "accessories-options": {
+      "type": "accessories-options",
+      "blocks": {
+        "crates": {
+          "type": "accessory",
+          "settings": {
+            "emoji": "📦",
+            "category": "Storage",
+            "title": "Crate Systems",
+            "description": "Custom milk crate setups with rod holders, dry storage pouches, and tackle organization. Built for the way you fish — everything has a place and nothing rattles loose."
+          }
+        },
+        "tracks": {
+          "type": "accessory",
+          "settings": {
+            "emoji": "🔩",
+            "category": "Mounting",
+            "title": "Gear Tracks & Rails",
+            "description": "Yakattack GearTrac and similar systems let you move accessories anywhere on your kayak. Rod holders, camera mounts, fish finders — all repositionable without drilling."
+          }
+        },
+        "rod-holders": {
+          "type": "accessory",
+          "settings": {
+            "emoji": "🎣",
+            "category": "Fishing",
+            "title": "Rod Holders",
+            "description": "Flush mount, track mount, and crate-mounted rod holders. We position them based on your fishing style — trolling, casting, or storage while paddling."
+          }
+        },
+        "anchor": {
+          "type": "accessory",
+          "settings": {
+            "emoji": "⚓",
+            "category": "Control",
+            "title": "Anchor Trolley Systems",
+            "description": "Stay positioned in current or wind without fighting your kayak. Anchor trolleys let you swing your anchor point from bow to stern to hold any angle."
+          }
+        },
+        "transport": {
+          "type": "accessory",
+          "settings": {
+            "emoji": "🚗",
+            "category": "Transport",
+            "title": "Carts & Transport",
+            "description": "Kayak carts, roof rack systems, and truck bed solutions. We can advise on the best way to get your kayak from your garage to the water and back."
+          }
+        },
+        "safety": {
+          "type": "accessory",
+          "settings": {
+            "emoji": "🦺",
+            "category": "Safety",
+            "title": "Safety & Visibility",
+            "description": "Flag mounts, navigation lights, paddle leashes, and bilge pumps. Don't skip the safety gear — especially on open Crystal Coast waters."
+          }
+        }
+      },
+      "block_order": ["crates", "tracks", "rod-holders", "anchor", "transport", "safety"],
+      "settings": {
+        "heading": "Accessories & Rigging Add-Ons",
+        "subheading": "The details that make your kayak fishable. We source and install the best components available.",
+        "background_color": "#F5F7FA"
+      }
+    }
+  },
+  "order": ["accessories-hero", "accessories-options"]
+}

@@ -1,0 +1,85 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "motorization-hero": {
+      "type": "motorization-hero",
+      "settings": {
+        "badge": "KAYAK MOTORIZATION",
+        "heading": "Pedal & Motor Setups for Kayaks",
+        "subheading": "Trolling motors, mounts, lithium battery systems, and complete wiring — hands-free kayak propulsion done right.",
+        "primary_cta_text": "Get a Quote",
+        "secondary_cta_text": "Shop Motors"
+      }
+    },
+    "motorization-options": {
+      "type": "motorization-options",
+      "blocks": {
+        "minnkota": {
+          "type": "motor",
+          "settings": {
+            "emoji": "⚡",
+            "brand": "Minn Kota",
+            "title": "Trolling Motor Install",
+            "description": "Minn Kota is the most trusted name in trolling motors. We install bow and stern mount setups with full wiring, fusing, and bracket fabrication for your specific kayak.",
+            "best_for": "Anglers wanting reliable hands-free control with long battery run times"
+          }
+        },
+        "torqeedo": {
+          "type": "motor",
+          "settings": {
+            "emoji": "🔋",
+            "brand": "Torqeedo",
+            "title": "Torqeedo Electric Motor",
+            "description": "German-engineered electric outboard motors known for efficiency and power. The Travel and Ultralight series are purpose-built for kayaks and small watercraft.",
+            "best_for": "Paddlers wanting powerful, quiet, and efficient electric propulsion"
+          }
+        },
+        "newport": {
+          "type": "motor",
+          "settings": {
+            "emoji": "🚤",
+            "brand": "Newport Vessels",
+            "title": "Newport Trolling Motor",
+            "description": "Affordable and reliable trolling motors that punch above their price. Great entry-level option for anglers adding motor assist to their setup.",
+            "best_for": "Budget-conscious anglers wanting reliable motor assist"
+          }
+        },
+        "battery": {
+          "type": "motor",
+          "settings": {
+            "emoji": "🔌",
+            "brand": "Power Systems",
+            "title": "Lithium Battery Integration",
+            "description": "A motor is only as good as its power source. We install lightweight lithium systems with proper wiring, fusing, and charging ports sized for your motor and usage.",
+            "best_for": "Anyone serious about maximizing run time while minimizing weight"
+          }
+        },
+        "mount": {
+          "type": "motor",
+          "settings": {
+            "emoji": "🔧",
+            "brand": "Custom Fabrication",
+            "title": "Motor Mounts & Brackets",
+            "description": "Not every kayak has a purpose-built motor mount. We fabricate and install custom brackets for bow, stern, or side mounting depending on your kayak model.",
+            "best_for": "Any kayak that needs a custom mounting solution"
+          }
+        }
+      },
+      "block_order": ["minnkota", "torqeedo", "newport", "battery", "mount"],
+      "settings": {
+        "heading": "Motor Systems We Install",
+        "subheading": "We work with the top kayak motor brands and handle full mount, wiring, and battery integration.",
+        "background_color": "#F5F7FA"
+      }
+    }
+  },
+  "order": ["motorization-hero", "motorization-options"]
+}
