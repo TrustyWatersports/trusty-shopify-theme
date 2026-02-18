@@ -9,6 +9,18 @@
  */
 {
   "sections": {
+    "packages-hero": {
+      "type": "packages-hero",
+      "settings": {
+        "badge": "CUSTOM RIGGING",
+        "heading": "Rigging Packages",
+        "subheading": "Choose a package that matches your fishing style and budget. Every rig is built by our Crystal Coast experts and shipped nationwide.",
+        "primary_cta_text": "Start Your Build",
+        "primary_cta_link": "/pages/start-your-build",
+        "secondary_cta_text": "📞 Call Us",
+        "secondary_cta_link": "tel:252-499-9911"
+      }
+    },
     "packages_grid": {
       "type": "rigging-packages-grid",
       "blocks": {
@@ -23,7 +35,7 @@
             "features": "Basic fishfinder (Helix 7)\nRod holders & gear tracks\nBasic lighting\nPower management\nProfessional installation",
             "featured": false,
             "cta_text": "Get Started",
-            "cta_link": "shopify://pages/rigging-packages"
+            "cta_link": "/pages/start-your-build"
           }
         },
         "package2": {
@@ -37,7 +49,7 @@
             "features": "Garmin Livescope setup\nUltra 106sv fishfinder\nTrolling motor prep\nPremium crate system\nComplete wiring & install\nLithium battery option",
             "featured": true,
             "cta_text": "Most Popular",
-            "cta_link": "shopify://pages/rigging-packages"
+            "cta_link": "/pages/start-your-build"
           }
         },
         "package_TjPeq4": {
@@ -51,7 +63,7 @@
             "features": "Garmin Livescope Plus\nUltra 106sv fishfinder\nTrolling motor with lithium\nPremium crate system\nComplete wiring & install",
             "featured": false,
             "cta_text": "View Details",
-            "cta_link": "shopify://pages/rigging-packages"
+            "cta_link": "/pages/start-your-build"
           }
         },
         "package3": {
@@ -61,6 +73,7 @@
             "tagline": "The ultimate fishing machine",
             "price": "$13,000+",
             "price_note": "Plus kayak cost",
+            "image": "shopify://shop_images/BSB-Angler-Forest-9.jpg",
             "features": "Full Garmin Livescope Plus\nDual fishfinders\nTrolling motor with lithium\nCustom crate & storage\nComplete electronics suite\nNMEA networking\nWhite-glove delivery",
             "featured": false,
             "cta_text": "Go Premium",
@@ -68,19 +81,24 @@
           }
         }
       },
-      "block_order": [
-        "package1",
-        "package2",
-        "package_TjPeq4",
-        "package3"
-      ],
+      "block_order": ["package1", "package2", "package_TjPeq4", "package3"],
       "settings": {
-        "heading": "Rigging Packages",
-        "subheading": "Choose a package that matches your fishing style and budget. Every rig is built by our Crystal Coast experts and shipped nationwide."
+        "heading": "Choose Your Package",
+        "subheading": "All packages include professional installation, testing, and shipping. Fully customizable."
+      }
+    },
+    "packages-cta": {
+      "type": "packages-cta",
+      "settings": {
+        "heading": "Not Sure Which Package Is Right For You?",
+        "subheading": "Tell us about your kayak and how you fish. We'll spec the perfect build and give you an honest quote.",
+        "primary_cta_text": "Start Your Build",
+        "primary_cta_link": "/pages/start-your-build",
+        "secondary_cta_text": "📞 (252) 499-9911",
+        "secondary_cta_link": "tel:252-499-9911",
+        "note": "Packages are starting points — every build is fully customizable to your kayak, fishing style, and budget."
       }
     }
   },
-  "order": [
-    "packages_grid"
-  ]
+  "order": ["packages-hero", "packages_grid", "packages-cta"]
 }

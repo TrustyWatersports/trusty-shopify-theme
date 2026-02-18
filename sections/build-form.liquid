@@ -1,0 +1,175 @@
+<section style="padding: 80px 20px; background: {{ section.settings.background_color }};">
+  <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+
+    <!-- Left: Form -->
+    <div>
+      <h2 style="font-size: 32px; font-weight: 800; color: #0A4B78; margin-bottom: 8px;">{{ section.settings.form_heading }}</h2>
+      <p style="color: #666; margin-bottom: 32px; font-size: 16px;">{{ section.settings.form_subheading }}</p>
+
+      {% form 'contact' %}
+        {% if form.posted_successfully? %}
+          <div style="background: #d4edda; border: 1px solid #c3e6cb; color: #155724; padding: 16px 20px; border-radius: 8px; margin-bottom: 24px; font-weight: 600;">
+            ✅ Got it! We'll review your build and reach out within 24 hours.
+          </div>
+        {% endif %}
+
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div>
+              <label style="display: block; font-weight: 600; color: #333; margin-bottom: 6px; font-size: 14px;">First Name *</label>
+              <input type="text" name="contact[first_name]" required placeholder="John"
+                style="width: 100%; padding: 12px 14px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; box-sizing: border-box;">
+            </div>
+            <div>
+              <label style="display: block; font-weight: 600; color: #333; margin-bottom: 6px; font-size: 14px;">Last Name *</label>
+              <input type="text" name="contact[last_name]" required placeholder="Smith"
+                style="width: 100%; padding: 12px 14px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; box-sizing: border-box;">
+            </div>
+          </div>
+
+          <div>
+            <label style="display: block; font-weight: 600; color: #333; margin-bottom: 6px; font-size: 14px;">Email Address *</label>
+            <input type="email" name="contact[email]" required placeholder="john@example.com"
+              style="width: 100%; padding: 12px 14px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; box-sizing: border-box;">
+          </div>
+
+          <div>
+            <label style="display: block; font-weight: 600; color: #333; margin-bottom: 6px; font-size: 14px;">Phone Number</label>
+            <input type="tel" name="contact[phone]" placeholder="(555) 123-4567"
+              style="width: 100%; padding: 12px 14px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; box-sizing: border-box;">
+          </div>
+
+          <div>
+            <label style="display: block; font-weight: 600; color: #333; margin-bottom: 6px; font-size: 14px;">Kayak Make & Model</label>
+            <input type="text" name="contact[kayak_model]" placeholder="e.g. Hobie Pro Angler 14, Old Town Sportsman 120..."
+              style="width: 100%; padding: 12px 14px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; box-sizing: border-box;">
+          </div>
+
+          <div>
+            <label style="display: block; font-weight: 600; color: #333; margin-bottom: 6px; font-size: 14px;">Rigging Interests</label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+              <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #444; cursor: pointer;">
+                <input type="checkbox" name="contact[interest_electronics]" value="Electronics / Fish Finder"> 📡 Electronics / Fish Finder
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #444; cursor: pointer;">
+                <input type="checkbox" name="contact[interest_motor]" value="Trolling Motor"> ⚡ Trolling Motor
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #444; cursor: pointer;">
+                <input type="checkbox" name="contact[interest_battery]" value="Lithium Battery"> 🔋 Lithium Battery
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #444; cursor: pointer;">
+                <input type="checkbox" name="contact[interest_tracks]" value="Gear Tracks & Rod Holders"> 🔩 Tracks & Rod Holders
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #444; cursor: pointer;">
+                <input type="checkbox" name="contact[interest_crate]" value="Crate & Storage"> 📦 Crate & Storage
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #444; cursor: pointer;">
+                <input type="checkbox" name="contact[interest_full]" value="Full Custom Build"> 🏆 Full Custom Build
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label style="display: block; font-weight: 600; color: #333; margin-bottom: 6px; font-size: 14px;">Budget Range</label>
+            <select name="contact[budget]"
+              style="width: 100%; padding: 12px 14px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; background: white; box-sizing: border-box;">
+              <option value="">-- Select a budget range --</option>
+              <option value="Under $1,000">Under $1,000</option>
+              <option value="$1,000 - $3,500">$1,000 – $3,500</option>
+              <option value="$3,500 - $6,500">$3,500 – $6,500 (Essential Angler)</option>
+              <option value="$6,500 - $13,000">$6,500 – $13,000 (Tournament Ready)</option>
+              <option value="$13,000+">$13,000+ (Elite Pro)</option>
+              <option value="Not sure yet">Not sure yet — help me figure it out</option>
+            </select>
+          </div>
+
+          <div>
+            <label style="display: block; font-weight: 600; color: #333; margin-bottom: 6px; font-size: 14px;">Tell Us About Your Build</label>
+            <textarea name="contact[body]" rows="4" placeholder="Where do you fish? What do you want to accomplish? Any specific gear in mind?"
+              style="width: 100%; padding: 12px 14px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; resize: vertical; box-sizing: border-box; font-family: inherit;"></textarea>
+          </div>
+
+          <button type="submit"
+            style="background: #00A86B; color: white; padding: 16px 32px; border: none; border-radius: 6px; font-size: 17px; font-weight: 800; cursor: pointer; width: 100%;">
+            {{ section.settings.submit_text }} →
+          </button>
+
+          <p style="text-align: center; color: #999; font-size: 13px; margin: 0;">{{ section.settings.form_note }}</p>
+
+        </div>
+      {% endform %}
+    </div>
+
+    <!-- Right: Info Panel -->
+    <div style="position: sticky; top: 30px;">
+
+      {% if section.settings.show_phone %}
+        <div style="background: #0A4B78; color: white; padding: 28px; border-radius: 12px; margin-bottom: 24px; text-align: center;">
+          <div style="font-size: 32px; margin-bottom: 8px;">📞</div>
+          <div style="font-size: 14px; opacity: 0.8; margin-bottom: 4px;">Prefer to talk? Call us directly:</div>
+          <a href="tel:{{ section.settings.phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' }}"
+            style="color: #00A86B; font-size: 24px; font-weight: 800; text-decoration: none;">{{ section.settings.phone }}</a>
+          <div style="font-size: 13px; opacity: 0.7; margin-top: 8px;">{{ section.settings.phone_hours }}</div>
+        </div>
+      {% endif %}
+
+      <div style="background: #f8f9fa; border-radius: 12px; padding: 28px; margin-bottom: 16px;">
+        <h3 style="font-size: 18px; font-weight: 800; color: #0A4B78; margin-bottom: 20px;">What Happens Next</h3>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div style="display: flex; gap: 14px; align-items: flex-start;">
+            <div style="background: #0A4B78; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; flex-shrink: 0;">1</div>
+            <div><div style="font-weight: 700; color: #333; font-size: 15px;">We Review Your Build</div><div style="color: #666; font-size: 14px; margin-top: 3px;">Our rigging team reads every submission and specs it out properly.</div></div>
+          </div>
+          <div style="display: flex; gap: 14px; align-items: flex-start;">
+            <div style="background: #0A4B78; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; flex-shrink: 0;">2</div>
+            <div><div style="font-weight: 700; color: #333; font-size: 15px;">You Get a Detailed Quote</div><div style="color: #666; font-size: 14px; margin-top: 3px;">Itemized quote with components, labor, and shipping — no surprises.</div></div>
+          </div>
+          <div style="display: flex; gap: 14px; align-items: flex-start;">
+            <div style="background: #00A86B; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; flex-shrink: 0;">3</div>
+            <div><div style="font-weight: 700; color: #333; font-size: 15px;">We Build & Ship</div><div style="color: #666; font-size: 14px; margin-top: 3px;">Once approved, we build your rig and ship it nationwide — ready to fish.</div></div>
+          </div>
+        </div>
+      </div>
+
+      {% for block in section.blocks %}
+        <div {{ block.shopify_attributes }} style="background: white; border: 2px solid #e8f5e9; border-radius: 12px; padding: 20px; margin-top: 16px; display: flex; gap: 14px; align-items: flex-start;">
+          <span style="font-size: 24px; flex-shrink: 0;">{{ block.settings.icon }}</span>
+          <div>
+            <div style="font-weight: 700; color: #0A4B78; font-size: 15px;">{{ block.settings.title }}</div>
+            <div style="color: #555; font-size: 14px; margin-top: 4px; line-height: 1.5;">{{ block.settings.description }}</div>
+          </div>
+        </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Build Form",
+  "settings": [
+    { "type": "color", "id": "background_color", "label": "Background Color", "default": "#FFFFFF" },
+    { "type": "text", "id": "form_heading", "label": "Form Heading", "default": "Tell Us About Your Build" },
+    { "type": "textarea", "id": "form_subheading", "label": "Form Subheading", "default": "Fill out the form below and our rigging team will be in touch within 24 hours." },
+    { "type": "text", "id": "submit_text", "label": "Submit Button Text", "default": "Send My Build Request" },
+    { "type": "text", "id": "form_note", "label": "Form Note", "default": "No obligation. We'll follow up by email or phone — whichever you prefer." },
+    { "type": "checkbox", "id": "show_phone", "label": "Show phone call box", "default": true },
+    { "type": "text", "id": "phone", "label": "Phone Number", "default": "(252) 499-9911" },
+    { "type": "text", "id": "phone_hours", "label": "Phone Hours", "default": "Mon–Sat 10am–5pm ET" }
+  ],
+  "blocks": [
+    {
+      "type": "trust_item",
+      "name": "Trust Item",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Emoji Icon", "default": "✅" },
+        { "type": "text", "id": "title", "label": "Title", "default": "No Obligation Quote" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "Getting a quote costs nothing." }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Build Form" }]
+}
+{% endschema %}

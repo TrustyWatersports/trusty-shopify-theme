@@ -1,0 +1,68 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "build-hero": {
+      "type": "build-hero",
+      "settings": {
+        "badge": "CUSTOM RIGGING",
+        "heading": "Start Your Build",
+        "subheading": "Tell us about your kayak and how you fish. We'll spec the perfect rig and send you an honest quote — usually within 24 hours.",
+        "stat1_value": "$3,500+",
+        "stat1_label": "Packages starting at",
+        "stat2_value": "24hr",
+        "stat2_label": "Quote turnaround",
+        "stat3_value": "100%",
+        "stat3_label": "Custom builds"
+      }
+    },
+    "build-form": {
+      "type": "build-form",
+      "blocks": {
+        "trust1": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "✅",
+            "title": "No Obligation Quote",
+            "description": "Getting a quote costs nothing. We're here to help you spec the perfect build, not pressure you into anything."
+          }
+        },
+        "trust2": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "🚚",
+            "title": "Ships Nationwide",
+            "description": "We build and ship fully rigged kayaks to all 50 states. Your tournament-ready rig arrives ready to fish."
+          }
+        },
+        "trust3": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "🔧",
+            "title": "Bring Your Own Kayak",
+            "description": "Already have a kayak? Ship it to us or drop it off and we'll rig it up. We work with all major brands."
+          }
+        }
+      },
+      "block_order": ["trust1", "trust2", "trust3"],
+      "settings": {
+        "background_color": "#F5F7FA",
+        "form_heading": "Tell Us About Your Build",
+        "form_subheading": "Fill out the form below and our rigging team will be in touch within 24 hours with a detailed quote.",
+        "submit_text": "Send My Build Request",
+        "form_note": "No obligation. We'll follow up by email or phone — whichever you prefer.",
+        "show_phone": true,
+        "phone": "(252) 499-9911",
+        "phone_hours": "Mon–Sat 10am–5pm ET"
+      }
+    }
+  },
+  "order": ["build-hero", "build-form"]
+}
