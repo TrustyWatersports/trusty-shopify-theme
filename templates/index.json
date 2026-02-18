@@ -276,7 +276,8 @@
         "brand_rmx3Gm": {
           "type": "brand",
           "settings": {
-            "brand_name": "",
+            "brand_logo": "shopify://shop_images/Wilderness_Systems.webp",
+            "brand_name": "Wilderness Systems",
             "brand_link": ""
           }
         },
