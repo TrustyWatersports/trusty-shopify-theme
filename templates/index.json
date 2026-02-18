@@ -238,6 +238,22 @@
     "brands_carousel_home": {
       "type": "brands-carousel",
       "blocks": {
+        "brand_3xfyMR": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/NuCanoe.webp",
+            "brand_name": "NuCanoe",
+            "brand_link": ""
+          }
+        },
+        "brand_wDRpFx": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/Torqeedo.webp",
+            "brand_name": "Torqeedo",
+            "brand_link": ""
+          }
+        },
         "brand_3fAJwW": {
           "type": "brand",
           "settings": {
@@ -319,6 +335,8 @@
         }
       },
       "block_order": [
+        "brand_3xfyMR",
+        "brand_wDRpFx",
         "brand_3fAJwW",
         "brand_8fhDFG",
         "brand_native",
