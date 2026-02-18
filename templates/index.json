@@ -267,7 +267,8 @@
         "brand_ip3Xra": {
           "type": "brand",
           "settings": {
-            "brand_name": "",
+            "brand_logo": "shopify://shop_images/NuCanoe.webp",
+            "brand_name": "NuCanoe",
             "brand_link": ""
           }
         },
