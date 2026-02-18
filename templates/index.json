@@ -305,6 +305,7 @@
         "brand_oldtown": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/logo.png",
             "brand_name": "Old Town",
             "brand_link": ""
           }
