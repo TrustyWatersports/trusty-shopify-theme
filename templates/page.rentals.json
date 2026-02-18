@@ -23,9 +23,10 @@
       "blocks": {
         "single": { "type": "rental", "settings": { "name": "Single Kayak", "half_day_price": "$40", "half_day_hours": "4", "full_day_price": "$60", "feature_1": "Recreational or touring kayaks", "feature_2": "Perfect for solo paddling", "feature_3": "Great for exploration", "featured": false } },
         "tandem": { "type": "rental", "settings": { "name": "Tandem Kayak", "half_day_price": "$60", "half_day_hours": "4", "full_day_price": "$90", "feature_1": "Two-person kayak", "feature_2": "Ideal for couples & families", "feature_3": "Extra stability", "featured": false } },
+        "hourly-pedal": { "type": "rental", "settings": { "name": "Hourly Waterfront Pedal Kayak", "half_day_price": "$20", "half_day_hours": "1", "full_day_price": "", "feature_1": "Pedal drive kayak — no paddling required", "feature_2": "Bogue Sound waterfront launch", "feature_3": "Perfect for a quick adventure", "featured": false } },
         "pedal": { "type": "rental", "settings": { "name": "Pedal Drive Kayak", "half_day_price": "$80", "half_day_hours": "4", "full_day_price": "$120", "feature_1": "Hands-free pedal propulsion", "feature_2": "Try before you buy!", "feature_3": "Perfect for fishing", "featured": true } }
       },
-      "block_order": ["single", "tandem", "pedal"],
+      "block_order": ["single", "tandem", "hourly-pedal", "pedal"],
       "settings": { "heading": "Kayak Rentals", "subheading": "All rentals include paddle, PFD, and basic instruction", "background_color": "#FFFFFF", "try_before_buy_text": "Love what you rented? Your rental fee credits toward purchasing that kayak! Test it on the water, then take it home." }
     },
     "rentals-tours": {

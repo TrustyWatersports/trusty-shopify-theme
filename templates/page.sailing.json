@@ -102,6 +102,8 @@
       "settings": {
         "video_title": "See Topaz Sailboats in Action",
         "video_description": "Watch how these incredible boats perform on the water",
+        "vimeo_id": "1142619905",
+        "vimeo_hash": "323502ecbc",
         "background_color": "#FFFFFF"
       }
     },
