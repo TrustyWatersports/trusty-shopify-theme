@@ -19,7 +19,7 @@
             "tagline": "Perfect for weekend warriors",
             "price": "$3,500",
             "price_note": "Plus kayak cost",
-            "image": "",
+            "image": "shopify://shop_images/Knarr_Will.jpg",
             "features": "Basic fishfinder (Helix 7)\nRod holders & gear tracks\nBasic lighting\nPower management\nProfessional installation",
             "featured": false,
             "cta_text": "Get Started",
@@ -33,10 +33,24 @@
             "tagline": "For serious competitors",
             "price": "$6,500",
             "price_note": "Plus kayak cost",
-            "image": "",
+            "image": "shopify://shop_images/DSC_0258_-_Large_c5233571-01c8-4cd2-a329-40abe57ecf77.jpg",
             "features": "Garmin Livescope setup\nUltra 106sv fishfinder\nTrolling motor prep\nPremium crate system\nComplete wiring & install\nLithium battery option",
             "featured": true,
             "cta_text": "Most Popular",
+            "cta_link": ""
+          }
+        },
+        "package_TjPeq4": {
+          "type": "package",
+          "settings": {
+            "name": "Tournament Ready",
+            "tagline": "For serious anglers",
+            "price": "$12,995",
+            "price_note": "Plus kayak cost",
+            "image": "shopify://shop_images/DSC_0436_-_Large_3f3f7274-d373-41af-a690-6d6a75e12bc5.jpg",
+            "features": "Garmin Livescope Plus\nUltra 106sv fishfinder\nTrolling motor with lithium\nPremium crate system\nComplete wiring & install",
+            "featured": false,
+            "cta_text": "View Details",
             "cta_link": ""
           }
         },
@@ -47,7 +61,6 @@
             "tagline": "The ultimate fishing machine",
             "price": "$13,000+",
             "price_note": "Plus kayak cost",
-            "image": "",
             "features": "Full Garmin Livescope Plus\nDual fishfinders\nTrolling motor with lithium\nCustom crate & storage\nComplete electronics suite\nNMEA networking\nWhite-glove delivery",
             "featured": false,
             "cta_text": "Go Premium",
@@ -58,6 +71,7 @@
       "block_order": [
         "package1",
         "package2",
+        "package_TjPeq4",
         "package3"
       ],
       "settings": {
