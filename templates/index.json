@@ -260,7 +260,8 @@
         "brand_FtkHXw": {
           "type": "brand",
           "settings": {
-            "brand_name": "",
+            "brand_logo": "shopify://shop_images/YakAttack.webp",
+            "brand_name": "YakAttack",
             "brand_link": ""
           }
         },
