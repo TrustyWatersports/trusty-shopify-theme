@@ -23,7 +23,7 @@
             "features": "Basic fishfinder (Helix 7)\nRod holders & gear tracks\nBasic lighting\nPower management\nProfessional installation",
             "featured": false,
             "cta_text": "Get Started",
-            "cta_link": "/pages/start-your-build"
+            "cta_link": "shopify://pages/rigging-packages"
           }
         },
         "package2": {
