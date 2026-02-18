@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+<<<<<<< HEAD
 {
   "sections": {
     "programs-hero": {
@@ -266,3 +267,264 @@
   },
   "order": ["programs-hero", "sailing-lessons", "kayak-tours", "events", "programs-cta"]
 }
+=======
+{
+  "sections": {
+    "programs-hero": {
+      "type": "programs-hero",
+      "settings": {
+        "hero_title": "Programs & Events",
+        "hero_subtitle": "Sailing lessons, guided tours, and Crystal Coast watersports experiences",
+        "show_icon": true,
+        "hero_icon": "⛵",
+        "hero_color_start": "#D32F2F",
+        "hero_color_end": "#B71C1C"
+      }
+    },
+    "sailing-lessons": {
+      "type": "programs-sailing",
+      "blocks": {
+        "beginner": {
+          "type": "sailing_program",
+          "settings": {
+            "program_icon": "🎓",
+            "program_name": "Beginner Course",
+            "program_tagline": "Perfect for first-time sailors",
+            "feature_1": "8 hours of instruction",
+            "feature_2": "Basic sailing theory & safety",
+            "feature_3": "Rigging & knot tying",
+            "feature_4": "On-water practice",
+            "feature_5": "All equipment included",
+            "price": "$350",
+            "card_color": "#D32F2F",
+            "button_text": "Book Now",
+            "button_link": "tel:252-515-4866"
+          }
+        },
+        "intermediate": {
+          "type": "sailing_program",
+          "settings": {
+            "program_icon": "⛵",
+            "program_name": "Intermediate Course",
+            "program_tagline": "Build your sailing skills",
+            "feature_1": "10 hours of instruction",
+            "feature_2": "Advanced maneuvers",
+            "feature_3": "Weather & navigation",
+            "feature_4": "Racing techniques",
+            "feature_5": "Performance sailing",
+            "price": "$450",
+            "card_color": "#1E6FA8",
+            "button_text": "Book Now",
+            "button_link": "tel:252-515-4866"
+          }
+        },
+        "private": {
+          "type": "sailing_program",
+          "settings": {
+            "program_icon": "🎯",
+            "program_name": "Private Instruction",
+            "program_tagline": "One-on-one personalized lessons",
+            "feature_1": "Flexible scheduling",
+            "feature_2": "Customized curriculum",
+            "feature_3": "Focus on your goals",
+            "feature_4": "All skill levels welcome",
+            "feature_5": "1-on-1 or small groups",
+            "price": "$100/hr",
+            "card_color": "#00A86B",
+            "button_text": "Book Now",
+            "button_link": "tel:252-515-4866"
+          }
+        }
+      },
+      "block_order": ["beginner", "intermediate", "private"],
+      "settings": {
+        "section_icon": "⛵",
+        "section_title": "Sailing Lessons",
+        "section_description": "Learn to sail on the beautiful waters of Bogue Sound with expert instruction",
+        "section_color": "#D32F2F"
+      }
+    },
+    "kayak-tours": {
+      "type": "programs-tours",
+      "blocks": {
+        "seniors": {
+          "type": "tour",
+          "settings": {
+            "tour_icon": "👴",
+            "tour_name": "Seniors on the Sound",
+            "tour_duration": "1.5 hours",
+            "tour_price": "Special senior pricing",
+            "price_color": "#9C27B0",
+            "tour_description": "Gentle-paced tour designed for senior paddlers with accessible equipment and support",
+            "show_button": true,
+            "button_text": "Learn More",
+            "button_link": "tel:252-515-4866"
+          }
+        },
+        "coffee-kayak": {
+          "type": "tour",
+          "settings": {
+            "tour_icon": "☕",
+            "tour_name": "Coffee and a Kayak",
+            "tour_duration": "Morning tour",
+            "tour_price": "Contact for pricing",
+            "price_color": "#8B4513",
+            "tour_description": "Start your day with a peaceful morning paddle and coffee on the water",
+            "show_button": true,
+            "button_text": "Book Tour",
+            "button_link": "tel:252-515-4866"
+          }
+        },
+        "waterfront-tour": {
+          "type": "tour",
+          "settings": {
+            "tour_icon": "🛶",
+            "tour_name": "Waterfront History Tour",
+            "tour_duration": "~1 hour pedal kayak tour",
+            "tour_price": "Contact for pricing",
+            "price_color": "#1E6FA8",
+            "tour_description": "Learn about the history, ecology, and industry of Morehead City Waterfront aboard a pedal kayak",
+            "show_button": true,
+            "button_text": "Book Tour",
+            "button_link": "tel:252-515-4866"
+          }
+        },
+        "sugarloaf": {
+          "type": "tour",
+          "settings": {
+            "tour_icon": "🌅",
+            "tour_name": "Sugarloaf Sunsets",
+            "tour_duration": "2 hours",
+            "tour_price": "$45/person",
+            "price_color": "#FF6B35",
+            "tour_description": "Evening paddle around Sugarloaf Island watching the sunset over Bogue Sound",
+            "show_button": true,
+            "button_text": "Book Tour",
+            "button_link": "tel:252-515-4866"
+          }
+        },
+        "custom-tours": {
+          "type": "tour",
+          "settings": {
+            "tour_icon": "🗺️",
+            "tour_name": "Custom Kayak Tours",
+            "tour_duration": "Flexible",
+            "tour_price": "Custom Pricing",
+            "price_color": "#0A4B78",
+            "tour_description": "Design your own adventure for groups, families, or special events. We'll create the perfect tour for you!",
+            "show_button": true,
+            "button_text": "Plan Custom Tour",
+            "button_link": "tel:252-515-4866"
+          }
+        }
+      },
+      "block_order": ["seniors", "coffee-kayak", "waterfront-tour", "sugarloaf", "custom-tours"],
+      "settings": {
+        "section_icon": "🚣",
+        "section_title": "Guided Kayak Tours",
+        "section_description": "Explore the Crystal Coast with experienced local guides",
+        "background_color": "#F5F7FA",
+        "title_color": "#0A4B78",
+        "show_cta_button": true,
+        "cta_text": "Book a Tour",
+        "cta_link": "tel:252-515-4866",
+        "cta_button_color": "#0A4B78"
+      }
+    },
+    "events": {
+      "type": "programs-events",
+      "blocks": {
+        "sailing-series": {
+          "type": "event",
+          "settings": {
+            "event_icon": "🏆",
+            "event_name": "Small Boat Sailing Series",
+            "event_description": "Join our summer racing series for Topper and Topaz sailboats! Perfect for beginners and experienced sailors.",
+            "event_when": "Saturdays, June - August",
+            "event_time": "10:00 AM - 2:00 PM",
+            "event_cost": "Free for participants",
+            "event_color": "#D32F2F",
+            "show_button": true,
+            "button_text": "Learn More",
+            "button_link": "tel:252-515-4866"
+          }
+        },
+        "portside-meetup": {
+          "type": "event",
+          "settings": {
+            "event_icon": "🎯",
+            "event_name": "Portside Kayak Fishing Meetup",
+            "event_description": "Join fellow kayak anglers for our monthly fishing meetup. Share tips, stories, and explore new fishing spots together.",
+            "event_when": "Second Saturday of each month",
+            "event_time": "7:00 AM",
+            "event_cost": "Free",
+            "event_color": "#00A86B",
+            "show_button": true,
+            "button_text": "Join Meetup",
+            "button_link": "tel:252-499-9911"
+          }
+        },
+        "demo-days": {
+          "type": "event",
+          "settings": {
+            "event_icon": "🌊",
+            "event_name": "Try-It Days",
+            "event_description": "Free demos of kayaks, SUPs, and sailboats! Test paddle different models, meet our team, and enjoy complimentary refreshments.",
+            "event_when": "First Saturday of each month",
+            "event_time": "10:00 AM - 4:00 PM",
+            "event_cost": "FREE!",
+            "event_color": "#00A86B",
+            "show_button": true,
+            "button_text": "RSVP",
+            "button_link": "tel:252-499-9911"
+          }
+        },
+        "lookout-campout": {
+          "type": "event",
+          "settings": {
+            "event_icon": "🏕️",
+            "event_name": "Lookout Campout",
+            "event_description": "Overnight kayak camping expedition to Cape Lookout! Experience the pristine beaches and star-filled skies. All camping gear and meals included.",
+            "event_when": "Seasonal (Summer)",
+            "event_time": "Friday evening - Sunday morning",
+            "event_cost": "Contact for pricing",
+            "event_color": "#8B4513",
+            "show_button": true,
+            "button_text": "Learn More",
+            "button_link": "tel:252-515-4866"
+          }
+        }
+      },
+      "block_order": ["sailing-series", "portside-meetup", "demo-days", "lookout-campout"],
+      "settings": {
+        "section_icon": "📅",
+        "section_title": "Upcoming Events",
+        "section_description": "Join us for races, demos, and community events",
+        "title_color": "#0A4B78"
+      }
+    },
+    "programs-cta": {
+      "type": "programs-cta",
+      "settings": {
+        "show_icon": false,
+        "cta_icon": "📞",
+        "cta_title": "Questions About Our Programs?",
+        "cta_description": "Call us or visit our waterfront location to learn more!",
+        "gradient_start": "#0A4B78",
+        "gradient_end": "#1E6FA8",
+        "show_primary_button": true,
+        "primary_text": "📞 (252) 515-4866",
+        "primary_link": "tel:252-515-4866",
+        "primary_button_color": "#FFFFFF",
+        "primary_text_color": "#0A4B78",
+        "show_secondary_button": true,
+        "secondary_text": "Visit Our Locations",
+        "secondary_link": "/pages/locations",
+        "secondary_button_color": "#00A86B",
+        "secondary_text_color": "#FFFFFF"
+      }
+    }
+  },
+  "order": ["programs-hero", "sailing-lessons", "kayak-tours", "events", "programs-cta"]
+}
+>>>>>>> 1153af0fb4345b6cec03947dad3afda4135ec8bb

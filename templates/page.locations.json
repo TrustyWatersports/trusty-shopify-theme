@@ -39,12 +39,17 @@
             "email": "rentals@trustysailandpaddle.com",
             "hours": "Tuesday - Saturday: 10:00 AM - 5:00 PM\nSunday - Monday: Closed",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "features": "Kayak & SUP Rentals\nSailboat Rentals\nGuided Tours & Lessons",
             "note": "Special event schedule varies",
 =======
             "features": "Kayak & SUP Rentals\nSailboat Rentals\nGuided Tours",
             "note": "Special hours vary",
 >>>>>>> 3b0a5e505f1577da6b5c9f636cc80ba23c7afdce
+=======
+            "features": "Kayak & SUP Rentals\nSailboat Rentals\nGuided Tours",
+            "note": "Special hours vary",
+>>>>>>> 1153af0fb4345b6cec03947dad3afda4135ec8bb
             "accent_color": "#00a86b"
           }
         }
@@ -57,8 +62,12 @@
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   "order": ["main", "locations"]
 =======
   "order": ["locations"]
 >>>>>>> 3b0a5e505f1577da6b5c9f636cc80ba23c7afdce
+=======
+  "order": ["locations"]
+>>>>>>> 1153af0fb4345b6cec03947dad3afda4135ec8bb
 }

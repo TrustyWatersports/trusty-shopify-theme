@@ -59,7 +59,7 @@
       background: var(--white);
     }
 
-    /* Top Bar */
+    /* Top Bar - styles kept here for global availability */
     .top-bar {
       background: var(--rigging-accent);
       color: var(--white);
@@ -499,92 +499,8 @@
 </head>
 
 <body class="template-{{ template.name }}">
-  
-  <!-- Top Announcement Bar -->
-  <div class="top-bar">
-    🎣 Custom Kayak Rigging Experts | Free Shipping on Rigs $2,500+ | {{ shop.name }}
-  </div>
 
-  <!-- Quick Access Navigation -->
-  <div class="quick-access">
-    <div class="quick-access-content">
-      <a href="/pages/custom-rigging" class="quick-link primary">
-        🔧 Custom Rigging
-      </a>
-      <a href="/collections/fishing-kayaks" class="quick-link">
-        🎣 Shop Kayaks
-      </a>
-      <a href="/pages/rentals" class="quick-link">
-        🚣 Rentals & Tours
-      </a>
-      <a href="/collections/sailboats" class="quick-link">
-        ⛵ Sailboats
-      </a>
-      <a href="/pages/showroom" class="quick-link">
-        🏪 Visit Showroom
-      </a>
-    </div>
-  </div>
-
-  <!-- Main Header -->
-  <header>
-    <div class="header-content">
-      <a href="/" class="logo">
-        <img src="https://images.squarespace-cdn.com/content/v1/6192794d1d9bc87b9719f93c/d75cec6a-478b-4fff-b3ae-bd24f8e06d8c/LOGO3.jpg?format=300w" alt="{{ shop.name }}">
-        <div class="logo-text">
-          <span class="trusty">Trusty</span> <span class="sail">Sail & Paddle</span>
-        </div>
-      </a>
-      
-      <!-- Hamburger Menu Button (Mobile Only) -->
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav id="main-nav">
-        <div class="nav-item dropdown">
-          <a href="/collections/all">SHOP ▾</a>
-          <div class="dropdown-content">
-            <a href="/collections/pedal-kayaks">Pedal Kayaks</a>
-            <a href="/collections/paddle-kayaks">Paddle Kayaks</a>
-            <a href="/collections/sailboats">Sailboats</a>
-          </div>
-        </div>
-        <a href="/pages/custom-rigging">CUSTOM RIGGING</a>
-        <div class="nav-item dropdown">
-          <a href="#">EXPERIENCE ▾</a>
-          <div class="dropdown-content">
-            <a href="/pages/rentals">Rentals</a>
-            <a href="/pages/programs-events">Programs & Events</a>
-            <a href="/pages/locations">Locations</a>
-          </div>
-        </div>
-        <div class="nav-item dropdown">
-          <a href="/pages/about">ABOUT ▾</a>
-          <div class="dropdown-content">
-            <a href="/pages/about">About Us</a>
-            <a href="/pages/blog">Blog</a>
-          </div>
-        </div>
-      </nav>
-
-      <div class="header-actions">
-        <a href="tel:252-499-9911" style="background: var(--sunrise); color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 13px; white-space: nowrap; transition: all 0.3s; margin-right: 10px;">
-          <span style="font-size: 10px; opacity: 0.9; display: block; margin-bottom: 2px;">SHOP</span>
-          📞 (252) 499-9911
-        </a>
-        <a href="tel:252-515-4866" style="background: var(--ocean-medium); color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 13px; white-space: nowrap; transition: all 0.3s;">
-          <span style="font-size: 10px; opacity: 0.9; display: block; margin-bottom: 2px;">WATERFRONT</span>
-          📞 (252) 515-4866
-        </a>
-        <a href="/search">🔍</a>
-        <a href="/account">👤</a>
-        <a href="/cart" id="cart-icon">🛒 <span id="cart-count">{{ cart.item_count }}</span></a>
-      </div>
-    </div>
-  </header>
+  {% section 'header' %}
 
   <!-- Main Content -->
   <main id="MainContent" role="main">
@@ -645,47 +561,7 @@
     </div>
   </footer>
 
-  <script>
-    // Update cart count dynamically
-    fetch('/cart.js')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('cart-count').textContent = data.item_count;
-      });
 
-    // Hamburger Menu Toggle
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.getElementById('main-nav');
-    
-    if (hamburger && nav) {
-      hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
-        nav.classList.toggle('active');
-      });
-
-      // Close menu when clicking outside
-      document.addEventListener('click', function(event) {
-        if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
-          hamburger.classList.remove('active');
-          nav.classList.remove('active');
-        }
-      });
-
-      // Mobile dropdown toggle
-      const navItems = nav.querySelectorAll('.nav-item');
-      navItems.forEach(item => {
-        const link = item.querySelector('a');
-        if (link && link.textContent.includes('▾')) {
-          link.addEventListener('click', function(e) {
-            if (window.innerWidth <= 968) {
-              e.preventDefault();
-              item.classList.toggle('open');
-            }
-          });
-        }
-      });
-    }
-  </script>
 
 </body>
 </html>
