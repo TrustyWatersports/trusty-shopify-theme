@@ -29,6 +29,72 @@
       "block_order": ["single", "tandem", "hourly-pedal", "pedal"],
       "settings": { "heading": "Kayak Rentals", "subheading": "All rentals include paddle, PFD, and basic instruction", "background_color": "#FFFFFF", "try_before_buy_text": "Love what you rented? Your rental fee credits toward purchasing that kayak! Test it on the water, then take it home." }
     },
+    "sailboat-rentals": {
+      "type": "sailboat-rentals",
+      "blocks": {
+        "uno": {
+          "type": "sailboat",
+          "settings": {
+            "name": "Topaz Uno",
+            "tagline": "Single-handed beginner dinghy",
+            "day_price": "$225",
+            "feature_1": "Solo sailing dinghy",
+            "feature_2": "Perfect for beginners",
+            "feature_3": "Delivery included",
+            "feature_4": "Bogue Sound access",
+            "lesson_price": "$100",
+            "cta_text": "Book This Boat",
+            "cta_link": "tel:252-515-4866",
+            "featured": false
+          }
+        },
+        "argo": {
+          "type": "sailboat",
+          "settings": {
+            "name": "Topaz Argo",
+            "tagline": "Double-handed performance dinghy",
+            "day_price": "$325",
+            "feature_1": "Solo or double-handed",
+            "feature_2": "Great for intermediate sailors",
+            "feature_3": "Delivery included",
+            "feature_4": "Bogue Sound access",
+            "lesson_price": "$100",
+            "cta_text": "Book This Boat",
+            "cta_link": "tel:252-515-4866",
+            "featured": true
+          }
+        },
+        "cat14": {
+          "type": "sailboat",
+          "settings": {
+            "name": "Topaz Cat 14",
+            "tagline": "High-performance catamaran",
+            "day_price": "$375",
+            "feature_1": "Twin-hull catamaran",
+            "feature_2": "Fast & exciting sailing",
+            "feature_3": "Delivery included",
+            "feature_4": "Bogue Sound access",
+            "lesson_price": "$100",
+            "cta_text": "Book This Boat",
+            "cta_link": "tel:252-515-4866",
+            "featured": false
+          }
+        }
+      },
+      "block_order": ["uno", "argo", "cat14"],
+      "settings": {
+        "badge": "SAILBOAT RENTALS",
+        "heading": "Sailboat Rentals",
+        "subheading": "Rent one of our Topaz sailboats and explore Bogue Sound. Delivery included. Add a certified sailing instructor for just $100\/hr.",
+        "background_color": "#F5F7FA",
+        "show_lesson_callout": true,
+        "lesson_heading": "Add a Sailing Lesson",
+        "lesson_description": "Never sailed before? Add a certified instructor to your rental for hands-on guidance. Perfect for beginners, families, or anyone wanting to brush up their skills on Bogue Sound.",
+        "lesson_rate": "$100\/hr",
+        "lesson_cta_text": "Book a Lesson",
+        "lesson_cta_link": "tel:252-515-4866"
+      }
+    },
     "rentals-tours": {
       "type": "rentals-tours",
       "blocks": {
@@ -55,5 +121,5 @@
       "settings": { "heading": "Rental FAQ", "background_color": "#F5F7FA" }
     }
   },
-  "order": ["rentals-hero", "rentals-pricing", "rentals-tours", "rentals-booking", "rentals-faq"]
+  "order": ["rentals-hero", "rentals-pricing", "sailboat-rentals", "rentals-tours", "rentals-booking", "rentals-faq"]
 }
