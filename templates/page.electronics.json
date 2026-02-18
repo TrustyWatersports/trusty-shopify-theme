@@ -16,7 +16,9 @@
         "heading": "Bass Boat Electronics on a Kayak",
         "subheading": "Live imaging, fishfinders, NMEA networks, and complete wiring — professionally installed by Crystal Coast experts.",
         "primary_cta_text": "Get a Quote",
-        "secondary_cta_text": "Shop Electronics"
+        "primary_cta_link": "/pages/start-your-build",
+        "secondary_cta_text": "Shop Electronics",
+        "secondary_cta_link": "/collections/all"
       }
     },
     "electronics-options": {

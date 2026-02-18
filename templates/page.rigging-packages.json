@@ -23,7 +23,7 @@
             "features": "Basic fishfinder (Helix 7)\nRod holders & gear tracks\nBasic lighting\nPower management\nProfessional installation",
             "featured": false,
             "cta_text": "Get Started",
-            "cta_link": ""
+            "cta_link": "/pages/start-your-build"
           }
         },
         "package2": {
@@ -37,7 +37,7 @@
             "features": "Garmin Livescope setup\nUltra 106sv fishfinder\nTrolling motor prep\nPremium crate system\nComplete wiring & install\nLithium battery option",
             "featured": true,
             "cta_text": "Most Popular",
-            "cta_link": ""
+            "cta_link": "/pages/start-your-build"
           }
         },
         "package_TjPeq4": {
@@ -51,7 +51,7 @@
             "features": "Garmin Livescope Plus\nUltra 106sv fishfinder\nTrolling motor with lithium\nPremium crate system\nComplete wiring & install",
             "featured": false,
             "cta_text": "View Details",
-            "cta_link": ""
+            "cta_link": "/pages/start-your-build"
           }
         },
         "package3": {
@@ -64,7 +64,7 @@
             "features": "Full Garmin Livescope Plus\nDual fishfinders\nTrolling motor with lithium\nCustom crate & storage\nComplete electronics suite\nNMEA networking\nWhite-glove delivery",
             "featured": false,
             "cta_text": "Go Premium",
-            "cta_link": ""
+            "cta_link": "/pages/start-your-build"
           }
         }
       },

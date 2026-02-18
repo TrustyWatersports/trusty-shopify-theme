@@ -16,7 +16,9 @@
         "heading": "Gear Tracks, Crates & Transport",
         "subheading": "Rod holders, crate systems, gear tracks, lighting, and transport solutions — everything to complete your rig.",
         "primary_cta_text": "Get a Quote",
-        "secondary_cta_text": "Shop Accessories"
+        "primary_cta_link": "/pages/start-your-build",
+        "secondary_cta_text": "Shop Accessories",
+        "secondary_cta_link": "/collections/all"
       }
     },
     "accessories-options": {
