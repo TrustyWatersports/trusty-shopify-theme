@@ -353,9 +353,9 @@
         "heading": "Official Topper & Topaz Sailboat Distributor",
         "description": "We're proud to be the United States distributor for Topper and Topaz sailboats - the UK's finest small sailing dinghies and catamarans. Perfect for beginners, families, and sailing programs.",
         "primary_button_text": "Explore Sailboats",
-        "primary_button_link": "",
+        "primary_button_link": "shopify://pages/sailing",
         "secondary_button_text": "Sailing Lessons",
-        "secondary_button_link": ""
+        "secondary_button_link": "shopify://pages/programs-events"
       }
     },
     "trusty_why_trusty_TU4aTV": {
