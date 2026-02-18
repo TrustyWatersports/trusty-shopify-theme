@@ -14,20 +14,78 @@
       "settings": {
         "heading": "Kayak Rentals & Guided Tours",
         "subheading": "Experience Crystal Coast waters from our waterfront location. Try before you buy — rental fees credit toward purchase!",
-        "gradient_start": "#0A4B78",
-        "gradient_end": "#1E6FA8"
+        "gradient_start": "#0a4b78",
+        "gradient_end": "#1e6fa8"
       }
     },
     "rentals-pricing": {
       "type": "rentals-pricing",
       "blocks": {
-        "single": { "type": "rental", "settings": { "name": "Single Kayak", "half_day_price": "$40", "half_day_hours": "4", "full_day_price": "$60", "feature_1": "Recreational or touring kayaks", "feature_2": "Perfect for solo paddling", "feature_3": "Great for exploration", "featured": false } },
-        "tandem": { "type": "rental", "settings": { "name": "Tandem Kayak", "half_day_price": "$60", "half_day_hours": "4", "full_day_price": "$90", "feature_1": "Two-person kayak", "feature_2": "Ideal for couples & families", "feature_3": "Extra stability", "featured": false } },
-        "hourly-pedal": { "type": "rental", "settings": { "name": "Hourly Waterfront Pedal Kayak", "half_day_price": "$20", "half_day_hours": "1", "full_day_price": "", "feature_1": "Pedal drive kayak — no paddling required", "feature_2": "Bogue Sound waterfront launch", "feature_3": "Perfect for a quick adventure", "featured": false } },
-        "pedal": { "type": "rental", "settings": { "name": "Pedal Drive Kayak", "half_day_price": "$80", "half_day_hours": "4", "full_day_price": "$120", "feature_1": "Hands-free pedal propulsion", "feature_2": "Try before you buy!", "feature_3": "Perfect for fishing", "featured": true } }
+        "single": {
+          "type": "rental",
+          "settings": {
+            "name": "Single Kayak",
+            "half_day_price": "$40",
+            "half_day_hours": "4",
+            "full_day_price": "$60",
+            "feature_1": "Recreational or touring kayaks",
+            "feature_2": "Perfect for solo paddling",
+            "feature_3": "Great for exploration",
+            "featured": false
+          }
+        },
+        "tandem": {
+          "type": "rental",
+          "settings": {
+            "name": "Tandem Kayak",
+            "half_day_price": "$60",
+            "half_day_hours": "4",
+            "full_day_price": "$90",
+            "feature_1": "Two-person kayak",
+            "feature_2": "Ideal for couples & families",
+            "feature_3": "Extra stability",
+            "featured": false
+          }
+        },
+        "hourly-pedal": {
+          "type": "rental",
+          "settings": {
+            "name": "Hourly Waterfront Pedal Kayak",
+            "half_day_price": "$20",
+            "half_day_hours": "1",
+            "full_day_price": "",
+            "feature_1": "Pedal drive kayak — no paddling required",
+            "feature_2": "Bogue Sound waterfront launch",
+            "feature_3": "Perfect for a quick adventure",
+            "featured": false
+          }
+        },
+        "pedal": {
+          "type": "rental",
+          "settings": {
+            "name": "Pedal Drive Kayak",
+            "half_day_price": "$80",
+            "half_day_hours": "4",
+            "full_day_price": "$120",
+            "feature_1": "Hands-free pedal propulsion",
+            "feature_2": "Try before you buy!",
+            "feature_3": "Perfect for fishing",
+            "featured": true
+          }
+        }
       },
-      "block_order": ["single", "tandem", "hourly-pedal", "pedal"],
-      "settings": { "heading": "Kayak Rentals", "subheading": "All rentals include paddle, PFD, and basic instruction", "background_color": "#FFFFFF", "try_before_buy_text": "Love what you rented? Your rental fee credits toward purchasing that kayak! Test it on the water, then take it home." }
+      "block_order": [
+        "single",
+        "tandem",
+        "hourly-pedal",
+        "pedal"
+      ],
+      "settings": {
+        "heading": "Kayak Rentals",
+        "subheading": "All rentals include paddle, PFD, and basic instruction",
+        "background_color": "#ffffff",
+        "try_before_buy_text": "Love what you rented? Your rental fee credits toward purchasing that kayak! Test it on the water, then take it home."
+      }
     },
     "sailboat-rentals": {
       "type": "sailboat-rentals",
@@ -35,6 +93,7 @@
         "uno": {
           "type": "sailboat",
           "settings": {
+            "image": "shopify://shop_images/DJI_0132-3_d754a8ec-8efc-429e-8b57-0685635e8c75-2.jpg",
             "name": "Topaz Uno",
             "tagline": "Single-handed beginner dinghy",
             "day_price": "$225",
@@ -51,6 +110,7 @@
         "argo": {
           "type": "sailboat",
           "settings": {
+            "image": "shopify://shop_images/IMG_2373.jpg",
             "name": "Topaz Argo",
             "tagline": "Double-handed performance dinghy",
             "day_price": "$325",
@@ -67,6 +127,7 @@
         "cat14": {
           "type": "sailboat",
           "settings": {
+            "image": "shopify://shop_images/topaz-14-catamaran-sirena-voile-france-8_48346956752_o.jpg",
             "name": "Topaz Cat 14",
             "tagline": "High-performance catamaran",
             "day_price": "$375",
@@ -81,16 +142,20 @@
           }
         }
       },
-      "block_order": ["uno", "argo", "cat14"],
+      "block_order": [
+        "uno",
+        "argo",
+        "cat14"
+      ],
       "settings": {
         "badge": "SAILBOAT RENTALS",
         "heading": "Sailboat Rentals",
-        "subheading": "Rent one of our Topaz sailboats and explore Bogue Sound. Delivery included. Add a certified sailing instructor for just $100\/hr.",
-        "background_color": "#F5F7FA",
+        "subheading": "Rent one of our Topaz sailboats and explore Bogue Sound. Delivery included. Add a certified sailing instructor for just $100/hr.",
+        "background_color": "#f5f7fa",
         "show_lesson_callout": true,
         "lesson_heading": "Add a Sailing Lesson",
         "lesson_description": "Never sailed before? Add a certified instructor to your rental for hands-on guidance. Perfect for beginners, families, or anyone wanting to brush up their skills on Bogue Sound.",
-        "lesson_rate": "$100\/hr",
+        "lesson_rate": "$100/hr",
         "lesson_cta_text": "Book a Lesson",
         "lesson_cta_link": "tel:252-515-4866"
       }
@@ -98,28 +163,120 @@
     "rentals-tours": {
       "type": "rentals-tours",
       "blocks": {
-        "wild-horse": { "type": "tour", "settings": { "emoji": "🐴", "name": "Wild Horse Tour", "price": "$75/person", "description": "3-hour guided paddle to see the famous Shackleford Banks wild horses. Includes kayak, gear, and guide.", "feature_1": "3 hours guided", "feature_2": "All equipment included", "feature_3": "Expert naturalist guide", "feature_4": "Small group (max 8)" } },
-        "sunset": { "type": "tour", "settings": { "emoji": "🌅", "name": "Sunset Paddle", "price": "$55/person", "description": "2-hour evening paddle through Bogue Sound. Watch the sunset from the water with local wildlife.", "feature_1": "2 hours guided", "feature_2": "Sunset timing", "feature_3": "Calm protected waters", "feature_4": "Great for beginners" } },
-        "fishing": { "type": "tour", "settings": { "emoji": "🎣", "name": "Fishing Charter", "price": "$150/person", "description": "4-hour guided fishing trip. Learn local techniques and hotspots from expert kayak anglers.", "feature_1": "4 hours guided", "feature_2": "Fishing gear provided", "feature_3": "Expert angler guide", "feature_4": "Rigged kayak included" } }
+        "wild-horse": {
+          "type": "tour",
+          "settings": {
+            "emoji": "🐴",
+            "name": "Wild Horse Tour",
+            "price": "$75/person",
+            "description": "3-hour guided paddle to see the famous Shackleford Banks wild horses. Includes kayak, gear, and guide.",
+            "feature_1": "3 hours guided",
+            "feature_2": "All equipment included",
+            "feature_3": "Expert naturalist guide",
+            "feature_4": "Small group (max 8)"
+          }
+        },
+        "sunset": {
+          "type": "tour",
+          "settings": {
+            "emoji": "🌅",
+            "name": "Sunset Paddle",
+            "price": "$55/person",
+            "description": "2-hour evening paddle through Bogue Sound. Watch the sunset from the water with local wildlife.",
+            "feature_1": "2 hours guided",
+            "feature_2": "Sunset timing",
+            "feature_3": "Calm protected waters",
+            "feature_4": "Great for beginners"
+          }
+        },
+        "fishing": {
+          "type": "tour",
+          "settings": {
+            "emoji": "🎣",
+            "name": "Fishing Charter",
+            "price": "$150/person",
+            "description": "4-hour guided fishing trip. Learn local techniques and hotspots from expert kayak anglers.",
+            "feature_1": "4 hours guided",
+            "feature_2": "Fishing gear provided",
+            "feature_3": "Expert angler guide",
+            "feature_4": "Rigged kayak included"
+          }
+        }
       },
-      "block_order": ["wild-horse", "sunset", "fishing"],
-      "settings": { "heading": "Guided Tours", "subheading": "Explore Crystal Coast with expert local guides", "background_color": "#F5F7FA" }
+      "block_order": [
+        "wild-horse",
+        "sunset",
+        "fishing"
+      ],
+      "settings": {
+        "heading": "Guided Tours",
+        "subheading": "Explore Crystal Coast with expert local guides",
+        "background_color": "#f5f7fa"
+      }
     },
     "rentals-booking": {
       "type": "rentals-booking",
-      "settings": { "background_color": "#FFFFFF", "heading": "Ready to Get on the Water?", "subheading": "Book online or give us a call — we'll get you set up.", "booking_button_text": "📅 Book a Rental", "phone": "(252) 515-4866", "address": "815 Shepard St, Morehead City, NC", "hours": "Daily 9am–6pm (Seasonal)" }
+      "settings": {
+        "background_color": "#ffffff",
+        "heading": "Ready to Get on the Water?",
+        "subheading": "Book online or give us a call — we'll get you set up.",
+        "booking_url": "",
+        "booking_button_text": "📅 Book a Rental",
+        "phone": "(252) 515-4866",
+        "address": "815 Shepard St, Morehead City, NC",
+        "hours": "Daily 9am–6pm (Seasonal)"
+      }
     },
     "rentals-faq": {
       "type": "rentals-faq",
       "blocks": {
-        "faq1": { "type": "faq", "settings": { "question": "What should I bring?", "answer": "Water bottle, sunscreen, hat, and appropriate clothing. We provide kayak, paddle, and PFD. Dry bags available for rent." } },
-        "faq2": { "type": "faq", "settings": { "question": "Do I need experience?", "answer": "No! We provide basic instruction before every rental. Protected waters perfect for beginners. Guided tours recommended for first-timers." } },
-        "faq3": { "type": "faq", "settings": { "question": "Can I rent for multiple days?", "answer": "Yes! Multi-day rentals available at discounted rates. Contact us for pricing." } },
-        "faq4": { "type": "faq", "settings": { "question": "What if I want to buy after renting?", "answer": "Your rental fee credits toward the purchase! Test the exact kayak on actual Crystal Coast waters." } }
+        "faq1": {
+          "type": "faq",
+          "settings": {
+            "question": "What should I bring?",
+            "answer": "Water bottle, sunscreen, hat, and appropriate clothing. We provide kayak, paddle, and PFD. Dry bags available for rent."
+          }
+        },
+        "faq2": {
+          "type": "faq",
+          "settings": {
+            "question": "Do I need experience?",
+            "answer": "No! We provide basic instruction before every rental. Protected waters perfect for beginners. Guided tours recommended for first-timers."
+          }
+        },
+        "faq3": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I rent for multiple days?",
+            "answer": "Yes! Multi-day rentals available at discounted rates. Contact us for pricing."
+          }
+        },
+        "faq4": {
+          "type": "faq",
+          "settings": {
+            "question": "What if I want to buy after renting?",
+            "answer": "Your rental fee credits toward the purchase! Test the exact kayak on actual Crystal Coast waters."
+          }
+        }
       },
-      "block_order": ["faq1", "faq2", "faq3", "faq4"],
-      "settings": { "heading": "Rental FAQ", "background_color": "#F5F7FA" }
+      "block_order": [
+        "faq1",
+        "faq2",
+        "faq3",
+        "faq4"
+      ],
+      "settings": {
+        "heading": "Rental FAQ",
+        "background_color": "#f5f7fa"
+      }
     }
   },
-  "order": ["rentals-hero", "rentals-pricing", "sailboat-rentals", "rentals-tours", "rentals-booking", "rentals-faq"]
+  "order": [
+    "rentals-hero",
+    "rentals-pricing",
+    "sailboat-rentals",
+    "rentals-tours",
+    "rentals-booking",
+    "rentals-faq"
+  ]
 }
