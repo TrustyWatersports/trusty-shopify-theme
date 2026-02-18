@@ -71,19 +71,19 @@
         "option_KXYF3H": {
           "type": "option",
           "settings": {
-            "title": "Pedal & Motor Setup:",
-            "text": "Trolling motors, mounts, wiring, lithium conversions",
+            "title": "Motorization",
+            "text": "Trolling motors, mounts, and more",
             "image": "shopify://shop_images/DSC_7135_-_Large_6c2547fb-4236-42a3-bce1-6783e8e24738.jpg",
-            "link": "shopify://pages/rigging-packages"
+            "link": "shopify://pages/motorization"
           }
         },
         "option_znKVWD": {
           "type": "option",
           "settings": {
-            "title": "Safety & Storage",
-            "text": "Lighting, power management, crate systems, gear tracks",
+            "title": "Accessories & Storage",
+            "text": "Boxes, rod holders, transport and storage",
             "image": "shopify://shop_images/9U8A8101.jpg",
-            "link": "shopify://pages/rigging-packages"
+            "link": "shopify://pages/accessories-storage"
           }
         }
       },
