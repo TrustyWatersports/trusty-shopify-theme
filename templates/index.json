@@ -257,6 +257,7 @@
         "brand_perception": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/Perception.webp",
             "brand_name": "Perception",
             "brand_link": ""
           }
