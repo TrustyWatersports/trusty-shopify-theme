@@ -24,6 +24,7 @@
             "email": "info@trustysailandpaddle.com",
             "hours": "Monday - Saturday: 10:00 AM - 5:00 PM\nSunday: Closed",
             "features": "60+ Kayaks & Sailboats\nCustom Rigging Workshop\nPaddling & Sailing Gear",
+            "note": "",
             "accent_color": "#ff6b35"
           }
         },
@@ -32,6 +33,7 @@
           "settings": {
             "badge": "WATERFRONT",
             "title": "Rental Location",
+            "image": "shopify://shop_images/DJI_0080-3.jpg",
             "address_line1": "815 Shepard Street",
             "address_line2": "Morehead City, NC 28557",
             "maps_link": "https://maps.google.com/?q=815+Shepard+Street+Morehead+City+NC+28557",
@@ -44,12 +46,17 @@
           }
         }
       },
-      "block_order": ["retail", "rental"],
+      "block_order": [
+        "retail",
+        "rental"
+      ],
       "settings": {
         "heading": "Our Locations",
         "subheading": "Two convenient Morehead City locations"
       }
     }
   },
-  "order": ["locations"]
+  "order": [
+    "locations"
+  ]
 }
