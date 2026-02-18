@@ -225,6 +225,21 @@
     "brands_carousel_7nVxLn": {
       "type": "brands-carousel",
       "blocks": {
+        "brand_VeazAg": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "brand_link": ""
+          }
+        },
+        "brand_nhFK97": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/LoadRite.webp",
+            "brand_name": "LoadRite Trailers",
+            "brand_link": ""
+          }
+        },
         "brand_U8Pgyx": {
           "type": "brand",
           "settings": {
@@ -307,6 +322,8 @@
         }
       },
       "block_order": [
+        "brand_VeazAg",
+        "brand_nhFK97",
         "brand_U8Pgyx",
         "brand_6cjmLT",
         "brand_A3nkTh",
