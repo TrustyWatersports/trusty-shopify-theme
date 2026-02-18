@@ -142,7 +142,7 @@
             "feature_4": "Take home today or add rigging",
             "feature_5": "Morehead City, NC",
             "button_text": "Plan Your Visit →",
-            "button_link": "/pages/showroom"
+            "button_link": "shopify://pages/locations"
           }
         },
         "pathway_hrFRJR": {
