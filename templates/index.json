@@ -187,73 +187,6 @@
         "secondary_button_link": ""
       }
     },
-    "brands_carousel_home": {
-      "type": "brands-carousel",
-      "blocks": {
-        "brand_native": { "type": "brand", "settings": { "brand_name": "Native Watercraft" } },
-        "brand_hobie": { "type": "brand", "settings": { "brand_name": "Hobie" } },
-        "brand_perception": { "type": "brand", "settings": { "brand_name": "Perception" } },
-        "brand_oldtown": { "type": "brand", "settings": { "brand_name": "Old Town" } },
-        "brand_wilderness": { "type": "brand", "settings": { "brand_name": "Wilderness Systems" } },
-        "brand_bonafide": { "type": "brand", "settings": { "brand_name": "Bonafide" } },
-        "brand_topper": { "type": "brand", "settings": { "brand_name": "Topper Sailboats" } },
-        "brand_topaz": { "type": "brand", "settings": { "brand_name": "Topaz Sailboats" } }
-      },
-      "block_order": ["brand_native", "brand_hobie", "brand_perception", "brand_oldtown", "brand_wilderness", "brand_bonafide", "brand_topper", "brand_topaz"],
-      "settings": {
-        "section_title": "Brands We Carry",
-        "section_subtitle": "Premium kayaks and sailboats we trust on Crystal Coast waters",
-        "background_color": "#FFFFFF",
-        "autoplay": true,
-        "autoplay_speed": 5
-      }
-    },
-    "rigging_packages_home": {
-      "type": "rigging-packages-grid",
-      "blocks": {
-        "pkg_essential": {
-          "type": "package",
-          "settings": {
-            "name": "Essential Angler",
-            "tagline": "Perfect for weekend warriors",
-            "price": "$3,500",
-            "price_note": "Plus kayak cost",
-            "features": "Basic fishfinder (Helix 7)\nRod holders & gear tracks\nBasic lighting\nPower management\nProfessional installation",
-            "featured": false,
-            "cta_text": "Get Started"
-          }
-        },
-        "pkg_tournament": {
-          "type": "package",
-          "settings": {
-            "name": "Tournament Ready",
-            "tagline": "For serious competitors",
-            "price": "$6,500",
-            "price_note": "Plus kayak cost",
-            "features": "Garmin Livescope setup\nUltra 106sv fishfinder\nTrolling motor prep\nPremium crate system\nComplete wiring & install\nLithium battery option",
-            "featured": true,
-            "cta_text": "Most Popular"
-          }
-        },
-        "pkg_elite": {
-          "type": "package",
-          "settings": {
-            "name": "Elite Pro",
-            "tagline": "The ultimate fishing machine",
-            "price": "$13,000+",
-            "price_note": "Plus kayak cost",
-            "features": "Full Garmin Livescope Plus\nDual fishfinders\nTrolling motor with lithium\nCustom crate & storage\nComplete electronics suite\nNMEA networking\nWhite-glove delivery",
-            "featured": false,
-            "cta_text": "Go Premium"
-          }
-        }
-      },
-      "block_order": ["pkg_essential", "pkg_tournament", "pkg_elite"],
-      "settings": {
-        "heading": "Rigging Packages",
-        "subheading": "Choose a package that matches your fishing style and budget. Every rig is built by our Crystal Coast experts and shipped nationwide."
-      }
-    },
     "trusty_why_trusty_TU4aTV": {
       "type": "trusty-why-trusty",
       "blocks": {
@@ -300,6 +233,140 @@
       "settings": {
         "heading": "Why Trusty Sail & Paddle?",
         "subtitle": "More than a shop - your complete Crystal Coast watersports partner"
+      }
+    },
+    "brands_carousel_home": {
+      "type": "brands-carousel",
+      "blocks": {
+        "brand_native": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Native Watercraft",
+            "brand_link": ""
+          }
+        },
+        "brand_hobie": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Hobie",
+            "brand_link": ""
+          }
+        },
+        "brand_perception": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Perception",
+            "brand_link": ""
+          }
+        },
+        "brand_oldtown": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Old Town",
+            "brand_link": ""
+          }
+        },
+        "brand_wilderness": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Wilderness Systems",
+            "brand_link": ""
+          }
+        },
+        "brand_bonafide": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Bonafide",
+            "brand_link": ""
+          }
+        },
+        "brand_topper": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Topper Sailboats",
+            "brand_link": ""
+          }
+        },
+        "brand_topaz": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Topaz Sailboats",
+            "brand_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "brand_native",
+        "brand_hobie",
+        "brand_perception",
+        "brand_oldtown",
+        "brand_wilderness",
+        "brand_bonafide",
+        "brand_topper",
+        "brand_topaz"
+      ],
+      "settings": {
+        "section_title": "Brands We Carry",
+        "section_subtitle": "Premium kayaks and sailboats we trust on Crystal Coast waters",
+        "background_color": "#ffffff",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "rigging_packages_home": {
+      "type": "rigging-packages-grid",
+      "blocks": {
+        "pkg_essential": {
+          "type": "package",
+          "settings": {
+            "name": "Essential Angler",
+            "tagline": "Perfect for weekend warriors",
+            "price": "$3,500",
+            "price_note": "Plus kayak cost",
+            "image": "shopify://shop_images/BSB-Angler-Forest-4.png",
+            "features": "Basic fishfinder (Helix 7)\nRod holders & gear tracks\nBasic lighting\nPower management\nProfessional installation",
+            "featured": false,
+            "cta_text": "Get Started",
+            "cta_link": ""
+          }
+        },
+        "pkg_tournament": {
+          "type": "package",
+          "settings": {
+            "name": "Tournament Ready",
+            "tagline": "For serious competitors",
+            "price": "$6,500",
+            "price_note": "Plus kayak cost",
+            "image": "shopify://shop_images/DSC_7422_-_Large_8a93e6e3-9bfe-4038-8003-7f74d3892a36.jpg",
+            "features": "Garmin Livescope setup\nUltra 106sv fishfinder\nTrolling motor prep\nPremium crate system\nComplete wiring & install\nLithium battery option",
+            "featured": true,
+            "cta_text": "Most Popular",
+            "cta_link": ""
+          }
+        },
+        "pkg_elite": {
+          "type": "package",
+          "settings": {
+            "name": "Elite Pro",
+            "tagline": "The ultimate fishing machine",
+            "price": "$13,000+",
+            "price_note": "Plus kayak cost",
+            "image": "shopify://shop_images/BSB-Angler-Forest-9.jpg",
+            "features": "Full Garmin Livescope Plus\nDual fishfinders\nTrolling motor with lithium\nCustom crate & storage\nComplete electronics suite\nNMEA networking\nWhite-glove delivery",
+            "featured": false,
+            "cta_text": "Go Premium",
+            "cta_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "pkg_essential",
+        "pkg_tournament",
+        "pkg_elite"
+      ],
+      "settings": {
+        "heading": "Rigging Packages",
+        "subheading": "Choose a package that matches your fishing style and budget. Every rig is built by our Crystal Coast experts and shipped nationwide."
       }
     }
   },
