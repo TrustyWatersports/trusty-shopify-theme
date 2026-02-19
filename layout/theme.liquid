@@ -272,6 +272,17 @@
         display: flex;
       }
 
+      /* Hide top bar and quick access, make header sticky from top */
+      .top-bar { display: none; }
+      .quick-access { display: none; }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      }
+
       nav {
         position: fixed;
         top: 0;
