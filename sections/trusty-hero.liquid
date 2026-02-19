@@ -4,7 +4,26 @@
     {% if section.blocks.size > 0 %}
       {% for block in section.blocks %}
         {% assign is_first = forloop.first %}
-        <div class="trusty-hero__slide{% if is_first %} is-active{% endif %}" {{ block.shopify_attributes }} style="background-image: url('{% if block.settings.slide_image != blank %}{{ block.settings.slide_image | image_url: width: 1600 }}{% endif %}');"></div>
+        {% if block.type == 'video_slide' %}
+          <div class="trusty-hero__slide{% if is_first %} is-active{% endif %} trusty-hero__slide--video" {{ block.shopify_attributes }}>
+            {% if block.settings.video_url != blank %}
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                class="trusty-hero__video"
+                poster="{% if block.settings.fallback_image != blank %}{{ block.settings.fallback_image | image_url: width: 1600 }}{% endif %}"
+              >
+                <source src="{{ block.settings.video_url }}" type="video/mp4">
+              </video>
+            {% elsif block.settings.fallback_image != blank %}
+              {%- comment -%}No video URL set yet, show fallback image{%- endcomment -%}
+            {% endif %}
+          </div>
+        {% else %}
+          <div class="trusty-hero__slide{% if is_first %} is-active{% endif %}" {{ block.shopify_attributes }} style="background-image: url('{% if block.settings.slide_image != blank %}{{ block.settings.slide_image | image_url: width: 1600 }}{% endif %}');"></div>
+        {% endif %}
       {% endfor %}
     {% else %}
       <!-- Fallback to single image if no blocks -->
@@ -52,6 +71,18 @@
   .trusty-hero__slide.is-active {
     opacity: 1;
   }
+  /* Video slide: no background-image, video fills the container */
+  .trusty-hero__slide--video {
+    background-image: none !important;
+  }
+  .trusty-hero__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
   .trusty-hero__content {
     position: relative;
     z-index: 10;
@@ -74,24 +105,26 @@
       const slides = hero.querySelectorAll('.trusty-hero__slide');
       
       if (slides.length <= 1) {
-        console.log('Only 1 slide, carousel disabled');
+        // Still need to play any video on single-slide heroes
+        const video = hero.querySelector('.trusty-hero__video');
+        if (video) video.play();
         return;
       }
 
       const intervalSeconds = parseInt(hero.getAttribute('data-interval') || '5', 10);
       let currentIndex = 0;
 
-      console.log('Carousel starting with', slides.length, 'slides, interval:', intervalSeconds, 'seconds');
-
       function showSlide(index) {
         slides.forEach(function(slide, i) {
+          const video = slide.querySelector('.trusty-hero__video');
           if (i === index) {
             slide.classList.add('is-active');
+            if (video) { video.currentTime = 0; video.play(); }
           } else {
             slide.classList.remove('is-active');
+            if (video) video.pause();
           }
         });
-        console.log('Showing slide', index);
       }
 
       // Start carousel
@@ -196,6 +229,24 @@
           "type": "image_picker",
           "id": "slide_image",
           "label": "Slide Image"
+        }
+      ]
+    },
+    {
+      "type": "video_slide",
+      "name": "Video Slide",
+      "settings": [
+        {
+          "type": "text",
+          "id": "video_url",
+          "label": "Video URL",
+          "info": "Upload your MP4 to Shopify Admin → Content → Files, then paste the URL here."
+        },
+        {
+          "type": "image_picker",
+          "id": "fallback_image",
+          "label": "Fallback Image",
+          "info": "Shown while video loads or on devices that can't autoplay"
         }
       ]
     }
