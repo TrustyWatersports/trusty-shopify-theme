@@ -114,8 +114,14 @@
       background: var(--white);
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       position: sticky;
-      top: 52px;
+      top: 52px; /* offset for quick-access bar on desktop */
       z-index: 998;
+    }
+
+    @media (max-width: 968px) {
+      header {
+        top: 0 !important; /* quick-access hidden on mobile, stick to very top */
+      }
     }
 
     .header-content {
@@ -485,27 +491,7 @@
       font-size: 14px;
     }
 
-    /* Mobile Responsive */
-    @media (max-width: 768px) {
-      .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        width: 100%;
-      }
-
-      .header-actions {
-        width: 100%;
-        justify-content: space-between;
-      }
-
-      .quick-access-content {
-        gap: 15px;
-        font-size: 12px;
-      }
-    }
+    /* Legacy mobile block removed - handled by 968px media query above */
   </style>
 </head>
 
