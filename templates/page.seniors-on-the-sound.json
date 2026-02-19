@@ -11,6 +11,46 @@
   "sections": {
     "program-detail": {
       "type": "program-detail",
+      "blocks": {
+        "tier_xEfR8K": {
+          "type": "tier",
+          "settings": {
+            "tier_icon": "🎯",
+            "tier_name": "Level 1",
+            "tier_description": "Seniors on the Sound is a regular program for adults ages 60 and up to join Trusty Sail and Paddle for community, socialization, and fun exercise as we pedal out to a predetermined location together. \n\nA pedal kayak,  paddle, personal flotation device, and guide service are all included for $30/session\n\nAs we pedal along the sound, we’ll be listening to the grooviest music from the 50s, 60s and the 70s! \n\nHave a favorite oldie you want to hear? Specify your favorite song in the “additional comments” section of our registration form to have it featured on our program playlist!",
+            "tier_price": "$30",
+            "tier_color": "#0a4b78",
+            "detail_1": "Paddle",
+            "detail_2": "Boat",
+            "detail_3": "",
+            "detail_4": "",
+            "detail_5": "",
+            "button_text": "Register",
+            "button_link": ""
+          }
+        },
+        "tier_7kNTi7": {
+          "type": "tier",
+          "settings": {
+            "tier_icon": "🎯",
+            "tier_name": "Level 1",
+            "tier_description": "",
+            "tier_price": "",
+            "tier_color": "#0a4b78",
+            "detail_1": "",
+            "detail_2": "",
+            "detail_3": "",
+            "detail_4": "",
+            "detail_5": "",
+            "button_text": "Register",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "tier_xEfR8K",
+        "tier_7kNTi7"
+      ],
       "settings": {
         "program_name": "Seniors on the Sound",
         "hero_icon": "⚓️",
