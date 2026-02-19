@@ -362,6 +362,33 @@
       .dropdown-content a { padding: 10px 15px; }
     }
 
+    /* Desktop: restore full header layout */
+    @media (min-width: 969px) {
+      .top-bar { display: block; }
+      .quick-access { display: block; }
+      .header-actions { display: flex !important; gap: 20px; align-items: center; }
+      .header-phone-btn { display: inline-block !important; }
+      .header-icon-btn { display: inline-block !important; }
+      .hamburger { display: none !important; }
+      .nav-mobile-calls { display: none !important; }
+      .header-content { padding: 20px; justify-content: space-between; }
+      .logo img { height: 60px; }
+      .logo-text { display: block; }
+      nav {
+        position: static !important;
+        width: auto !important;
+        height: auto !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        flex-direction: row !important;
+        background: transparent !important;
+        right: auto !important;
+        top: auto !important;
+        z-index: auto !important;
+      }
+    }
+
     .header-actions {
       display: flex;
       gap: 20px;
