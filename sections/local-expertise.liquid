@@ -1,0 +1,190 @@
+<!-- Hero -->
+<section style="position: relative; padding: 100px 20px; text-align: center; color: white; overflow: hidden; min-height: 380px; display: flex; align-items: center; justify-content: center;">
+  {% if section.settings.hero_image %}
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('{{ section.settings.hero_image | img_url: '2048x' }}'); background-size: cover; background-position: center; opacity: {{ section.settings.image_opacity | divided_by: 100.0 }}; z-index: 0;"></div>
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #0A4B78 0%, #1E6FA8 100%); opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }}; z-index: 1;"></div>
+  {% else %}
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #0A4B78 0%, #1E6FA8 100%); z-index: 0;"></div>
+  {% endif %}
+  <div style="position: relative; z-index: 2; max-width: 800px; margin: 0 auto;">
+    <div style="font-size: 3.5rem; margin-bottom: 16px;">🗺️</div>
+    <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 16px;">{{ section.settings.hero_title }}</h1>
+    <p style="font-size: 1.2rem; opacity: 0.95; max-width: 650px; margin: 0 auto;">{{ section.settings.hero_subtitle }}</p>
+  </div>
+</section>
+
+<!-- Intro -->
+<section style="padding: 60px 20px; max-width: 900px; margin: 0 auto; text-align: center;">
+  <p style="font-size: 1.15rem; line-height: 1.9; color: #444;">{{ section.settings.intro_text }}</p>
+</section>
+
+<!-- Fishing Spots -->
+{% assign fishing_blocks = section.blocks | where: "type", "fishing_spot" %}
+{% if fishing_blocks.size > 0 %}
+<section style="padding: 20px 20px 60px; background: #F5F7FA;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <div style="font-size: 2.5rem; margin-bottom: 8px;">🎣</div>
+      <h2 style="font-size: 2rem; color: #0A4B78; font-weight: 800; margin-bottom: 8px;">{{ section.settings.fishing_title }}</h2>
+      <p style="color: #666;">{{ section.settings.fishing_subtitle }}</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+      {% for block in section.blocks %}
+        {% if block.type == 'fishing_spot' %}
+          <div style="background: white; border-radius: 12px; padding: 28px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); border-top: 4px solid #00A86B;" {{ block.shopify_attributes }}>
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+              <span style="font-size: 2rem;">{{ block.settings.spot_icon }}</span>
+              <div>
+                <h3 style="font-size: 1.1rem; font-weight: 700; color: #0A4B78; margin: 0;">{{ block.settings.spot_name }}</h3>
+                <span style="font-size: 12px; background: #E8F5E9; color: #00A86B; padding: 2px 10px; border-radius: 12px; font-weight: 600;">{{ block.settings.spot_type }}</span>
+              </div>
+            </div>
+            <p style="color: #555; font-size: 0.95rem; line-height: 1.6; margin-bottom: 14px;">{{ block.settings.spot_description }}</p>
+            {% if block.settings.target_species != blank %}<div style="font-size: 13px; color: #00A86B; font-weight: 600;">Target: {{ block.settings.target_species }}</div>{% endif %}
+            {% if block.settings.best_season != blank %}<div style="font-size: 13px; color: #666; margin-top: 4px;">Best: {{ block.settings.best_season }}</div>{% endif %}
+            {% if block.settings.pro_tip != blank %}
+              <div style="margin-top: 14px; padding: 10px 14px; background: #FFF8E1; border-radius: 6px; font-size: 13px; color: #795548;">
+                <strong>Pro Tip:</strong> {{ block.settings.pro_tip }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Water & Weather -->
+{% assign water_blocks = section.blocks | where: "type", "water_condition" %}
+{% if water_blocks.size > 0 %}
+<section style="padding: 60px 20px;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <div style="font-size: 2.5rem; margin-bottom: 8px;">🌊</div>
+      <h2 style="font-size: 2rem; color: #0A4B78; font-weight: 800; margin-bottom: 8px;">{{ section.settings.water_title }}</h2>
+      <p style="color: #666;">{{ section.settings.water_subtitle }}</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+      {% for block in section.blocks %}
+        {% if block.type == 'water_condition' %}
+          <div style="background: linear-gradient(135deg, #E3F2FD, #BBDEFB); border-radius: 12px; padding: 28px;" {{ block.shopify_attributes }}>
+            <div style="font-size: 2.5rem; margin-bottom: 12px;">{{ block.settings.condition_icon }}</div>
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: #0A4B78; margin-bottom: 10px;">{{ block.settings.condition_title }}</h3>
+            <p style="color: #444; font-size: 0.95rem; line-height: 1.7;">{{ block.settings.condition_content }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Gear -->
+{% assign gear_blocks = section.blocks | where: "type", "gear_rec" %}
+{% if gear_blocks.size > 0 %}
+<section style="padding: 20px 20px 60px; background: #F5F7FA;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <div style="font-size: 2.5rem; margin-bottom: 8px;">🛶</div>
+      <h2 style="font-size: 2rem; color: #0A4B78; font-weight: 800; margin-bottom: 8px;">{{ section.settings.gear_title }}</h2>
+      <p style="color: #666;">{{ section.settings.gear_subtitle }}</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+      {% for block in section.blocks %}
+        {% if block.type == 'gear_rec' %}
+          <div style="background: white; border-radius: 12px; padding: 28px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); border-left: 5px solid #FF6B35;" {{ block.shopify_attributes }}>
+            <div style="font-size: 2rem; margin-bottom: 12px;">{{ block.settings.gear_icon }}</div>
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: #0A4B78; margin-bottom: 8px;">{{ block.settings.gear_name }}</h3>
+            <p style="color: #555; font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px;">{{ block.settings.gear_reason }}</p>
+            {% if block.settings.gear_recommendation != blank %}
+              <div style="font-size: 13px; color: #FF6B35; font-weight: 600;">We Recommend: {{ block.settings.gear_recommendation }}</div>
+            {% endif %}
+            {% if block.settings.gear_link != blank %}
+              <a href="{{ block.settings.gear_link }}" style="display: inline-block; margin-top: 14px; background: #0A4B78; color: white; padding: 8px 18px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: 600;">Shop This</a>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- CTA -->
+<section style="padding: 60px 20px; background: linear-gradient(135deg, #0A4B78, #1E6FA8); color: white; text-align: center;">
+  <div style="max-width: 700px; margin: 0 auto;">
+    <h2 style="font-size: 2rem; margin-bottom: 16px;">{{ section.settings.cta_heading }}</h2>
+    <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px;">{{ section.settings.cta_text }}</p>
+    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+      <a href="{{ section.settings.cta_primary_link }}" style="background: #FF6B35; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700;">{{ section.settings.cta_primary_text }}</a>
+      <a href="{{ section.settings.cta_secondary_link }}" style="background: transparent; color: white; border: 2px solid white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700;">{{ section.settings.cta_secondary_text }}</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Local Expertise",
+  "settings": [
+    { "type": "header", "content": "Hero" },
+    { "type": "text", "id": "hero_title", "label": "Hero Title", "default": "Crystal Coast Local Expertise" },
+    { "type": "textarea", "id": "hero_subtitle", "label": "Hero Subtitle" },
+    { "type": "image_picker", "id": "hero_image", "label": "Background Photo" },
+    { "type": "range", "id": "image_opacity", "label": "Photo Visibility", "min": 0, "max": 100, "step": 5, "default": 70, "unit": "%" },
+    { "type": "range", "id": "overlay_opacity", "label": "Color Overlay Strength", "min": 0, "max": 100, "step": 5, "default": 55, "unit": "%" },
+    { "type": "header", "content": "Intro" },
+    { "type": "textarea", "id": "intro_text", "label": "Intro Paragraph" },
+    { "type": "header", "content": "Section Headings" },
+    { "type": "text", "id": "fishing_title", "label": "Fishing Spots Title", "default": "Our Favorite Fishing Spots" },
+    { "type": "text", "id": "fishing_subtitle", "label": "Fishing Spots Subtitle" },
+    { "type": "text", "id": "water_title", "label": "Water & Weather Title", "default": "Know Your Water" },
+    { "type": "text", "id": "water_subtitle", "label": "Water & Weather Subtitle" },
+    { "type": "text", "id": "gear_title", "label": "Gear Title", "default": "Gear Built for These Waters" },
+    { "type": "text", "id": "gear_subtitle", "label": "Gear Subtitle" },
+    { "type": "header", "content": "Bottom CTA" },
+    { "type": "text", "id": "cta_heading", "label": "CTA Heading", "default": "Come Talk to Us" },
+    { "type": "textarea", "id": "cta_text", "label": "CTA Text" },
+    { "type": "text", "id": "cta_primary_text", "label": "Primary Button", "default": "Shop Kayaks & Gear" },
+    { "type": "url", "id": "cta_primary_link", "label": "Primary Button Link" },
+    { "type": "text", "id": "cta_secondary_text", "label": "Secondary Button", "default": "Find Our Locations" },
+    { "type": "url", "id": "cta_secondary_link", "label": "Secondary Button Link" }
+  ],
+  "blocks": [
+    {
+      "type": "fishing_spot",
+      "name": "Fishing Spot",
+      "settings": [
+        { "type": "text", "id": "spot_icon", "label": "Icon (emoji)", "default": "🎣" },
+        { "type": "text", "id": "spot_name", "label": "Spot Name" },
+        { "type": "text", "id": "spot_type", "label": "Type (e.g. Flats, Creek, Sound)" },
+        { "type": "textarea", "id": "spot_description", "label": "Description" },
+        { "type": "text", "id": "target_species", "label": "Target Species" },
+        { "type": "text", "id": "best_season", "label": "Best Season / Time" },
+        { "type": "textarea", "id": "pro_tip", "label": "Pro Tip (optional)" }
+      ]
+    },
+    {
+      "type": "water_condition",
+      "name": "Water / Weather Condition",
+      "settings": [
+        { "type": "text", "id": "condition_icon", "label": "Icon (emoji)", "default": "🌊" },
+        { "type": "text", "id": "condition_title", "label": "Title" },
+        { "type": "textarea", "id": "condition_content", "label": "Content" }
+      ]
+    },
+    {
+      "type": "gear_rec",
+      "name": "Gear Recommendation",
+      "settings": [
+        { "type": "text", "id": "gear_icon", "label": "Icon (emoji)", "default": "🛶" },
+        { "type": "text", "id": "gear_name", "label": "Gear Category" },
+        { "type": "textarea", "id": "gear_reason", "label": "Why it matters here" },
+        { "type": "text", "id": "gear_recommendation", "label": "Our Recommendation" },
+        { "type": "url", "id": "gear_link", "label": "Shop Link (optional)" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Local Expertise" }]
+}
+{% endschema %}

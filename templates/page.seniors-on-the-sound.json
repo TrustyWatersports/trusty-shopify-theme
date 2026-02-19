@@ -1,0 +1,40 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "program-detail": {
+      "type": "program-detail",
+      "settings": {
+        "program_name": "Seniors on the Sound",
+        "hero_icon": "👴",
+        "program_tagline": "Gentle-paced paddling designed for active seniors on the beautiful waters of Bogue Sound",
+        "cta_text": "Reserve Your Spot",
+        "cta_link": "tel:252-515-4866",
+        "image_opacity": 70,
+        "overlay_opacity": 55,
+        "hero_color_start": "#9C27B0",
+        "hero_color_end": "#6A1B9A",
+        "overview": "Seniors on the Sound is our signature adaptive kayaking program built specifically for active adults 55 and older. Whether you have never paddled before or used to kayak years ago, we meet you exactly where you are. Small groups, patient guides, and kayaks designed for stability mean you can focus on enjoying the water.",
+        "tiers_heading": "Program Levels",
+        "tiers_subheading": "Choose the level that fits your experience and comfort. You can move between levels as you progress.",
+        "info_heading": "Participant Information",
+        "bottom_cta_heading": "Ready to Get on the Water?",
+        "bottom_cta_text": "Spots are limited to keep groups small and personal. Call our waterfront location to register.",
+        "bottom_primary_text": "(252) 515-4866",
+        "bottom_primary_link": "tel:252-515-4866",
+        "bottom_secondary_text": "View All Programs",
+        "bottom_secondary_link": "/pages/programs"
+      }
+    }
+  },
+  "order": [
+    "program-detail"
+  ]
+}

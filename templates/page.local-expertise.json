@@ -1,0 +1,38 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "local-expertise": {
+      "type": "local-expertise",
+      "settings": {
+        "hero_title": "Crystal Coast Local Expertise",
+        "hero_subtitle": "We live and fish these waters every week. Here is what we know.",
+        "image_opacity": 70,
+        "overlay_opacity": 55,
+        "intro_text": "We have been paddling, fishing, and sailing the Crystal Coast for years. Bogue Sound, the ICW, Radio Island marsh, Cape Lookout - we know the tides, the fish, the wind patterns, and the gear that actually performs here. This page is our way of sharing that local knowledge so you can make the most of your time on the water.",
+        "fishing_title": "Our Favorite Fishing Spots",
+        "fishing_subtitle": "All reachable by kayak - from beginner-friendly flats to expert-level crossings",
+        "water_title": "Know Your Water",
+        "water_subtitle": "Crystal Coast conditions every paddler and angler should understand before launching",
+        "gear_title": "Gear Built for These Waters",
+        "gear_subtitle": "What works here and why - straight from the people who paddle it every week",
+        "cta_heading": "Come Talk to Us",
+        "cta_text": "Stop by either location. We will match you to the right kayak for these waters, rig it up, and point you toward the fish.",
+        "cta_primary_text": "Shop Kayaks and Gear",
+        "cta_primary_link": "/collections/fishing-kayaks",
+        "cta_secondary_text": "Find Our Locations",
+        "cta_secondary_link": "/pages/locations"
+      }
+    }
+  },
+  "order": [
+    "local-expertise"
+  ]
+}
