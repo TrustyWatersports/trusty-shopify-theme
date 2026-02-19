@@ -265,25 +265,101 @@
     }
 
     /* Mobile Responsive */
-    @media (max-width: 768px) {
+    @media (max-width: 968px) {
+
+      /* Hide announcement and quick access on mobile */
+      .top-bar { display: none; }
+      .quick-access { display: none; }
+
+      /* Sticky header — full width, compact */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      }
+
       .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        width: 100%;
-      }
-
-      .header-actions {
-        width: 100%;
+        flex-direction: row;
+        align-items: center;
         justify-content: space-between;
+        padding: 10px 16px;
+        gap: 0;
       }
 
-      .quick-access-content {
-        gap: 15px;
-        font-size: 12px;
+      .logo img { height: 42px; }
+
+      /* Hide desktop nav and actions */
+      nav, .header-actions { display: none; }
+
+      /* Show hamburger */
+      .hamburger {
+        display: flex !important;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
       }
+
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--ocean-deep);
+        border-radius: 2px;
+        transition: all 0.3s;
+      }
+
+      /* Mobile nav drawer */
+      nav.active {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: white;
+        z-index: 1000;
+        padding: 70px 30px 30px;
+        overflow-y: auto;
+        gap: 0;
+      }
+
+      nav.active a {
+        padding: 16px 0;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1px solid var(--gray-light);
+        color: var(--ocean-deep);
+        text-decoration: none;
+      }
+
+      /* Call buttons shown in mobile nav */
+      .mobile-nav-calls {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 24px;
+      }
+
+      .mobile-nav-calls a {
+        display: block;
+        text-align: center;
+        padding: 14px;
+        border-radius: 6px;
+        font-weight: 700;
+        font-size: 15px;
+        text-decoration: none;
+        color: white !important;
+        border-bottom: none !important;
+      }
+
+      .mobile-nav-calls .shop-call { background: var(--sunrise); }
+      .mobile-nav-calls .waterfront-call { background: var(--ocean-medium); }
+    }
+
+    @media (min-width: 969px) {
+      .hamburger { display: none; }
     }
   </style>
 </head>
@@ -322,8 +398,12 @@
       <a href="/" class="logo">
         <img src="https://images.squarespace-cdn.com/content/v1/6192794d1d9bc87b9719f93c/d75cec6a-478b-4fff-b3ae-bd24f8e06d8c/LOGO3.jpg?format=300w" alt="{{ shop.name }}">
       </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
       
-      <nav>
+      <nav id="main-nav">
         <a href="/collections/fishing-kayaks">Fishing Kayaks</a>
         <a href="/collections/pedal-kayaks">Pedal Kayaks</a>
         <a href="/collections/sailboats">Sailboats</a>
@@ -331,11 +411,20 @@
         <a href="/pages/rentals">Rentals</a>
         <a href="/pages/showroom">Showroom</a>
         <a href="/pages/about">About</a>
+        <div class="mobile-nav-calls">
+          <a href="tel:252-499-9911" class="shop-call">📞 Shop: (252) 499-9911</a>
+          <a href="tel:252-515-4866" class="waterfront-call">📞 Waterfront: (252) 515-4866</a>
+        </div>
       </nav>
 
       <div class="header-actions">
-        <a href="tel:252-726-7700" style="background: var(--sunrise); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 14px; white-space: nowrap; transition: all 0.3s;">
-          📞 (252) 726-7700
+        <a href="tel:252-499-9911" style="background: var(--sunrise); color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 13px; white-space: nowrap; transition: all 0.3s; margin-right: 8px;">
+          <span style="font-size: 10px; opacity: 0.9; display: block; margin-bottom: 2px;">SHOP</span>
+          📞 (252) 499-9911
+        </a>
+        <a href="tel:252-515-4866" style="background: var(--ocean-medium); color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 13px; white-space: nowrap; transition: all 0.3s;">
+          <span style="font-size: 10px; opacity: 0.9; display: block; margin-bottom: 2px;">WATERFRONT</span>
+          📞 (252) 515-4866
         </a>
         <a href="/search">🔍</a>
         <a href="/account">👤</a>
@@ -401,6 +490,22 @@
       .then(data => {
         document.getElementById('cart-count').textContent = data.item_count;
       });
+
+    // Mobile hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('main-nav');
+    if (hamburger && nav) {
+      hamburger.addEventListener('click', function() {
+        nav.classList.toggle('active');
+        hamburger.classList.toggle('active');
+      });
+      document.addEventListener('click', function(e) {
+        if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+          nav.classList.remove('active');
+          hamburger.classList.remove('active');
+        }
+      });
+    }
   </script>
 
 </body>
