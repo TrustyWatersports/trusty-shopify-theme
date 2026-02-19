@@ -53,7 +53,7 @@
       "name": "Hero Section",
       "settings": {
         "hero_image": "shopify://shop_images/DSC01283_-_Large_5e96b3b9-3d0e-4de4-a92f-d8f062bf1f67.png",
-        "interval_ms": 10,
+        "interval_ms": 30,
         "overlay_opacity": 40,
         "badge_text": "⚡ Custom Rigging Experts",
         "heading_part1": "Tournament-Ready",
