@@ -119,8 +119,24 @@
     }
 
     @media (max-width: 968px) {
-      header {
-        top: 0 !important; /* quick-access hidden on mobile, stick to very top */
+      /* Sticky header fix - target both header tag and Shopify section wrapper */
+      header,
+      .shopify-section:has(header) {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 999 !important;
+      }
+
+      /* Hide phone buttons on mobile - they appear in the nav drawer instead */
+      .header-phone-btn { display: none !important; }
+
+      /* Hide search/account/cart on mobile */
+      .header-icon-btn { display: none !important; }
+
+      /* Make hamburger prominent */
+      .hamburger {
+        display: flex !important;
+        margin-left: auto;
       }
     }
 
@@ -274,21 +290,39 @@
 
     /* Mobile Navigation */
     @media (max-width: 968px) {
-      .hamburger {
-        display: flex;
-      }
 
-      /* Hide top bar and quick access, make header sticky from top */
+      /* Sticky header at very top */
       .top-bar { display: none; }
       .quick-access { display: none; }
-
       header {
-        position: sticky;
-        top: 0;
-        z-index: 999;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 999 !important;
         box-shadow: 0 2px 12px rgba(0,0,0,0.15);
       }
 
+      /* Compact header row: logo | hamburger */
+      .header-content {
+        gap: 10px;
+        flex-wrap: nowrap;
+        padding: 10px 15px;
+        justify-content: space-between;
+      }
+      .logo { flex-shrink: 0; }
+      .logo img { height: 40px; }
+      .logo-text { display: none; }
+
+      /* Hide all header-actions on mobile */
+      .header-actions { display: none !important; }
+
+      /* Show hamburger */
+      .hamburger {
+        display: flex !important;
+        flex-shrink: 0;
+        padding: 5px;
+      }
+
+      /* Nav drawer slides in from right */
       nav {
         position: fixed;
         top: 0;
@@ -297,7 +331,7 @@
         height: 100vh;
         background: white;
         box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-        padding: 80px 0 20px;
+        padding: 0;
         transition: right 0.3s ease;
         z-index: 1000;
         overflow-y: auto;
@@ -305,21 +339,16 @@
         flex-direction: column;
       }
 
-      nav.active {
-        right: 0;
-      }
+      nav.active { right: 0; }
 
       nav > a,
       nav > .nav-item {
         display: block;
         padding: 15px 25px;
         border-bottom: 1px solid var(--gray-light);
-        order: initial;
       }
 
-      .nav-item > a {
-        display: block;
-      }
+      .nav-item > a { display: block; }
 
       .dropdown-content {
         position: static;
@@ -329,63 +358,8 @@
         background: var(--gray-light);
       }
 
-      .nav-item.open .dropdown-content {
-        display: block;
-      }
-
-      .dropdown-content a {
-        padding: 10px 15px;
-      }
-
-      /* Mobile header layout */
-      .header-content {
-        gap: 10px;
-        flex-wrap: nowrap;
-        padding: 12px 15px;
-      }
-
-      .logo {
-        order: 1;
-        flex-shrink: 0;
-      }
-
-      .hamburger {
-        order: 4;
-        flex-shrink: 0;
-        padding: 5px;
-      }
-
-      .header-actions {
-        order: 2;
-        gap: 5px;
-        flex: 1;
-        justify-content: flex-end;
-      }
-
-      .logo-text {
-        display: none;
-      }
-
-      .logo img {
-        height: 40px;
-      }
-
-      .header-actions a[href^="tel"] {
-        padding: 8px 10px;
-        font-size: 10px;
-        margin-right: 0;
-        white-space: nowrap;
-      }
-
-      .header-actions a[href^="tel"] span {
-        display: none;
-      }
-
-      .header-actions a[href="/search"],
-      .header-actions a[href="/account"],
-      .header-actions #cart-icon {
-        display: none;
-      }
+      .nav-item.open .dropdown-content { display: block; }
+      .dropdown-content a { padding: 10px 15px; }
     }
 
     .header-actions {
