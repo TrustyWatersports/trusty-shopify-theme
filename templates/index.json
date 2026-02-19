@@ -235,43 +235,6 @@
         "subtitle": "More than a shop - your complete Crystal Coast watersports partner"
       }
     },
-    "google-reviews": {
-      "type": "google-reviews",
-      "blocks": {
-        "review_1": {
-          "type": "review",
-          "settings": {
-            "review_text": "Absolutely 5 star experience with the Trusty family. Knowledgeable and friendly. The demo day was important to us as newbies. This area has so many places to kayak with year round kayak weather, why not get into it! Highly recommend Trusty. Post covid customer service is not missing here!! They're great people and any community worth living in is worth doing business in. Don't buy big box or Amazon... buy from people like Trusty Sail and Paddle.",
-            "reviewer_name": "Jeffrey Shingelton",
-            "review_date": "Google Review"
-          }
-        },
-        "review_2": {
-          "type": "review",
-          "settings": {
-            "review_text": "I actually live up in Virginia, but unfortunately there were no places to demo kayaks around me. After meeting Andrew and getting to talk with him, he was professional, knowledgeable, and all around fantastic to work with. He is friendly no matter your experience or skill level. I learned a ton, settled on the kayak I will be purchasing, and will be making the 4 hour trek specifically to buy from him. Trusty Sail and Paddle sets a real example of why we need local shops!",
-            "reviewer_name": "Andrew Freeman",
-            "review_date": "Google Review"
-          }
-        },
-        "review_3": {
-          "type": "review",
-          "settings": {
-            "review_text": "We had an exceptional experience buying our Topaz Argo from Trusty Sail and Paddle in Morehead City. Heather and Andrew are fantastic! They helped us every step of the way. We will definitely be going to them for all of our water sport supplies!",
-            "reviewer_name": "Dee Stephens",
-            "review_date": "Google Review"
-          }
-        }
-      },
-      "block_order": ["review_1", "review_2", "review_3"],
-      "settings": {
-        "heading": "What Our Customers Say",
-        "subheading": "Don't take our word for it — hear from the anglers, sailors, and families we've served on the Crystal Coast.",
-        "review_count": "5.0 · 50+ Google Reviews",
-        "google_review_link": "https://www.google.com/maps/place/?q=place_id:ChIJ9x-I3jFouwQR",
-        "leave_review_link": "https://search.google.com/local/writereview?placeid=ChIJ9x-I3jFouwQR"
-      }
-    },
     "brands_carousel_home": {
       "type": "brands-carousel",
       "blocks": {
@@ -458,6 +421,48 @@
         "heading": "Rigging Packages",
         "subheading": "Choose a package that matches your fishing style and budget. Every rig is built by our Crystal Coast experts and shipped nationwide."
       }
+    },
+    "google-reviews": {
+      "type": "google-reviews",
+      "blocks": {
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "review_text": "Absolutely 5 star experience with the Trusty family. Knowledgeable and friendly. The demo day was important to us as newbies. This area has so many places to kayak with year round kayak weather, why not get into it! Highly recommend Trusty. Post covid customer service is not missing here!! They're great people and any community worth living in is worth doing business in. Don't buy big box or Amazon... buy from people like Trusty Sail and Paddle.",
+            "reviewer_name": "Jeffrey Shingelton",
+            "review_date": "Google Review"
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "review_text": "I actually live up in Virginia, but unfortunately there were no places to demo kayaks around me. After meeting Andrew and getting to talk with him, he was professional, knowledgeable, and all around fantastic to work with. He is friendly no matter your experience or skill level. I learned a ton, settled on the kayak I will be purchasing, and will be making the 4 hour trek specifically to buy from him. Trusty Sail and Paddle sets a real example of why we need local shops!",
+            "reviewer_name": "Andrew Freeman",
+            "review_date": "Google Review"
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "review_text": "We had an exceptional experience buying our Topaz Argo from Trusty Sail and Paddle in Morehead City. Heather and Andrew are fantastic! They helped us every step of the way. We will definitely be going to them for all of our water sport supplies!",
+            "reviewer_name": "Dee Stephens",
+            "review_date": "Google Review"
+          }
+        }
+      },
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3"
+      ],
+      "settings": {
+        "background_color": "#f5f7fa",
+        "heading": "What Our Customers Say",
+        "subheading": "Don't take our word for it — hear from the anglers, sailors, and families we've served on the Crystal Coast.",
+        "review_count": "5.0 · 50+ Google Reviews",
+        "google_review_link": "https://www.google.com/maps/place/?q=place_id:ChIJ9x-I3jFouwQR",
+        "leave_review_link": "https://search.google.com/local/writereview?placeid=ChIJ9x-I3jFouwQR"
+      }
     }
   },
   "order": [
@@ -466,8 +471,8 @@
     "trusty_pathways_CPfqNk",
     "trusty_sailing_cta_VGa3zk",
     "trusty_why_trusty_TU4aTV",
-    "google-reviews",
     "brands_carousel_home",
-    "rigging_packages_home"
+    "rigging_packages_home",
+    "google-reviews"
   ]
 }
