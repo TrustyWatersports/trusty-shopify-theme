@@ -51,6 +51,9 @@
       <a href="{{ section.settings.secondary_button_link }}" class="btn btn-secondary">
         {{ section.settings.secondary_button_text }}
       </a>
+      <a href="{{ section.settings.tertiary_button_link }}" class="btn btn-secondary">
+        {{ section.settings.tertiary_button_text }}
+      </a>
     </div>
   </div>
 </section>
@@ -218,6 +221,17 @@
       "type": "url",
       "id": "secondary_button_link",
       "label": "Secondary Button Link"
+    },
+    {
+      "type": "text",
+      "id": "tertiary_button_text",
+      "label": "Third Button Text",
+      "default": "Shop Kayaks"
+    },
+    {
+      "type": "url",
+      "id": "tertiary_button_link",
+      "label": "Third Button Link"
     }
   ],
   "blocks": [
