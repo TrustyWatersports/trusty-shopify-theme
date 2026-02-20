@@ -1,0 +1,48 @@
+<div style="background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-medium) 100%); color: white; padding: 30px; border-radius: 16px; margin: 40px 0; text-align: center;">
+  <div style="font-size: 32px; margin-bottom: 12px;">&#x1F4C5;</div>
+  <h3 style="font-size: 24px; margin-bottom: 10px;">{{ section.settings.heading }}</h3>
+  <p style="opacity: 0.9; margin-bottom: 20px; font-size: 16px; max-width: 500px; margin-left: auto; margin-right: auto;">{{ section.settings.subtext }}</p>
+  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+    <a href="{{ section.settings.calendly_url }}" target="_blank"
+       style="background: var(--sunrise); color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px; display: inline-block;">
+      &#x1F4C5; Book Your Date
+    </a>
+    <a href="tel:252-499-9911"
+       style="background: white; color: var(--ocean-deep); padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px; display: inline-block;">
+      &#x1F4DE; Call Us Instead
+    </a>
+  </div>
+  <p style="margin-top: 15px; opacity: 0.75; font-size: 13px;">{{ section.settings.footnote }}</p>
+</div>
+
+{% schema %}
+{
+  "name": "Booking CTA",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Ready to Book Your Adventure?"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Purchase above to reserve your spot, then pick your date and time below."
+    },
+    {
+      "type": "url",
+      "id": "calendly_url",
+      "label": "Calendly Link"
+    },
+    {
+      "type": "text",
+      "id": "footnote",
+      "label": "Footnote",
+      "default": "Questions? Call (252) 499-9911 — we're happy to help pick the right experience."
+    }
+  ],
+  "presets": [{ "name": "Booking CTA" }]
+}
+{% endschema %}

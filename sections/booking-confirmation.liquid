@@ -1,0 +1,60 @@
+<div style="max-width: 700px; margin: 0 auto; padding: 60px 20px; text-align: center;">
+
+  <!-- Success Header -->
+  <div style="font-size: 64px; margin-bottom: 20px;">&#x2705;</div>
+  <h1 style="font-size: 36px; color: var(--ocean-deep); margin-bottom: 12px;">You're Almost Set!</h1>
+  <p style="font-size: 18px; color: var(--gray-medium); margin-bottom: 40px; line-height: 1.6;">
+    Your payment is confirmed. Now pick your date and time to complete your booking.
+  </p>
+
+  <!-- Calendly Embed -->
+  <div style="background: var(--gray-light); border-radius: 16px; padding: 40px; margin-bottom: 40px;">
+    <h2 style="font-size: 24px; color: var(--ocean-deep); margin-bottom: 8px;">&#x1F4C5; Pick Your Date & Time</h2>
+    <p style="color: var(--gray-medium); margin-bottom: 25px;">Choose a time that works for you — we'll send a confirmation to your email.</p>
+    
+    <!-- Calendly inline widget -->
+    <div class="calendly-inline-widget" 
+         data-url="https://calendly.com/trustywatersports?hide_gdpr_banner=1&primary_color=00a86b" 
+         style="min-width: 320px; height: 700px;">
+    </div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  </div>
+
+  <!-- Alternative contact -->
+  <div style="background: white; border: 2px solid var(--ocean-light); border-radius: 12px; padding: 30px; margin-bottom: 30px;">
+    <h3 style="font-size: 18px; color: var(--ocean-deep); margin-bottom: 8px;">Prefer to book by phone?</h3>
+    <p style="color: var(--gray-medium); margin-bottom: 15px;">Call us and we'll get you set up right away.</p>
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="tel:252-499-9911" style="background: var(--rigging-accent); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 700;">&#x1F4DE; (252) 499-9911</a>
+      <a href="tel:252-515-4866" style="background: var(--ocean-deep); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 700;">&#x1F6F6; (252) 515-4866</a>
+    </div>
+  </div>
+
+  <!-- What to expect -->
+  <div style="text-align: left; background: var(--gray-light); border-radius: 12px; padding: 30px;">
+    <h3 style="font-size: 18px; color: var(--ocean-deep); margin-bottom: 16px;">What happens next?</h3>
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <div style="display: flex; gap: 14px; align-items: flex-start;">
+        <div style="background: var(--rigging-accent); color: white; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0;">1</div>
+        <div><strong>Pick your date above</strong> — select a time slot that works for you</div>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start;">
+        <div style="background: var(--rigging-accent); color: white; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0;">2</div>
+        <div><strong>Check your email</strong> — you'll get a calendar invite with location details</div>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start;">
+        <div style="background: var(--rigging-accent); color: white; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0;">3</div>
+        <div><strong>Show up and enjoy</strong> — meet us at 815 Shepard St, Morehead City waterfront</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Booking Confirmation",
+  "settings": [],
+  "presets": [{ "name": "Booking Confirmation" }]
+}
+{% endschema %}
