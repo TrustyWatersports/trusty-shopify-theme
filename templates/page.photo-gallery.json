@@ -11,7 +11,53 @@
   "sections": {
     "photo-gallery": {
       "type": "photo-gallery",
+      "blocks": {
+        "photo_QLn8Fh": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/XTR_130_-_Large6.png",
+            "caption": "",
+            "category": "Crystal Coast"
+          }
+        },
+        "photo_KAaceE": {
+          "type": "photo",
+          "settings": {
+            "caption": "",
+            "category": "Crystal Coast"
+          }
+        },
+        "photo_m6Y6Cb": {
+          "type": "photo",
+          "settings": {
+            "caption": "",
+            "category": "Crystal Coast"
+          }
+        },
+        "photo_m4dfpB": {
+          "type": "photo",
+          "settings": {
+            "caption": "",
+            "category": "Crystal Coast"
+          }
+        },
+        "photo_z8qVLM": {
+          "type": "photo",
+          "settings": {
+            "caption": "",
+            "category": "Crystal Coast"
+          }
+        }
+      },
+      "block_order": [
+        "photo_QLn8Fh",
+        "photo_KAaceE",
+        "photo_m6Y6Cb",
+        "photo_m4dfpB",
+        "photo_z8qVLM"
+      ],
       "settings": {
+        "gallery_icon": "📷",
         "gallery_title": "Photo Gallery",
         "gallery_subtitle": "Life on the Crystal Coast - kayaking, sailing, tournaments, and everything in between",
         "columns": 3,
