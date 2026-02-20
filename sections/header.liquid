@@ -41,8 +41,9 @@
     <nav id="main-nav">
       <!-- Mobile call buttons at top of drawer -->
       <div class="nav-mobile-calls">
-        <a href="tel:252-499-9911" style="display:block; background: var(--sunrise); color: white; padding: 12px 20px; text-decoration: none; font-weight: 700; font-size: 14px; text-align: center; margin-bottom: 4px;">📞 Shop: (252) 499-9911</a>
-        <a href="tel:252-515-4866" style="display:block; background: var(--ocean-medium); color: white; padding: 12px 20px; text-decoration: none; font-weight: 700; font-size: 14px; text-align: center;">📞 Waterfront: (252) 515-4866</a>
+        <a href="tel:252-499-9911" style="display:block; background: var(--sunrise); color: white; padding: 12px 20px; text-decoration: none; font-weight: 700; font-size: 14px; text-align: center; margin-bottom: 4px;">&#x1F4DE; Shop: (252) 499-9911</a>
+        <a href="tel:252-515-4866" style="display:block; background: var(--ocean-medium); color: white; padding: 12px 20px; text-decoration: none; font-weight: 700; font-size: 14px; text-align: center; margin-bottom: 4px;">&#x1F4DE; Waterfront: (252) 515-4866</a>
+        <a href="/cart" style="display:block; background: var(--rigging-accent); color: white; padding: 12px 20px; text-decoration: none; font-weight: 700; font-size: 14px; text-align: center;">&#x1F6D2; Cart (<span class="mobile-cart-count">{{ cart.item_count }}</span>)</a>
       </div>
       {%- for link in main_menu.links -%}
         {%- if link.links != blank -%}
@@ -83,6 +84,7 @@
     .then(data => {
       const el = document.getElementById('cart-count');
       if (el) el.textContent = data.item_count;
+      document.querySelectorAll('.mobile-cart-count').forEach(el => el.textContent = data.item_count);
     });
 
   const hamburger = document.getElementById('hamburger');
