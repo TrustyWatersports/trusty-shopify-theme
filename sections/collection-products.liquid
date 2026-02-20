@@ -1,0 +1,165 @@
+{% paginate collection.products by 24 %}
+
+<div class="container" style="padding: 40px 20px;">
+  
+  <!-- Collection Header -->
+  <div style="text-align: center; margin-bottom: 50px;">
+    <h1 style="font-size: 42px; color: var(--ocean-deep); margin-bottom: 15px;">
+      {{ collection.title }}
+    </h1>
+    {% if collection.description != blank %}
+      <div style="font-size: 18px; color: var(--gray-medium); max-width: 800px; margin: 0 auto;">
+        {{ collection.description }}
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- Sorting -->
+  <div style="background: var(--gray-light); padding: 25px; border-radius: 12px; margin-bottom: 40px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+      <div>
+        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">Sort By</label>
+        <select id="sort" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: white;" onchange="window.location.href=this.value">
+          <option value="?sort_by=manual" {% if collection.sort_by == 'manual' %}selected{% endif %}>Featured</option>
+          <option value="?sort_by=price-ascending" {% if collection.sort_by == 'price-ascending' %}selected{% endif %}>Price: Low to High</option>
+          <option value="?sort_by=price-descending" {% if collection.sort_by == 'price-descending' %}selected{% endif %}>Price: High to Low</option>
+          <option value="?sort_by=title-ascending" {% if collection.sort_by == 'title-ascending' %}selected{% endif %}>A-Z</option>
+          <option value="?sort_by=created-descending" {% if collection.sort_by == 'created-descending' %}selected{% endif %}>Newest</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Count -->
+  <div style="margin-bottom: 30px; color: var(--gray-medium);">
+    Showing <strong>{{ collection.products_count }}</strong> products
+  </div>
+
+  <!-- Products Grid -->
+  <div id="products-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; margin-bottom: 60px;">
+    {% for product in collection.products %}
+      <div class="product-card"
+           style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; position: relative;">
+        
+        <!-- Availability Badge -->
+        {% if product.available %}
+          <div style="position: absolute; top: 10px; right: 10px; background: #00A86B; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; z-index: 1;">
+            In Stock
+          </div>
+        {% else %}
+          <div style="position: absolute; top: 10px; right: 10px; background: #888; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; z-index: 1;">
+            Sold Out
+          </div>
+        {% endif %}
+
+        <a href="{{ product.url }}" style="text-decoration: none; color: inherit;">
+          <!-- Product Image -->
+          {% if product.featured_image %}
+            <img src="{{ product.featured_image | image_url: width: 400 }}"
+                 alt="{{ product.title }}"
+                 style="width: 100%; height: 240px; object-fit: cover;">
+          {% else %}
+            <div style="width: 100%; height: 240px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">
+              No image available
+            </div>
+          {% endif %}
+
+          <div style="padding: 20px;">
+            {% if product.vendor %}
+              <div style="color: #1E6FA8; font-size: 12px; font-weight: 600; text-transform: uppercase; margin-bottom: 8px;">
+                {{ product.vendor }}
+              </div>
+            {% endif %}
+
+            <h3 style="font-size: 18px; margin-bottom: 12px; color: #0A4B78; line-height: 1.3;">
+              {{ product.title }}
+            </h3>
+
+            {% if product.type %}
+              <div style="font-size: 13px; color: #888; margin-bottom: 15px;">
+                {{ product.type }}
+              </div>
+            {% endif %}
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+              <span style="font-size: 24px; font-weight: 700; color: #222;">
+                {{ product.price | money }}
+              </span>
+              {% if product.compare_at_price > product.price %}
+                <span style="text-decoration: line-through; color: #888; font-size: 16px;">
+                  {{ product.compare_at_price | money }}
+                </span>
+              {% endif %}
+            </div>
+
+            {% if product.description != blank %}
+              <div style="font-size: 13px; color: #666; margin-bottom: 15px; line-height: 1.6;">
+                {{ product.description | strip_html | truncate: 120 }}
+              </div>
+            {% endif %}
+
+            <div style="display: flex; gap: 10px;">
+              <span style="flex: 1; text-align: center; padding: 10px; font-size: 14px; background: #0A4B78; color: white; border-radius: 6px; font-weight: 600;">
+                View Details
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Pagination -->
+  {% if paginate.pages > 1 %}
+    <div style="display: flex; justify-content: center; gap: 10px; margin-top: 40px; margin-bottom: 60px;">
+      {% if paginate.previous %}
+        <a href="{{ paginate.previous.url }}" style="padding: 10px 20px; border: 2px solid #0A4B78; color: #0A4B78; text-decoration: none; border-radius: 6px; font-weight: 600;">← Previous</a>
+      {% endif %}
+      {% for part in paginate.parts %}
+        {% if part.is_link %}
+          <a href="{{ part.url }}" style="padding: 10px 16px; border: 2px solid #ddd; color: #333; text-decoration: none; border-radius: 6px;">{{ part.title }}</a>
+        {% else %}
+          <span style="padding: 10px 16px; background: #0A4B78; color: white; border-radius: 6px; font-weight: 600;">{{ part.title }}</span>
+        {% endif %}
+      {% endfor %}
+      {% if paginate.next %}
+        <a href="{{ paginate.next.url }}" style="padding: 10px 20px; border: 2px solid #0A4B78; color: #0A4B78; text-decoration: none; border-radius: 6px; font-weight: 600;">Next →</a>
+      {% endif %}
+    </div>
+  {% endif %}
+
+</div>
+
+<!-- CTA Banner -->
+<div style="background: linear-gradient(135deg, #0A4B78 0%, #1E6FA8 100%); color: white; padding: 60px 20px; text-align: center;">
+  <h2 style="font-size: 36px; margin-bottom: 20px;">Can't Decide? We Can Help.</h2>
+  <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.95;">Visit our showroom to see 60+ kayaks, try before you buy with rentals, or call for expert advice.</p>
+  <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+    <a href="/pages/showroom" style="background: white; color: #0A4B78; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700;">Visit Showroom</a>
+    <a href="/pages/rentals" style="background: transparent; border: 2px solid white; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700;">Rent First</a>
+    <a href="tel:252-499-9911" style="background: #00A86B; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700;">📞 Call Us</a>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-6px)';
+      this.style.boxShadow = '0 8px 24px rgba(0,0,0,0.15)';
+    });
+    card.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+      this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)';
+    });
+  });
+</script>
+
+{% endpaginate %}
+
+{% schema %}
+{
+  "name": "Collection Products",
+  "settings": [],
+  "presets": [{ "name": "Collection Products" }]
+}
+{% endschema %}
