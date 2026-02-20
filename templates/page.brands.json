@@ -326,9 +326,10 @@
         "brand-yamaha": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/Torqeedo.webp",
             "brand_name": "Yamaha / Torqeedo",
             "brand_description": "Electric outboard motors",
-            "brand_link": "/collections/motors"
+            "brand_link": "/collections/torqeedo"
           }
         },
         "category-outdoor": {
