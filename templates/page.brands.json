@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
  * ------------------------------------------------------------
  * IMPORTANT: The contents of this file are auto-generated.
@@ -8,8 +7,6 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-=======
->>>>>>> 1153af0fb4345b6cec03947dad3afda4135ec8bb
 {
   "sections": {
     "brands-hero": {
@@ -25,7 +22,7 @@
           "type": "category",
           "settings": {
             "category_name": "Kayaks",
-            "category_color": "#0A4B78"
+            "category_color": "#0a4b78"
           }
         },
         "brand-jackson": {
@@ -104,7 +101,7 @@
           "type": "category",
           "settings": {
             "category_name": "Sailboats",
-            "category_color": "#D32F2F"
+            "category_color": "#d32f2f"
           }
         },
         "brand-topaz": {
@@ -135,7 +132,7 @@
           "type": "category",
           "settings": {
             "category_name": "Apparel & Safety Gear",
-            "category_color": "#00A86B"
+            "category_color": "#00a86b"
           }
         },
         "brand-astral": {
@@ -182,7 +179,7 @@
           "type": "category",
           "settings": {
             "category_name": "Kayak & Sailing Accessories",
-            "category_color": "#FF6B35"
+            "category_color": "#ff6b35"
           }
         },
         "brand-yakattack": {
@@ -222,7 +219,7 @@
           "settings": {
             "brand_name": "BerleyPro",
             "brand_description": "Kayak accessories and electronics mounts",
-            "brand_link": "/collections/berlypro"
+            "brand_link": "/collections/berleypro"
           }
         },
         "brand-powerpole": {
@@ -245,7 +242,7 @@
           "type": "category",
           "settings": {
             "category_name": "Ropes & Lines",
-            "category_color": "#8B4513"
+            "category_color": "#8b4513"
           }
         },
         "brand-ner": {
@@ -268,7 +265,7 @@
           "type": "category",
           "settings": {
             "category_name": "Racks, Trailers & Storage",
-            "category_color": "#4A9CD6"
+            "category_color": "#4a9cd6"
           }
         },
         "brand-dynamic": {
@@ -315,7 +312,7 @@
           "type": "category",
           "settings": {
             "category_name": "Electronics & Motors",
-            "category_color": "#1E6FA8"
+            "category_color": "#1e6fa8"
           }
         },
         "brand-garmin": {
@@ -338,7 +335,7 @@
           "type": "category",
           "settings": {
             "category_name": "Camping & Outdoor",
-            "category_color": "#2E7D32"
+            "category_color": "#2e7d32"
           }
         },
         "brand-ketch": {
@@ -426,5 +423,8 @@
       }
     }
   },
-  "order": ["brands-hero", "brands-directory"]
+  "order": [
+    "brands-hero",
+    "brands-directory"
+  ]
 }
