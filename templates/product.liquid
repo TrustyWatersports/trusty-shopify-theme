@@ -33,12 +33,14 @@
       {% if product.images.size > 1 %}
         <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
           {% for image in product.images limit: 4 %}
-            <img src="{{ image | image_url: width: 200 }}" 
-                 alt="{{ product.title }} - image {{ forloop.index }}"
+            <div style="background: var(--gray-light); border-radius: 8px; overflow: hidden; cursor: pointer; border: 2px solid transparent; transition: border-color 0.3s;"
                  onclick="document.getElementById('main-img').src='{{ image | image_url: width: 800 }}';"
-                 style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; cursor: pointer; border: 2px solid transparent; transition: border-color 0.3s;"
                  onmouseover="this.style.borderColor='var(--ocean-medium)'"
                  onmouseout="this.style.borderColor='transparent'">
+              <img src="{{ image | image_url: width: 200 }}" 
+                   alt="{{ product.title }} - image {{ forloop.index }}"
+                   style="width: 100%; height: auto; display: block; object-fit: contain;">
+            </div>
           {% endfor %}
         </div>
       {% endif %}
@@ -62,9 +64,9 @@
           <span id="product-price" style="font-size: 42px; font-weight: 700; color: var(--text-dark);">
             {{ product.selected_or_first_available_variant.price | money }}
           </span>
-          {% assign compare = product.selected_or_first_available_variant.compare_at_price %}
-          {% assign current = product.selected_or_first_available_variant.price %}
-          {% if compare and compare != blank and compare > current %}
+          {% assign compare = product.selected_or_first_available_variant.compare_at_price | plus: 0 %}
+          {% assign current = product.selected_or_first_available_variant.price | plus: 0 %}
+          {% if compare > 0 and compare > current %}
             <span style="text-decoration: line-through; color: var(--gray-medium); font-size: 24px;">
               {{ compare | money }}
             </span>
@@ -178,19 +180,19 @@
       <!-- Trust Badges -->
       <div style="display: flex; gap: 20px; flex-wrap: wrap; padding: 20px; background: var(--gray-light); border-radius: 8px; text-align: center;">
         <div style="flex: 1; min-width: 120px;">
-          <div style="font-size: 24px; margin-bottom: 5px;">&#x1F69A;</div>
-          <div style="font-size: 13px; font-weight: 600;">Free Shipping</div>
-          <div style="font-size: 11px; color: var(--gray-medium);">On orders $1,000+</div>
+          <div style="font-size: 24px; margin-bottom: 5px;">&#x1F3AF;</div>
+          <div style="font-size: 13px; font-weight: 600;">Expert Rigging</div>
+          <div style="font-size: 11px; color: var(--gray-medium);">Crystal Coast pros</div>
         </div>
         <div style="flex: 1; min-width: 120px;">
-          <div style="font-size: 24px; margin-bottom: 5px;">&#x1F527;</div>
-          <div style="font-size: 13px; font-weight: 600;">Expert Support</div>
-          <div style="font-size: 11px; color: var(--gray-medium);">15+ years experience</div>
+          <div style="font-size: 24px; margin-bottom: 5px;">&#x1F4DE;</div>
+          <div style="font-size: 13px; font-weight: 600;">Call Before You Buy</div>
+          <div style="font-size: 11px; color: var(--gray-medium);">We'll help you choose</div>
         </div>
         <div style="flex: 1; min-width: 120px;">
-          <div style="font-size: 24px; margin-bottom: 5px;">&#x21A9;</div>
-          <div style="font-size: 13px; font-weight: 600;">Easy Returns</div>
-          <div style="font-size: 11px; color: var(--gray-medium);">30-day policy</div>
+          <div style="font-size: 24px; margin-bottom: 5px;">&#x1F6A3;</div>
+          <div style="font-size: 13px; font-weight: 600;">Try Before You Buy</div>
+          <div style="font-size: 11px; color: var(--gray-medium);">Rent at our waterfront</div>
         </div>
       </div>
     </div>
@@ -215,13 +217,15 @@
           <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
             <a href="{{ related_product.url }}" style="text-decoration: none; color: inherit;">
               {% if related_product.featured_image %}
-                <img src="{{ related_product.featured_image | image_url: width: 300 }}" 
-                     alt="{{ related_product.title }}" 
-                     style="width: 100%; height: 180px; object-fit: cover;">
+                <div style="background: #f8f8f8; padding: 8px;">
+                  <img src="{{ related_product.featured_image | image_url: width: 300 }}" 
+                       alt="{{ related_product.title }}" 
+                       style="width: 100%; height: auto; display: block; max-height: 180px; object-fit: contain;">
+                </div>
               {% endif %}
               <div style="padding: 20px;">
                 <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--ocean-deep);">{{ related_product.title }}</h4>
-                <div style="font-size: 20px; font-weight: 700; color: var(--text-dark);">{{ related_product.price | money }}</div>
+                <div style="font-size: 20px; font-weight: 700; color: var(--text-dark);">{{ related_product.selected_or_first_available_variant.price | money }}</div>
               </div>
             </a>
           </div>
