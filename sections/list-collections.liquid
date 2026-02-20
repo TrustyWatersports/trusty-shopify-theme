@@ -1,42 +1,163 @@
-<div style="background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-medium) 100%); color: white; padding: 60px 20px; text-align: center; margin-bottom: 60px;">
-  <h1 style="font-size: 42px; margin-bottom: 15px;">Shop All Collections</h1>
-  <p style="font-size: 18px; opacity: 0.9;">Browse kayaks, sailboats, accessories, and more</p>
+<div class="container" style="padding: 60px 20px 80px;">
+  
+  <div style="text-align: center; margin-bottom: 50px;">
+    <h1 style="font-size: 42px; color: var(--ocean-deep); margin-bottom: 15px;">Shop All Kayaks & Boats</h1>
+    <p style="font-size: 18px; color: var(--gray-medium);">Find the right kayak for fishing, touring, or sailing the Crystal Coast</p>
+  </div>
+
+  <!-- Collection Finder -->
+  <div style="background: var(--gray-light); border-radius: 16px; padding: 40px; max-width: 800px; margin: 0 auto 60px;">
+    <h2 style="font-size: 22px; color: var(--ocean-deep); margin-bottom: 8px; text-align: center;">Browse by Category</h2>
+    <p style="color: var(--gray-medium); text-align: center; margin-bottom: 30px; font-size: 15px;">Select a category and type, then hit Go</p>
+
+    <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: flex-end; justify-content: center;">
+      
+      <div style="flex: 1; min-width: 200px; max-width: 280px;">
+        <label style="display: block; font-weight: 700; margin-bottom: 8px; color: var(--text-dark); font-size: 14px;">Category</label>
+        <select id="category-select" onchange="updateSubcategory()" style="width: 100%; padding: 12px 16px; border: 2px solid #ddd; border-radius: 8px; font-size: 15px; background: white; color: var(--text-dark); cursor: pointer;">
+          <option value="">Choose a category...</option>
+          <option value="kayaks">Kayaks</option>
+          <option value="motorized">Motorized Kayaks</option>
+          <option value="sailboats">Sailboats</option>
+          <option value="accessories">Accessories & Gear</option>
+        </select>
+      </div>
+
+      <div id="subcategory-wrap" style="flex: 1; min-width: 200px; max-width: 280px; display: none;">
+        <label style="display: block; font-weight: 700; margin-bottom: 8px; color: var(--text-dark); font-size: 14px;">Brand / Type</label>
+        <select id="subcategory-select" style="width: 100%; padding: 12px 16px; border: 2px solid #ddd; border-radius: 8px; font-size: 15px; background: white; color: var(--text-dark); cursor: pointer;">
+          <option value="">All</option>
+        </select>
+      </div>
+
+      <div>
+        <button onclick="goToCollection()" style="padding: 12px 28px; background: var(--rigging-accent); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; white-space: nowrap;">
+          Go &rarr;
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Quick-access pill links — only collections with products, titles cleaned up -->
+  <div style="max-width: 800px; margin: 0 auto;">
+    <h3 style="font-size: 18px; color: var(--ocean-deep); margin-bottom: 20px; text-align: center;">Or jump directly to a collection:</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+      {% for collection in collections %}
+        {% unless collection.handle == 'frontpage' or collection.products_count == 0 %}
+          {% assign clean_title = collection.title | replace: '-', ' ' %}
+          <a href="{{ collection.url }}"
+             style="padding: 10px 20px; background: white; border: 2px solid var(--ocean-light); color: var(--ocean-deep); border-radius: 25px; text-decoration: none; font-size: 14px; font-weight: 600; transition: all 0.2s;"
+             onmouseover="this.style.background='var(--ocean-deep)';this.style.color='white';this.style.borderColor='var(--ocean-deep)'"
+             onmouseout="this.style.background='white';this.style.color='var(--ocean-deep)';this.style.borderColor='var(--ocean-light)'">
+            {{ clean_title }}
+            <span style="font-size: 12px; opacity: 0.7;">({{ collection.products_count }})</span>
+          </a>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="margin-top: 60px; background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-medium) 100%); color: white; border-radius: 16px; padding: 40px; text-align: center;">
+    <h2 style="font-size: 28px; margin-bottom: 12px;">Not sure which kayak is right for you?</h2>
+    <p style="opacity: 0.9; margin-bottom: 25px;">Call us or rent one first — we carry 60+ kayaks and know every one of them.</p>
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+      <a href="tel:252-499-9911" style="background: var(--sunrise); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700;">&#x1F4DE; Call (252) 499-9911</a>
+      <a href="/pages/rentals" style="background: white; color: var(--ocean-deep); padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700;">Try Before You Buy</a>
+    </div>
+  </div>
+
 </div>
 
-<div class="container" style="padding: 0 20px 80px;">
-  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px;">
-    {% for collection in collections %}
-      {% unless collection.handle == 'frontpage' %}
-        <a href="{{ collection.url }}" style="text-decoration: none; color: inherit;">
-          <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s;"
-               onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)'"
-               onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.08)'">
-            {% if collection.image %}
-              <div style="background: #f8f8f8; height: 200px; overflow: hidden;">
-                <img src="{{ collection.image | image_url: width: 400 }}" alt="{{ collection.title }}" style="width: 100%; height: 100%; object-fit: cover;">
-              </div>
-            {% elsif collection.products.first and collection.products.first.featured_image %}
-              <div style="background: #f8f8f8; padding: 20px; height: 200px; display: flex; align-items: center; justify-content: center;">
-                <img src="{{ collection.products.first.featured_image | image_url: width: 300 }}" alt="{{ collection.title }}" style="max-width: 100%; max-height: 160px; object-fit: contain;">
-              </div>
-            {% else %}
-              <div style="height: 200px; background: linear-gradient(135deg, var(--ocean-light), var(--seafoam)); display: flex; align-items: center; justify-content: center;">
-                <span style="font-size: 48px;">&#x1F6F6;</span>
-              </div>
-            {% endif %}
-            <div style="padding: 20px;">
-              <h3 style="font-size: 20px; color: var(--ocean-deep); margin-bottom: 8px;">{{ collection.title }}</h3>
-              {% if collection.description != blank %}
-                <p style="font-size: 14px; color: var(--gray-medium); margin-bottom: 12px; line-height: 1.5;">{{ collection.description | strip_html | truncate: 100 }}</p>
-              {% endif %}
-              <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span style="font-size: 13px; color: var(--gray-medium);">{{ collection.products_count }} products</span>
-                <span style="color: var(--rigging-accent); font-weight: 700; font-size: 14px;">Shop Now &rarr;</span>
-              </div>
-            </div>
-          </div>
-        </a>
-      {% endunless %}
-    {% endfor %}
-  </div>
-</div>
+<script>
+  var collectionMap = {
+    kayaks: {
+      default: '/collections/fishing-kayaks',
+      sub: [
+        { label: 'All Fishing Kayaks',    url: '/collections/fishing-kayaks' },
+        { label: 'Pedal Kayaks',          url: '/collections/pedal-kayaks' },
+        { label: 'Native Watercraft',     url: '/collections/native-watercraft' },
+        { label: 'Old Town',              url: '/collections/old-town' },
+        { label: 'Bonafide',              url: '/collections/bonafide-kayaks' },
+        { label: 'Jackson Kayak',         url: '/collections/jackson-kayak' },
+        { label: 'Wilderness Systems',    url: '/collections/wilderness-systems' },
+        { label: 'Ocean Kayak',           url: '/collections/ocean-kayak' }
+      ]
+    },
+    motorized: {
+      default: '/collections/motorization',
+      sub: [
+        { label: 'All Motorized',         url: '/collections/motorization' },
+        { label: 'Torqeedo',              url: '/collections/torqeedo' },
+        { label: 'Minn-Kota',             url: '/collections/minn-kota' },
+        { label: 'Power-Pole',            url: '/collections/power-pole' }
+      ]
+    },
+    sailboats: {
+      default: '/collections/sailboats',
+      sub: [
+        { label: 'All Sailboats',         url: '/collections/sailboats' },
+        { label: 'Topaz Sailboats',       url: '/collections/topaz-sailboats' },
+        { label: 'Nacra Sailboats',       url: '/collections/nacra-sailboats' },
+        { label: 'Weta',                  url: '/collections/weta' }
+      ]
+    },
+    accessories: {
+      default: '/collections/accessories',
+      sub: [
+        { label: 'All Accessories',       url: '/collections/accessories' },
+        { label: 'Electronics',           url: '/collections/electronics' },
+        { label: 'Rigging Packages',      url: '/collections/rigging-packages' },
+        { label: 'YakAttack',             url: '/collections/yakattack' },
+        { label: 'Garmin',               url: '/collections/garmin' },
+        { label: 'Humminbird',            url: '/collections/humminbird' },
+        { label: 'Suspenz',              url: '/collections/suspenz' },
+        { label: 'Dynamic Dollies',       url: '/collections/dynamic-dollies' },
+        { label: 'SeaDek',               url: '/collections/seadek' }
+      ]
+    }
+  };
+
+  function updateSubcategory() {
+    var cat = document.getElementById('category-select').value;
+    var wrap = document.getElementById('subcategory-wrap');
+    var sub = document.getElementById('subcategory-select');
+
+    if (!cat || !collectionMap[cat]) {
+      wrap.style.display = 'none';
+      return;
+    }
+
+    sub.innerHTML = '<option value="">All</option>';
+    collectionMap[cat].sub.forEach(function(opt) {
+      var el = document.createElement('option');
+      el.value = opt.url;
+      el.textContent = opt.label;
+      sub.appendChild(el);
+    });
+
+    wrap.style.display = 'block';
+  }
+
+  function goToCollection() {
+    var cat = document.getElementById('category-select').value;
+    var sub = document.getElementById('subcategory-select');
+
+    if (!cat) {
+      alert('Please select a category first.');
+      return;
+    }
+
+    var url = (sub && sub.value) ? sub.value : collectionMap[cat].default;
+    window.location.href = url;
+  }
+</script>
+
+{% schema %}
+{
+  "name": "List Collections",
+  "settings": [],
+  "presets": [{ "name": "List Collections" }]
+}
+{% endschema %}

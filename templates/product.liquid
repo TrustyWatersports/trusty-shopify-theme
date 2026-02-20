@@ -52,16 +52,7 @@
           <span id="product-price" style="font-size: 42px; font-weight: 700; color: var(--text-dark);">
             {{ product.selected_or_first_available_variant.price | money }}
           </span>
-          {% assign v = product.selected_or_first_available_variant %}
-          {% assign cap_str = v.compare_at_price | default: '' | append: '' %}
-          {% if cap_str != '' and cap_str != '0' %}
-            {% assign cap = v.compare_at_price %}
-            {% assign cur = v.price %}
-            {% if cap > cur %}
-              <span style="text-decoration: line-through; color: var(--gray-medium); font-size: 24px;">{{ cap | money }}</span>
-              <span style="background: var(--sunrise); color: white; padding: 4px 12px; border-radius: 20px; font-size: 14px; font-weight: 600;">Save {{ cap | minus: cur | money }}</span>
-            {% endif %}
-          {% endif %}
+          {%- comment -%}Sale price display intentionally omitted{%- endcomment -%}
         </div>
       </div>
 
