@@ -116,29 +116,7 @@
     <div style="font-size: 16px; line-height: 1.8; color: var(--text-dark);">{{ product.description }}</div>
   </div>
 
-  {% for rp in recommendations.products limit: 1 %}{% assign has_recs = true %}{% endfor %}
-  {% if has_recs %}
-    <div style="margin-top: 80px;">
-      <h2 style="font-size: 32px; text-align: center; margin-bottom: 40px; color: var(--ocean-deep);">You Might Also Like</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 30px;">
-        {% for rp in recommendations.products limit: 4 %}
-          <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-            <a href="{{ rp.url }}" style="text-decoration: none; color: inherit;">
-              {% if rp.featured_image %}
-                <div style="background: #f8f8f8; padding: 8px;">
-                  <img src="{{ rp.featured_image | image_url: width: 300 }}" alt="{{ rp.title }}" style="width: 100%; height: auto; display: block; max-height: 180px; object-fit: contain;">
-                </div>
-              {% endif %}
-              <div style="padding: 20px;">
-                <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--ocean-deep);">{{ rp.title }}</h4>
-                <div style="font-size: 20px; font-weight: 700; color: var(--text-dark);">{{ rp.price | money }}</div>
-              </div>
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  {% endif %}
+
 
 </div>
 
