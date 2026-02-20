@@ -64,16 +64,15 @@
           <span id="product-price" style="font-size: 42px; font-weight: 700; color: var(--text-dark);">
             {{ product.selected_or_first_available_variant.price | money }}
           </span>
-          {% assign compare = product.selected_or_first_available_variant.compare_at_price | plus: 0 %}
-          {% assign current = product.selected_or_first_available_variant.price | plus: 0 %}
-          {% if compare > 0 and compare > current %}
-            <span style="text-decoration: line-through; color: var(--gray-medium); font-size: 24px;">
-              {{ compare | money }}
-            </span>
-            <span style="background: var(--sunrise); color: white; padding: 4px 12px; border-radius: 20px; font-size: 14px; font-weight: 600;">
-              Save {{ compare | minus: current | money }}
-            </span>
-          {% endif %}
+          {%- assign v = product.selected_or_first_available_variant -%}
+          {%- if v.compare_at_price != blank and v.compare_at_price != nil -%}
+            {%- assign cap = v.compare_at_price | times: 1 -%}
+            {%- assign cur = v.price | times: 1 -%}
+            {%- if cap > cur -%}
+              <span style="text-decoration: line-through; color: var(--gray-medium); font-size: 24px;">{{ cap | money }}</span>
+              <span style="background: var(--sunrise); color: white; padding: 4px 12px; border-radius: 20px; font-size: 14px; font-weight: 600;">Save {{ cap | minus: cur | money }}</span>
+            {%- endif -%}
+          {%- endif -%}
         </div>
       </div>
 

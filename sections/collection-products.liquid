@@ -3,10 +3,8 @@
 <div class="container" style="padding: 40px 20px;">
   
   <!-- Collection Header -->
-  <div style="text-align: center; margin-bottom: 50px;">
-    <h1 style="font-size: 42px; color: var(--ocean-deep); margin-bottom: 15px;">
-      {{ collection.title }}
-    </h1>
+  <div style="text-align: center; margin-bottom: 40px;">
+    <h1 style="font-size: 42px; color: var(--ocean-deep); margin-bottom: 15px;">{{ collection.title }}</h1>
     {% if collection.description != blank %}
       <div style="font-size: 18px; color: var(--gray-medium); max-width: 800px; margin: 0 auto;">
         {{ collection.description }}
@@ -14,46 +12,73 @@
     {% endif %}
   </div>
 
-  <!-- Sorting -->
-  <div style="background: var(--gray-light); padding: 25px; border-radius: 12px; margin-bottom: 40px;">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-      <div>
-        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">Sort By</label>
-        <select id="sort" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: white;" onchange="window.location.href=this.value">
-          <option value="?sort_by=manual" {% if collection.sort_by == 'manual' %}selected{% endif %}>Featured</option>
-          <option value="?sort_by=price-ascending" {% if collection.sort_by == 'price-ascending' %}selected{% endif %}>Price: Low to High</option>
-          <option value="?sort_by=price-descending" {% if collection.sort_by == 'price-descending' %}selected{% endif %}>Price: High to Low</option>
-          <option value="?sort_by=title-ascending" {% if collection.sort_by == 'title-ascending' %}selected{% endif %}>A-Z</option>
-          <option value="?sort_by=created-descending" {% if collection.sort_by == 'created-descending' %}selected{% endif %}>Newest</option>
+  <!-- Filter & Sort Bar -->
+  <div style="background: var(--gray-light); padding: 20px 25px; border-radius: 12px; margin-bottom: 30px; display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-end;">
+    
+    <!-- Sort -->
+    <div style="flex: 1; min-width: 180px;">
+      <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 13px; color: var(--text-dark);">Sort By</label>
+      <select id="sort-select" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: white; font-size: 14px;" onchange="applyFilters()">
+        <option value="manual" {% if collection.sort_by == 'manual' or collection.sort_by == blank %}selected{% endif %}>Featured</option>
+        <option value="price-ascending" {% if collection.sort_by == 'price-ascending' %}selected{% endif %}>Price: Low to High</option>
+        <option value="price-descending" {% if collection.sort_by == 'price-descending' %}selected{% endif %}>Price: High to Low</option>
+        <option value="title-ascending" {% if collection.sort_by == 'title-ascending' %}selected{% endif %}>A–Z</option>
+        <option value="created-descending" {% if collection.sort_by == 'created-descending' %}selected{% endif %}>Newest</option>
+      </select>
+    </div>
+
+    <!-- Filter by Vendor -->
+    {% assign vendors = collection.products | map: 'vendor' | uniq | sort %}
+    {% if vendors.size > 1 %}
+      <div style="flex: 1; min-width: 180px;">
+        <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 13px; color: var(--text-dark);">Brand</label>
+        <select id="vendor-filter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: white; font-size: 14px;" onchange="filterProducts()">
+          <option value="">All Brands</option>
+          {% for vendor in vendors %}
+            <option value="{{ vendor }}">{{ vendor }}</option>
+          {% endfor %}
         </select>
       </div>
+    {% endif %}
+
+    <!-- Filter by Availability -->
+    <div style="flex: 1; min-width: 180px;">
+      <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 13px; color: var(--text-dark);">Availability</label>
+      <select id="availability-filter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: white; font-size: 14px;" onchange="filterProducts()">
+        <option value="">All Products</option>
+        <option value="in-stock">In Stock Only</option>
+      </select>
+    </div>
+
+    <!-- Clear Filters -->
+    <div>
+      <button onclick="clearFilters()" style="padding: 10px 20px; background: white; border: 2px solid var(--gray-medium); border-radius: 6px; font-size: 14px; cursor: pointer; color: var(--gray-medium); font-weight: 600;">Clear Filters</button>
     </div>
   </div>
 
   <!-- Product Count -->
-  <div style="margin-bottom: 30px; color: var(--gray-medium);">
-    Showing <strong>{{ collection.products_count }}</strong> products
+  <div style="margin-bottom: 20px; color: var(--gray-medium); font-size: 14px;">
+    Showing <strong id="visible-count">{{ collection.products_count }}</strong> of <strong>{{ collection.products_count }}</strong> products
   </div>
 
   <!-- Products Grid -->
   <div id="products-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; margin-bottom: 60px;">
     {% for product in collection.products %}
+      {% assign compare_price = product.compare_at_price | plus: 0 %}
+      {% assign current_price = product.price | plus: 0 %}
       <div class="product-card"
+           data-vendor="{{ product.vendor }}"
+           data-available="{{ product.available }}"
            style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; position: relative;">
         
         <!-- Availability Badge -->
         {% if product.available %}
-          <div style="position: absolute; top: 10px; right: 10px; background: #00A86B; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; z-index: 1;">
-            In Stock
-          </div>
+          <div style="position: absolute; top: 10px; right: 10px; background: #00A86B; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; z-index: 1;">In Stock</div>
         {% else %}
-          <div style="position: absolute; top: 10px; right: 10px; background: #888; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; z-index: 1;">
-            Sold Out
-          </div>
+          <div style="position: absolute; top: 10px; right: 10px; background: #888; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; z-index: 1;">Sold Out</div>
         {% endif %}
 
         <a href="{{ product.url }}" style="text-decoration: none; color: inherit;">
-          <!-- Product Image -->
           {% if product.featured_image %}
             <div style="background: #f8f8f8; padding: 10px;">
               <img src="{{ product.featured_image | image_url: width: 400 }}"
@@ -61,61 +86,51 @@
                    style="width: 100%; height: auto; display: block; object-fit: contain; max-height: 260px;">
             </div>
           {% else %}
-            <div style="width: 100%; height: 200px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">
-              No image available
-            </div>
+            <div style="width: 100%; height: 200px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">No image available</div>
           {% endif %}
 
           <div style="padding: 20px;">
             {% if product.vendor %}
-              <div style="color: #1E6FA8; font-size: 12px; font-weight: 600; text-transform: uppercase; margin-bottom: 8px;">
-                {{ product.vendor }}
-              </div>
+              <div style="color: #1E6FA8; font-size: 12px; font-weight: 600; text-transform: uppercase; margin-bottom: 8px;">{{ product.vendor }}</div>
             {% endif %}
 
-            <h3 style="font-size: 18px; margin-bottom: 12px; color: #0A4B78; line-height: 1.3;">
-              {{ product.title }}
-            </h3>
+            <h3 style="font-size: 18px; margin-bottom: 12px; color: #0A4B78; line-height: 1.3;">{{ product.title }}</h3>
 
             {% if product.type %}
-              <div style="font-size: 13px; color: #888; margin-bottom: 15px;">
-                {{ product.type }}
-              </div>
+              <div style="font-size: 13px; color: #888; margin-bottom: 15px;">{{ product.type }}</div>
             {% endif %}
 
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-              <span style="font-size: 24px; font-weight: 700; color: #222;">
-                {{ product.price | money }}
-              </span>
-              {% if product.compare_at_price > product.price %}
-                <span style="text-decoration: line-through; color: #888; font-size: 16px;">
-                  {{ product.compare_at_price | money }}
-                </span>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 8px;">
+              <span style="font-size: 24px; font-weight: 700; color: #222;">{{ product.price | money }}</span>
+              {% if compare_price > 0 and compare_price > current_price %}
+                <span style="text-decoration: line-through; color: #888; font-size: 16px;">{{ product.compare_at_price | money }}</span>
               {% endif %}
             </div>
 
             {% if product.description != blank %}
-              <div style="font-size: 13px; color: #666; margin-bottom: 15px; line-height: 1.6;">
-                {{ product.description | strip_html | truncate: 120 }}
-              </div>
+              <div style="font-size: 13px; color: #666; margin-bottom: 15px; line-height: 1.6;">{{ product.description | strip_html | truncate: 120 }}</div>
             {% endif %}
 
-            <div style="display: flex; gap: 10px;">
-              <span style="flex: 1; text-align: center; padding: 10px; font-size: 14px; background: #0A4B78; color: white; border-radius: 6px; font-weight: 600;">
-                View Details
-              </span>
-            </div>
+            <div style="text-align: center; padding: 10px; font-size: 14px; background: #0A4B78; color: white; border-radius: 6px; font-weight: 600;">View Details</div>
           </div>
         </a>
       </div>
     {% endfor %}
   </div>
 
+  <!-- No results message -->
+  <div id="no-results" style="display: none; text-align: center; padding: 60px 20px; color: var(--gray-medium);">
+    <div style="font-size: 48px; margin-bottom: 20px;">&#x1F6F6;</div>
+    <h3 style="font-size: 22px; margin-bottom: 10px; color: var(--ocean-deep);">No products match your filters</h3>
+    <p style="margin-bottom: 20px;">Try adjusting or clearing your filters.</p>
+    <button onclick="clearFilters()" style="padding: 12px 28px; background: var(--rigging-accent); color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; font-weight: 600;">Clear Filters</button>
+  </div>
+
   <!-- Pagination -->
   {% if paginate.pages > 1 %}
-    <div style="display: flex; justify-content: center; gap: 10px; margin-top: 40px; margin-bottom: 60px;">
+    <div style="display: flex; justify-content: center; gap: 10px; margin-top: 40px; margin-bottom: 60px; flex-wrap: wrap;">
       {% if paginate.previous %}
-        <a href="{{ paginate.previous.url }}" style="padding: 10px 20px; border: 2px solid #0A4B78; color: #0A4B78; text-decoration: none; border-radius: 6px; font-weight: 600;">← Previous</a>
+        <a href="{{ paginate.previous.url }}" style="padding: 10px 20px; border: 2px solid #0A4B78; color: #0A4B78; text-decoration: none; border-radius: 6px; font-weight: 600;">&larr; Previous</a>
       {% endif %}
       {% for part in paginate.parts %}
         {% if part.is_link %}
@@ -125,7 +140,7 @@
         {% endif %}
       {% endfor %}
       {% if paginate.next %}
-        <a href="{{ paginate.next.url }}" style="padding: 10px 20px; border: 2px solid #0A4B78; color: #0A4B78; text-decoration: none; border-radius: 6px; font-weight: 600;">Next →</a>
+        <a href="{{ paginate.next.url }}" style="padding: 10px 20px; border: 2px solid #0A4B78; color: #0A4B78; text-decoration: none; border-radius: 6px; font-weight: 600;">Next &rarr;</a>
       {% endif %}
     </div>
   {% endif %}
@@ -139,11 +154,12 @@
   <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
     <a href="/pages/showroom" style="background: white; color: #0A4B78; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700;">Visit Showroom</a>
     <a href="/pages/rentals" style="background: transparent; border: 2px solid white; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700;">Rent First</a>
-    <a href="tel:252-499-9911" style="background: #00A86B; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700;">📞 Call Us</a>
+    <a href="tel:252-499-9911" style="background: #00A86B; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700;">&#x1F4DE; Call Us</a>
   </div>
 </div>
 
 <script>
+  // Hover effects
   document.querySelectorAll('.product-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
       this.style.transform = 'translateY(-6px)';
@@ -154,6 +170,45 @@
       this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)';
     });
   });
+
+  function applyFilters() {
+    // Sort navigates the page via URL
+    var sort = document.getElementById('sort-select').value;
+    var url = new URL(window.location.href);
+    url.searchParams.set('sort_by', sort);
+    window.location.href = url.toString();
+  }
+
+  function filterProducts() {
+    var vendor = document.getElementById('vendor-filter') ? document.getElementById('vendor-filter').value.toLowerCase() : '';
+    var availability = document.getElementById('availability-filter').value;
+    var cards = document.querySelectorAll('.product-card');
+    var visible = 0;
+
+    cards.forEach(function(card) {
+      var cardVendor = (card.getAttribute('data-vendor') || '').toLowerCase();
+      var cardAvailable = card.getAttribute('data-available');
+      var show = true;
+
+      if (vendor && cardVendor !== vendor) show = false;
+      if (availability === 'in-stock' && cardAvailable !== 'true') show = false;
+
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+
+    document.getElementById('visible-count').textContent = visible;
+    document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
+    document.getElementById('products-grid').style.display = visible === 0 ? 'none' : 'grid';
+  }
+
+  function clearFilters() {
+    var vendorEl = document.getElementById('vendor-filter');
+    var availEl = document.getElementById('availability-filter');
+    if (vendorEl) vendorEl.value = '';
+    if (availEl) availEl.value = '';
+    filterProducts();
+  }
 </script>
 
 {% endpaginate %}
