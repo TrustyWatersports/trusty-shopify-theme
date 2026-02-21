@@ -12,6 +12,14 @@
     "photo-gallery": {
       "type": "photo-gallery",
       "blocks": {
+        "photo_QAmEtA": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/IMG_5677.jpg",
+            "caption": "",
+            "category": "Sailing"
+          }
+        },
         "photo_mVntHp": {
           "type": "photo",
           "settings": {
@@ -70,6 +78,7 @@
         }
       },
       "block_order": [
+        "photo_QAmEtA",
         "photo_mVntHp",
         "photo_KmPFqA",
         "photo_QLn8Fh",
