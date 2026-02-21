@@ -11,6 +11,43 @@
   "sections": {
     "local-expertise": {
       "type": "local-expertise",
+      "blocks": {
+        "gear_rec_WEeCzB": {
+          "type": "gear_rec",
+          "settings": {
+            "gear_icon": "🛶",
+            "gear_name": "",
+            "gear_reason": "",
+            "gear_recommendation": "",
+            "gear_link": ""
+          }
+        },
+        "water_condition_yQQ3gP": {
+          "type": "water_condition",
+          "settings": {
+            "condition_icon": "🌊",
+            "condition_title": "",
+            "condition_content": ""
+          }
+        },
+        "fishing_spot_xGA7Ag": {
+          "type": "fishing_spot",
+          "settings": {
+            "spot_icon": "🎣",
+            "spot_name": "",
+            "spot_type": "",
+            "spot_description": "",
+            "target_species": "",
+            "best_season": "",
+            "pro_tip": ""
+          }
+        }
+      },
+      "block_order": [
+        "gear_rec_WEeCzB",
+        "water_condition_yQQ3gP",
+        "fishing_spot_xGA7Ag"
+      ],
       "settings": {
         "hero_title": "Crystal Coast Local Expertise",
         "hero_subtitle": "We live and fish these waters every week. Here is what we know.",
