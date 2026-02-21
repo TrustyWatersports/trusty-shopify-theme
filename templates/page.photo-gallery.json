@@ -12,6 +12,14 @@
     "photo-gallery": {
       "type": "photo-gallery",
       "blocks": {
+        "photo_4a8chQ": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/DSC_3671_-_Medium_03e57d28-db8f-49d6-a539-88937054933c.jpg",
+            "caption": "",
+            "category": "Kayak Fishing"
+          }
+        },
         "photo_XjNgFJ": {
           "type": "photo",
           "settings": {
@@ -102,6 +110,7 @@
         }
       },
       "block_order": [
+        "photo_4a8chQ",
         "photo_XjNgFJ",
         "photo_PcDB6D",
         "photo_etYVhN",
