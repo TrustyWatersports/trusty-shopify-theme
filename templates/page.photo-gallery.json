@@ -15,8 +15,9 @@
         "photo_DrKk4Y": {
           "type": "photo",
           "settings": {
+            "photo": "shopify://shop_images/DJI_0128.jpg",
             "caption": "",
-            "category": "Crystal Coast"
+            "category": "Sailing"
           }
         },
         "photo_6WW3rN": {
