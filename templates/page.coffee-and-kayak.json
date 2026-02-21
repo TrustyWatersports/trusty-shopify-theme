@@ -11,16 +11,39 @@
   "sections": {
     "program-detail": {
       "type": "program-detail",
+      "blocks": {
+        "tier_HEtXCf": {
+          "type": "tier",
+          "settings": {
+            "tier_icon": "🎯",
+            "tier_name": "Level 1",
+            "tier_description": "",
+            "tier_price": "",
+            "tier_color": "#0a4b78",
+            "detail_1": "",
+            "detail_2": "",
+            "detail_3": "",
+            "detail_4": "",
+            "detail_5": "",
+            "button_text": "Register",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "tier_HEtXCf"
+      ],
       "settings": {
         "program_name": "Coffee and a Kayak",
         "hero_icon": "☕",
         "program_tagline": "Start your morning with a peaceful paddle on Bogue Sound, then coffee and conversation with fellow water lovers",
         "cta_text": "Reserve Your Spot",
         "cta_link": "tel:252-515-4866",
-        "image_opacity": 70,
-        "overlay_opacity": 55,
-        "hero_color_start": "#5D4037",
-        "hero_color_end": "#8B4513",
+        "hero_image": "shopify://shop_images/634695931_895022953273200_5829239730157354453_n.jpg",
+        "image_opacity": 100,
+        "overlay_opacity": 0,
+        "hero_color_start": "#5d4037",
+        "hero_color_end": "#8b4513",
         "overview": "Coffee and a Kayak is our most social program - a low-key morning paddle on the calm waters of Bogue Sound followed by fresh coffee and great conversation back at the dock. It is the perfect way to start a Saturday, meet fellow paddlers, and experience the Crystal Coast at its most peaceful. All skill levels are welcome.",
         "tiers_heading": "Options",
         "tiers_subheading": "Join a regular group session or book a private experience for your crew.",
