@@ -12,6 +12,21 @@
     "photo-gallery": {
       "type": "photo-gallery",
       "blocks": {
+        "photo_XjNgFJ": {
+          "type": "photo",
+          "settings": {
+            "caption": "",
+            "category": "Crystal Coast"
+          }
+        },
+        "photo_PcDB6D": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/IMG_5169_2.jpg",
+            "caption": "",
+            "category": "Our Team"
+          }
+        },
         "photo_etYVhN": {
           "type": "photo",
           "settings": {
@@ -86,6 +101,8 @@
         }
       },
       "block_order": [
+        "photo_XjNgFJ",
+        "photo_PcDB6D",
         "photo_etYVhN",
         "photo_QAmEtA",
         "photo_mVntHp",
