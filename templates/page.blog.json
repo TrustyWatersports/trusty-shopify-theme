@@ -32,6 +32,7 @@
         "post-2": {
           "type": "blog_post",
           "settings": {
+            "post_image": "shopify://shop_images/Untitled-202_png.webp",
             "post_title": "Hooked by the Truth: What it's like Being a Small Sailboat Dealer in a Big Fish Industry",
             "post_excerpt": "Being a small dealer is hard. Being a small sailboat dealer? It's damn near impossible. If it weren't for kayaks, Trusty Sail & Paddle wouldn't still be afloat. Here's the raw truth about what it's like being a small dealer in an industry that forgot us.",
             "post_link": "/pages/blog-hooked-by-the-truth",
