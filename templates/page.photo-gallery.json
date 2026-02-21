@@ -12,12 +12,20 @@
     "photo-gallery": {
       "type": "photo-gallery",
       "blocks": {
+        "photo_mVntHp": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/DJI_0010.jpg",
+            "caption": "",
+            "category": "Crystal Coast"
+          }
+        },
         "photo_KmPFqA": {
           "type": "photo",
           "settings": {
-            "photo": "shopify://shop_images/The_twins_are_ready_to_ship.jpg",
+            "photo": "shopify://shop_images/Untitled-136.png",
             "caption": "",
-            "category": "Kayak Fishing"
+            "category": "Sailing"
           }
         },
         "photo_QLn8Fh": {
@@ -62,6 +70,7 @@
         }
       },
       "block_order": [
+        "photo_mVntHp",
         "photo_KmPFqA",
         "photo_QLn8Fh",
         "photo_KAaceE",
