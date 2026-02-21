@@ -12,6 +12,13 @@
     "photo-gallery": {
       "type": "photo-gallery",
       "blocks": {
+        "photo_XPgDdb": {
+          "type": "photo",
+          "settings": {
+            "caption": "",
+            "category": "Crystal Coast"
+          }
+        },
         "photo_KMykbX": {
           "type": "photo",
           "settings": {
@@ -22,8 +29,9 @@
         "photo_n3L9JH": {
           "type": "photo",
           "settings": {
+            "photo": "shopify://shop_images/20240414_152916.jpg",
             "caption": "",
-            "category": "Crystal Coast"
+            "category": "Events"
           }
         },
         "photo_Awq7MV": {
@@ -180,6 +188,7 @@
         }
       },
       "block_order": [
+        "photo_XPgDdb",
         "photo_KMykbX",
         "photo_n3L9JH",
         "photo_Awq7MV",
