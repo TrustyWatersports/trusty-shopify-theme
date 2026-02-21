@@ -12,7 +12,7 @@
     "photo-gallery": {
       "type": "photo-gallery",
       "blocks": {
-        "photo_3m8wpw": {
+        "photo_tDkbF4": {
           "type": "photo",
           "settings": {
             "caption": "",
@@ -75,6 +75,14 @@
             "category": "Crystal Coast"
           }
         },
+        "photo_3m8wpw": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/676898CC-FF90-4183-BA99-2E8B65CDF9A5.jpg",
+            "caption": "",
+            "category": "Tours & Programs"
+          }
+        },
         "photo_KmPFqA": {
           "type": "photo",
           "settings": {
@@ -125,7 +133,7 @@
         }
       },
       "block_order": [
-        "photo_3m8wpw",
+        "photo_tDkbF4",
         "photo_68x3MQ",
         "photo_4a8chQ",
         "photo_XjNgFJ",
@@ -133,6 +141,7 @@
         "photo_etYVhN",
         "photo_QAmEtA",
         "photo_mVntHp",
+        "photo_3m8wpw",
         "photo_KmPFqA",
         "photo_QLn8Fh",
         "photo_KAaceE",
