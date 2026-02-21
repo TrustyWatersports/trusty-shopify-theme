@@ -12,6 +12,28 @@
     "photo-gallery": {
       "type": "photo-gallery",
       "blocks": {
+        "photo_DrKk4Y": {
+          "type": "photo",
+          "settings": {
+            "caption": "",
+            "category": "Crystal Coast"
+          }
+        },
+        "photo_6WW3rN": {
+          "type": "photo",
+          "settings": {
+            "caption": "",
+            "category": "Crystal Coast"
+          }
+        },
+        "photo_tRjRLe": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/381343883_293748236734011_3049335373102492869_n.jpg",
+            "caption": "",
+            "category": "Crystal Coast"
+          }
+        },
         "photo_tDkbF4": {
           "type": "photo",
           "settings": {
@@ -134,6 +156,9 @@
         }
       },
       "block_order": [
+        "photo_DrKk4Y",
+        "photo_6WW3rN",
+        "photo_tRjRLe",
         "photo_tDkbF4",
         "photo_68x3MQ",
         "photo_4a8chQ",
