@@ -12,6 +12,14 @@
     "photo-gallery": {
       "type": "photo-gallery",
       "blocks": {
+        "photo_etYVhN": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/DJI_0053.jpg",
+            "caption": "",
+            "category": "Crystal Coast"
+          }
+        },
         "photo_QAmEtA": {
           "type": "photo",
           "settings": {
@@ -78,6 +86,7 @@
         }
       },
       "block_order": [
+        "photo_etYVhN",
         "photo_QAmEtA",
         "photo_mVntHp",
         "photo_KmPFqA",
