@@ -12,6 +12,14 @@
     "photo-gallery": {
       "type": "photo-gallery",
       "blocks": {
+        "photo_KmPFqA": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/The_twins_are_ready_to_ship.jpg",
+            "caption": "",
+            "category": "Kayak Fishing"
+          }
+        },
         "photo_QLn8Fh": {
           "type": "photo",
           "settings": {
@@ -54,6 +62,7 @@
         }
       },
       "block_order": [
+        "photo_KmPFqA",
         "photo_QLn8Fh",
         "photo_KAaceE",
         "photo_m6Y6Cb",
