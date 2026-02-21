@@ -12,6 +12,21 @@
     "photo-gallery": {
       "type": "photo-gallery",
       "blocks": {
+        "photo_3m8wpw": {
+          "type": "photo",
+          "settings": {
+            "caption": "",
+            "category": "Crystal Coast"
+          }
+        },
+        "photo_68x3MQ": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/image3.jpg",
+            "caption": "",
+            "category": "Our Team"
+          }
+        },
         "photo_4a8chQ": {
           "type": "photo",
           "settings": {
@@ -110,6 +125,8 @@
         }
       },
       "block_order": [
+        "photo_3m8wpw",
+        "photo_68x3MQ",
         "photo_4a8chQ",
         "photo_XjNgFJ",
         "photo_PcDB6D",
