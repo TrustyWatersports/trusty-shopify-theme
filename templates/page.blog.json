@@ -52,6 +52,7 @@
         "post-4": {
           "type": "blog_post",
           "settings": {
+            "post_image": "shopify://shop_images/IMG_7684_jpg.webp",
             "post_title": "Reviving Connection: The Essential Role of Independent Specialty Retailers in Our Communities",
             "post_excerpt": "Independent specialty retailers aren't just places to shop—they're spaces where people gather, share, and connect. In a world where so much is automated and impersonal, we remind you of the power of human connection and the value of a community that cares.",
             "post_link": "/pages/blog-specialty-retailers",
@@ -61,6 +62,7 @@
         "post-5": {
           "type": "blog_post",
           "settings": {
+            "post_image": "shopify://shop_images/IMG_3697_jpg.webp",
             "post_title": "Every Story Matters: Embracing the Gift of Genuine Customer Interactions",
             "post_excerpt": "When customers apologize for 'taking up my time,' my response is always the same: 'There is nothing I would rather be doing.' Every interaction is a privilege. None of you have ever stolen my time—you've given me gifts of knowledge, experience, and insights that have enriched my life beyond measure.",
             "post_link": "/pages/blog-every-story-matters",
