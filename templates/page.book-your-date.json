@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "booking-confirmation": {
+      "type": "booking-confirmation",
+      "settings": {}
+    }
+  },
+  "order": ["booking-confirmation"]
+}

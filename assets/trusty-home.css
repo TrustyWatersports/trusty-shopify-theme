@@ -444,4 +444,27 @@
   .trusty-why__grid {
     grid-template-columns: 1fr;
   }
+
+  /* Trust bar: 2-column grid on mobile */
+  .trusty-trustbar__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    justify-items: start;
+  }
+
+  .trusty-trustbar__item {
+    gap: 8px;
+  }
+
+  .trusty-trustbar__icon {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .trusty-trustbar__text {
+    font-size: 12px;
+  }
 }

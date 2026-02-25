@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "locations": {
@@ -12,7 +21,7 @@
             "address_line2": "Morehead City, NC 28557",
             "maps_link": "https://maps.google.com/?q=5300+Highway+70+West+Morehead+City+NC+28557",
             "phone": "(252) 499-9911",
-            "email": "info@trustysailandpaddle.com",
+            "email": "trustywatersports@gmail.com",
             "hours": "Monday - Saturday: 10:00 AM - 5:00 PM\nSunday: Closed",
             "features": "60+ Kayaks & Sailboats\nCustom Rigging Workshop\nPaddling & Sailing Gear",
             "accent_color": "#ff6b35"
@@ -27,7 +36,7 @@
             "address_line2": "Morehead City, NC 28557",
             "maps_link": "https://maps.google.com/?q=815+Shepard+Street+Morehead+City+NC+28557",
             "phone": "(252) 515-4866",
-            "email": "rentals@trustysailandpaddle.com",
+            "email": "trustywatersports@gmail.com",
             "hours": "Tuesday - Saturday: 10:00 AM - 5:00 PM\nSunday - Monday: Closed",
             "features": "Kayak & SUP Rentals\nSailboat Rentals\nGuided Tours",
             "note": "Special hours vary",

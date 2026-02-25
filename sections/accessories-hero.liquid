@@ -1,0 +1,27 @@
+<section style="background: linear-gradient(135deg, #00A86B 0%, #0A4B78 100%); color: white; padding: 80px 20px; text-align: center;">
+  <div style="max-width: 900px; margin: 0 auto;">
+    <div style="display: inline-block; background: rgba(255,255,255,0.15); padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 700; margin-bottom: 20px; letter-spacing: 1px;">{{ section.settings.badge }}</div>
+    <h1 style="font-size: 48px; font-weight: 800; margin-bottom: 20px; line-height: 1.1;">{{ section.settings.heading }}</h1>
+    <p style="font-size: 20px; opacity: 0.95; max-width: 700px; margin: 0 auto 40px;">{{ section.settings.subheading }}</p>
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+      <a href="{{ section.settings.primary_cta_link }}" style="background: white; color: #00A86B; padding: 14px 32px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 16px;">{{ section.settings.primary_cta_text }}</a>
+      <a href="{{ section.settings.secondary_cta_link }}" style="background: rgba(255,255,255,0.15); color: white; border: 2px solid white; padding: 14px 32px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 16px;">{{ section.settings.secondary_cta_text }}</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Accessories Hero",
+  "settings": [
+    { "type": "text", "id": "badge", "label": "Badge text", "default": "RIGGING ACCESSORIES" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Gear Tracks, Crates & Transport" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Rod holders, crate systems, gear tracks, lighting, and transport solutions — everything to complete your rig." },
+    { "type": "text", "id": "primary_cta_text", "label": "Primary button text", "default": "Get a Quote" },
+    { "type": "url", "id": "primary_cta_link", "label": "Primary button link" },
+    { "type": "text", "id": "secondary_cta_text", "label": "Secondary button text", "default": "Shop Accessories" },
+    { "type": "url", "id": "secondary_cta_link", "label": "Secondary button link" }
+  ],
+  "presets": [{ "name": "Accessories Hero" }]
+}
+{% endschema %}

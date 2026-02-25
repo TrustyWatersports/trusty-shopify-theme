@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "programs-hero": {
@@ -88,7 +97,7 @@
             "tour_description": "Gentle-paced tour designed for senior paddlers with accessible equipment and support",
             "show_button": true,
             "button_text": "Learn More",
-            "button_link": "tel:252-515-4866"
+            "button_link": "/pages/seniors-on-the-sound"
           }
         },
         "coffee-kayak": {
@@ -101,8 +110,8 @@
             "price_color": "#8B4513",
             "tour_description": "Start your day with a peaceful morning paddle and coffee on the water",
             "show_button": true,
-            "button_text": "Book Tour",
-            "button_link": "tel:252-515-4866"
+            "button_text": "Learn More",
+            "button_link": "/pages/coffee-and-kayak"
           }
         },
         "waterfront-tour": {
@@ -148,7 +157,50 @@
           }
         }
       },
-      "block_order": ["seniors", "coffee-kayak", "waterfront-tour", "sugarloaf", "custom-tours"],
+        "wild-horse": {
+          "type": "tour",
+          "settings": {
+            "tour_icon": "🐴",
+            "tour_name": "Wild Horse Tour",
+            "tour_duration": "3 hours",
+            "tour_price": "$75/person",
+            "price_color": "#00A86B",
+            "tour_description": "Guided paddle to see the famous Shackleford Banks wild horses. Kayak, gear, and expert naturalist guide included. Small group (max 8).",
+            "show_button": true,
+            "button_text": "Book Tour",
+            "button_link": "tel:252-515-4866"
+          }
+        },
+        "sunset-paddle": {
+          "type": "tour",
+          "settings": {
+            "tour_icon": "🌅",
+            "tour_name": "Sunset Paddle",
+            "tour_duration": "2 hours",
+            "tour_price": "$55/person",
+            "price_color": "#FF6B35",
+            "tour_description": "Evening paddle through Bogue Sound. Watch the sunset from the water with local wildlife. Great for beginners.",
+            "show_button": true,
+            "button_text": "Book Tour",
+            "button_link": "tel:252-515-4866"
+          }
+        },
+        "fishing-charter": {
+          "type": "tour",
+          "settings": {
+            "tour_icon": "🎣",
+            "tour_name": "Fishing Charter",
+            "tour_duration": "4 hours",
+            "tour_price": "$150/person",
+            "price_color": "#0A4B78",
+            "tour_description": "Guided fishing trip with expert kayak anglers. Learn local techniques and hotspots. Fishing gear and rigged kayak included.",
+            "show_button": true,
+            "button_text": "Book Charter",
+            "button_link": "tel:252-515-4866"
+          }
+        }
+      },
+      "block_order": ["seniors", "coffee-kayak", "waterfront-tour", "sugarloaf", "wild-horse", "sunset-paddle", "fishing-charter", "custom-tours"],
       "settings": {
         "section_icon": "🚣",
         "section_title": "Guided Kayak Tours",

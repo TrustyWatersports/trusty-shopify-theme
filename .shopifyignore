@@ -1,0 +1,30 @@
+# Files protected from deletion during shopify theme pull
+# Add any locally-created or frequently-fixed files here
+
+# New section files
+sections/build-hero.liquid
+sections/build-form.liquid
+sections/packages-hero.liquid
+sections/packages-cta.liquid
+sections/rentals-pricing.liquid
+sections/sailboat-rentals.liquid
+# sections/program-detail.liquid
+# sections/photo-gallery.liquid
+# sections/local-expertise.liquid
+
+# Templates with custom links that Shopify admin doesn't know about
+# TEMPORARILY removed new templates for initial push - add back after
+# templates/page.seniors-on-the-sound.json
+# templates/page.coffee-and-kayak.json
+# templates/page.photo-gallery.json
+# templates/page.local-expertise.json
+templates/page.start-your-build.json
+templates/page.rigging-packages.json
+templates/page.custom-rigging.json
+templates/page.sailing.json
+templates/page.rentals.json
+templates/page.locations.json
+templates/page.programs.json
+templates/page.electronics.json
+templates/page.motorization.json
+templates/page.accessories.json

@@ -1,0 +1,83 @@
+{
+  "sections": {
+    "program-detail": {
+      "type": "program-detail",
+      "blocks": {
+        "tier-intro": {
+          "type": "tier",
+          "settings": {
+            "tier_icon": "🌊",
+            "tier_name": "Intro Paddle",
+            "tier_description": "First time on the water? Start here. Stable kayaks, calm waters, patient guides.",
+            "tier_price": "$55/person",
+            "tier_color": "#9C27B0",
+            "detail_1": "2 hours on Bogue Sound",
+            "detail_2": "All equipment provided",
+            "detail_3": "Assisted launch & landing",
+            "detail_4": "Small group (max 6)",
+            "detail_5": "",
+            "button_text": "Register Now",
+            "button_link": "tel:252-515-4866"
+          }
+        },
+        "tier-regular": {
+          "type": "tier",
+          "settings": {
+            "tier_icon": "🚣",
+            "tier_name": "Regular Program",
+            "tier_description": "Join our ongoing weekly sessions. Build skills and confidence on the water at a relaxed pace.",
+            "tier_price": "$45/session",
+            "tier_color": "#6A1B9A",
+            "detail_1": "Weekly Tuesday mornings",
+            "detail_2": "Progressive skill building",
+            "detail_3": "Social community of paddlers",
+            "detail_4": "Discount for 4-session package",
+            "detail_5": "",
+            "button_text": "Register Now",
+            "button_link": "tel:252-515-4866"
+          }
+        },
+        "tier-private": {
+          "type": "tier",
+          "settings": {
+            "tier_icon": "👨‍👩‍👦",
+            "tier_name": "Private or Family",
+            "tier_description": "Bring family members or book a private session designed for your pace and needs.",
+            "tier_price": "Call for Pricing",
+            "tier_color": "#9C27B0",
+            "detail_1": "Flexible scheduling",
+            "detail_2": "Family members welcome",
+            "detail_3": "1-on-1 instructor attention",
+            "detail_4": "Great gift for an active senior",
+            "detail_5": "",
+            "button_text": "Call to Book",
+            "button_link": "tel:252-515-4866"
+          }
+        }
+      },
+      "block_order": ["tier-intro", "tier-regular", "tier-private"],
+      "settings": {
+        "program_name": "Seniors on the Sound",
+        "hero_icon": "👴",
+        "program_tagline": "Gentle-paced paddling designed for active seniors on the beautiful waters of Bogue Sound",
+        "cta_text": "Reserve Your Spot",
+        "cta_link": "tel:252-515-4866",
+        "image_opacity": 70,
+        "overlay_opacity": 55,
+        "hero_color_start": "#9C27B0",
+        "hero_color_end": "#6A1B9A",
+        "overview": "Seniors on the Sound is our signature adaptive kayaking program built specifically for active adults 55 and older. Whether you have never paddled before or used to kayak years ago, we meet you exactly where you are. Small groups, patient guides, and kayaks designed for stability mean you can focus on enjoying the water.",
+        "tiers_heading": "Program Levels",
+        "tiers_subheading": "Choose the level that fits your experience and comfort. You can move between levels as you progress.",
+        "info_heading": "Participant Information",
+        "bottom_cta_heading": "Ready to Get on the Water?",
+        "bottom_cta_text": "Spots are limited to keep groups small and personal. Call our waterfront location to register.",
+        "bottom_primary_text": "(252) 515-4866",
+        "bottom_primary_link": "tel:252-515-4866",
+        "bottom_secondary_text": "View All Programs",
+        "bottom_secondary_link": "/pages/programs"
+      }
+    }
+  },
+  "order": ["program-detail"]
+}

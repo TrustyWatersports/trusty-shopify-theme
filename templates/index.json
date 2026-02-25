@@ -12,6 +12,13 @@
     "trusty_hero_78gxMM": {
       "type": "trusty-hero",
       "blocks": {
+        "video_slide_main": {
+          "type": "video_slide",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/1cc378b4d0d5443c8f4ef07105dd5c05.mp4",
+            "fallback_image": "shopify://shop_images/DSC01336_-_Large_4125405f-df95-4e9c-acf1-33342118b51f.png"
+          }
+        },
         "image_slide_jUUttQ": {
           "type": "image_slide",
           "settings": {
@@ -38,6 +45,7 @@
         }
       },
       "block_order": [
+        "video_slide_main",
         "image_slide_jUUttQ",
         "image_slide_tPrmNw",
         "image_slide_JBV6yC",
@@ -46,8 +54,8 @@
       "name": "Hero Section",
       "settings": {
         "hero_image": "shopify://shop_images/DSC01283_-_Large_5e96b3b9-3d0e-4de4-a92f-d8f062bf1f67.png",
-        "interval_ms": 5,
-        "overlay_opacity": 40,
+        "interval_ms": 30,
+        "overlay_opacity": 0,
         "badge_text": "⚡ Custom Rigging Experts",
         "heading_part1": "Tournament-Ready",
         "heading_part2": "Fishing Kayaks",
@@ -56,7 +64,9 @@
         "primary_button_text": "Browse Rigging Packages",
         "primary_button_link": "shopify://pages/rigging-packages",
         "secondary_button_text": "Build Custom Rig",
-        "secondary_button_link": ""
+        "secondary_button_link": "",
+        "tertiary_button_text": "Shop Kayaks",
+        "tertiary_button_link": ""
       }
     },
     "trusty_trustbar_QzbjeE": {

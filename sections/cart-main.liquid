@@ -1,0 +1,116 @@
+<div class="container" style="padding: 40px 20px; max-width: 1100px; margin: 0 auto;">
+  <h1 style="font-size: 36px; color: var(--ocean-deep); margin-bottom: 40px;">Your Cart</h1>
+
+  {% if cart.item_count == 0 %}
+    <div style="text-align: center; padding: 80px 20px;">
+      <div style="font-size: 64px; margin-bottom: 20px;">&#x1F6D2;</div>
+      <h2 style="font-size: 28px; color: var(--ocean-deep); margin-bottom: 15px;">Your cart is empty</h2>
+      <p style="color: var(--gray-medium); margin-bottom: 30px;">Browse our kayaks, sailboats, and rigging packages.</p>
+      <a href="/collections/all" style="display: inline-block; background: var(--rigging-accent); color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px;">Shop Now</a>
+    </div>
+
+  {% else %}
+    <div style="display: grid; grid-template-columns: 1fr 380px; gap: 40px; align-items: start;">
+
+      <!-- Cart Items -->
+      <div>
+        {% form 'cart', cart %}
+          {% for item in cart.items %}
+            <div style="display: grid; grid-template-columns: 100px 1fr auto; gap: 20px; align-items: start; padding: 24px 0; border-bottom: 1px solid var(--gray-light);">
+              
+              <!-- Image -->
+              <a href="{{ item.url }}">
+                {% if item.image %}
+                  <img src="{{ item.image | image_url: width: 200 }}" alt="{{ item.title }}" style="width: 100%; height: auto; border-radius: 8px; display: block;">
+                {% else %}
+                  <div style="width: 100px; height: 80px; background: var(--gray-light); border-radius: 8px;"></div>
+                {% endif %}
+              </a>
+
+              <!-- Details -->
+              <div>
+                <div style="font-size: 12px; color: var(--ocean-medium); font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">{{ item.vendor }}</div>
+                <a href="{{ item.url }}" style="text-decoration: none; color: var(--ocean-deep); font-size: 18px; font-weight: 600; line-height: 1.3; display: block; margin-bottom: 6px;">{{ item.product_title }}</a>
+                {% unless item.variant_title == 'Default Title' %}
+                  <div style="color: var(--gray-medium); font-size: 14px; margin-bottom: 12px;">{{ item.variant_title }}</div>
+                {% endunless %}
+                <div style="font-size: 20px; font-weight: 700; color: var(--text-dark); margin-bottom: 16px;">{{ item.final_line_price | money }}</div>
+
+                <!-- Quantity -->
+                <div style="display: flex; align-items: center; gap: 12px;">
+                  <label style="font-size: 13px; font-weight: 600; color: var(--text-dark);">Qty:</label>
+                  <div style="display: flex; align-items: center; border: 2px solid var(--gray-light); border-radius: 6px; overflow: hidden;">
+                    <button type="button" onclick="updateQty('{{ item.key }}', {{ item.quantity | minus: 1 }})" style="padding: 6px 12px; background: none; border: none; font-size: 18px; cursor: pointer; color: var(--ocean-deep);">-</button>
+                    <span style="padding: 6px 14px; font-weight: 600; min-width: 40px; text-align: center;">{{ item.quantity }}</span>
+                    <button type="button" onclick="updateQty('{{ item.key }}', {{ item.quantity | plus: 1 }})" style="padding: 6px 12px; background: none; border: none; font-size: 18px; cursor: pointer; color: var(--ocean-deep);">+</button>
+                  </div>
+                  <button type="button" onclick="updateQty('{{ item.key }}', 0)" style="background: none; border: none; color: var(--gray-medium); font-size: 13px; cursor: pointer; text-decoration: underline; padding: 0;">Remove</button>
+                </div>
+              </div>
+
+              <!-- Unit Price -->
+              <div style="text-align: right; font-size: 16px; color: var(--gray-medium);">
+                {{ item.price | money }} each
+              </div>
+            </div>
+          {% endfor %}
+        {% endform %}
+      </div>
+
+      <!-- Order Summary -->
+      <div style="background: var(--gray-light); border-radius: 12px; padding: 30px; position: sticky; top: 20px;">
+        <h2 style="font-size: 22px; color: var(--ocean-deep); margin-bottom: 24px;">Order Summary</h2>
+        
+        <div style="margin-bottom: 16px;">
+          {% for item in cart.items %}
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px; color: var(--gray-medium);">
+              <span>{{ item.product_title }}{% unless item.variant_title == 'Default Title' %} - {{ item.variant_title }}{% endunless %} &times; {{ item.quantity }}</span>
+              <span>{{ item.final_line_price | money }}</span>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div style="border-top: 2px solid #ddd; padding-top: 16px; margin-bottom: 24px;">
+          <div style="display: flex; justify-content: space-between; font-size: 20px; font-weight: 700; color: var(--text-dark);">
+            <span>Subtotal</span>
+            <span>{{ cart.total_price | money }}</span>
+          </div>
+          <div style="font-size: 13px; color: var(--gray-medium); margin-top: 6px;">Shipping calculated at checkout</div>
+        </div>
+
+        <a href="/checkout" style="display: block; background: var(--rigging-accent); color: white; text-align: center; padding: 16px; border-radius: 8px; font-size: 18px; font-weight: 700; text-decoration: none; margin-bottom: 12px;">
+          Proceed to Checkout &rarr;
+        </a>
+        <a href="/collections/all" style="display: block; text-align: center; color: var(--ocean-medium); font-size: 14px; text-decoration: none; font-weight: 600;">
+          &larr; Continue Shopping
+        </a>
+
+        <!-- Trust note -->
+        <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: var(--gray-medium); font-size: 13px; line-height: 1.8;">
+          &#x1F512; Secure checkout<br>
+          Questions? Call <a href="tel:252-499-9911" style="color: var(--ocean-medium); font-weight: 600;">(252) 499-9911</a>
+        </div>
+      </div>
+
+    </div>
+  {% endif %}
+</div>
+
+<script>
+function updateQty(key, qty) {
+  fetch('/cart/change.js', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ id: key, quantity: qty })
+  })
+  .then(() => location.reload());
+}
+</script>
+
+{% schema %}
+{
+  "name": "Cart",
+  "settings": [],
+  "presets": [{ "name": "Cart" }]
+}
+{% endschema %}

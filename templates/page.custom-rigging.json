@@ -53,7 +53,7 @@
         "primary_button_text": "Browse Rigging Packages",
         "primary_button_link": "shopify://pages/rigging-packages",
         "secondary_button_text": "Build Custom Rig",
-        "secondary_button_link": "mailto:trustywatersports@gmail.com"
+        "secondary_button_link": "/pages/start-your-build"
       }
     },
     "rigging_options_grid_nVb7Q4": {
@@ -62,28 +62,28 @@
         "option_YQ3cCh": {
           "type": "option",
           "settings": {
-            "title": "Bass Boat Style Electronics:",
-            "text": "Live imaging, wiring clean-up, transducer mounts, NMEA networks.",
+            "title": "Kayak Electronics Information",
+            "text": "Fish Finders, Lighting, Batteries and more.",
             "image": "shopify://shop_images/Knarrr_Jameson.jpg",
-            "link": "shopify://pages/rigging-packages"
+            "link": "/pages/electronics"
           }
         },
         "option_KXYF3H": {
           "type": "option",
           "settings": {
-            "title": "Pedal & Motor Setup:",
-            "text": "Trolling motors, mounts, wiring, lithium conversions",
+            "title": "Motorization",
+            "text": "Trolling motors, mounts, and more",
             "image": "shopify://shop_images/DSC_7135_-_Large_6c2547fb-4236-42a3-bce1-6783e8e24738.jpg",
-            "link": "shopify://pages/rigging-packages"
+            "link": "shopify://pages/motorization"
           }
         },
         "option_znKVWD": {
           "type": "option",
           "settings": {
-            "title": "Safety & Storage",
-            "text": "Lighting, power management, crate systems, gear tracks",
+            "title": "Accessories & Storage",
+            "text": "Boxes, rod holders, transport and storage",
             "image": "shopify://shop_images/9U8A8101.jpg",
-            "link": "shopify://pages/rigging-packages"
+            "link": "/pages/accessories"
           }
         }
       },
@@ -244,7 +244,7 @@
         "primary_btn_text": "Call Rigging",
         "primary_btn_link": "tel:252-499-9911",
         "secondary_btn_text": "Email Rigging",
-        "secondary_btn_link": "mailto:rigging@trustysailandpaddle.com"
+        "secondary_btn_link": "mailto:trustywatersports@gmail.com"
       }
     },
     "custom_rigging_faq_94i3Jj": {

@@ -1,0 +1,210 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "photo-gallery": {
+      "type": "photo-gallery",
+      "blocks": {
+        "photo_AgtaaW": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/421227804_359344436841057_4005973451293681101_n.jpg",
+            "caption": "",
+            "category": "Tours & Programs"
+          }
+        },
+        "photo_cQpLj9": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/421492458_359334483508719_2642684768504011978_n.jpg",
+            "caption": "",
+            "category": "Tours & Programs"
+          }
+        },
+        "photo_c3FaQD": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/DSC_0410.jpg",
+            "caption": "",
+            "category": "Tours & Programs"
+          }
+        },
+        "photo_fLzec6": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/676898CC-FF90-4183-BA99-2E8B65CDF9A5.jpg",
+            "caption": "",
+            "category": "Tours & Programs"
+          }
+        },
+        "photo_qiGr8m": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/IMG_3697_jpg.webp",
+            "caption": "",
+            "category": "Our Team"
+          }
+        },
+        "photo_mkN4r4": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/PXL_20250704_131935861_jpg.webp",
+            "caption": "",
+            "category": "Crystal Coast"
+          }
+        },
+        "photo_EGdhK8": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/Resized_IMG_20240524_135821_635_1716575254068_4cfdb997-c0e2-47c6-9938-7fb2a05a69c5.jpg",
+            "caption": "",
+            "category": "Kayak Fishing"
+          }
+        },
+        "photo_fcmqMc": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/486062448_639006558874842_1050716937668905815_n.jpg",
+            "caption": "",
+            "category": "Our Team"
+          }
+        },
+        "photo_4mkmfA": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/485303790_639006595541505_536331812623789752_n.jpg",
+            "caption": "",
+            "category": "Our Team"
+          }
+        },
+        "photo_xRR7kp": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/20240414_152704.jpg",
+            "caption": "",
+            "category": "Events"
+          }
+        },
+        "photo_hXbTwa": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/20240414_152916.jpg",
+            "caption": "",
+            "category": "Events"
+          }
+        },
+        "photo_Mzk8Wr": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/IMG_5178_2.jpg",
+            "caption": "",
+            "category": "Our Team"
+          }
+        },
+        "photo_ftBzXU": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/image3.jpg",
+            "caption": "",
+            "category": "Our Team"
+          }
+        },
+        "photo_TVbyMQ": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/381343883_293748236734011_3049335373102492869_n.jpg",
+            "caption": "",
+            "category": "Tours & Programs"
+          }
+        },
+        "photo_pkyUf6": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/449092719_452871654155001_2940091375722825863_n.jpg",
+            "caption": "",
+            "category": "Tours & Programs"
+          }
+        },
+        "photo_yrAtCB": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/IMG_5677.jpg",
+            "caption": "",
+            "category": "Sailing"
+          }
+        },
+        "photo_iJBYRi": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/DSC_0337.jpg",
+            "caption": "",
+            "category": "Sailing"
+          }
+        },
+        "photo_TgjzGj": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/Untitled-136.png",
+            "caption": "",
+            "category": "Sailing"
+          }
+        },
+        "photo_xeQktn": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/DSC_3671_-_Medium_03e57d28-db8f-49d6-a539-88937054933c.jpg",
+            "caption": "",
+            "category": "Kayak Fishing"
+          }
+        },
+        "photo_4XLTqk": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/DJI_0010.jpg",
+            "caption": "",
+            "category": "Crystal Coast"
+          }
+        }
+      },
+      "block_order": [
+        "photo_AgtaaW",
+        "photo_cQpLj9",
+        "photo_c3FaQD",
+        "photo_fLzec6",
+        "photo_qiGr8m",
+        "photo_mkN4r4",
+        "photo_EGdhK8",
+        "photo_fcmqMc",
+        "photo_4mkmfA",
+        "photo_xRR7kp",
+        "photo_hXbTwa",
+        "photo_Mzk8Wr",
+        "photo_ftBzXU",
+        "photo_TVbyMQ",
+        "photo_pkyUf6",
+        "photo_yrAtCB",
+        "photo_iJBYRi",
+        "photo_TgjzGj",
+        "photo_xeQktn",
+        "photo_4XLTqk"
+      ],
+      "settings": {
+        "gallery_icon": "📷",
+        "gallery_title": "Photo Gallery",
+        "gallery_subtitle": "Life on the Crystal Coast - kayaking, sailing, tournaments, and everything in between",
+        "columns": 3,
+        "show_filters": true
+      }
+    }
+  },
+  "order": [
+    "photo-gallery"
+  ]
+}

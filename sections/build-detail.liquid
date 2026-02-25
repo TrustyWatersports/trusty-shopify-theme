@@ -1,0 +1,114 @@
+<section style="padding: 60px 20px; background: white;">
+  <div style="max-width: 900px; margin: 0 auto;">
+
+    <a href="/pages/custom-rigging" style="display: inline-flex; align-items: center; gap: 8px; color: var(--ocean-medium); text-decoration: none; font-weight: 600; font-size: 15px; margin-bottom: 40px;">&larr; Back to Custom Rigging</a>
+
+    {% if section.settings.hero_image %}
+      <div style="border-radius: 16px; overflow: hidden; margin-bottom: 40px; aspect-ratio: 16/9;">
+        {{ section.settings.hero_image | image_url: width: 1200 | image_tag: loading: 'eager', style: 'width:100%; height:100%; object-fit:cover; display:block;' }}
+      </div>
+    {% endif %}
+
+    <div style="margin-bottom: 40px;">
+      {% if section.settings.badge != blank %}
+        <div style="display: inline-block; background: var(--rigging-accent); color: white; padding: 4px 14px; border-radius: 20px; font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 16px;">{{ section.settings.badge }}</div>
+      {% endif %}
+      <h1 style="font-size: 42px; font-weight: 900; color: var(--ocean-deep); margin-bottom: 12px; line-height: 1.1;">{{ section.settings.build_title }}</h1>
+      {% if section.settings.customer_info != blank %}
+        <p style="font-size: 16px; color: var(--gray-medium);">{{ section.settings.customer_info }}</p>
+      {% endif %}
+    </div>
+
+    {% if section.settings.build_description != blank %}
+      <div style="font-size: 17px; line-height: 1.8; color: #444; margin-bottom: 50px;">
+        {{ section.settings.build_description }}
+      </div>
+    {% endif %}
+
+    {% assign has_components = false %}
+    {% for block in section.blocks %}
+      {% if block.type == 'component' %}{% assign has_components = true %}{% endif %}
+    {% endfor %}
+
+    {% if has_components %}
+      <div style="background: #F5F7FA; border-radius: 12px; padding: 36px; margin-bottom: 50px;">
+        <h3 style="font-size: 24px; font-weight: 800; color: var(--ocean-deep); margin-bottom: 24px;">What's On This Build</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+          {% for block in section.blocks %}
+            {% if block.type == 'component' %}
+              <div {{ block.shopify_attributes }} style="background: white; border-radius: 8px; padding: 16px 20px; display: flex; align-items: flex-start; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                <div style="font-size: 24px; flex-shrink: 0;">{{ block.settings.icon }}</div>
+                <div>
+                  <div style="font-weight: 700; color: var(--ocean-deep); font-size: 15px;">{{ block.settings.name }}</div>
+                  {% if block.settings.detail != blank %}
+                    <div style="font-size: 13px; color: var(--gray-medium); margin-top: 2px;">{{ block.settings.detail }}</div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% assign has_photos = false %}
+    {% for block in section.blocks %}
+      {% if block.type == 'photo' %}{% assign has_photos = true %}{% endif %}
+    {% endfor %}
+
+    {% if has_photos %}
+      <h3 style="font-size: 24px; font-weight: 800; color: var(--ocean-deep); margin-bottom: 24px;">Build Photos</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 50px;">
+        {% for block in section.blocks %}
+          {% if block.type == 'photo' %}
+            <div {{ block.shopify_attributes }} style="border-radius: 10px; overflow: hidden; aspect-ratio: 4/3;">
+              {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', style: 'width:100%; height:100%; object-fit:cover; display:block;' }}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div style="background: linear-gradient(135deg, var(--ocean-deep), var(--ocean-medium)); color: white; border-radius: 16px; padding: 48px; text-align: center;">
+      <h3 style="font-size: 28px; font-weight: 800; margin-bottom: 12px;">Want a Build Like This?</h3>
+      <p style="font-size: 17px; opacity: 0.9; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto;">We'll spec it out around your fishing style and budget. Every build is custom.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="tel:252-499-9911" style="display: inline-block; background: var(--rigging-accent); color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 16px;">Call (252) 499-9911</a>
+        <a href="/pages/start-your-build" style="display: inline-block; background: white; color: var(--ocean-deep); padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 16px;">Start Your Build</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Build Detail",
+  "settings": [
+    { "type": "image_picker", "id": "hero_image", "label": "Hero image" },
+    { "type": "text", "id": "badge", "label": "Badge (e.g. TOURNAMENT BUILD)", "default": "CUSTOM BUILD" },
+    { "type": "text", "id": "build_title", "label": "Build title", "default": "Hobie Pro Angler Tournament Rig" },
+    { "type": "text", "id": "customer_info", "label": "Customer info", "default": "Built for a customer" },
+    { "type": "richtext", "id": "build_description", "label": "Full build description" }
+  ],
+  "blocks": [
+    {
+      "type": "component",
+      "name": "Component",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Icon", "default": "🔧" },
+        { "type": "text", "id": "name", "label": "Component name", "default": "Garmin Echomap Ultra 106sv" },
+        { "type": "text", "id": "detail", "label": "Detail (optional)", "default": "Transducer included" }
+      ]
+    },
+    {
+      "type": "photo",
+      "name": "Photo",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Photo" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Build Detail" }]
+}
+{% endschema %}
