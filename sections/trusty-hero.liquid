@@ -13,7 +13,6 @@
                 loop
                 playsinline
                 class="trusty-hero__video"
-                poster="{% if block.settings.fallback_image != blank %}{{ block.settings.fallback_image | image_url: width: 1600 }}{% endif %}"
               >
                 <source src="{{ block.settings.video_url }}" type="video/mp4">
               </video>

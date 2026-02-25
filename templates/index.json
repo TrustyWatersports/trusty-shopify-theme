@@ -9,6 +9,11 @@
  */
 {
   "sections": {
+    "collection_products_WHzEmR": {
+      "type": "collection-products",
+      "name": "Collection Products",
+      "settings": {}
+    },
     "trusty_hero_78gxMM": {
       "type": "trusty-hero",
       "blocks": {
@@ -18,42 +23,13 @@
             "video_url": "https://cdn.shopify.com/videos/c/o/v/1cc378b4d0d5443c8f4ef07105dd5c05.mp4",
             "fallback_image": "shopify://shop_images/DSC01336_-_Large_4125405f-df95-4e9c-acf1-33342118b51f.png"
           }
-        },
-        "image_slide_jUUttQ": {
-          "type": "image_slide",
-          "settings": {
-            "slide_image": "shopify://shop_images/DSC01336_-_Large_4125405f-df95-4e9c-acf1-33342118b51f.png"
-          }
-        },
-        "image_slide_tPrmNw": {
-          "type": "image_slide",
-          "settings": {
-            "slide_image": "shopify://shop_images/Knarr_Will.jpg"
-          }
-        },
-        "image_slide_JBV6yC": {
-          "type": "image_slide",
-          "settings": {
-            "slide_image": "shopify://shop_images/DSC01283_-_Large_5e96b3b9-3d0e-4de4-a92f-d8f062bf1f67.png"
-          }
-        },
-        "image_slide_zahd6z": {
-          "type": "image_slide",
-          "settings": {
-            "slide_image": "shopify://shop_images/6__1728_-_Large_5131436a-c383-4b4b-b658-88474cdd526c.jpg"
-          }
         }
       },
       "block_order": [
-        "video_slide_main",
-        "image_slide_jUUttQ",
-        "image_slide_tPrmNw",
-        "image_slide_JBV6yC",
-        "image_slide_zahd6z"
+        "video_slide_main"
       ],
       "name": "Hero Section",
       "settings": {
-        "hero_image": "shopify://shop_images/DSC01283_-_Large_5e96b3b9-3d0e-4de4-a92f-d8f062bf1f67.png",
         "interval_ms": 30,
         "overlay_opacity": 0,
         "badge_text": "⚡ Custom Rigging Experts",
@@ -64,9 +40,9 @@
         "primary_button_text": "Browse Rigging Packages",
         "primary_button_link": "shopify://pages/rigging-packages",
         "secondary_button_text": "Build Custom Rig",
-        "secondary_button_link": "",
+        "secondary_button_link": "shopify://pages/custom-rigging",
         "tertiary_button_text": "Shop Kayaks",
-        "tertiary_button_link": ""
+        "tertiary_button_link": "shopify://collections/pedal-kayaks"
       }
     },
     "trusty_trustbar_QzbjeE": {
@@ -192,9 +168,9 @@
         "heading": "Official Topper & Topaz Sailboat Distributor",
         "description": "We're proud to be the United States distributor for Topper and Topaz sailboats - the UK's finest small sailing dinghies and catamarans. Perfect for beginners, families, and sailing programs.",
         "primary_button_text": "Explore Sailboats",
-        "primary_button_link": "",
+        "primary_button_link": "shopify://pages/sailing",
         "secondary_button_text": "Sailing Lessons",
-        "secondary_button_link": ""
+        "secondary_button_link": "shopify://pages/programs"
       }
     },
     "trusty_why_trusty_TU4aTV": {
@@ -247,6 +223,7 @@
     }
   },
   "order": [
+    "collection_products_WHzEmR",
     "trusty_hero_78gxMM",
     "trusty_trustbar_QzbjeE",
     "trusty_pathways_CPfqNk",

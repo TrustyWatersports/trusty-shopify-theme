@@ -1,3 +1,4 @@
+{% if collection != blank %}
 {% paginate collection.products by 24 %}
 
 <div class="container" style="padding: 40px 20px;">
@@ -18,7 +19,7 @@
     <!-- Sort -->
     <div style="flex: 1; min-width: 180px;">
       <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 13px; color: var(--text-dark);">Sort By</label>
-      <select id="sort-select" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: white; font-size: 14px;" onchange="applyFilters()">
+      <select id="sort-select" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: white; font-size: 14px;" onchange="applySort()">
         <option value="manual" {% if collection.sort_by == 'manual' or collection.sort_by == blank %}selected{% endif %}>Featured</option>
         <option value="price-ascending" {% if collection.sort_by == 'price-ascending' %}selected{% endif %}>Price: Low to High</option>
         <option value="price-descending" {% if collection.sort_by == 'price-descending' %}selected{% endif %}>Price: High to Low</option>
@@ -28,7 +29,7 @@
     </div>
 
     <!-- Filter by Vendor -->
-    {% assign vendors = collection.products | map: 'vendor' | uniq | sort %}
+    {% assign vendors = collection.all_products | map: 'vendor' | uniq | sort %}
     {% if vendors.size > 1 %}
       <div style="flex: 1; min-width: 180px;">
         <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 13px; color: var(--text-dark);">Brand</label>
@@ -36,6 +37,22 @@
           <option value="">All Brands</option>
           {% for vendor in vendors %}
             <option value="{{ vendor }}">{{ vendor }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    {% endif %}
+
+    <!-- Filter by Product Type -->
+    {% assign types = collection.all_products | map: 'type' | uniq | sort %}
+    {% if types.size > 1 %}
+      <div style="flex: 1; min-width: 180px;">
+        <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 13px; color: var(--text-dark);">Type</label>
+        <select id="type-filter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: white; font-size: 14px;" onchange="filterProducts()">
+          <option value="">All Types</option>
+          {% for type in types %}
+            {% if type != blank %}
+              <option value="{{ type }}">{{ type }}</option>
+            {% endif %}
           {% endfor %}
         </select>
       </div>
@@ -69,6 +86,7 @@
       <div class="product-card"
            data-vendor="{{ product.vendor }}"
            data-available="{{ product.available }}"
+           data-type="{{ product.type }}"
            style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; position: relative;">
         
         <!-- Availability Badge -->
@@ -171,8 +189,7 @@
     });
   });
 
-  function applyFilters() {
-    // Sort navigates the page via URL
+  function applySort() {
     var sort = document.getElementById('sort-select').value;
     var url = new URL(window.location.href);
     url.searchParams.set('sort_by', sort);
@@ -181,22 +198,18 @@
 
   function filterProducts() {
     var vendor = document.getElementById('vendor-filter') ? document.getElementById('vendor-filter').value.toLowerCase() : '';
-    var availability = document.getElementById('availability-filter').value;
+    var type = document.getElementById('type-filter') ? document.getElementById('type-filter').value.toLowerCase() : '';
+    var availability = document.getElementById('availability-filter') ? document.getElementById('availability-filter').value : '';
     var cards = document.querySelectorAll('.product-card');
     var visible = 0;
-
     cards.forEach(function(card) {
-      var cardVendor = (card.getAttribute('data-vendor') || '').toLowerCase();
-      var cardAvailable = card.getAttribute('data-available');
       var show = true;
-
-      if (vendor && cardVendor !== vendor) show = false;
-      if (availability === 'in-stock' && cardAvailable !== 'true') show = false;
-
+      if (vendor && (card.getAttribute('data-vendor') || '').toLowerCase() !== vendor) show = false;
+      if (type && (card.getAttribute('data-type') || '').toLowerCase() !== type) show = false;
+      if (availability === 'in-stock' && card.getAttribute('data-available') !== 'true') show = false;
       card.style.display = show ? '' : 'none';
       if (show) visible++;
     });
-
     document.getElementById('visible-count').textContent = visible;
     document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
     document.getElementById('products-grid').style.display = visible === 0 ? 'none' : 'grid';
@@ -204,14 +217,17 @@
 
   function clearFilters() {
     var vendorEl = document.getElementById('vendor-filter');
+    var typeEl = document.getElementById('type-filter');
     var availEl = document.getElementById('availability-filter');
     if (vendorEl) vendorEl.value = '';
+    if (typeEl) typeEl.value = '';
     if (availEl) availEl.value = '';
     filterProducts();
   }
 </script>
 
 {% endpaginate %}
+{% endif %}
 
 {% schema %}
 {
