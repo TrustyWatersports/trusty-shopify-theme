@@ -1,0 +1,25 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-build-detail": {
+      "type": "build-detail",
+      "settings": {
+        "badge": "Pro Rig Build",
+        "build_title": "Bonafide PWR129 Pro Rig",
+        "customer_info": "",
+        "build_description": "<p>Humminbird HELIX 10, Nocqua 20ah battery, rod holders, anchor spike, Torqeedo motor with wizard foot control. Ready for redfish and speckled trout.</p>"
+      }
+    }
+  },
+  "order": [
+    "main-build-detail"
+  ]
+}

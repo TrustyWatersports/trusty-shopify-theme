@@ -1,0 +1,25 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-build-detail": {
+      "type": "build-detail",
+      "settings": {
+        "badge": "Tournament Build",
+        "build_title": "Old Town Sportsman Elite Build",
+        "customer_info": "",
+        "build_description": "<p>Full tournament setup with 360 imaging, premium lighting, measuring board. Competition ready.</p>"
+      }
+    }
+  },
+  "order": [
+    "main-build-detail"
+  ]
+}

@@ -1,0 +1,40 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-build-detail": {
+      "type": "build-detail",
+      "blocks": {
+        "photo_7hiDnG": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6535.jpg" } },
+        "photo_AkkBJX": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6534.jpg" } },
+        "photo_eL7t3i": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6543.jpg" } },
+        "photo_Fn6jK6": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6529.jpg" } },
+        "photo_iCDb8W": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6519.jpg" } },
+        "photo_yMQ8f3": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6520.jpg" } },
+        "photo_PeKx6V": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6523.jpg" } },
+        "photo_K3XA94": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6524.jpg" } },
+        "photo_YFUU4N": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6530.jpg" } },
+        "photo_q7wCtR": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6526.jpg" } },
+        "photo_mVkegJ": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6533.jpg" } },
+        "photo_7AfwW4": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6531.jpg" } },
+        "photo_Vjwwzy": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6532.jpg" } },
+        "photo1": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6518.jpg" } }
+      },
+      "block_order": ["photo_7hiDnG","photo_AkkBJX","photo_eL7t3i","photo_Fn6jK6","photo_iCDb8W","photo_yMQ8f3","photo_PeKx6V","photo_K3XA94","photo_YFUU4N","photo_q7wCtR","photo_mVkegJ","photo_7AfwW4","photo_Vjwwzy","photo1"],
+      "settings": {
+        "badge": "Tournament Build",
+        "build_title": "Bonafide XTR Show Package",
+        "customer_info": "Built to showcase our technology",
+        "build_description": "<p>XTR ULTIMATE FISHING PACKAGE</p>"
+      }
+    }
+  },
+  "order": ["main-build-detail"]
+}
