@@ -88,6 +88,24 @@
         <p style="text-align: center; margin-top: 12px; font-size: 12px; color: var(--gray-medium);">
           Can't find a time? Call <a href="tel:252-499-9911" style="color: var(--ocean-medium);">(252) 499-9911</a>
         </p>
+
+        <!-- Add to Cart - hidden until Calendly booking complete -->
+        {% form 'product', product %}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          <input type="hidden" name="quantity" value="1">
+          <div id="book-first-msg" style="margin-top: 16px; padding: 14px; background: white; border-radius: 8px; text-align: center; color: var(--ocean-deep); font-weight: 600; font-size: 15px; border: 2px dashed var(--gray-medium);">
+            &#x1F4C5; Select your date above to unlock checkout
+          </div>
+          <div id="add-to-cart-wrapper" style="display: none; margin-top: 16px; flex-direction: column; gap: 10px;">
+            <div style="padding: 12px; background: #e8f5e9; border-radius: 8px; text-align: center; color: var(--rigging-accent); font-weight: 600; font-size: 14px;">
+              &#x2713; Date selected! Complete your payment below.
+            </div>
+            <button type="submit" name="add" style="width: 100%; font-size: 18px; padding: 16px; cursor: pointer; background: var(--rigging-accent); color: white; border: none; border-radius: 8px; font-weight: 700;">
+              Complete Booking &amp; Pay
+            </button>
+          </div>
+        {% endform %}
+
       </div>
     </div>
 
@@ -100,3 +118,27 @@
     .service-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
   }
 </style>
+<script>
+  function showCheckout() {
+    var bookMsg = document.getElementById('book-first-msg');
+    var cartWrapper = document.getElementById('add-to-cart-wrapper');
+    if (bookMsg) bookMsg.style.display = 'none';
+    if (cartWrapper) {
+      cartWrapper.style.display = 'flex';
+      cartWrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  // Triggered when Calendly booking is completed
+  window.addEventListener('message', function(e) {
+    if (e.data.event && e.data.event === 'calendly.event_scheduled') {
+      showCheckout();
+    }
+  });
+
+  // Show checkout if returned from Calendly redirect (detects Calendly UTM params)
+  if (window.location.search.indexOf('event_type_uuid') !== -1 || 
+      window.location.search.indexOf('booked=true') !== -1) {
+    showCheckout();
+  }
+</script>

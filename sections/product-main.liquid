@@ -79,11 +79,25 @@
           <input type="number" name="quantity" value="1" min="1" style="width: 100px; padding: 12px; border: 2px solid var(--gray-light); border-radius: 8px; font-size: 16px; text-align: center;">
         </div>
 
-        <div style="display: flex; gap: 15px; margin-bottom: 30px; flex-wrap: wrap;">
-          <button type="submit" name="add" style="flex: 1; min-width: 200px; font-size: 18px; padding: 16px; cursor: pointer; background: var(--rigging-accent); color: white; border: none; border-radius: 8px; font-weight: 700;" {% unless product.available %}disabled{% endunless %}>
-            {% if product.available %}Add to Cart{% else %}Out of Stock{% endif %}
-          </button>
-          <a href="/cart" style="display: flex; align-items: center; justify-content: center; padding: 16px 24px; background: var(--ocean-deep); color: white; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px; white-space: nowrap;">View Cart</a>
+        {% assign has_calendly = product.metafields.custom.calendly_url %}
+        <div id="checkout-section" style="display: flex; gap: 15px; margin-bottom: 30px; flex-wrap: wrap;">
+          {% if has_calendly %}
+            <!-- Show Add to Cart only after Calendly booking -->
+            <div id="book-first-msg" style="width: 100%; padding: 16px; background: var(--gray-light); border-radius: 8px; text-align: center; color: var(--ocean-deep); font-weight: 600; font-size: 16px;">
+              📅 Select your date below, then complete payment here
+            </div>
+            <div id="add-to-cart-wrapper" style="display: none; width: 100%; gap: 15px; display: none;">
+              <button type="submit" name="add" style="flex: 1; min-width: 200px; font-size: 18px; padding: 16px; cursor: pointer; background: var(--rigging-accent); color: white; border: none; border-radius: 8px; font-weight: 700;">
+                ✓ Date Selected — Add to Cart
+              </button>
+              <a href="/cart" style="display: flex; align-items: center; justify-content: center; padding: 16px 24px; background: var(--ocean-deep); color: white; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px; white-space: nowrap;">View Cart</a>
+            </div>
+          {% else %}
+            <button type="submit" name="add" style="flex: 1; min-width: 200px; font-size: 18px; padding: 16px; cursor: pointer; background: var(--rigging-accent); color: white; border: none; border-radius: 8px; font-weight: 700;" {% unless product.available %}disabled{% endunless %}>
+              {% if product.available %}Add to Cart{% else %}Out of Stock{% endif %}
+            </button>
+            <a href="/cart" style="display: flex; align-items: center; justify-content: center; padding: 16px 24px; background: var(--ocean-deep); color: white; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px; white-space: nowrap;">View Cart</a>
+          {% endif %}
         </div>
       {% endform %}
 
@@ -130,4 +144,27 @@
     var price = select.options[select.selectedIndex].getAttribute('data-price');
     if (price) document.getElementById('product-price').textContent = price;
   }
+
+  // Show Add to Cart after Calendly booking is complete
+  function showCheckout() {
+    var bookMsg = document.getElementById('book-first-msg');
+    var cartWrapper = document.getElementById('add-to-cart-wrapper');
+    if (bookMsg) bookMsg.style.display = 'none';
+    if (cartWrapper) {
+      cartWrapper.style.display = 'flex';
+      cartWrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  // Check if redirected back from Calendly with ?booked=true
+  if (window.location.search.indexOf('booked=true') !== -1) {
+    showCheckout();
+  }
+
+  // Listen for Calendly event completion
+  window.addEventListener('message', function(e) {
+    if (e.data.event && e.data.event === 'calendly.event_scheduled') {
+      showCheckout();
+    }
+  });
 </script>

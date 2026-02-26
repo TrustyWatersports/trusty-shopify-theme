@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "product-main": {
+      "type": "product-main",
+      "settings": {}
+    },
+    "calendly-booking": {
+      "type": "calendly-booking",
+      "settings": {
+        "heading": "Check Availability & Book Your Date",
+        "subtext": "Pick your date first — you'll complete payment after selecting your time slot."
+      }
+    }
+  },
+  "order": ["product-main", "calendly-booking"]
+}
