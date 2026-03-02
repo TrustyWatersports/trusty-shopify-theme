@@ -21,12 +21,20 @@
               <p class="cr-package__desc">{{ block.settings.desc | escape }}</p>
             {% endif %}
 
-            {% if block.settings.cta_text != blank %}
-              <a class="cr-package__cta"
-                 href="{{ block.settings.cta_link | default: '/pages/custom-rigging' }}">
-                {{ block.settings.cta_text | escape }}
-              </a>
-            {% endif %}
+            <div class="cr-package__actions">
+              {% if block.settings.cta_text != blank %}
+                <a class="cr-package__cta cr-package__cta--secondary"
+                   href="{{ block.settings.cta_link | default: '/pages/custom-rigging' }}">
+                  {{ block.settings.cta_text | escape }}
+                </a>
+              {% endif %}
+              {% if block.settings.shop_text != blank and block.settings.shop_link != blank %}
+                <a class="cr-package__cta cr-package__cta--primary"
+                   href="{{ block.settings.shop_link }}">
+                  {{ block.settings.shop_text | escape }}
+                </a>
+              {% endif %}
+            </div>
           </div>
         </div>
       {% endfor %}
@@ -56,7 +64,10 @@
   .cr-package__body { padding: 16px; }
   .cr-package__title { margin: 0 0 6px; }
   .cr-package__desc { margin: 0 0 12px; opacity: .85; }
-  .cr-package__cta { display:inline-block; padding: 10px 14px; border-radius: 10px; background:#0aa86b; color:#fff; text-decoration:none; font-weight:700; }
+  .cr-package__actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .cr-package__cta { display:inline-block; padding: 10px 14px; border-radius: 10px; text-decoration:none; font-weight:700; }
+  .cr-package__cta--primary { background:#0aa86b; color:#fff; }
+  .cr-package__cta--secondary { background: transparent; color:#0aa86b; border: 2px solid #0aa86b; }
   .cr-packages__custom { margin-top: 26px; text-align:center; padding: 18px; border-radius: 14px; background: rgba(10,168,107,.08); }
   .cr-packages__customlink { font-weight: 800; text-decoration:none; }
 </style>
@@ -80,8 +91,10 @@
         { "type": "image_picker", "id": "image", "label": "Image" },
         { "type": "text", "id": "title", "label": "Title", "default": "Tournament Ready" },
         { "type": "text", "id": "desc", "label": "Description", "default": "Electronics, power, storage, and install." },
-        { "type": "text", "id": "cta_text", "label": "CTA text", "default": "Learn more" },
-        { "type": "text", "id": "cta_link", "label": "Learn more link (any URL)", "default": "/pages/custom-rigging" }
+        { "type": "text", "id": "cta_text", "label": "Learn more button text", "default": "Learn more" },
+        { "type": "text", "id": "cta_link", "label": "Learn more link (any URL)", "default": "/pages/custom-rigging" },
+        { "type": "text", "id": "shop_text", "label": "Shop button text", "default": "Shop Now" },
+        { "type": "url", "id": "shop_link", "label": "Shop link (product or collection)" }
       ]
     }
   ],
