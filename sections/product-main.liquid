@@ -107,15 +107,15 @@
         <a href="/pages/start-your-build?kayak={{ product.handle }}" style="display: inline-block; background: white; color: var(--rigging-accent); font-weight: 700; padding: 12px 24px; border-radius: 6px; text-decoration: none;">Configure Your Custom Rig &rarr;</a>
       </div>
 
-      <div style="margin-bottom: 30px;">
-        <h3 style="font-size: 20px; margin-bottom: 15px; color: var(--ocean-deep);">Key Features:</h3>
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light); display: flex; gap: 10px;"><span style="color: var(--rigging-accent);">&#10003;</span><span>Stable fishing platform with ample deck space</span></li>
-          <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light); display: flex; gap: 10px;"><span style="color: var(--rigging-accent);">&#10003;</span><span>Multiple rod holder positions available</span></li>
-          <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light); display: flex; gap: 10px;"><span style="color: var(--rigging-accent);">&#10003;</span><span>Comfortable seating for all-day fishing</span></li>
-          <li style="padding: 10px 0; display: flex; gap: 10px;"><span style="color: var(--rigging-accent);">&#10003;</span><span>Easy to transport and launch</span></li>
-        </ul>
-      </div>
+      {% assign desc_html = product.description %}
+      {% if desc_html contains '<li' %}
+        <div style="margin-bottom: 30px;">
+          <h3 style="font-size: 20px; margin-bottom: 15px; color: var(--ocean-deep);">Key Features:</h3>
+          <ul style="list-style: none; padding: 0; margin: 0;" class="product-key-features">
+            {{ desc_html | split: '<li' | shift | join: '<li' | prepend: '<ul>' | append: '</ul>' | split: '<ul>' | last | split: '</ul>' | first | split: '<li>' | shift | join: '<li>' }}
+          </ul>
+        </div>
+      {% endif %}
 
       <div style="display: flex; gap: 20px; flex-wrap: wrap; padding: 20px; background: var(--gray-light); border-radius: 8px; text-align: center;">
         <div style="flex: 1; min-width: 100px;"><div style="font-size: 24px; margin-bottom: 5px;">&#x1F3AF;</div><div style="font-size: 13px; font-weight: 600;">Expert Rigging</div><div style="font-size: 11px; color: var(--gray-medium);">Crystal Coast pros</div></div>
@@ -137,6 +137,20 @@
 <style>
   @media (max-width: 768px) {
     .product-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
+  }
+  .product-key-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-light);
+    display: flex;
+    gap: 10px;
+    list-style: none;
+  }
+  .product-key-features li:last-child { border-bottom: none; }
+  .product-key-features li::before {
+    content: '✓';
+    color: var(--rigging-accent);
+    font-weight: 700;
+    flex-shrink: 0;
   }
 </style>
 <script>
