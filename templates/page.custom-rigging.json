@@ -221,7 +221,7 @@
         "build_GFGgHX": {
           "type": "build",
           "settings": {
-            "image": "shopify://shop_images/6__2061_-_Large_741e17ea-7138-4f89-9806-7e43e56e8cef.jpg",
+            "image": "shopify://shop_images/IMG_6534.jpg",
             "icon": "🐟",
             "gradient": "linear-gradient(135deg, var(--rigging-accent), #00C77F)",
             "title": "Bonafide PWR129 Powered Up!",
