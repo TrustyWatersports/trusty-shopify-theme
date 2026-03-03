@@ -53,6 +53,7 @@
         "slide-3": {
           "type": "slide",
           "settings": {
+            "slide_image": "shopify://shop_images/IMG_3489.jpg",
             "show_badge": true,
             "badge_text": "RACE READY",
             "badge_color": "#ff6b35",
@@ -76,7 +77,7 @@
       ],
       "settings": {
         "autoplay": true,
-        "autoplay_speed": 5,
+        "autoplay_speed": 4,
         "show_arrows": true,
         "show_indicators": true
       }
