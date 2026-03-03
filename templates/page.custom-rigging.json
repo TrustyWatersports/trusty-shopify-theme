@@ -156,11 +156,11 @@
         "package_hgGhQF": {
           "type": "package",
           "settings": {
-            "image": "shopify://shop_images/DSC_0258_-_Large_c5233571-01c8-4cd2-a329-40abe57ecf77.jpg",
-            "title": "Tournament Ready",
-            "desc": "Electronics, power, storage, and install.",
+            "image": "shopify://shop_images/Screenshot_2026-03-02_084915.png",
+            "title": "Basic Motor Package",
+            "desc": "45lb thrust Minn Kota motor, cut down to fit your boat. Bracket, box, lithium battery and tiller extension. Only what you need to get motored up!",
             "cta_text": "Learn more",
-            "cta_link": "/pages/custom-rigging",
+            "cta_link": "/pages/rigging-packages",
             "shop_text": "Shop Now",
             "shop_link": ""
           }
