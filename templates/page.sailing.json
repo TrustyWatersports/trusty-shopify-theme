@@ -96,7 +96,7 @@
         "content_text": "<p>Topper and Topaz sailboats represent the pinnacle of small boat design from the United Kingdom. With over 50 years of innovation, these boats are trusted by sailing schools, racing programs, and recreational sailors worldwide.</p><p>Perfect for beginners learning to sail, experienced racers competing in one-design classes, and families enjoying weekend adventures on the water.</p><p>At Trusty Sail &amp; Paddle, we're proud to be the official US distributor, bringing these exceptional boats to American waters and supporting the Crystal Coast sailing community.</p>",
         "show_button": true,
         "button_text": "Shop Sailboats",
-        "button_link": "/collections/sailboats",
+        "button_link": "shopify://collections/sailboats-1",
         "button_color": "#d32f2f",
         "show_stats": true,
         "stat1_number": "35+",
@@ -202,12 +202,12 @@
         "show_pattern": true,
         "show_primary_button": true,
         "primary_text": "Shop All Sailboats",
-        "primary_link": "/collections/sailboats",
+        "primary_link": "shopify://collections/sailboats-1",
         "primary_button_color": "#ffffff",
         "primary_text_color": "#d32f2f",
         "show_secondary_button": true,
         "secondary_text": "Book Sailing Lessons",
-        "secondary_link": "/pages/programs",
+        "secondary_link": "shopify://pages/programs-events",
         "show_extra_info": true,
         "extra_info": "📞 Call us: (252) 499-9911 | 🏪 Visit: 5300 HWY 70W, Morehead City, NC"
       }
