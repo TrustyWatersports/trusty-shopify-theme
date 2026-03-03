@@ -12,6 +12,12 @@
     "rigging_hero_carousel_wkJKeQ": {
       "type": "rigging-hero-carousel",
       "blocks": {
+        "slide_wBaJMr": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/DSC_7135_-_Large_6c2547fb-4236-42a3-bce1-6783e8e24738.jpg"
+          }
+        },
         "slide_FhGygc": {
           "type": "slide",
           "settings": {
@@ -21,21 +27,24 @@
         "slide_GXLARj": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/DSC00372_-_Large_c7b32b22-f34e-4861-9a9a-de6cfe7e104f.png"
+            "image": "shopify://shop_images/Knarr_Lifestyle_2.jpg"
           }
         },
         "slide_gxdeei": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/BSB-Angler-Forest-4.png"
+            "image": "shopify://shop_images/DSC_0262_-_Large_f1acdc3b-f6af-411a-ac6c-3cdc98a48f02.jpg"
           }
         },
         "slide_JazQWw": {
           "type": "slide",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/DSC_0721_-_Large_5953a9cc-ed29-4e26-8344-f69de096eb17.jpg"
+          }
         }
       },
       "block_order": [
+        "slide_wBaJMr",
         "slide_FhGygc",
         "slide_GXLARj",
         "slide_gxdeei",
