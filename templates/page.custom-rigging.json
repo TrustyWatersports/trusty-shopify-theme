@@ -232,12 +232,12 @@
         "build_LYr9M4": {
           "type": "build",
           "settings": {
-            "image": "shopify://shop_images/Knarr_Lifestyle_2.jpg",
+            "image": "shopify://shop_images/IMG_6544.jpg",
             "icon": "🏆",
             "gradient": "linear-gradient(135deg, var(--sunrise), #FF8F66)",
-            "title": "Old Town Sportsman Elite Build",
-            "description": "Full tournament setup with 360 imaging, premium lighting, measuring board. Competition ready.",
-            "build_url": ""
+            "title": "Old Town Sportsman Workhorse Rig",
+            "description": "This tough boat is made to be used! Pedal drive, our motor package add on, basic fish-finder and lighting package, spotlight, anchor wizzard. All the Navarre we could add!",
+            "build_url": "shopify://pages/build-detail-3"
           }
         }
       },
