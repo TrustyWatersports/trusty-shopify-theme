@@ -61,7 +61,7 @@
             "slide_subtitle": "One-design racing classes trusted by sailors worldwide",
             "show_buttons": true,
             "primary_button_text": "Racing Sailboats",
-            "primary_button_link": "/collections/sailboats",
+            "primary_button_link": "shopify://collections/sailboats-1",
             "primary_button_color": "#ff6b35",
             "secondary_button_text": "Join Our Series",
             "secondary_button_link": "/pages/programs",
