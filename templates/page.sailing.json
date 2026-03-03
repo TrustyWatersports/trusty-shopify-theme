@@ -42,11 +42,11 @@
             "slide_subtitle": "Stable, forgiving boats designed to build confidence on the water",
             "show_buttons": true,
             "primary_button_text": "Sailing Lessons",
-            "primary_button_link": "/pages/programs",
+            "primary_button_link": "shopify://pages/programs-events",
             "primary_button_color": "#00a86b",
             "secondary_button_text": "View Boats",
-            "secondary_button_link": "/collections/sailboats",
-            "image_opacity": 100,
+            "secondary_button_link": "shopify://collections/sailboats-1",
+            "image_opacity": 80,
             "overlay_opacity": 0
           }
         },
