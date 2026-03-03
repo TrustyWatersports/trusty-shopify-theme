@@ -65,7 +65,7 @@
             "primary_button_color": "#ff6b35",
             "secondary_button_text": "Join Our Series",
             "secondary_button_link": "/pages/programs",
-            "image_opacity": 30,
+            "image_opacity": 80,
             "overlay_opacity": 0
           }
         }
