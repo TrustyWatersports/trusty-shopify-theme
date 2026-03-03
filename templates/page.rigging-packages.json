@@ -16,7 +16,7 @@
         "heading": "Rigging Packages",
         "subheading": "Choose a package that matches your fishing style and budget. Every rig is built by our Crystal Coast experts and shipped nationwide.",
         "primary_cta_text": "Start Your Build",
-        "primary_cta_link": "/pages/start-your-build",
+        "primary_cta_link": "shopify://collections/rigging-packages",
         "secondary_cta_text": "📞 Call Us",
         "secondary_cta_link": "tel:252-499-9911"
       }
@@ -81,7 +81,12 @@
           }
         }
       },
-      "block_order": ["package1", "package2", "package_TjPeq4", "package3"],
+      "block_order": [
+        "package1",
+        "package2",
+        "package_TjPeq4",
+        "package3"
+      ],
       "settings": {
         "heading": "Choose Your Package",
         "subheading": "All packages include professional installation, testing, and shipping. Fully customizable."
@@ -100,5 +105,9 @@
       }
     }
   },
-  "order": ["packages-hero", "packages_grid", "packages-cta"]
+  "order": [
+    "packages-hero",
+    "packages_grid",
+    "packages-cta"
+  ]
 }
