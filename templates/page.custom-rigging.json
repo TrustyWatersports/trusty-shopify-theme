@@ -182,11 +182,11 @@
           "settings": {
             "image": "shopify://shop_images/9U8A8101.jpg",
             "title": "Tournament Ready Package",
-            "desc": "Electronics, power, storage, and install.",
+            "desc": "Time to level up your kayak, and get it ready for competition! 7\" fish finder, full lighting kit, high capacity battery, spotlight and more!",
             "cta_text": "Learn more",
-            "cta_link": "/pages/custom-rigging",
+            "cta_link": "/pages/rigging-packages",
             "shop_text": "Shop Now",
-            "shop_link": ""
+            "shop_link": "shopify://products/tournement-ready-package"
           }
         }
       },
