@@ -73,7 +73,7 @@
           "settings": {
             "title": "Motorization",
             "text": "Trolling motors, mounts, and more",
-            "image": "shopify://shop_images/DSC_7135_-_Large_6c2547fb-4236-42a3-bce1-6783e8e24738.jpg",
+            "image": "shopify://shop_images/DSC_0436_-_Large_3f3f7274-d373-41af-a690-6d6a75e12bc5.jpg",
             "link": "shopify://pages/motorization"
           }
         },
@@ -82,7 +82,7 @@
           "settings": {
             "title": "Accessories & Storage",
             "text": "Boxes, rod holders, transport and storage",
-            "image": "shopify://shop_images/9U8A8101.jpg",
+            "image": "shopify://shop_images/DSC_7422_-_Large_8a93e6e3-9bfe-4038-8003-7f74d3892a36.jpg",
             "link": "/pages/accessories"
           }
         }
@@ -151,7 +151,9 @@
             "title": "Tournament Ready",
             "desc": "Electronics, power, storage, and install.",
             "cta_text": "Learn more",
-            "cta_link": "/pages/custom-rigging"
+            "cta_link": "/pages/custom-rigging",
+            "shop_text": "Shop Now",
+            "shop_link": ""
           }
         },
         "package_rJ7PAJ": {
@@ -161,7 +163,9 @@
             "title": "Tournament Ready",
             "desc": "Electronics, power, storage, and install.",
             "cta_text": "Learn more",
-            "cta_link": "/pages/custom-rigging"
+            "cta_link": "/pages/custom-rigging",
+            "shop_text": "Shop Now",
+            "shop_link": ""
           }
         },
         "package_kWiNMX": {
@@ -171,7 +175,9 @@
             "title": "Tournament Ready",
             "desc": "Electronics, power, storage, and install.",
             "cta_text": "Learn more",
-            "cta_link": "/pages/custom-rigging"
+            "cta_link": "/pages/custom-rigging",
+            "shop_text": "Shop Now",
+            "shop_link": ""
           }
         }
       },
@@ -199,7 +205,8 @@
             "icon": "🎣",
             "gradient": "linear-gradient(135deg, var(--ocean-light), var(--ocean-medium))",
             "title": "Hobie Pro Angler Tournament Rig",
-            "description": "Garmin Echomap Ultra, LiveScope, dual batteries, LED lighting, custom crate. Shipped to Texas."
+            "description": "Garmin Echomap Ultra, LiveScope, dual batteries, LED lighting, custom crate. Shipped to Texas.",
+            "build_url": ""
           }
         },
         "build_GFGgHX": {
@@ -209,7 +216,8 @@
             "icon": "🐟",
             "gradient": "linear-gradient(135deg, var(--rigging-accent), #00C77F)",
             "title": "Native Slayer Inshore Setup",
-            "description": "Humminbird HELIX 7, power system, rod holders, anchor trolley. Ready for redfish and speckled trout."
+            "description": "Humminbird HELIX 7, power system, rod holders, anchor trolley. Ready for redfish and speckled trout.",
+            "build_url": ""
           }
         },
         "build_LYr9M4": {
@@ -219,7 +227,8 @@
             "icon": "🏆",
             "gradient": "linear-gradient(135deg, var(--sunrise), #FF8F66)",
             "title": "Old Town Sportsman Elite Build",
-            "description": "Full tournament setup with 360 imaging, premium lighting, measuring board. Competition ready."
+            "description": "Full tournament setup with 360 imaging, premium lighting, measuring board. Competition ready.",
+            "build_url": ""
           }
         }
       },
