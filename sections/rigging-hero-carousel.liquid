@@ -14,6 +14,10 @@
             style="width:100%;height:{{ section.settings.height }}px;object-fit:cover;display:block;"
           >
         </div>
+      {% elsif block.type == 'video_slide' and block.settings.video != blank %}
+        <div class="rigging-hero__slide" {{ block.shopify_attributes }} style="height:{{ section.settings.height }}px;">
+          {{ block.settings.video | video_tag: autoplay: true, loop: true, muted: true, controls: false, playsinline: true, style: 'width:100%;height:100%;object-fit:cover;display:block;' }}
+        </div>
       {% endif %}
     {% endfor %}
   </div>
@@ -99,9 +103,16 @@
   "blocks": [
     {
       "type": "slide",
-      "name": "Slide",
+      "name": "Image slide",
       "settings": [
         { "type": "image_picker", "id": "image", "label": "Image" }
+      ]
+    },
+    {
+      "type": "video_slide",
+      "name": "Video slide",
+      "settings": [
+        { "type": "video", "id": "video", "label": "Video (Shopify hosted)" }
       ]
     }
   ],
