@@ -15,7 +15,7 @@
         "slide_FhGygc": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/DSC00231_-_Large_0eb92c52-7550-4555-8e83-2497f24e6dbc.png"
+            "image": "shopify://shop_images/DSC01283_-_Large_5e96b3b9-3d0e-4de4-a92f-d8f062bf1f67.png"
           }
         },
         "slide_GXLARj": {
@@ -44,7 +44,7 @@
       "name": "Rigging Carousel",
       "settings": {
         "height": 520,
-        "overlay_opacity": 55,
+        "overlay_opacity": 15,
         "badge_text": "Custom Rigging Experts",
         "heading_1": "Tournament-Ready",
         "heading_2": "Fishing Kayaks",
