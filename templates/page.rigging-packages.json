@@ -33,7 +33,7 @@
             "price": "$1199.95",
             "price_note": "Basic Motor Package",
             "image": "shopify://shop_images/Screenshot_2026-03-02_084915.png",
-            "features": "Includes:\nMinn Kota 45lb Thrust Saltwater Motor\nAmped Outdoors 12v60ah lithium battery &amp; charger\nYak Gadget Motor Bracket\nBattery Box\nUniversal Joint Tiller Extension\nProfessional installation",
+            "features": "Minn Kota 45lb Thrust Saltwater Motor\nAmped Outdoors 12v60ah lithium battery &amp; charger\nYak Gadget Motor Bracket\nBattery Box\nUniversal Joint Tiller Extension\nProfessional installation",
             "featured": false,
             "cta_text": "Buy Now!",
             "cta_link": "shopify://products/basic-motor-package"
@@ -42,12 +42,12 @@
         "package2": {
           "type": "package",
           "settings": {
-            "name": "Tournament Ready",
-            "tagline": "For serious competitors",
-            "price": "$6,500",
-            "price_note": "Plus kayak cost",
-            "image": "shopify://shop_images/DSC_0258_-_Large_c5233571-01c8-4cd2-a329-40abe57ecf77.jpg",
-            "features": "Garmin Livescope setup\nUltra 106sv fishfinder\nTrolling motor prep\nPremium crate system\nComplete wiring & install\nLithium battery option",
+            "name": "Essential Angler Package",
+            "tagline": "Getting Started? Stop here...",
+            "price": "$989.95",
+            "price_note": "Your boat ready upon arrival",
+            "image": "shopify://shop_images/Knarr_Will.jpg",
+            "features": "Garmin Striker Vivid 5 CV Fish Finder with Transducer\nNocqua 10ah battery\nYakAttack Through Hull Fitting Kit\n2x YakAttack Omega Pro Rod Holders\nYakAttack VisiPole II and Flag\nYakAttack HD LeverLoc Anchor Trolly&nbsp;\nYakAttack Sidewinder Anchor Line Reel\nYakAttack Fish Finder Mount\nNavarre Kayak Fishing Garmin Transducer Mount\nSmall Anchor (claw or mushroom per preference)\nFittings and Battery Mount\nInstallation Labor",
             "featured": true,
             "cta_text": "Most Popular",
             "cta_link": "/pages/start-your-build"
