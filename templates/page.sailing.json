@@ -26,12 +26,15 @@
             "primary_button_link": "shopify://collections/sailboats-1",
             "primary_button_color": "#d32f2f",
             "secondary_button_text": "Learn to Sail",
-            "secondary_button_link": "shopify://pages/programs-events"
+            "secondary_button_link": "shopify://pages/programs-events",
+            "image_opacity": 70,
+            "overlay_opacity": 0
           }
         },
         "slide-2": {
           "type": "slide",
           "settings": {
+            "slide_image": "shopify://shop_images/3-DSC_0543.jpg",
             "show_badge": true,
             "badge_text": "BEGINNER FRIENDLY",
             "badge_color": "#00a86b",
@@ -42,7 +45,9 @@
             "primary_button_link": "/pages/programs",
             "primary_button_color": "#00a86b",
             "secondary_button_text": "View Boats",
-            "secondary_button_link": "/collections/sailboats"
+            "secondary_button_link": "/collections/sailboats",
+            "image_opacity": 100,
+            "overlay_opacity": 0
           }
         },
         "slide-3": {
@@ -58,7 +63,9 @@
             "primary_button_link": "/collections/sailboats",
             "primary_button_color": "#ff6b35",
             "secondary_button_text": "Join Our Series",
-            "secondary_button_link": "/pages/programs"
+            "secondary_button_link": "/pages/programs",
+            "image_opacity": 30,
+            "overlay_opacity": 0
           }
         }
       },
