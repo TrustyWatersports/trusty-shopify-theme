@@ -25,33 +25,6 @@
     "packages_grid": {
       "type": "rigging-packages-grid",
       "blocks": {
-        "package_D9zrdT": {
-          "type": "package",
-          "settings": {
-            "name": "Elite PRO Fisherman Package",
-            "tagline": "The best of the best...",
-            "price": "$11,295.95",
-            "price_note": "Lets go out and win!",
-            "features": "Garmin Livescope Plus\nUltra 106sv fishfinder\nTrolling motor with lithium\nPremium crate system\nComplete wiring & install",
-            "featured": false,
-            "cta_text": "View Details",
-            "cta_link": ""
-          }
-        },
-        "package1": {
-          "type": "package",
-          "settings": {
-            "name": "Essential Angler",
-            "tagline": "Perfect for weekend warriors",
-            "price": "$1199.95",
-            "price_note": "Basic Motor Package",
-            "image": "shopify://shop_images/Screenshot_2026-03-02_084915.png",
-            "features": "Minn Kota 45lb Thrust Saltwater Motor\nAmped Outdoors 12v60ah lithium battery &amp; charger\nYak Gadget Motor Bracket\nBattery Box\nUniversal Joint Tiller Extension\nProfessional installation",
-            "featured": false,
-            "cta_text": "Buy Now!",
-            "cta_link": "shopify://products/basic-motor-package"
-          }
-        },
         "package2": {
           "type": "package",
           "settings": {
@@ -64,6 +37,20 @@
             "featured": true,
             "cta_text": "Most Popular",
             "cta_link": "shopify://products/essential-angler-package"
+          }
+        },
+        "package1": {
+          "type": "package",
+          "settings": {
+            "name": "Basic Motor Package",
+            "tagline": "Perfect for weekend warriors",
+            "price": "$1199.95",
+            "price_note": "Only what you need to get powered up!",
+            "image": "shopify://shop_images/Screenshot_2026-03-02_084915.png",
+            "features": "Minn Kota 45lb Thrust Saltwater Motor\nAmped Outdoors 12v60ah lithium battery &amp; charger\nYak Gadget Motor Bracket\nBattery Box\nUniversal Joint Tiller Extension\nProfessional installation",
+            "featured": false,
+            "cta_text": "Buy Now!",
+            "cta_link": "shopify://products/basic-motor-package"
           }
         },
         "package_TjPeq4": {
@@ -93,14 +80,28 @@
             "cta_text": "Go Premium - Buy Now!",
             "cta_link": "shopify://products/elite-fisherman-package"
           }
+        },
+        "package_D9zrdT": {
+          "type": "package",
+          "settings": {
+            "name": "Elite PRO Fisherman Package",
+            "tagline": "The best of the best...",
+            "price": "$11,295.95",
+            "price_note": "Lets win this!",
+            "image": "shopify://shop_images/The_twins_are_ready_to_ship.jpg",
+            "features": "Garmin Echomap UHD2 pSV Side scan chart plotter\nGarmin Livescope Plus System with GLS 10\nYakAttack Fish Finder mount\nNavarre Kayak Garmin transducer mount\nFishfindermounts.com Twist Handle Livescope Mount\nYakAttack Through hull fitting kit\nNocqua 20ah batter power kit with charger x 2&nbsp;\nTorqeedo Ultralight Kayak Motor with Extended Range Battery\nYakAttack Torqeedo throttle mount\nWizzard FCS Foot Control Steering system\nYak Power 8 Port Bluetooth switching system\nYak Power 20\" Green stern strip light kit\nYak Power 10\" Green/Red bow strip light kit\nYak Power Button Light kit 2 x red, 2 x white\nYak Power SAE splitters 3x\nYak Power Power Ports - 2 cockpit, 1 bow, 1 stern\nPower-Pole Microspike Driver\nPower-Pole Anchor Spike\nTrusty Sail &amp; Paddle Bow spotlight kit\nProfessionally installed, all wiring hidden in hull. Bulkhead style mounting for switch and power. Secured.",
+            "featured": false,
+            "cta_text": "Buy the BEST Now!",
+            "cta_link": "shopify://products/elite-pro-fisherman-package"
+          }
         }
       },
       "block_order": [
-        "package_D9zrdT",
-        "package1",
         "package2",
+        "package1",
         "package_TjPeq4",
-        "package3"
+        "package3",
+        "package_D9zrdT"
       ],
       "settings": {
         "heading": "Choose Your Package",
