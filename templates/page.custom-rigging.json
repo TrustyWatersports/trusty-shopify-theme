@@ -210,7 +210,7 @@
         "build_QyJF8m": {
           "type": "build",
           "settings": {
-            "image": "shopify://shop_images/DSC_7422_-_Large_8a93e6e3-9bfe-4038-8003-7f74d3892a36.jpg",
+            "image": "shopify://shop_images/IMG_6531.jpg",
             "icon": "🎣",
             "gradient": "linear-gradient(135deg, var(--ocean-light), var(--ocean-medium))",
             "title": "Bonafide XTR Show Build",
@@ -224,9 +224,9 @@
             "image": "shopify://shop_images/6__2061_-_Large_741e17ea-7138-4f89-9806-7e43e56e8cef.jpg",
             "icon": "🐟",
             "gradient": "linear-gradient(135deg, var(--rigging-accent), #00C77F)",
-            "title": "Native Slayer Inshore Setup",
-            "description": "Humminbird HELIX 7, power system, rod holders, anchor trolley. Ready for redfish and speckled trout.",
-            "build_url": ""
+            "title": "Bonafide PWR129 Powered Up!",
+            "description": "Humminbird HELIX 10, Nocqua power system, rod holders, anchor spike, Torqeedo Ultralight Motor, Wizard Foot controls. Ready for redfish and speckled trout.",
+            "build_url": "shopify://pages/build-detail-2"
           }
         },
         "build_LYr9M4": {
