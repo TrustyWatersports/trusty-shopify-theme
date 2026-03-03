@@ -9,6 +9,19 @@
  */
 {
   "sections": {
+    "packages_hero_kVdxiJ": {
+      "type": "packages-hero",
+      "name": "Packages Hero",
+      "settings": {
+        "badge": "CUSTOM RIGGING",
+        "heading": "Rigging Packages",
+        "subheading": "Choose a package that matches your fishing style and budget. Every rig is built by our Crystal Coast experts and shipped nationwide.",
+        "primary_cta_text": "Start Your Build",
+        "primary_cta_link": "",
+        "secondary_cta_text": "📞 Call Us",
+        "secondary_cta_link": ""
+      }
+    },
     "packages_grid": {
       "type": "rigging-packages-grid",
       "blocks": {
@@ -17,13 +30,13 @@
           "settings": {
             "name": "Essential Angler",
             "tagline": "Perfect for weekend warriors",
-            "price": "$3,500",
-            "price_note": "Plus kayak cost",
-            "image": "shopify://shop_images/Knarr_Will.jpg",
-            "features": "Basic fishfinder (Helix 7)\nRod holders & gear tracks\nBasic lighting\nPower management\nProfessional installation",
+            "price": "$1199.95",
+            "price_note": "Basic Motor Package",
+            "image": "shopify://shop_images/Screenshot_2026-03-02_084915.png",
+            "features": "Includes:\nMinn Kota 45lb Thrust Saltwater Motor\nAmped Outdoors 12v60ah lithium battery &amp; charger\nYak Gadget Motor Bracket\nBattery Box\nUniversal Joint Tiller Extension\nProfessional installation",
             "featured": false,
-            "cta_text": "Get Started",
-            "cta_link": "/pages/start-your-build"
+            "cta_text": "Buy Now!",
+            "cta_link": "shopify://products/basic-motor-package"
           }
         },
         "package2": {
@@ -90,19 +103,6 @@
         "secondary_cta_text": "📞 (252) 499-9911",
         "secondary_cta_link": "tel:252-499-9911",
         "note": "Packages are starting points — every build is fully customizable to your kayak, fishing style, and budget."
-      }
-    },
-    "packages_hero_kVdxiJ": {
-      "type": "packages-hero",
-      "name": "Packages Hero",
-      "settings": {
-        "badge": "CUSTOM RIGGING",
-        "heading": "Rigging Packages",
-        "subheading": "Choose a package that matches your fishing style and budget. Every rig is built by our Crystal Coast experts and shipped nationwide.",
-        "primary_cta_text": "Start Your Build",
-        "primary_cta_link": "",
-        "secondary_cta_text": "📞 Call Us",
-        "secondary_cta_link": ""
       }
     }
   },
