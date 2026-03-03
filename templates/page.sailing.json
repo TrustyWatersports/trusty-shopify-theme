@@ -64,7 +64,7 @@
             "primary_button_link": "shopify://collections/sailboats-1",
             "primary_button_color": "#ff6b35",
             "secondary_button_text": "Join Our Series",
-            "secondary_button_link": "/pages/programs",
+            "secondary_button_link": "shopify://pages/programs-events",
             "image_opacity": 80,
             "overlay_opacity": 0
           }
@@ -99,9 +99,9 @@
         "button_link": "/collections/sailboats",
         "button_color": "#d32f2f",
         "show_stats": true,
-        "stat1_number": "50+",
+        "stat1_number": "35+",
         "stat1_label": "Years of Innovation",
-        "stat2_number": "100k+",
+        "stat2_number": "75k+",
         "stat2_label": "Boats Worldwide",
         "stat3_number": "#1",
         "stat3_label": "In the UK"
