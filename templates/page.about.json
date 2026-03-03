@@ -1,13 +1,23 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "about-hero": {
       "type": "about-hero",
       "settings": {
-        "year": "2025",
+        "hero_image": "shopify://shop_images/Christmas2025.jpg",
+        "year": "2026",
         "family_title": "The Fournel Family",
         "family_members": "Andrew, Heather, Abraham, Thomas & Rose",
-        "overlay_color": "#0A4B78",
-        "overlay_opacity": 40
+        "overlay_color": "#0a4b78",
+        "overlay_opacity": 25
       }
     },
     "about-mission": {
@@ -15,7 +25,7 @@
       "settings": {
         "greeting": "Welcome to Trusty Sail and Paddle, how can we help you?",
         "mission_text": "<p>We are a small, locally and family owned and operated kayak and sail shop with a focus on you, our community and our environment. We want to get you in the boat you've always wanted based on your unique needs. We develop programs to spark community interest and we hope that through enjoyment of the water, all of our customers and friends gain a deeper appreciation for our natural resources.</p><p>We know all the questions to ask to match you with your right thing, provide all appropriate gear and accessories, stand behind your purchase with service and support, and stand behind our community as we all grow and chart a course together.</p>",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "text_color": "#333333"
       }
     },
@@ -26,7 +36,7 @@
         "video_description": "Learn about the Trusty family and our passion for watersports on the Crystal Coast",
         "vimeo_id": "1144729646",
         "vimeo_hash": "b4f1200637",
-        "background_color": "#F5F7FA"
+        "background_color": "#f5f7fa"
       }
     },
     "testimonials": {
@@ -75,10 +85,17 @@
           }
         }
       },
-      "block_order": ["testimonial-1", "testimonial-2", "testimonial-3", "testimonial-4", "testimonial-5", "testimonial-6"],
+      "block_order": [
+        "testimonial-1",
+        "testimonial-2",
+        "testimonial-3",
+        "testimonial-4",
+        "testimonial-5",
+        "testimonial-6"
+      ],
       "settings": {
         "section_title": "What People In The Community Are Saying About Trusty!",
-        "background_color": "#F5F7FA"
+        "background_color": "#f5f7fa"
       }
     },
     "about-contact": {
@@ -91,9 +108,15 @@
         "shop_phone": "(252)499-9911",
         "dock_phone": "(252)515-4866",
         "hours": "<p><strong>Our Hours:</strong></p><p>Monday - Saturday: 10am-5pm</p><p>Sunday: CLOSED</p>",
-        "background_color": "#0A4B78"
+        "background_color": "#0a4b78"
       }
     }
   },
-  "order": ["about-hero", "about-mission", "brand-story-video", "testimonials", "about-contact"]
+  "order": [
+    "about-hero",
+    "about-mission",
+    "brand-story-video",
+    "testimonials",
+    "about-contact"
+  ]
 }

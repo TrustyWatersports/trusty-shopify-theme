@@ -11,11 +11,86 @@
   "sections": {
     "main-build-detail": {
       "type": "build-detail",
+      "blocks": {
+        "photo_dt46gJ": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6535.jpg"
+          }
+        },
+        "photo_dXiL4t": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6534.jpg"
+          }
+        },
+        "photo_8GGpHB": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6543.jpg"
+          }
+        },
+        "photo_6yehkx": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6542.jpg"
+          }
+        },
+        "photo_jBHQLQ": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6540.jpg"
+          }
+        },
+        "photo_WwjCXV": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6538.jpg"
+          }
+        },
+        "photo_kfALG9": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6537.jpg"
+          }
+        },
+        "photo_VxqmP8": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6541.jpg"
+          }
+        },
+        "photo_gB9Hpd": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6536.jpg"
+          }
+        },
+        "photo_R7B8mh": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6539.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "photo_dt46gJ",
+        "photo_dXiL4t",
+        "photo_8GGpHB",
+        "photo_6yehkx",
+        "photo_jBHQLQ",
+        "photo_WwjCXV",
+        "photo_kfALG9",
+        "photo_VxqmP8",
+        "photo_gB9Hpd",
+        "photo_R7B8mh"
+      ],
       "settings": {
+        "hero_image": "shopify://shop_images/IMG_6540.jpg",
         "badge": "Pro Rig Build",
         "build_title": "Bonafide PWR129 Pro Rig",
         "customer_info": "",
-        "build_description": "<p>Humminbird HELIX 10, Nocqua 20ah battery, rod holders, anchor spike, Torqeedo motor with wizard foot control. Ready for redfish and speckled trout.</p>"
+        "build_description": "<h1>$8395.95</h1><p>Humminbird HELIX 10, Nocqua 20ah battery, rod holders, anchor spike, Torqeedo motor with wizard foot control. Ready for redfish and speckled trout. Top speeds over 7mph with the 3hp motor setup. Smooth foot control steering with the Wizard foot controls. Beautiful and functional rig. </p>"
       }
     }
   },

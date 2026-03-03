@@ -11,11 +11,71 @@
   "sections": {
     "main-build-detail": {
       "type": "build-detail",
+      "blocks": {
+        "photo_DdzUdA": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6544.jpg"
+          }
+        },
+        "photo_6mQERw": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6548.jpg"
+          }
+        },
+        "photo_kVzc7d": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-03-02_084915.png"
+          }
+        },
+        "photo_6VyTGF": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6551.jpg"
+          }
+        },
+        "photo_wmXbUB": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6552_4861d98a-5169-4b61-af11-480e3518356f.jpg"
+          }
+        },
+        "photo_zDgYcb": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6546.jpg"
+          }
+        },
+        "photo_8fJaYw": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6545_73bc7d91-b192-4fbd-854e-b56f79dfe9f7.jpg"
+          }
+        },
+        "photo_6TEFLK": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6550.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "photo_DdzUdA",
+        "photo_6mQERw",
+        "photo_kVzc7d",
+        "photo_6VyTGF",
+        "photo_wmXbUB",
+        "photo_zDgYcb",
+        "photo_8fJaYw",
+        "photo_6TEFLK"
+      ],
       "settings": {
         "badge": "Tournament Build",
         "build_title": "Old Town Sportsman Elite Build",
         "customer_info": "",
-        "build_description": "<p>Full tournament setup with 360 imaging, premium lighting, measuring board. Competition ready.</p>"
+        "build_description": "<h1>OLD TOWN WORKHOUSE PACKAGE<br/><strong>$5,473.65</strong></h1><p><br/>OLD TOWN SPORTSMAN PDL 120 KAYAK 2999<br/>GARMIN STRIKER 4CV VIVID 180<br/>NOCQUA 10AH BATTERY 129<br/>MINN KOTA RIPTIDE TROLLING MOTOR 45LB 350<br/>AMPED OUTDOOR 12V 60AH LITHIUM BATTERY 420<br/>YAK POWER BUNDLE<br/>5 CIRCUIT PANEL 99.99<br/>2- PIECE LIGHT KIT 99.99<br/>PHONE CHARGER 69.99<br/>2-PACK BUTTON LIGHTS 29.99<br/>YAK ATTACK ACCESSORIES<br/>VISIFLAG 35.95<br/>VISILIGHT 45.95<br/>GT90 4” TRACK 15.95<br/>GT90 8’ TRACK 20.95<br/>FISH FINDER MOUNT 50.95<br/>OMEGA PRO ROD HOLDER 30.95<br/>13’X16’ BLACKPAK 149.95<br/>NAVARRE KAYAK ACCESSORIES<br/>2 HANDLE KIT 30/60<br/>DRIVE SPACERS 21/42<br/>PROP NUT 25<br/>ANCHOR WIZARD LOW PROFILE 125<br/>ANCHOR WIZARD PLATE25<br/>BLAZER LED FLOOD LIGHT 65<br/>OLD TOWN RUDDER UPGRADE 150<br/>HELMSMATE TILLER EXT W/ U JOINT 100<br/>YAK GADGET MOTOR MOUNT 153</p>"
       }
     }
   },

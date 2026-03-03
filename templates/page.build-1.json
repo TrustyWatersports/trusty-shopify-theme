@@ -12,29 +12,117 @@
     "main-build-detail": {
       "type": "build-detail",
       "blocks": {
-        "photo_7hiDnG": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6535.jpg" } },
-        "photo_AkkBJX": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6534.jpg" } },
-        "photo_eL7t3i": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6543.jpg" } },
-        "photo_Fn6jK6": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6529.jpg" } },
-        "photo_iCDb8W": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6519.jpg" } },
-        "photo_yMQ8f3": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6520.jpg" } },
-        "photo_PeKx6V": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6523.jpg" } },
-        "photo_K3XA94": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6524.jpg" } },
-        "photo_YFUU4N": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6530.jpg" } },
-        "photo_q7wCtR": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6526.jpg" } },
-        "photo_mVkegJ": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6533.jpg" } },
-        "photo_7AfwW4": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6531.jpg" } },
-        "photo_Vjwwzy": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6532.jpg" } },
-        "photo1": { "type": "photo", "settings": { "image": "shopify://shop_images/IMG_6518.jpg" } }
+        "photo_7hiDnG": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6535.jpg"
+          }
+        },
+        "photo_AkkBJX": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6534.jpg"
+          }
+        },
+        "photo_eL7t3i": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6543.jpg"
+          }
+        },
+        "photo_Fn6jK6": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6529.jpg"
+          }
+        },
+        "photo_iCDb8W": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6519.jpg"
+          }
+        },
+        "photo_yMQ8f3": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6520.jpg"
+          }
+        },
+        "photo_PeKx6V": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6523.jpg"
+          }
+        },
+        "photo_K3XA94": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6524.jpg"
+          }
+        },
+        "photo_YFUU4N": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6530.jpg"
+          }
+        },
+        "photo_q7wCtR": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6526.jpg"
+          }
+        },
+        "photo_mVkegJ": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6533.jpg"
+          }
+        },
+        "photo_7AfwW4": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6531.jpg"
+          }
+        },
+        "photo_Vjwwzy": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6532.jpg"
+          }
+        },
+        "photo1": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6518.jpg"
+          }
+        }
       },
-      "block_order": ["photo_7hiDnG","photo_AkkBJX","photo_eL7t3i","photo_Fn6jK6","photo_iCDb8W","photo_yMQ8f3","photo_PeKx6V","photo_K3XA94","photo_YFUU4N","photo_q7wCtR","photo_mVkegJ","photo_7AfwW4","photo_Vjwwzy","photo1"],
+      "block_order": [
+        "photo_7hiDnG",
+        "photo_AkkBJX",
+        "photo_eL7t3i",
+        "photo_Fn6jK6",
+        "photo_iCDb8W",
+        "photo_yMQ8f3",
+        "photo_PeKx6V",
+        "photo_K3XA94",
+        "photo_YFUU4N",
+        "photo_q7wCtR",
+        "photo_mVkegJ",
+        "photo_7AfwW4",
+        "photo_Vjwwzy",
+        "photo1"
+      ],
       "settings": {
+        "hero_image": "shopify://shop_images/IMG_6531.jpg",
         "badge": "Tournament Build",
         "build_title": "Bonafide XTR Show Package",
         "customer_info": "Built to showcase our technology",
-        "build_description": "<p>XTR ULTIMATE FISHING PACKAGE</p>"
+        "build_description": "<h1>XTR ULTIMATE FISHING PACKAGE<br/>$12,702.87</h1><p><br/>BONAFIDE XTR 130 KAYAK 2949<br/>MINN KOTA 36” POWERDRIVE MOTOR 55LB, QUICK RELEASE, MICROREMOTE 2200<br/>AMPED OUTDOORS LI BATTERY 12V 100AH 800<br/>XTR BOW MOTOR MOUNT 129.99<br/>XTR ELECTRONICS MOUNTING PLATE 79.99<br/>HUMMINBIRD HELIX 10 FISH FINDER/CHARTPLOTTER 2000<br/>POWER POLE MICRO SPIKE AND DRIVER 760<br/>INSTALLATION 1400<br/>YAK POWER BUNDLE<br/>8 CIRCUIT POWER PANEL $199<br/>7 SAE Y ADAPTER 10.99/76.93<br/>4 2-PACK BUTTON LIGHTS 29.99/119.96<br/>2 4’ POWER PORT 17.99/35.98<br/>12’ POWER PORT 31.99<br/>2 8’ POWER PORT 22.99/45.98<br/>2-PIECE LED LIGHT KIT 99.99<br/>2-PIECE RED GREEN LIGHT KIT 79.99<br/>BATTERY PIGTAIL FOR NOCQUA 15.99<br/>PHONE CHARGER 69.99<br/>YAK ATTACK ACCESSORIES<br/>UNIVERSAL MOUNT 50.95<br/>2 GT90 4” TRACK 15.95/31.90<br/>2 GT175 4’ TRACK 19.95/39.90<br/>BOOMSTICK PRO 99.95<br/>2 90 DEGREE MIGHTYMOUNT VERTICAL TRACK ADAPTER 19.95/39.90<br/>2 OMEGA PRO ROD HOLDER 40.95/81.90<br/>DOUBLE HEADER WITH ROTOGRIP PADDLE HOLDERS 35.95<br/>3 THRU HULL WIRING KITS 25.95/77.85<br/>COMMAND STAND 254.95<br/>CUP HOLDER 20.95<br/>LEADERBOARD ROTOGRIP 2-PACK 24.95<br/>ROD STAGER 76.95<br/>JACKSON KAYAK 12” TRI-TRACK KIT 45.99<br/>ANCHOR WIZARD LOW PROFILE 125<br/>ANCHOR WIZARD MOUNT 25<br/>2 BLAZER LED FLOOD LIGHTS 50/100<br/>CHROME-PLATED STERN LIGHT BASE 29<br/>FIREFLY ANCHOR LIGHT 100<br/>2 TROLLING MOTOR PLUG AND RECEPTACLE 65/130<br/>NOCQUA 20AH BATTERY KIT<br/>ELECTRICAL FITTINGS 100</p>"
       }
     }
   },
-  "order": ["main-build-detail"]
+  "order": [
+    "main-build-detail"
+  ]
 }
