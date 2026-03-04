@@ -52,6 +52,7 @@
         "brand-native": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/Native_Watercraft.webp",
             "brand_name": "Native Watercraft",
             "brand_description": "Innovative pedal-drive fishing kayaks",
             "brand_link": "shopify://collections/native-watercraft"
@@ -60,6 +61,7 @@
         "brand-bonafide": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/BonaFide.webp",
             "brand_name": "Bonafide Kayaks",
             "brand_description": "Stable, feature-rich fishing kayaks",
             "brand_link": "shopify://collections/bonafide"
