@@ -24,6 +24,17 @@
     "electronics-options": {
       "type": "electronics-options",
       "blocks": {
+        "option_tct69p": {
+          "type": "option",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5191_826f5d59-9301-4d37-8410-0b86dedd8837.jpg",
+            "emoji": "📡",
+            "category": "Power-Pole",
+            "title": "Micro-Anchor Installation",
+            "description": "Mount your Power-Pole Microspike driver and permanently wire it to your existing battery system for long lasting operation.",
+            "specs": "Power-Pole, Remote operation."
+          }
+        },
         "fishfinder": {
           "type": "option",
           "settings": {
@@ -81,6 +92,7 @@
         }
       },
       "block_order": [
+        "option_tct69p",
         "fishfinder",
         "livescope",
         "power",
