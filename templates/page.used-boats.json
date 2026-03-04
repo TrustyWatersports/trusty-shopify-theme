@@ -14,13 +14,16 @@
       "settings": {
         "hero_title": "Used Boats & Consignment",
         "hero_subtitle": "Quality pre-owned kayaks and sailboats at great prices",
-        "background_color": "#0A4B78"
+        "hero_image": "shopify://shop_images/Falcon11_TampaFlorida_drone-Large1.jpg",
+        "image_opacity": 100,
+        "overlay_opacity": 20,
+        "background_color": "#0a4b78"
       }
     },
     "used-boats-grid": {
       "type": "used-boats-grid",
       "settings": {
-        "background_color": "#F5F7FA"
+        "background_color": "#f5f7fa"
       }
     }
   },
