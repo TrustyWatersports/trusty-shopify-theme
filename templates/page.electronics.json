@@ -24,6 +24,17 @@
     "electronics-options": {
       "type": "electronics-options",
       "blocks": {
+        "option_FBMw38": {
+          "type": "option",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5188_b4de700f-1672-45ee-a29b-84896c8be448.jpg",
+            "emoji": "📡",
+            "category": "Trusty Sail & Paddle",
+            "title": "Custom Electronics",
+            "description": "You name it, we can make it happen. Just give us a call!",
+            "specs": "Anything and everything. You name it we can make it a reality."
+          }
+        },
         "livescope": {
           "type": "option",
           "settings": {
@@ -70,6 +81,7 @@
         }
       },
       "block_order": [
+        "option_FBMw38",
         "livescope",
         "fishfinder",
         "power",
