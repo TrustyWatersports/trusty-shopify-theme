@@ -24,15 +24,15 @@
     "electronics-options": {
       "type": "electronics-options",
       "blocks": {
-        "option_FBMw38": {
+        "fishfinder": {
           "type": "option",
           "settings": {
-            "image": "shopify://shop_images/IMG_5188_b4de700f-1672-45ee-a29b-84896c8be448.jpg",
-            "emoji": "📡",
-            "category": "Trusty Sail & Paddle",
-            "title": "Custom Electronics",
-            "description": "You name it, we can make it happen. Just give us a call!",
-            "specs": "Anything and everything. You name it we can make it a reality."
+            "image": "shopify://shop_images/d4a6084c-81cd-4125-adc1-9db095832c6c.359d161662bf9bd7d5b3623ad8cbbf2a.webp",
+            "emoji": "🎯",
+            "category": "Garmin / Humminbird",
+            "title": "Chartplotter & Fishfinder",
+            "description": "GPS chartplotters with traditional and down/side imaging sonar. Navigate to your spots and mark waypoints on the water.",
+            "specs": "Garmin ECHOMAP, Humminbird HELIX series — mount, wiring, transducer install"
           }
         },
         "livescope": {
@@ -44,17 +44,6 @@
             "title": "Livescope Plus System",
             "description": "Real-time live sonar that shows fish swimming in real time. The gold standard for tournament kayak fishing. See structure, bait, and fish with incredible clarity.",
             "specs": "LVS34 transducer, GLS 10 black box, compatible chartplotter mount and wiring"
-          }
-        },
-        "fishfinder": {
-          "type": "option",
-          "settings": {
-            "image": "shopify://shop_images/d4a6084c-81cd-4125-adc1-9db095832c6c.359d161662bf9bd7d5b3623ad8cbbf2a.webp",
-            "emoji": "🎯",
-            "category": "Garmin / Humminbird",
-            "title": "Chartplotter & Fishfinder",
-            "description": "GPS chartplotters with traditional and down/side imaging sonar. Navigate to your spots and mark waypoints on the water.",
-            "specs": "Garmin ECHOMAP, Humminbird HELIX series — mount, wiring, transducer install"
           }
         },
         "power": {
@@ -78,14 +67,25 @@
             "description": "LED navigation lights for dawn, dusk, and low-light fishing. Properly wired and waterproofed for saltwater use.",
             "specs": "Bow/stern LED lights, switch panel, waterproof wiring harness"
           }
+        },
+        "option_FBMw38": {
+          "type": "option",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5188_b4de700f-1672-45ee-a29b-84896c8be448.jpg",
+            "emoji": "📡",
+            "category": "Trusty Sail & Paddle",
+            "title": "Custom Electronics",
+            "description": "You name it, we can make it happen. Just give us a call!",
+            "specs": "Anything and everything. You name it we can make it a reality."
+          }
         }
       },
       "block_order": [
-        "option_FBMw38",
-        "livescope",
         "fishfinder",
+        "livescope",
         "power",
-        "lighting"
+        "lighting",
+        "option_FBMw38"
       ],
       "settings": {
         "heading": "Electronics We Install",
