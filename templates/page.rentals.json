@@ -21,6 +21,19 @@
         "gradient_end": "#1e6fa8"
       }
     },
+    "rentals-booking": {
+      "type": "rentals-booking",
+      "settings": {
+        "background_color": "#ffffff",
+        "heading": "Ready to Get on the Water?",
+        "subheading": "Book online or give us a call — we'll get you set up.",
+        "booking_url": "",
+        "booking_button_text": "Book a Rental",
+        "phone": "(252) 515-4866",
+        "address": "815 Shepard St, Morehead City, NC",
+        "hours": "Daily 9am–6pm (Seasonal)"
+      }
+    },
     "rentals-pricing2": {
       "type": "rentals-pricing2",
       "blocks": {
@@ -171,17 +184,14 @@
         "lesson_cta_link": "shopify://products/sailing-lesson-1-hour"
       }
     },
-    "rentals-booking": {
-      "type": "rentals-booking",
+    "waiver_embed_e7hPpR": {
+      "type": "waiver-embed",
+      "name": "Waiver Embed",
       "settings": {
-        "background_color": "#ffffff",
-        "heading": "Ready to Get on the Water?",
-        "subheading": "Book online or give us a call — we'll get you set up.",
-        "booking_url": "",
-        "booking_button_text": "Book a Rental",
-        "phone": "(252) 515-4866",
-        "address": "815 Shepard St, Morehead City, NC",
-        "hours": "Daily 9am–6pm (Seasonal)"
+        "background_color": "#F5F7FA",
+        "heading": "Sign Your Waiver",
+        "subheading": "All participants must sign our waiver before renting. You can sign ahead of time or at the dock — but signing early makes check-in faster!",
+        "iframe_height": 800
       }
     },
     "rentals-faq": {
@@ -226,24 +236,14 @@
         "heading": "Rental FAQ",
         "background_color": "#f5f7fa"
       }
-    },
-    "waiver_embed_e7hPpR": {
-      "type": "waiver-embed",
-      "name": "Waiver Embed",
-      "settings": {
-        "background_color": "#F5F7FA",
-        "heading": "Sign Your Waiver",
-        "subheading": "All participants must sign our waiver before renting. You can sign ahead of time or at the dock — but signing early makes check-in faster!",
-        "iframe_height": 800
-      }
     }
   },
   "order": [
     "rentals-hero",
     "rentals-pricing2",
     "sailboat-rentals",
-    "rentals-booking",
     "waiver_embed_e7hPpR",
+    "rentals-booking",
     "rentals-faq"
   ]
 }
