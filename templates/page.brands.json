@@ -334,9 +334,10 @@
         "brand-malone": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/malone.webp",
             "brand_name": "Malone",
             "brand_description": "Kayak racks and trailers",
-            "brand_link": "/collections/malone"
+            "brand_link": "shopify://collections/malone"
           }
         },
         "category-electronics": {
