@@ -91,6 +91,7 @@
         "brand-eddyline": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/eddylineLogo_2_410x_5a7692d7-b996-4cd0-b9e0-3e7aa97fc91b.webp",
             "brand_name": "Eddyline Kayaks",
             "brand_description": "Lightweight touring kayaks",
             "brand_link": "/collections/eddyline"
