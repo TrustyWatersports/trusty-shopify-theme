@@ -71,6 +71,7 @@
         "mount": {
           "type": "motor",
           "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-03-02_084915.png",
             "emoji": "🔧",
             "brand": "Custom Fabrication",
             "title": "Motor Mounts & Brackets",
