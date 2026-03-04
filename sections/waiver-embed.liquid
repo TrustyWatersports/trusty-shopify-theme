@@ -1,0 +1,64 @@
+<div style="padding: 60px 20px; background: {{ section.settings.background_color }};">
+  <div style="max-width: 900px; margin: 0 auto;">
+    
+    <div style="text-align: center; margin-bottom: 30px;">
+      <div style="display: inline-block; background: #fff3cd; border: 1px solid #ffc107; border-radius: 8px; padding: 12px 24px; margin-bottom: 20px;">
+        <span style="color: #856404; font-weight: 600; font-size: 14px;">⚠️ Required before your rental</span>
+      </div>
+      <h2 style="font-size: 2rem; color: #0a4b78; margin-bottom: 10px;">{{ section.settings.heading }}</h2>
+      <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">{{ section.settings.subheading }}</p>
+    </div>
+
+    <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+      <iframe 
+        src="https://waiver.smartwaiver.com/w/gvuj8semmrb8non1cqpxr/web/" 
+        width="100%" 
+        height="{{ section.settings.iframe_height }}" 
+        frameborder="0" 
+        style="display: block;">
+      </iframe>
+    </div>
+
+    <p style="text-align: center; margin-top: 16px; font-size: 13px; color: #999;">
+      Having trouble with the form? <a href="https://waiver.smartwaiver.com/w/gvuj8semmrb8non1cqpxr/web/" target="_blank" style="color: #0a4b78;">Open waiver in a new tab →</a>
+    </p>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Waiver Embed",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#F5F7FA"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Sign Your Waiver"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "All participants must sign our waiver before renting. You can sign ahead of time or at the dock — but signing early makes check-in faster!"
+    },
+    {
+      "type": "range",
+      "id": "iframe_height",
+      "min": 400,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "label": "Waiver Height",
+      "default": 800
+    }
+  ],
+  "presets": [{ "name": "Waiver Embed" }]
+}
+{% endschema %}
