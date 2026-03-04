@@ -22,6 +22,25 @@
     },
     "used-boats-grid": {
       "type": "used-boats-grid",
+      "blocks": {
+        "boat_tKCqrW": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_6554.jpg",
+            "boat_name": "Jackson Knarr Kayak Package",
+            "boat_brand": "Jackson Kayak, Malone Trailer",
+            "boat_year": "2022",
+            "boat_condition": "excellent",
+            "boat_description": "Very lightly used trailer and kayak package. Two Jackson Karr kayaks with virtually no use. Malone trailer with two sets of saddle-up pro cradles. Paddles, cart, yakattack blackpak, anchor trolly, and more! Awesome package for the team getting into kayak fishing.",
+            "boat_price": "$7750.95",
+            "contact_info": "",
+            "is_sold": false
+          }
+        }
+      },
+      "block_order": [
+        "boat_tKCqrW"
+      ],
       "settings": {
         "background_color": "#f5f7fa"
       }
