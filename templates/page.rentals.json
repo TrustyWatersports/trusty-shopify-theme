@@ -114,7 +114,7 @@
             "feature_4": "Bogue Sound access",
             "lesson_price": "$100",
             "cta_text": "Book This Boat",
-            "cta_link": "tel:252-515-4866",
+            "cta_link": "shopify://products/topaz-uno-saiboat-copy",
             "featured": false
           }
         },
