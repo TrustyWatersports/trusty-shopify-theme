@@ -30,17 +30,17 @@
 
     <!-- Filter by Vendor -->
     {% assign vendors = collection.all_products | map: 'vendor' | uniq | sort %}
-    {% if vendors.size > 1 %}
-      <div style="flex: 1; min-width: 180px;">
-        <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 13px; color: var(--text-dark);">Brand</label>
-        <select id="vendor-filter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: white; font-size: 14px;" onchange="filterProducts()">
-          <option value="">All Brands</option>
-          {% for vendor in vendors %}
+    <div style="flex: 1; min-width: 180px;">
+      <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 13px; color: var(--text-dark);">Brand</label>
+      <select id="vendor-filter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: white; font-size: 14px;" onchange="filterProducts()">
+        <option value="">All Brands</option>
+        {% for vendor in vendors %}
+          {% if vendor != blank %}
             <option value="{{ vendor }}">{{ vendor }}</option>
-          {% endfor %}
-        </select>
-      </div>
-    {% endif %}
+          {% endif %}
+        {% endfor %}
+      </select>
+    </div>
 
     <!-- Filter by Collection -->
     <div style="flex: 1; min-width: 180px;">
