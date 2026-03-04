@@ -8,6 +8,17 @@
       "label": "Hero Image"
     },
     {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image Position (Vertical)",
+      "options": [
+        { "value": "top", "label": "Top" },
+        { "value": "center", "label": "Center" },
+        { "value": "bottom", "label": "Bottom" }
+      ],
+      "default": "top"
+    },
+    {
       "type": "text",
       "id": "year",
       "label": "Year",
@@ -46,7 +57,7 @@
 
 <section style="position: relative; min-height: 500px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
   {% if section.settings.hero_image %}
-    <img src="{{ section.settings.hero_image | img_url: '2048x' }}" alt="{{ section.settings.family_title }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+    <img src="{{ section.settings.hero_image | img_url: '2048x' }}" alt="{{ section.settings.family_title }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center {{ section.settings.image_position | default: 'top' }};">
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: {{ section.settings.overlay_color }}; opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};"></div>
   {% else %}
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, {{ section.settings.overlay_color }} 0%, #1E6FA8 100%);"></div>
