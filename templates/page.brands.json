@@ -28,6 +28,7 @@
         "brand-jackson": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/Jackson.webp",
             "brand_name": "Jackson Kayak",
             "brand_description": "Premium whitewater and fishing kayaks",
             "brand_link": "shopify://collections/jackson"
