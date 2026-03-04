@@ -160,9 +160,10 @@
         "brand-zhik": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/zhik.webp",
             "brand_name": "Zhik",
             "brand_description": "Technical sailing apparel",
-            "brand_link": "/collections/zhik"
+            "brand_link": "shopify://collections/zhik"
           }
         },
         "brand-kavu": {
