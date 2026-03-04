@@ -282,6 +282,7 @@
         "brand-marlow": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/marlow.webp",
             "brand_name": "Marlow Ropes",
             "brand_description": "High-performance sailing lines",
             "brand_link": "/collections/marlow-ropes"
