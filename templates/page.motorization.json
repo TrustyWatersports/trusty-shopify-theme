@@ -49,6 +49,7 @@
         "newport": {
           "type": "motor",
           "settings": {
+            "image": "shopify://shop_images/TitanX_10.5_Greg_Blanchard_-_Large1.jpg",
             "emoji": "🚤",
             "brand": "Newport Vessels",
             "title": "Newport Trolling Motor",
