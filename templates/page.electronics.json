@@ -60,6 +60,7 @@
         "lighting": {
           "type": "option",
           "settings": {
+            "image": "shopify://shop_images/ykp-o-ypledkblb2_install.webp",
             "emoji": "💡",
             "category": "Lighting",
             "title": "Navigation & Safety Lighting",
