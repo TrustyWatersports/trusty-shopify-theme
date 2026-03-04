@@ -67,6 +67,7 @@
         "transport": {
           "type": "accessory",
           "settings": {
+            "image": "shopify://shop_images/IMG_3139.jpg",
             "emoji": "🚗",
             "category": "Transport",
             "title": "Carts & Transport",
@@ -76,6 +77,7 @@
         "safety": {
           "type": "accessory",
           "settings": {
+            "image": "shopify://shop_images/IMG_9967_4c70b2e5-77bf-405f-b87d-f1e55b6296c2.jpg",
             "emoji": "🦺",
             "category": "Safety",
             "title": "Safety & Visibility",
