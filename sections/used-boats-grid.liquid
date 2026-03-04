@@ -17,7 +17,27 @@
         {
           "type": "image_picker",
           "id": "boat_image",
-          "label": "Boat Image"
+          "label": "Photo 1 (Main)"
+        },
+        {
+          "type": "image_picker",
+          "id": "boat_image_2",
+          "label": "Photo 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "boat_image_3",
+          "label": "Photo 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "boat_image_4",
+          "label": "Photo 4"
+        },
+        {
+          "type": "image_picker",
+          "id": "boat_image_5",
+          "label": "Photo 5"
         },
         {
           "type": "text",
@@ -83,17 +103,44 @@
     
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 40px;">
       {% for block in section.blocks %}
+        {% assign block_id = forloop.index %}
+        {% assign images = '' | split: '' %}
+        {% if block.settings.boat_image %}{% assign images = images | push: block.settings.boat_image %}{% endif %}
+        {% if block.settings.boat_image_2 %}{% assign images = images | push: block.settings.boat_image_2 %}{% endif %}
+        {% if block.settings.boat_image_3 %}{% assign images = images | push: block.settings.boat_image_3 %}{% endif %}
+        {% if block.settings.boat_image_4 %}{% assign images = images | push: block.settings.boat_image_4 %}{% endif %}
+        {% if block.settings.boat_image_5 %}{% assign images = images | push: block.settings.boat_image_5 %}{% endif %}
+
         <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); position: relative;">
           
           {% if block.settings.is_sold %}
             <div style="position: absolute; top: 20px; right: 20px; background: #D32F2F; color: white; padding: 8px 16px; border-radius: 6px; font-weight: bold; z-index: 10;">SOLD</div>
           {% endif %}
           
-          {% if block.settings.boat_image %}
-            <img src="{{ block.settings.boat_image | img_url: '600x' }}" alt="{{ block.settings.boat_name }}" style="width: 100%; height: 250px; object-fit: cover;">
-          {% else %}
-            <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #0A4B78 0%, #1E6FA8 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🚤</div>
-          {% endif %}
+          <!-- Image Slideshow -->
+          <div class="boat-slideshow" id="slideshow-{{ block_id }}" style="position: relative; width: 100%; height: 250px; overflow: hidden; touch-action: pan-y;">
+            {% if images.size > 0 %}
+              {% for img in images %}
+                <div class="boat-slide" style="position: absolute; inset: 0; opacity: {% if forloop.first %}1{% else %}0{% endif %}; transition: opacity 0.4s ease;">
+                  <img src="{{ img | img_url: '600x' }}" alt="{{ block.settings.boat_name }}" style="width: 100%; height: 250px; object-fit: cover;">
+                </div>
+              {% endfor %}
+
+              {% if images.size > 1 %}
+                <button class="boat-prev" onclick="boatSlide('{{ block_id }}', -1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 18px; z-index: 5; display: flex; align-items: center; justify-content: center;">‹</button>
+                <button class="boat-next" onclick="boatSlide('{{ block_id }}', 1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 18px; z-index: 5; display: flex; align-items: center; justify-content: center;">›</button>
+                
+                <!-- Dots -->
+                <div style="position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; z-index: 5;">
+                  {% for img in images %}
+                    <div class="boat-dot" id="dot-{{ block_id }}-{{ forloop.index0 }}" style="width: 8px; height: 8px; border-radius: 50%; background: {% if forloop.first %}white{% else %}rgba(255,255,255,0.5){% endif %}; cursor: pointer;" onclick="boatGoTo('{{ block_id }}', {{ forloop.index0 }})"></div>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            {% else %}
+              <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #0A4B78 0%, #1E6FA8 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🚤</div>
+            {% endif %}
+          </div>
           
           <div style="padding: 2rem;">
             <h3 style="font-size: 1.5rem; color: #0a4b78; margin-bottom: 0.5rem;">{{ block.settings.boat_name }}</h3>
@@ -137,3 +184,45 @@
   }
 }
 </style>
+
+<script>
+var boatIndexes = {};
+
+function boatSlide(id, dir) {
+  var slideshow = document.getElementById('slideshow-' + id);
+  var slides = slideshow.querySelectorAll('.boat-slide');
+  if (!slides.length) return;
+  if (boatIndexes[id] === undefined) boatIndexes[id] = 0;
+  var total = slides.length;
+  boatIndexes[id] = (boatIndexes[id] + dir + total) % total;
+  boatGoTo(id, boatIndexes[id]);
+}
+
+function boatGoTo(id, index) {
+  var slideshow = document.getElementById('slideshow-' + id);
+  var slides = slideshow.querySelectorAll('.boat-slide');
+  var dots = slideshow.querySelectorAll('.boat-dot');
+  boatIndexes[id] = index;
+  slides.forEach(function(s, i) {
+    s.style.opacity = i === index ? '1' : '0';
+  });
+  dots.forEach(function(d, i) {
+    d.style.background = i === index ? 'white' : 'rgba(255,255,255,0.5)';
+  });
+}
+
+// Touch/swipe support
+document.querySelectorAll('.boat-slideshow').forEach(function(slideshow) {
+  var id = slideshow.id.replace('slideshow-', '');
+  var touchStartX = 0;
+  slideshow.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+  slideshow.addEventListener('touchend', function(e) {
+    var diff = touchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 40) {
+      boatSlide(id, diff > 0 ? 1 : -1);
+    }
+  }, { passive: true });
+});
+</script>
