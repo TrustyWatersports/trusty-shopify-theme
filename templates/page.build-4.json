@@ -12,22 +12,169 @@
     "main-build-detail": {
       "type": "build-detail",
       "blocks": {
+        "photo_YiCq8X": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5163.jpg"
+          }
+        },
+        "photo_JAM8TV": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5206.jpg"
+          }
+        },
+        "photo_zUdN4r": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5208_62482327-8f1a-4835-8953-55e968347b24.jpg"
+          }
+        },
+        "photo_aTaMTd": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5200.jpg"
+          }
+        },
+        "photo_B3BEDW": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5203.jpg"
+          }
+        },
+        "photo_qF4VeB": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5159.jpg"
+          }
+        },
+        "photo_LnVUJq": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5211.jpg"
+          }
+        },
+        "photo_xHtQGK": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5188_b4de700f-1672-45ee-a29b-84896c8be448.jpg"
+          }
+        },
+        "photo_8aEqQa": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5191_826f5d59-9301-4d37-8410-0b86dedd8837.jpg"
+          }
+        },
+        "photo_JfiYi4": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5209.jpg"
+          }
+        },
+        "photo_CgqzKg": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5212.jpg"
+          }
+        },
+        "photo_FkXKbR": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5195_9bd31fd2-95da-421e-b3a4-769367d0fc29.jpg"
+          }
+        },
+        "photo_UaGcJk": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5210_1.jpg"
+          }
+        },
+        "photo_hBbRWk": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5202_011c6b8e-aaa1-4f80-9324-e10cd3efa998.jpg"
+          }
+        },
+        "photo_JnbnUn": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5213.jpg"
+          }
+        },
+        "photo_kMrnfk": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5190.jpg"
+          }
+        },
+        "photo_E6r3yW": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5213_1.jpg"
+          }
+        },
+        "photo_iLeUtY": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5189.jpg"
+          }
+        },
+        "photo_7jBYRk": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5194.jpg"
+          }
+        },
+        "photo_LjNACe": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5210_e16a0342-3e57-49c2-acd4-4735725ab164.jpg"
+          }
+        },
+        "photo_GU4Vj6": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5196.jpg"
+          }
+        },
         "photo1": {
           "type": "photo",
           "settings": {
-            "image": ""
+            "image": "shopify://shop_images/IMG_5187.jpg"
           }
         }
       },
       "block_order": [
+        "photo_YiCq8X",
+        "photo_JAM8TV",
+        "photo_zUdN4r",
+        "photo_aTaMTd",
+        "photo_B3BEDW",
+        "photo_qF4VeB",
+        "photo_LnVUJq",
+        "photo_xHtQGK",
+        "photo_8aEqQa",
+        "photo_JfiYi4",
+        "photo_CgqzKg",
+        "photo_FkXKbR",
+        "photo_UaGcJk",
+        "photo_hBbRWk",
+        "photo_JnbnUn",
+        "photo_kMrnfk",
+        "photo_E6r3yW",
+        "photo_iLeUtY",
+        "photo_7jBYRk",
+        "photo_LjNACe",
+        "photo_GU4Vj6",
         "photo1"
       ],
       "settings": {
-        "hero_image": "",
-        "badge": "",
-        "build_title": "",
-        "customer_info": "",
-        "build_description": ""
+        "hero_image": "shopify://shop_images/IMG_5210_1.jpg",
+        "badge": "Top of the Line",
+        "build_title": "World Class Kayak Build x 2!",
+        "customer_info": "Special customer in Florida",
+        "build_description": "<p>We were challeneged to build a world class kayak, using the Old Town Bigwater ePDL 132 platform as the base. Challenge accepted! Oh, and make it two. </p>"
       }
     }
   },
