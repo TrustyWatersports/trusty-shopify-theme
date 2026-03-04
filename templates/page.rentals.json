@@ -226,6 +226,16 @@
         "heading": "Rental FAQ",
         "background_color": "#f5f7fa"
       }
+    },
+    "waiver_embed_e7hPpR": {
+      "type": "waiver-embed",
+      "name": "Waiver Embed",
+      "settings": {
+        "background_color": "#F5F7FA",
+        "heading": "Sign Your Waiver",
+        "subheading": "All participants must sign our waiver before renting. You can sign ahead of time or at the dock — but signing early makes check-in faster!",
+        "iframe_height": 800
+      }
     }
   },
   "order": [
@@ -233,6 +243,7 @@
     "rentals-pricing2",
     "sailboat-rentals",
     "rentals-booking",
+    "waiver_embed_e7hPpR",
     "rentals-faq"
   ]
 }
