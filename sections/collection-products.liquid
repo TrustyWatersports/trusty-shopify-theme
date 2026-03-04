@@ -31,11 +31,11 @@
     <!-- Filter by Vendor -->
     <div style="flex: 1; min-width: 180px;">
       <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 13px; color: var(--text-dark);">Brand</label>
-      <select id="vendor-filter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: white; font-size: 14px;" onchange="applyVendorFilter()">
+      <select id="vendor-filter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: white; font-size: 14px;" onchange="filterProducts()">
         <option value="">All Brands</option>
         {% for vendor in shop.vendors %}
           {% if vendor != blank %}
-            <option value="{{ vendor | handleize }}" {% if current_tags contains vendor %}selected{% endif %}>{{ vendor }}</option>
+            <option value="{{ vendor }}">{{ vendor }}</option>
           {% endif %}
         {% endfor %}
       </select>
@@ -190,17 +190,6 @@
     var url = new URL(window.location.href);
     url.searchParams.set('sort_by', sort);
     window.location.href = url.toString();
-  }
-
-  function applyVendorFilter() {
-    var vendor = document.getElementById('vendor-filter').value;
-    var collection = document.getElementById('collection-filter') ? document.getElementById('collection-filter').value : '';
-    var base = collection ? '/collections/' + collection : '/collections/all';
-    if (vendor) {
-      window.location.href = base + '/{{ vendor | handleize }}'.replace('{{ vendor | handleize }}', vendor);
-    } else {
-      window.location.href = base;
-    }
   }
 
   function applyCollectionFilter() {
