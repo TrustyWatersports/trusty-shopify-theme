@@ -25,20 +25,6 @@
     "packages_grid": {
       "type": "rigging-packages-grid",
       "blocks": {
-        "package_r9HhrL": {
-          "type": "package",
-          "settings": {
-            "name": "I Love Garmin! Package",
-            "tagline": "For the Garmin Fan",
-            "price": "$5949.95",
-            "price_note": "GPS Anchoring- from the stern.",
-            "image": "shopify://shop_images/75294-4.jpg",
-            "features": "Garmin Echomap UHD2 94SV 9\" Chartplotter\nYakAttack Fish Finder mount\nYakAttack Through Hull Fitting kit\nNavarre Kayak Garmin Transducer mount\nNocqua 20ah 12V battery with charger\nGarmin Force Current Kayak Motor with GPS Anchoring\nAmped Outdoors 24v50ah battery\nBattery Box\n24v Lithium Battery Charger\nProfessional Installation. All product properly installed and secured. All wiring inside boat where possible.\nLeft or Right side fish finder install by request.&nbsp;",
-            "featured": false,
-            "cta_text": "Click Here!",
-            "cta_link": "shopify://products/i-love-garmin-package"
-          }
-        },
         "package2": {
           "type": "package",
           "settings": {
@@ -95,6 +81,20 @@
             "cta_link": "shopify://products/lights-camera-anchor-package"
           }
         },
+        "package_r9HhrL": {
+          "type": "package",
+          "settings": {
+            "name": "I Love Garmin! Package",
+            "tagline": "For the Garmin Fan",
+            "price": "$5949.95",
+            "price_note": "GPS Anchoring- from the stern.",
+            "image": "shopify://shop_images/75294-4.jpg",
+            "features": "Garmin Echomap UHD2 94SV 9\" Chartplotter\nYakAttack Fish Finder mount\nYakAttack Through Hull Fitting kit\nNavarre Kayak Garmin Transducer mount\nNocqua 20ah 12V battery with charger\nGarmin Force Current Kayak Motor with GPS Anchoring\nAmped Outdoors 24v50ah battery\nBattery Box\n24v Lithium Battery Charger\nProfessional Installation. All product properly installed and secured. All wiring inside boat where possible.\nLeft or Right side fish finder install by request.&nbsp;",
+            "featured": false,
+            "cta_text": "Click Here!",
+            "cta_link": "shopify://products/i-love-garmin-package"
+          }
+        },
         "package3": {
           "type": "package",
           "settings": {
@@ -125,11 +125,11 @@
         }
       },
       "block_order": [
-        "package_r9HhrL",
         "package2",
         "package1",
         "package_TjPeq4",
         "package_xbfhce",
+        "package_r9HhrL",
         "package3",
         "package_D9zrdT"
       ],
