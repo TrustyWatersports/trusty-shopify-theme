@@ -94,7 +94,7 @@
             "brand_logo": "shopify://shop_images/eddylineLogo_2_410x_5a7692d7-b996-4cd0-b9e0-3e7aa97fc91b.webp",
             "brand_name": "Eddyline Kayaks",
             "brand_description": "Lightweight touring kayaks",
-            "brand_link": "/collections/eddyline"
+            "brand_link": "shopify://collections/eddyline"
           }
         },
         "brand-oldtown": {
@@ -103,7 +103,7 @@
             "brand_logo": "shopify://shop_images/logo.png",
             "brand_name": "Old Town",
             "brand_description": "Classic canoes and kayaks since 1898",
-            "brand_link": "/collections/old-town"
+            "brand_link": "shopify://collections/old-town"
           }
         },
         "category-sailboats": {
@@ -116,6 +116,7 @@
         "brand-topaz": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/Topaz.webp",
             "brand_name": "Topaz Sailboats",
             "brand_description": "Small dinghies and catamarans from the UK",
             "brand_link": "/collections/topaz-sailboats"
