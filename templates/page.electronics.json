@@ -27,6 +27,7 @@
         "livescope": {
           "type": "option",
           "settings": {
+            "image": "shopify://shop_images/Garmin-LiveScope-Plus-System-with-GLS-10-and-LVS34-Transducer_c3dae1a7-0095-4595-93d2-cee08cdd0dc6.ef924ce7a4e48e4dd5401b738883f51d.webp",
             "emoji": "📡",
             "category": "Garmin",
             "title": "Livescope Plus System",
@@ -42,26 +43,6 @@
             "title": "Chartplotter & Fishfinder",
             "description": "GPS chartplotters with traditional and down/side imaging sonar. Navigate to your spots and mark waypoints on the water.",
             "specs": "Garmin ECHOMAP, Humminbird HELIX series — mount, wiring, transducer install"
-          }
-        },
-        "lowrance": {
-          "type": "option",
-          "settings": {
-            "emoji": "🌊",
-            "category": "Lowrance",
-            "title": "ActiveTarget Live Sonar",
-            "description": "Lowrance's live sonar system gives you real-time forward and down-looking imaging. A top choice for structure fishing and tracking fish movement.",
-            "specs": "ActiveTarget transducer, compatible HDS display, bracket mount and wiring"
-          }
-        },
-        "nmea": {
-          "type": "option",
-          "settings": {
-            "emoji": "🔗",
-            "category": "Integration",
-            "title": "NMEA 2000 Network",
-            "description": "Connect all your electronics on a single network — chartplotter, fishfinder, motor, and more all share data and display on one screen.",
-            "specs": "NMEA 2000 backbone, T-connectors, power tap, device integration"
           }
         },
         "power": {
@@ -85,11 +66,16 @@
           }
         }
       },
-      "block_order": ["livescope", "fishfinder", "lowrance", "nmea", "power", "lighting"],
+      "block_order": [
+        "livescope",
+        "fishfinder",
+        "power",
+        "lighting"
+      ],
       "settings": {
         "heading": "Electronics We Install",
         "subheading": "From entry-level fishfinders to full Livescope setups — we spec, source, and install it all.",
-        "background_color": "#F5F7FA"
+        "background_color": "#f5f7fa"
       }
     },
     "electronics-why-pro": {
@@ -128,13 +114,22 @@
           }
         }
       },
-      "block_order": ["wiring", "waterproof", "mount", "warranty"],
+      "block_order": [
+        "wiring",
+        "waterproof",
+        "mount",
+        "warranty"
+      ],
       "settings": {
         "heading": "Why Professional Installation Matters",
         "subheading": "A bad wiring job can fry your electronics or drain your battery mid-trip. Don't risk it.",
-        "background_color": "#FFFFFF"
+        "background_color": "#ffffff"
       }
     }
   },
-  "order": ["electronics-hero", "electronics-options", "electronics-why-pro"]
+  "order": [
+    "electronics-hero",
+    "electronics-options",
+    "electronics-why-pro"
+  ]
 }
