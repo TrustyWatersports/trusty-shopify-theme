@@ -27,7 +27,7 @@
         "single": {
           "type": "rental",
           "settings": {
-            "product_url": "",
+            "product_url": "shopify://collections/paddle-kayak-rental-single",
             "name": "Single Kayak",
             "half_day_price": "$40",
             "half_day_hours": "4",
@@ -35,7 +35,7 @@
             "feature_1": "Recreational or touring kayaks",
             "feature_2": "Perfect for solo paddling",
             "feature_3": "Great for exploration",
-            "cta_text": "Call to Book",
+            "cta_text": "Click to Book!",
             "featured": false
           }
         },
