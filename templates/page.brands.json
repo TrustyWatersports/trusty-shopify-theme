@@ -203,9 +203,10 @@
         "brand-yakattack": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/YakAttack.webp",
             "brand_name": "YakAttack",
             "brand_description": "Kayak fishing accessories and mounts",
-            "brand_link": "/collections/yakattack"
+            "brand_link": "shopify://collections/yakattack"
           }
         },
         "brand-harken": {
