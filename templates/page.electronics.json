@@ -27,7 +27,7 @@
         "livescope": {
           "type": "option",
           "settings": {
-            "image": "shopify://shop_images/Garmin-LiveScope-Plus-System-with-GLS-10-and-LVS34-Transducer_c3dae1a7-0095-4595-93d2-cee08cdd0dc6.ef924ce7a4e48e4dd5401b738883f51d.webp",
+            "image": "shopify://shop_images/60404705_2000x_e3319b16-f6e4-4ffb-b24f-8bbbc39a94db.webp",
             "emoji": "📡",
             "category": "Garmin",
             "title": "Livescope Plus System",
@@ -38,6 +38,7 @@
         "fishfinder": {
           "type": "option",
           "settings": {
+            "image": "shopify://shop_images/d4a6084c-81cd-4125-adc1-9db095832c6c.359d161662bf9bd7d5b3623ad8cbbf2a.webp",
             "emoji": "🎯",
             "category": "Garmin / Humminbird",
             "title": "Chartplotter & Fishfinder",
@@ -48,6 +49,7 @@
         "power": {
           "type": "option",
           "settings": {
+            "image": "shopify://shop_images/IMG_5203.jpg",
             "emoji": "🔋",
             "category": "Power",
             "title": "Lithium Power Systems",
