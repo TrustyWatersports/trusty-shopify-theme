@@ -31,7 +31,7 @@
     <!-- Filter by Vendor -->
     <div style="flex: 1; min-width: 180px;">
       <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 13px; color: var(--text-dark);">Brand</label>
-      <select id="vendor-filter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: white; font-size: 14px;" onchange="filterProducts()">
+      <select id="vendor-filter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: white; font-size: 14px;" onchange="applyVendorFilter()">
         <option value="">All Brands</option>
         {% for vendor in shop.vendors %}
           {% if vendor != blank %}
@@ -190,6 +190,18 @@
     var url = new URL(window.location.href);
     url.searchParams.set('sort_by', sort);
     window.location.href = url.toString();
+  }
+
+  function applyVendorFilter() {
+    var vendor = document.getElementById('vendor-filter').value;
+    var category = document.getElementById('collection-filter') ? document.getElementById('collection-filter').value : '';
+    if (vendor) {
+      var base = category ? '/collections/' + category : '/collections/all';
+      window.location.href = '/search?q=' + encodeURIComponent(vendor) + '&type=product';
+    } else {
+      var category = document.getElementById('collection-filter') ? document.getElementById('collection-filter').value : '';
+      window.location.href = category ? '/collections/' + category : '/collections/all';
+    }
   }
 
   function applyCollectionFilter() {
