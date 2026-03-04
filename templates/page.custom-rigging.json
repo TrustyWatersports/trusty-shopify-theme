@@ -207,6 +207,17 @@
     "custom_rigging_gallery_eVhUqU": {
       "type": "custom-rigging-gallery",
       "blocks": {
+        "build_MAgh9f": {
+          "type": "build",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5195_9bd31fd2-95da-421e-b3a4-769367d0fc29.jpg",
+            "icon": "🎣",
+            "gradient": "linear-gradient(135deg, var(--ocean-light), var(--ocean-medium))",
+            "title": "World-Class Kayak Build",
+            "description": "Customer asked for a world-class kayak, using the Old Town Bigwater ePDL 132 as our platform. Challenge accepted! x 2!",
+            "build_url": "shopify://pages/build-detail-4"
+          }
+        },
         "build_QyJF8m": {
           "type": "build",
           "settings": {
@@ -242,6 +253,7 @@
         }
       },
       "block_order": [
+        "build_MAgh9f",
         "build_QyJF8m",
         "build_GFGgHX",
         "build_LYr9M4"
