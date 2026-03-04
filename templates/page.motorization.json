@@ -38,6 +38,7 @@
         "torqeedo": {
           "type": "motor",
           "settings": {
+            "image": "shopify://shop_images/IMG_6541.jpg",
             "emoji": "🔋",
             "brand": "Torqeedo",
             "title": "Torqeedo Electric Motor",
