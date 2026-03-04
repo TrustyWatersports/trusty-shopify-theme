@@ -19,6 +19,15 @@
     "brands-directory": {
       "type": "brands-directory",
       "blocks": {
+        "brand_XzGGbi": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/Newport_Full_Logo_Navy.avif",
+            "brand_name": "Newport Vessels",
+            "brand_description": "Trolling motors and batteries",
+            "brand_link": "shopify://collections/newport-vessels"
+          }
+        },
         "category-kayaks": {
           "type": "category",
           "settings": {
@@ -254,15 +263,6 @@
             "brand_link": "shopify://collections/power-pole"
           }
         },
-        "brand-minnkota": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/minn_kota.webp",
-            "brand_name": "Minn Kota",
-            "brand_description": "Trolling motors",
-            "brand_link": "shopify://collections/minn-kota"
-          }
-        },
         "category-ropes": {
           "type": "category",
           "settings": {
@@ -356,6 +356,15 @@
             "brand_link": "shopify://collections/garmin-1"
           }
         },
+        "brand-minnkota": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/minn_kota.webp",
+            "brand_name": "Minn Kota",
+            "brand_description": "Trolling motors",
+            "brand_link": "shopify://collections/minn-kota"
+          }
+        },
         "brand-yamaha": {
           "type": "brand",
           "settings": {
@@ -405,6 +414,7 @@
         }
       },
       "block_order": [
+        "brand_XzGGbi",
         "category-kayaks",
         "brand-jackson",
         "brand-perception",
@@ -432,7 +442,6 @@
         "brand-allen",
         "brand-berlypro",
         "brand-powerpole",
-        "brand-minnkota",
         "category-ropes",
         "brand-ner",
         "brand-marlow",
@@ -444,6 +453,7 @@
         "brand-malone",
         "category-electronics",
         "brand-garmin",
+        "brand-minnkota",
         "brand-yamaha",
         "category-outdoor",
         "brand-ketch",
