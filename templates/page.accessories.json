@@ -27,6 +27,7 @@
         "crates": {
           "type": "accessory",
           "settings": {
+            "image": "shopify://shop_images/YakAttack-BlackPak-Pro-13x16-09.png",
             "emoji": "📦",
             "category": "Storage",
             "title": "Crate Systems",
@@ -36,6 +37,7 @@
         "tracks": {
           "type": "accessory",
           "settings": {
+            "image": "shopify://shop_images/YakAttack-Gen-2-Geartrac-1.75-best-track-for-kayak-rigging-GT175G2-08-2.jpg",
             "emoji": "🔩",
             "category": "Mounting",
             "title": "Gear Tracks & Rails",
@@ -45,6 +47,7 @@
         "rod-holders": {
           "type": "accessory",
           "settings": {
+            "image": "shopify://shop_images/IMG_9868.png",
             "emoji": "🎣",
             "category": "Fishing",
             "title": "Rod Holders",
@@ -54,6 +57,7 @@
         "anchor": {
           "type": "accessory",
           "settings": {
+            "image": "shopify://shop_images/anchor_trolley_2.png",
             "emoji": "⚓",
             "category": "Control",
             "title": "Anchor Trolley Systems",
@@ -79,13 +83,23 @@
           }
         }
       },
-      "block_order": ["crates", "tracks", "rod-holders", "anchor", "transport", "safety"],
+      "block_order": [
+        "crates",
+        "tracks",
+        "rod-holders",
+        "anchor",
+        "transport",
+        "safety"
+      ],
       "settings": {
         "heading": "Accessories & Rigging Add-Ons",
         "subheading": "The details that make your kayak fishable. We source and install the best components available.",
-        "background_color": "#F5F7FA"
+        "background_color": "#f5f7fa"
       }
     }
   },
-  "order": ["accessories-hero", "accessories-options"]
+  "order": [
+    "accessories-hero",
+    "accessories-options"
+  ]
 }
