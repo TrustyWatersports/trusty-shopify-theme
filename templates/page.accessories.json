@@ -24,6 +24,16 @@
     "accessories-options": {
       "type": "accessories-options",
       "blocks": {
+        "accessory_4V4MLb": {
+          "type": "accessory",
+          "settings": {
+            "image": "shopify://shop_images/IMG_4772.jpg",
+            "emoji": "🎣",
+            "category": "Storage",
+            "title": "Track Storage",
+            "description": "Custom setups with stacking storage, cutting boards, and tackle organization. Built for the way you fish."
+          }
+        },
         "crates": {
           "type": "accessory",
           "settings": {
@@ -86,6 +96,7 @@
         }
       },
       "block_order": [
+        "accessory_4V4MLb",
         "crates",
         "tracks",
         "rod-holders",
