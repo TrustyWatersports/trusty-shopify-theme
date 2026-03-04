@@ -42,7 +42,7 @@
         "tandem": {
           "type": "rental",
           "settings": {
-            "product_url": "",
+            "product_url": "shopify://collections/kayak-rental-half-day-tandem",
             "name": "Tandem Kayak",
             "half_day_price": "$60",
             "half_day_hours": "4",
@@ -50,7 +50,7 @@
             "feature_1": "Two-person kayak",
             "feature_2": "Ideal for couples & families",
             "feature_3": "Extra stability",
-            "cta_text": "Call to Book",
+            "cta_text": "Click to Book!",
             "featured": false
           }
         },
