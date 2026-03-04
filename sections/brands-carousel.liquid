@@ -81,7 +81,7 @@
     <div class="brands-carousel-wrapper" style="position: relative;">
       <button class="carousel-prev" style="position: absolute; left: -50px; top: 50%; transform: translateY(-50%); background: white; border: 2px solid #0a4b78; color: #0a4b78; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10; font-size: 1.5rem; display: flex; align-items: center; justify-content: center;">‹</button>
       
-      <div class="brands-carousel" style="overflow: hidden;">
+      <div class="brands-carousel" style="overflow: hidden; touch-action: pan-y; cursor: grab;">
         <div class="brands-track" style="display: flex; gap: 40px; transition: transform 0.5s ease;">
           {% for block in section.blocks %}
             <a href="{{ block.settings.brand_link }}" class="brand-item" style="flex: 0 0 200px; text-decoration: none; text-align: center; transition: transform 0.3s ease;">
@@ -148,5 +148,28 @@
     updateCarousel();
   }, {{ section.settings.autoplay_speed | times: 1000 }});
   {% endif %}
+
+  // Touch/swipe support
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  const carousel = document.querySelector('.brands-carousel');
+
+  carousel.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  carousel.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) {
+        currentIndex = Math.min(maxIndex, currentIndex + 1);
+      } else {
+        currentIndex = Math.max(0, currentIndex - 1);
+      }
+      updateCarousel();
+    }
+  }, { passive: true });
 })();
 </script>
