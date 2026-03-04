@@ -350,9 +350,10 @@
         "brand-garmin": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/garmin.webp",
             "brand_name": "Garmin",
             "brand_description": "Marine electronics and fish finders",
-            "brand_link": "/collections/garmin"
+            "brand_link": "shopify://collections/garmin-1"
           }
         },
         "brand-yamaha": {
