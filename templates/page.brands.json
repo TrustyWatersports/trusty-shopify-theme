@@ -12,6 +12,7 @@
     "brands-hero": {
       "type": "blog-hero",
       "settings": {
+        "hero_image": "shopify://shop_images/IMG_4026.jpg",
         "hero_height": 400
       }
     },
