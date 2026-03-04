@@ -25,18 +25,18 @@
     "packages_grid": {
       "type": "rigging-packages-grid",
       "blocks": {
-        "package_xbfhce": {
+        "package_r9HhrL": {
           "type": "package",
           "settings": {
-            "name": "Lights, Camera, Anchor! Package",
-            "tagline": "For the influencer!",
-            "price": "$2,395.95",
-            "price_note": "Power to film, anchor to stay put.",
-            "image": "shopify://shop_images/IMG_6530.jpg",
-            "features": "Nocqua 20ah Battery Kit with charger&nbsp; x 2\nNocqua Smart Link Battery Connector\nYak Power 8 port Bluetooth enabled switching system\nYak Power 10\" Red/Green bow strip lighting\nYak Power 20\" Green stern strip lighting\nYak Power Blue Button Light Set x 2 (four lights total)\nYak Power White Button Light Set (tankwell two lights)\nYak Power SAE Power Port&nbsp; Cockpit x 2\nYak Power SAE Power Port Stern and Bow\nYak Power Y-Adapter x 4\nTrusty Sail &amp; Paddle Bow Light Kit\nPower-Pole Microspike Driver\nPower-Pole Spike\nProfessional Installation, all wires in hull, switch and batteries securely mounted",
+            "name": "I Love Garmin! Package",
+            "tagline": "For the Garmin Fan",
+            "price": "$5949.95",
+            "price_note": "GPS Anchoring- from the stern.",
+            "image": "shopify://shop_images/75294-4.jpg",
+            "features": "Garmin Echomap UHD2 94SV 9\" Chartplotter\nYakAttack Fish Finder mount\nYakAttack Through Hull Fitting kit\nNavarre Kayak Garmin Transducer mount\nNocqua 20ah 12V battery with charger\nGarmin Force Current Kayak Motor with GPS Anchoring\nAmped Outdoors 24v50ah battery\nBattery Box\n24v Lithium Battery Charger\nProfessional Installation. All product properly installed and secured. All wiring inside boat where possible.\nLeft or Right side fish finder install by request.&nbsp;",
             "featured": false,
-            "cta_text": "Buy Now!",
-            "cta_link": "shopify://products/lights-camera-anchor-package"
+            "cta_text": "Click Here!",
+            "cta_link": "shopify://products/i-love-garmin-package"
           }
         },
         "package2": {
@@ -81,6 +81,20 @@
             "cta_link": "/pages/start-your-build"
           }
         },
+        "package_xbfhce": {
+          "type": "package",
+          "settings": {
+            "name": "Lights, Camera, Anchor! Package",
+            "tagline": "For the influencer!",
+            "price": "$2,395.95",
+            "price_note": "Power to film, anchor to stay put.",
+            "image": "shopify://shop_images/IMG_6530.jpg",
+            "features": "Nocqua 20ah Battery Kit with charger&nbsp; x 2\nNocqua Smart Link Battery Connector\nYak Power 8 port Bluetooth enabled switching system\nYak Power 10\" Red/Green bow strip lighting\nYak Power 20\" Green stern strip lighting\nYak Power Blue Button Light Set x 2 (four lights total)\nYak Power White Button Light Set (tankwell two lights)\nYak Power SAE Power Port&nbsp; Cockpit x 2\nYak Power SAE Power Port Stern and Bow\nYak Power Y-Adapter x 4\nTrusty Sail &amp; Paddle Bow Light Kit\nPower-Pole Microspike Driver\nPower-Pole Spike\nProfessional Installation, all wires in hull, switch and batteries securely mounted",
+            "featured": false,
+            "cta_text": "Buy Now!",
+            "cta_link": "shopify://products/lights-camera-anchor-package"
+          }
+        },
         "package3": {
           "type": "package",
           "settings": {
@@ -111,10 +125,11 @@
         }
       },
       "block_order": [
-        "package_xbfhce",
+        "package_r9HhrL",
         "package2",
         "package1",
         "package_TjPeq4",
+        "package_xbfhce",
         "package3",
         "package_D9zrdT"
       ],
