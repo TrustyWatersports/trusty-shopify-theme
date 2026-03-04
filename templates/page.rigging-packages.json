@@ -25,6 +25,20 @@
     "packages_grid": {
       "type": "rigging-packages-grid",
       "blocks": {
+        "package_xbfhce": {
+          "type": "package",
+          "settings": {
+            "name": "Lights, Camera, Anchor! Package",
+            "tagline": "For the influencer!",
+            "price": "$2,395.95",
+            "price_note": "Power to film, anchor to stay put.",
+            "image": "shopify://shop_images/IMG_6530.jpg",
+            "features": "Nocqua 20ah Battery Kit with charger&nbsp; x 2\nNocqua Smart Link Battery Connector\nYak Power 8 port Bluetooth enabled switching system\nYak Power 10\" Red/Green bow strip lighting\nYak Power 20\" Green stern strip lighting\nYak Power Blue Button Light Set x 2 (four lights total)\nYak Power White Button Light Set (tankwell two lights)\nYak Power SAE Power Port&nbsp; Cockpit x 2\nYak Power SAE Power Port Stern and Bow\nYak Power Y-Adapter x 4\nTrusty Sail &amp; Paddle Bow Light Kit\nPower-Pole Microspike Driver\nPower-Pole Spike\nProfessional Installation, all wires in hull, switch and batteries securely mounted",
+            "featured": false,
+            "cta_text": "Buy Now!",
+            "cta_link": "shopify://products/lights-camera-anchor-package"
+          }
+        },
         "package2": {
           "type": "package",
           "settings": {
@@ -97,6 +111,7 @@
         }
       },
       "block_order": [
+        "package_xbfhce",
         "package2",
         "package1",
         "package_TjPeq4",
