@@ -60,6 +60,7 @@
         "battery": {
           "type": "motor",
           "settings": {
+            "image": "shopify://shop_images/IMG_6518.jpg",
             "emoji": "🔌",
             "brand": "Power Systems",
             "title": "Lithium Battery Integration",
