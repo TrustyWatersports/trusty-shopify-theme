@@ -298,9 +298,10 @@
         "brand-dynamic": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/dynamic-dollies.webp",
             "brand_name": "Dynamic Dollies",
             "brand_description": "Boat dollies and launching systems",
-            "brand_link": "/collections/dynamic-dollies"
+            "brand_link": "shopify://collections/dynamic-dollies"
           }
         },
         "brand-yakima": {
