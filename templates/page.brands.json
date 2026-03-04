@@ -221,6 +221,7 @@
         "brand-ronstan": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/ronstan.webp",
             "brand_name": "Ronstan",
             "brand_description": "Sailing blocks and fittings",
             "brand_link": "/collections/ronstan"
