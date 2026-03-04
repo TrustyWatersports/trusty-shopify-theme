@@ -104,6 +104,7 @@
         "uno": {
           "type": "sailboat",
           "settings": {
+            "image": "shopify://shop_images/DJI_0132-3-2_27d54051-e6ea-46e9-ace0-1b6fb8c62f7c.jpg",
             "name": "Topaz Uno",
             "tagline": "Single-handed beginner dinghy",
             "day_price": "$225",
@@ -120,6 +121,7 @@
         "argo": {
           "type": "sailboat",
           "settings": {
+            "image": "shopify://shop_images/IMG_2373.jpg",
             "name": "Topaz Argo",
             "tagline": "Double-handed performance dinghy",
             "day_price": "$325",
@@ -136,6 +138,7 @@
         "cat14": {
           "type": "sailboat",
           "settings": {
+            "image": "shopify://shop_images/topaz-14-catamaran-sirena-voile-france-8_48346956752_o.jpg",
             "name": "Topaz Cat 14",
             "tagline": "High-performance catamaran",
             "day_price": "$375",
@@ -165,7 +168,7 @@
         "lesson_description": "Never sailed before? Add a certified instructor to your rental for hands-on guidance. Perfect for beginners, families, or anyone wanting to brush up their skills on Bogue Sound.",
         "lesson_rate": "$100/hr",
         "lesson_cta_text": "Book a Lesson",
-        "lesson_cta_link": "tel:252-515-4866"
+        "lesson_cta_link": "shopify://products/sailing-lesson-1-hour"
       }
     },
     "rentals-booking": {
