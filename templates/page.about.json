@@ -13,7 +13,7 @@
       "type": "about-hero",
       "settings": {
         "hero_image": "shopify://shop_images/Christmas2025.jpg",
-        "image_position": "center",
+        "image_position": "top",
         "year": "2026",
         "family_title": "The Fournel Family",
         "family_members": "Andrew, Heather, Abraham, Thomas & Rose",
