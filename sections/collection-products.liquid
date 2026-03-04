@@ -42,21 +42,18 @@
       </div>
     {% endif %}
 
-    <!-- Filter by Product Type -->
-    {% assign types = collection.all_products | map: 'type' | uniq | sort %}
-    {% if types.size > 1 %}
-      <div style="flex: 1; min-width: 180px;">
-        <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 13px; color: var(--text-dark);">Type</label>
-        <select id="type-filter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: white; font-size: 14px;" onchange="filterProducts()">
-          <option value="">All Types</option>
-          {% for type in types %}
-            {% if type != blank %}
-              <option value="{{ type }}">{{ type }}</option>
-            {% endif %}
-          {% endfor %}
-        </select>
-      </div>
-    {% endif %}
+    <!-- Filter by Collection -->
+    <div style="flex: 1; min-width: 180px;">
+      <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 13px; color: var(--text-dark);">Category</label>
+      <select id="collection-filter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: white; font-size: 14px;" onchange="applyCollectionFilter()">
+        <option value="">All Categories</option>
+        {% for c in collections %}
+          {% unless c.handle == 'frontpage' or c.handle == 'all' or c.products_count == 0 %}
+            <option value="{{ c.handle }}" {% if collection.handle == c.handle %}selected{% endif %}>{{ c.title }}</option>
+          {% endunless %}
+        {% endfor %}
+      </select>
+    </div>
 
     <!-- Filter by Availability -->
     <div style="flex: 1; min-width: 180px;">
@@ -196,16 +193,23 @@
     window.location.href = url.toString();
   }
 
+  function applyCollectionFilter() {
+    var handle = document.getElementById('collection-filter').value;
+    if (handle) {
+      window.location.href = '/collections/' + handle;
+    } else {
+      window.location.href = '/collections/all';
+    }
+  }
+
   function filterProducts() {
     var vendor = document.getElementById('vendor-filter') ? document.getElementById('vendor-filter').value.toLowerCase() : '';
-    var type = document.getElementById('type-filter') ? document.getElementById('type-filter').value.toLowerCase() : '';
     var availability = document.getElementById('availability-filter') ? document.getElementById('availability-filter').value : '';
     var cards = document.querySelectorAll('.product-card');
     var visible = 0;
     cards.forEach(function(card) {
       var show = true;
       if (vendor && (card.getAttribute('data-vendor') || '').toLowerCase() !== vendor) show = false;
-      if (type && (card.getAttribute('data-type') || '').toLowerCase() !== type) show = false;
       if (availability === 'in-stock' && card.getAttribute('data-available') !== 'true') show = false;
       card.style.display = show ? '' : 'none';
       if (show) visible++;
