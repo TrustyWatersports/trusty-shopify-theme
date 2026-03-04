@@ -50,12 +50,22 @@
       "step": 5,
       "label": "Overlay Opacity %",
       "default": 40
+    },
+    {
+      "type": "range",
+      "id": "hero_height",
+      "min": 300,
+      "max": 900,
+      "step": 50,
+      "unit": "px",
+      "label": "Hero Height",
+      "default": 700
     }
   ]
 }
 {% endschema %}
 
-<section style="position: relative; min-height: 500px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+<section style="position: relative; min-height: {{ section.settings.hero_height }}px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
   {% if section.settings.hero_image %}
     <img src="{{ section.settings.hero_image | img_url: '2048x' }}" alt="{{ section.settings.family_title }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center {{ section.settings.image_position | default: 'top' }};">
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: {{ section.settings.overlay_color }}; opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};"></div>
