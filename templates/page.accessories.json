@@ -24,6 +24,26 @@
     "accessories-options": {
       "type": "accessories-options",
       "blocks": {
+        "accessory_AxBbQp": {
+          "type": "accessory",
+          "settings": {
+            "image": "shopify://shop_images/Astral-LifeJacket-ERonny-WaterBlue-Angle.jpg",
+            "emoji": "🎣",
+            "category": "Safety",
+            "title": "PFD's Made to be Worn",
+            "description": "Comfortable and helpful PFD's you will want to wear. From Astral and NRS, the pockets and storage are essential."
+          }
+        },
+        "accessory_WLmd6d": {
+          "type": "accessory",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6525_18211722-69ca-437b-959b-8b1d8fbfe366.jpg",
+            "emoji": "🎣",
+            "category": "Measure",
+            "title": "Fish Measuring Boards",
+            "description": "Multiple brands, tournament legal. Easy stowage with custom storage options."
+          }
+        },
         "accessory_4V4MLb": {
           "type": "accessory",
           "settings": {
@@ -96,6 +116,8 @@
         }
       },
       "block_order": [
+        "accessory_AxBbQp",
+        "accessory_WLmd6d",
         "accessory_4V4MLb",
         "crates",
         "tracks",
