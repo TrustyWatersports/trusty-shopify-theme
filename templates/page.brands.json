@@ -316,9 +316,10 @@
         "brand-suspenz": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/suspenz.webp",
             "brand_name": "Suspenz",
             "brand_description": "Kayak and SUP storage solutions",
-            "brand_link": "/collections/suspenz"
+            "brand_link": "shopify://collections/suspenz"
           }
         },
         "brand-loadrite": {
