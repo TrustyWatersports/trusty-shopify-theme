@@ -257,9 +257,10 @@
         "brand-minnkota": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/minn_kota.webp",
             "brand_name": "Minn Kota",
             "brand_description": "Trolling motors",
-            "brand_link": "/collections/minn-kota"
+            "brand_link": "shopify://collections/minn-kota"
           }
         },
         "category-ropes": {
