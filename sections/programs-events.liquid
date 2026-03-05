@@ -24,6 +24,12 @@
       "id": "title_color",
       "label": "Title Color",
       "default": "#0A4B78"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#F5F7FA"
     }
   ],
   "blocks": [
@@ -34,7 +40,7 @@
         {
           "type": "image_picker",
           "id": "event_image",
-          "label": "Event Banner (optional)"
+          "label": "Event Banner Image"
         },
         {
           "type": "text",
@@ -46,6 +52,18 @@
           "type": "text",
           "id": "event_name",
           "label": "Event Name"
+        },
+        {
+          "type": "text",
+          "id": "event_badge",
+          "label": "Status Badge (e.g. 'Registering Now', 'Seasonal', 'Free Event')",
+          "default": "Registering Now"
+        },
+        {
+          "type": "color",
+          "id": "event_badge_color",
+          "label": "Badge Color",
+          "default": "#2E7D32"
         },
         {
           "type": "textarea",
@@ -66,9 +84,20 @@
         },
         {
           "type": "text",
+          "id": "event_location",
+          "label": "Location",
+          "default": "Waterfront Location"
+        },
+        {
+          "type": "text",
           "id": "event_cost",
           "label": "Cost",
           "default": "Free"
+        },
+        {
+          "type": "text",
+          "id": "event_spots",
+          "label": "Spots / Capacity (optional, e.g. 'Limited to 12')"
         },
         {
           "type": "color",
@@ -86,12 +115,29 @@
           "type": "text",
           "id": "button_text",
           "label": "Button Text",
-          "default": "Learn More"
+          "default": "Register Now"
         },
         {
           "type": "url",
           "id": "button_link",
           "label": "Button Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_secondary_button",
+          "label": "Show Secondary Button",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "secondary_button_text",
+          "label": "Secondary Button Text",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "secondary_button_link",
+          "label": "Secondary Button Link"
         }
       ]
     }
@@ -104,54 +150,83 @@
 }
 {% endschema %}
 
-<section style="padding: 80px 20px; background: white;">
+<section class="programs-events-section" style="padding: 80px 20px; background: {{ section.settings.background_color }};">
   <div style="max-width: 1200px; margin: 0 auto;">
-    
+
     <div style="text-align: center; margin-bottom: 60px;">
       <div style="font-size: 3rem; margin-bottom: 1rem;">{{ section.settings.section_icon }}</div>
       <h2 style="font-size: 2.5rem; color: {{ section.settings.title_color }}; margin-bottom: 1rem;">{{ section.settings.section_title }}</h2>
       {% if section.settings.section_description != blank %}
-        <p style="font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto;">{{ section.settings.section_description }}</p>
+        <p style="font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto;">{{ section.settings.section_description }}</p>
       {% endif %}
     </div>
 
-    <div style="display: grid; gap: 40px;">
+    <div class="events-grid">
       {% for block in section.blocks %}
-        <div style="background: linear-gradient(to right, {{ block.settings.event_color }}15 0%, white 30%); border-left: 6px solid {{ block.settings.event_color }}; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
-          
-          <div style="display: grid; grid-template-columns: {% if block.settings.event_image %}300px {% endif %}1fr; gap: 0;">
+        <div class="event-card" style="--accent: {{ block.settings.event_color }};">
+
+          <!-- Image / Header Band -->
+          <div class="event-card__header" style="background: {{ block.settings.event_color }};">
             {% if block.settings.event_image %}
-              <img src="{{ block.settings.event_image | img_url: '400x' }}" alt="{{ block.settings.event_name }}" style="width: 100%; height: 100%; object-fit: cover;">
+              <img src="{{ block.settings.event_image | img_url: '800x400', crop: 'center' }}" alt="{{ block.settings.event_name }}" class="event-card__img">
+              <div class="event-card__img-overlay"></div>
             {% endif %}
-            
-            <div style="padding: 2rem;">
-              <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                <span style="font-size: 2.5rem;">{{ block.settings.event_icon }}</span>
-                <h3 style="font-size: 1.8rem; color: #0a4b78; margin: 0;">{{ block.settings.event_name }}</h3>
-              </div>
-              
-              <p style="color: #333; line-height: 1.7; margin-bottom: 1.5rem;">{{ block.settings.event_description }}</p>
-              
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-                <div style="background: white; padding: 1rem; border-radius: 8px; border: 2px solid #f0f0f0;">
-                  <div style="font-size: 0.875rem; color: #666; margin-bottom: 0.25rem;">📅 When</div>
-                  <div style="font-weight: 600; color: #0a4b78;">{{ block.settings.event_when }}</div>
-                </div>
-                <div style="background: white; padding: 1rem; border-radius: 8px; border: 2px solid #f0f0f0;">
-                  <div style="font-size: 0.875rem; color: #666; margin-bottom: 0.25rem;">🕒 Time</div>
-                  <div style="font-weight: 600; color: #0a4b78;">{{ block.settings.event_time }}</div>
-                </div>
-                <div style="background: white; padding: 1rem; border-radius: 8px; border: 2px solid #f0f0f0;">
-                  <div style="font-size: 0.875rem; color: #666; margin-bottom: 0.25rem;">💰 Cost</div>
-                  <div style="font-weight: 600; color: {{ block.settings.event_color }};">{{ block.settings.event_cost }}</div>
-                </div>
-              </div>
-              
-              {% if block.settings.show_button %}
-                <a href="{{ block.settings.button_link }}" style="display: inline-block; background: {{ block.settings.event_color }}; color: white; padding: 0.875rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s;">{{ block.settings.button_text }}</a>
+            <div class="event-card__header-content">
+              <span class="event-card__icon">{{ block.settings.event_icon }}</span>
+              {% if block.settings.event_badge != blank %}
+                <span class="event-card__badge" style="background: {{ block.settings.event_badge_color }};">{{ block.settings.event_badge }}</span>
               {% endif %}
             </div>
           </div>
+
+          <!-- Body -->
+          <div class="event-card__body">
+            <h3 class="event-card__title">{{ block.settings.event_name }}</h3>
+            <p class="event-card__desc">{{ block.settings.event_description }}</p>
+
+            <!-- Info Pills -->
+            <div class="event-card__pills">
+              <div class="event-pill">
+                <span class="event-pill__label">📅 When</span>
+                <span class="event-pill__value">{{ block.settings.event_when }}</span>
+              </div>
+              <div class="event-pill">
+                <span class="event-pill__label">🕒 Time</span>
+                <span class="event-pill__value">{{ block.settings.event_time }}</span>
+              </div>
+              <div class="event-pill">
+                <span class="event-pill__label">📍 Location</span>
+                <span class="event-pill__value">{{ block.settings.event_location }}</span>
+              </div>
+              <div class="event-pill">
+                <span class="event-pill__label">💰 Cost</span>
+                <span class="event-pill__value" style="color: {{ block.settings.event_color }}; font-weight: 700;">{{ block.settings.event_cost }}</span>
+              </div>
+              {% if block.settings.event_spots != blank %}
+                <div class="event-pill event-pill--spots">
+                  <span class="event-pill__label">👥 Spots</span>
+                  <span class="event-pill__value">{{ block.settings.event_spots }}</span>
+                </div>
+              {% endif %}
+            </div>
+
+            <!-- CTAs -->
+            {% if block.settings.show_button or block.settings.show_secondary_button %}
+              <div class="event-card__ctas">
+                {% if block.settings.show_button %}
+                  <a href="{{ block.settings.button_link }}" class="event-btn event-btn--primary" style="background: {{ block.settings.event_color }};">
+                    {{ block.settings.button_text }}
+                  </a>
+                {% endif %}
+                {% if block.settings.show_secondary_button %}
+                  <a href="{{ block.settings.secondary_button_link }}" class="event-btn event-btn--secondary" style="color: {{ block.settings.event_color }}; border-color: {{ block.settings.event_color }};">
+                    {{ block.settings.secondary_button_text }}
+                  </a>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+
         </div>
       {% endfor %}
     </div>
@@ -160,12 +235,149 @@
 </section>
 
 <style>
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px;
+}
+
+.event-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+}
+
+.event-card__header {
+  position: relative;
+  height: 160px;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+}
+.event-card__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.event-card__img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+}
+.event-card__header-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.event-card__icon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+.event-card__badge {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.event-card__body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.event-card__title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0A4B78;
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+.event-card__desc {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0 0 20px;
+  flex: 1;
+}
+
+.event-card__pills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.event-pill {
+  background: #F5F7FA;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.event-pill--spots {
+  grid-column: 1 / -1;
+  background: #FFF3E0;
+  border: 1px solid #FFB74D;
+}
+.event-pill__label {
+  font-size: 0.72rem;
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.event-pill__value {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0A4B78;
+}
+
+.event-card__ctas {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.event-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
+  transition: opacity 0.2s;
+}
+.event-btn:hover { opacity: 0.88; }
+.event-btn--primary {
+  color: white;
+}
+.event-btn--secondary {
+  background: white;
+  border: 2px solid;
+}
+
 @media (max-width: 768px) {
-  section > div > div > div > div:first-child {
-    grid-template-columns: 1fr !important;
-  }
-  section > div > div > div > div:last-child > div:nth-child(4) {
-    grid-template-columns: 1fr !important;
+  .events-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>
