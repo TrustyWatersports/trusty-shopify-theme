@@ -48,7 +48,7 @@
       {%- for link in main_menu.links -%}
         {%- if link.links != blank -%}
           <div class="nav-item dropdown">
-            <a href="{{ link.url }}">{{ link.title | upcase }} ▾</a>
+            <a href="{{ link.url }}" class="nav-parent-link">{{ link.title | upcase }}</a><button class="dropdown-toggle" aria-label="Expand {{ link.title }}" tabindex="0">▾</button>
             <div class="dropdown-content">
               {%- for child_link in link.links -%}
                 <a href="{{ child_link.url }}">{{ child_link.title }}</a>
@@ -100,19 +100,54 @@
         nav.classList.remove('active');
       }
     });
-    nav.querySelectorAll('.nav-item').forEach(item => {
-      const link = item.querySelector('a');
-      if (link && link.textContent.includes('▾')) {
-        link.addEventListener('click', function(e) {
-          if (window.innerWidth <= 968) {
-            e.preventDefault();
-            item.classList.toggle('open');
-          }
+    // Desktop: hover opens dropdown; Mobile: chevron button toggles, parent link navigates
+    nav.querySelectorAll('.nav-item.dropdown').forEach(item => {
+      const toggleBtn = item.querySelector('.dropdown-toggle');
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          // Close other open items
+          nav.querySelectorAll('.nav-item.open').forEach(other => {
+            if (other !== item) other.classList.remove('open');
+          });
+          item.classList.toggle('open');
         });
       }
     });
   }
 </script>
+
+<style>
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0 6px;
+  color: inherit;
+  line-height: inherit;
+  vertical-align: middle;
+}
+@media (max-width: 968px) {
+  .nav-item.dropdown {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .nav-item.dropdown > .nav-parent-link {
+    flex: 1;
+  }
+  .nav-item.dropdown > .dropdown-toggle {
+    padding: 12px 16px;
+    font-size: 1.1rem;
+    color: white;
+  }
+  .nav-item.dropdown > .dropdown-content {
+    width: 100%;
+  }
+}
+</style>
 
 {% schema %}
 {
