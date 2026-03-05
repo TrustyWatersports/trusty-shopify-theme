@@ -153,8 +153,10 @@
 <section class="programs-events-section" style="padding: 80px 20px; background: {{ section.settings.background_color }};">
   <div style="max-width: 1200px; margin: 0 auto;">
 
-    <div style="text-align: center; margin-bottom: 60px;">
-      <div style="font-size: 3rem; margin-bottom: 1rem;">{{ section.settings.section_icon }}</div>
+    <div style="text-align: center; margin-bottom: 60px; min-height: 60px;">
+      {% if section.settings.section_icon != blank %}
+        <div style="font-size: 3rem; margin-bottom: 1rem;">{{ section.settings.section_icon }}</div>
+      {% endif %}
       <h2 style="font-size: 2.5rem; color: {{ section.settings.title_color }}; margin-bottom: 1rem;">{{ section.settings.section_title }}</h2>
       {% if section.settings.section_description != blank %}
         <p style="font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto;">{{ section.settings.section_description }}</p>
