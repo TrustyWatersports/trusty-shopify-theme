@@ -12,9 +12,9 @@
     <span style="color: var(--text-dark);">{{ product.title }}</span>
   </div>
 
-  <div class="product-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 80px;">
+  <div class="product-grid" style="display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 40px; margin-bottom: 80px;">
     
-    <div>
+    <div style="min-width: 0;">
       <div class="product-main-img-wrap">
         {% if product.featured_image %}
           <img id="main-img" src="{{ product.featured_image | image_url: width: 800 }}" alt="{{ product.title }}" class="product-main-img">
@@ -34,7 +34,7 @@
       {% endif %}
     </div>
 
-    <div>
+    <div style="min-width: 0;">
       {% if product.vendor %}
         <div style="color: var(--ocean-medium); font-size: 14px; font-weight: 600; text-transform: uppercase; margin-bottom: 10px;">{{ product.vendor }}</div>
       {% endif %}
@@ -179,9 +179,26 @@
     border-color: var(--ocean-medium);
   }
 
+  /* Collapse to single column at 900px, not just 768px */
+  @media (max-width: 900px) {
+    .product-grid {
+      grid-template-columns: 1fr !important;
+      gap: 24px !important;
+    }
+  }
   @media (max-width: 768px) {
-    .product-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
-    .product-main-img { max-height: 360px; }
+    .container { padding: 16px !important; }
+    .product-main-img-wrap {
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+    }
+    .product-main-img {
+      width: 100% !important;
+      max-width: 100% !important;
+      max-height: 300px;
+      object-fit: contain;
+    }
   }
   .product-key-features li {
     padding: 10px 0;
