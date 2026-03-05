@@ -17,7 +17,7 @@
     <div style="min-width: 0;">
       <div class="product-main-img-wrap">
         {% if product.featured_image %}
-          <img id="main-img" src="{{ product.featured_image | image_url: width: 800 }}" alt="{{ product.title }}" class="product-main-img">
+          <img id="main-img" src="{{ product.featured_image | image_url: width: 800 }}" alt="{{ product.vendor }} {{ product.title }} - available at Trusty Sail & Paddle, Morehead City NC" class="product-main-img">
         {% else %}
           <div style="width: 100%; height: 400px; display: flex; align-items: center; justify-content: center; color: var(--gray-medium);">No image available</div>
         {% endif %}
@@ -27,7 +27,7 @@
           {% for image in product.images %}
             <div class="product-thumb{% if forloop.first %} active{% endif %}"
                  onclick="selectThumb(this, '{{ image | image_url: width: 800 }}')">
-              <img src="{{ image | image_url: width: 160 }}" alt="{{ product.title }} image {{ forloop.index }}" loading="lazy">
+              <img src="{{ image | image_url: width: 160 }}" alt="{{ product.vendor }} {{ product.title }} - view {{ forloop.index }}" loading="lazy">
             </div>
           {% endfor %}
         </div>

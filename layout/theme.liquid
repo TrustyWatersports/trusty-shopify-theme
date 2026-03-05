@@ -19,6 +19,80 @@
 
   {% render 'meta-tags' %}
 
+  <!-- Structured Data: Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportingGoodsStore",
+    "name": "Trusty Sail & Paddle",
+    "url": "https://www.trustysailandpaddle.com",
+    "logo": "https://www.trustysailandpaddle.com/cdn/shop/files/trusty-logo.png",
+    "description": "Custom kayak rigging experts and watersports outfitter on the Crystal Coast. Kayak sales, rentals, sailing lessons, and nationwide custom rigging.",
+    "telephone": "+12524999911",
+    "priceRange": "$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4426 Arendell St",
+      "addressLocality": "Morehead City",
+      "addressRegion": "NC",
+      "postalCode": "28557",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 34.7229,
+      "longitude": -76.7305
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/TrustySailandPaddle",
+      "https://www.instagram.com/trustysailandpaddle"
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: Product (product pages only) -->
+  {% if template.name == 'product' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": {{ product.title | json }},
+    "description": {{ product.description | strip_html | truncate: 500 | json }},
+    "brand": {
+      "@type": "Brand",
+      "name": {{ product.vendor | json }}
+    },
+    "image": {% if product.featured_image %}"https:{{ product.featured_image | image_url: width: 800 }}"{% else %}""{% endif %},
+    "sku": {{ product.selected_or_first_available_variant.sku | json }},
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.trustysailandpaddle.com{{ product.url }}",
+      "priceCurrency": "USD",
+      "price": {{ product.selected_or_first_available_variant.price | money_without_currency | remove: ',' }},
+      "availability": {% if product.available %}"https://schema.org/InStock"{% else %}"https://schema.org/OutOfStock"{% endif %},
+      "seller": {
+        "@type": "Organization",
+        "name": "Trusty Sail & Paddle"
+      }
+    }
+  }
+  </script>
+  {% endif %}
+
   <!-- Cooper Black font (using closest web-safe alternative) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
