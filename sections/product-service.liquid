@@ -86,7 +86,7 @@
                data-path="{{ tidycal_path }}"
                style="min-width: 280px; border-radius: 8px; overflow: hidden;">
           </div>
-          <script src="https://tidycal.com/js/embed.js" async></script>
+          <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
         {% else %}
           <!-- Fallback: direct booking link button -->
           <div style="text-align: center; padding: 30px; background: white; border-radius: 12px; margin-bottom: 16px;">
@@ -146,9 +146,7 @@
     }
   }
 
-  // TidyCal redirects to the same page with ?booked=1 after booking completion.
-  // Configure this in TidyCal: Booking Type → Settings → Redirect after booking
-  // Set redirect URL to: https://trustysailandpaddle.com{{ request.path }}?booked=1
+  // TidyCal redirects to this page with ?booked=1 after booking completion.
   if (window.location.search.indexOf('booked=1') !== -1 ||
       window.location.search.indexOf('booked=true') !== -1) {
     showCheckout();
