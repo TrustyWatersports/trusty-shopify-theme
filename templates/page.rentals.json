@@ -127,7 +127,7 @@
             "feature_4": "Bogue Sound access",
             "lesson_price": "$100",
             "cta_text": "Book This Boat",
-            "cta_link": "shopify://products/topaz-uno-saiboat-copy",
+            "cta_link": "shopify://products/topaz-uno-sailboat-rental-full-day",
             "featured": false
           }
         },
@@ -144,7 +144,7 @@
             "feature_4": "Bogue Sound access",
             "lesson_price": "$100",
             "cta_text": "Book This Boat",
-            "cta_link": "shopify://products/topaz-argo-sailboat-copy",
+            "cta_link": "shopify://products/topaz-argo-sailboat-rental-full-day",
             "featured": true
           }
         },
@@ -161,7 +161,7 @@
             "feature_4": "Bogue Sound access",
             "lesson_price": "$100",
             "cta_text": "Book This Boat",
-            "cta_link": "shopify://products/topaz-cat14-catamaran-copy",
+            "cta_link": "shopify://products/topaz-cat14-catamaran-rental-full-day",
             "featured": false
           }
         }
