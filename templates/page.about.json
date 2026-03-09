@@ -18,8 +18,7 @@
         "family_title": "The Fournel Family",
         "family_members": "Andrew, Heather, Abraham, Thomas & Rose",
         "overlay_color": "#0a4b78",
-        "overlay_opacity": 25,
-        "hero_height": 700
+        "overlay_opacity": 25
       }
     },
     "about-mission": {

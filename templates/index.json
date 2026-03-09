@@ -195,7 +195,7 @@
         "brand_zjf6RW": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/Screenshot_2026-03-04_153344.png",
+            "brand_logo": "shopify://shop_images/Jackson.webp",
             "brand_name": "Jackson Kayak",
             "brand_link": "shopify://collections/jackson"
           }
@@ -336,9 +336,9 @@
       "settings": {
         "section_title": "Shop By Brand",
         "section_subtitle": "",
-        "background_color": "#ffffff",
+        "background_color": "#FFFFFF",
         "autoplay": true,
-        "autoplay_speed": 3
+        "autoplay_speed": 5
       }
     },
     "trusty_why_trusty_TU4aTV": {

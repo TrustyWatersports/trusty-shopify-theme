@@ -14,39 +14,13 @@
       "settings": {
         "hero_title": "Used Boats & Consignment",
         "hero_subtitle": "Quality pre-owned kayaks and sailboats at great prices",
-        "hero_image": "shopify://shop_images/Falcon11_TampaFlorida_drone-Large1.jpg",
-        "image_opacity": 100,
-        "overlay_opacity": 20,
-        "background_color": "#0a4b78"
+        "background_color": "#0A4B78"
       }
     },
     "used-boats-grid": {
       "type": "used-boats-grid",
-      "blocks": {
-        "boat_tKCqrW": {
-          "type": "boat",
-          "settings": {
-            "boat_image": "shopify://shop_images/IMG_6554.jpg",
-            "boat_image_2": "shopify://shop_images/IMG_6560_970a583b-ac1d-4b82-b08e-96aac5bd79dd.jpg",
-            "boat_image_3": "shopify://shop_images/IMG_6558_e4201ec9-5f63-4106-9405-d767ed2d6b03.jpg",
-            "boat_image_4": "shopify://shop_images/IMG_6557.jpg",
-            "boat_image_5": "shopify://shop_images/IMG_6556_fd0b3faf-340f-4158-952f-b527e2ac29ea.jpg",
-            "boat_name": "Jackson Knarr Kayak Package",
-            "boat_brand": "Jackson Kayak, Malone Trailer",
-            "boat_year": "2022",
-            "boat_condition": "excellent",
-            "boat_description": "Very lightly used trailer and kayak package. Two Jackson Karr kayaks with virtually no use. Malone trailer with two sets of saddle-up pro cradles. Paddles, cart, yakattack blackpak, anchor trolly, and more! Awesome package for the team getting into kayak fishing.",
-            "boat_price": "$7750.95",
-            "contact_info": "",
-            "is_sold": false
-          }
-        }
-      },
-      "block_order": [
-        "boat_tKCqrW"
-      ],
       "settings": {
-        "background_color": "#f5f7fa"
+        "background_color": "#F5F7FA"
       }
     }
   },
