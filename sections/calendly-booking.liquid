@@ -25,28 +25,21 @@
 
   <!-- TidyCal inline embed -->
   {% assign booking_path = product.metafields.custom.calendly_url | default: section.settings.calendly_url %}
-  <div class="tidycal-embed"
-       data-path="{{ booking_path }}"
-       style="min-width: 320px; border-radius: 12px; overflow: hidden;">
-  </div>
-  <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
-
-  <!-- Unlock checkout after TidyCal booking -->
-  <script>
-    window.addEventListener('message', function(e) {
-      if (e.data && e.data.type === 'tidycal:booking_confirmed') {
-        var btn = document.getElementById('add-to-cart-button') || document.querySelector('[name="add"]');
-        if (btn) {
-          btn.disabled = false;
-          btn.removeAttribute('disabled');
-          btn.style.opacity = '1';
-          btn.style.pointerEvents = 'auto';
-          btn.textContent = 'Proceed to Checkout';
-          btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }
-    });
-  </script>
+  {% if booking_path != blank %}
+    <div class="tidycal-embed"
+         data-path="{{ booking_path }}"
+         style="min-width: 320px; border-radius: 12px; overflow: hidden;">
+    </div>
+    <script src="https://tidycal.com/js/embed.js" async></script>
+  {% else %}
+    <div style="text-align: center; padding: 40px; background: white; border-radius: 12px;">
+      <p style="color: var(--gray-medium); margin-bottom: 16px;">No booking path configured for this product.</p>
+      <a href="https://tidycal.com/trustywatersports" target="_blank"
+         style="display: inline-block; background: var(--ocean-deep); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700;">
+        &#x1F4C5; View All Available Times
+      </a>
+    </div>
+  {% endif %}
 
   <p style="text-align: center; margin-top: 16px; font-size: 13px; color: var(--gray-medium);">
     After selecting your time, you'll be redirected to complete payment. &nbsp;|&nbsp; Questions? Call <a href="tel:252-499-9911" style="color: var(--ocean-medium);">(252) 499-9911</a>
@@ -55,7 +48,7 @@
 
 {% schema %}
 {
-  "name": "Calendly Booking",
+  "name": "TidyCal Booking",
   "settings": [
     {
       "type": "text",
@@ -72,10 +65,10 @@
     {
       "type": "text",
       "id": "calendly_url",
-      "label": "TidyCal Booking Path",
-      "info": "The data-path value for this booking type, e.g. trustywatersports/single-kayak-rental-half-day20260309131357"
+      "label": "TidyCal Booking Path (fallback)",
+      "info": "Used if product metafield is not set. e.g. trustywatersports/single-kayak-rental-full-day20260309131357"
     }
   ],
-  "presets": [{ "name": "Calendly Booking" }]
+  "presets": [{ "name": "TidyCal Booking" }]
 }
 {% endschema %}

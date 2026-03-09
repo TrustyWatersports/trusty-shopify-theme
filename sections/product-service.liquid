@@ -1,4 +1,4 @@
-<!-- Service product page: description hero + pricing + Calendly embed -->
+<!-- Service product page: description hero + pricing + TidyCal embed -->
 <div class="container" style="padding: 40px 20px 80px;">
 
   <!-- Breadcrumbs -->
@@ -61,7 +61,7 @@
       </div>
     </div>
 
-    <!-- Right: Calendly embed -->
+    <!-- Right: TidyCal embed + checkout -->
     <div>
       <div style="background: var(--gray-light); border-radius: 16px; padding: 30px; position: sticky; top: 20px;">
         <div style="text-align: center; margin-bottom: 20px;">
@@ -79,28 +79,42 @@
           <span>3 Enjoy!</span>
         </div>
 
-        <div class="calendly-inline-widget"
-             data-url="{{ product.metafields.custom.calendly_url | default: 'https://calendly.com/trustywatersports' }}?hide_gdpr_banner=1&primary_color=00a86b&hide_event_type_details=1"
-             style="min-width: 280px; height: 580px; border-radius: 8px; overflow: hidden;">
-        </div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        {% assign tidycal_path = product.metafields.custom.calendly_url %}
+        {% if tidycal_path != blank %}
+          <!-- TidyCal inline embed -->
+          <div class="tidycal-embed"
+               data-path="{{ tidycal_path }}"
+               style="min-width: 280px; border-radius: 8px; overflow: hidden;">
+          </div>
+          <script src="https://tidycal.com/js/embed.js" async></script>
+        {% else %}
+          <!-- Fallback: direct booking link button -->
+          <div style="text-align: center; padding: 30px; background: white; border-radius: 12px; margin-bottom: 16px;">
+            <p style="color: var(--gray-medium); margin-bottom: 16px; font-size: 14px;">Click below to select your date and time:</p>
+            <a href="https://tidycal.com/trustywatersports" target="_blank"
+               style="display: inline-block; background: var(--ocean-deep); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px;">
+              &#x1F4C5; View Available Times
+            </a>
+          </div>
+        {% endif %}
 
         <p style="text-align: center; margin-top: 12px; font-size: 12px; color: var(--gray-medium);">
           Can't find a time? Call <a href="tel:252-499-9911" style="color: var(--ocean-medium);">(252) 499-9911</a>
         </p>
 
-        <!-- Add to Cart - hidden until Calendly booking complete -->
+        <!-- Add to Cart - shown immediately (TidyCal redirects after booking, no postMessage) -->
         {% form 'product', product %}
           <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
           <input type="hidden" name="quantity" value="1">
-          <div id="book-first-msg" style="margin-top: 16px; padding: 14px; background: white; border-radius: 8px; text-align: center; color: var(--ocean-deep); font-weight: 600; font-size: 15px; border: 2px dashed var(--gray-medium);">
-            &#x1F4C5; Select your date above to unlock checkout
-          </div>
-          <div id="add-to-cart-wrapper" style="display: none; margin-top: 16px; flex-direction: column; gap: 10px;">
-            <div style="padding: 12px; background: #e8f5e9; border-radius: 8px; text-align: center; color: var(--rigging-accent); font-weight: 600; font-size: 14px;">
+          <div id="add-to-cart-wrapper" style="margin-top: 20px;">
+            <div id="book-first-msg" style="padding: 14px; background: white; border-radius: 8px; text-align: center; color: var(--ocean-deep); font-weight: 600; font-size: 15px; border: 2px dashed var(--gray-medium); margin-bottom: 12px;">
+              &#x1F4C5; Select your date above to unlock checkout
+            </div>
+            <div id="booked-msg" style="display: none; padding: 12px; background: #e8f5e9; border-radius: 8px; text-align: center; color: var(--rigging-accent); font-weight: 600; font-size: 14px; margin-bottom: 12px;">
               &#x2713; Date selected! Complete your payment below.
             </div>
-            <button type="submit" name="add" style="width: 100%; font-size: 18px; padding: 16px; cursor: pointer; background: var(--rigging-accent); color: white; border: none; border-radius: 8px; font-weight: 700;">
+            <button type="submit" name="add" id="add-to-cart-btn"
+                    style="width: 100%; font-size: 18px; padding: 16px; cursor: pointer; background: var(--rigging-accent); color: white; border: none; border-radius: 8px; font-weight: 700; opacity: 0.5; pointer-events: none;">
               Complete Booking &amp; Pay
             </button>
           </div>
@@ -121,23 +135,21 @@
 <script>
   function showCheckout() {
     var bookMsg = document.getElementById('book-first-msg');
-    var cartWrapper = document.getElementById('add-to-cart-wrapper');
+    var bookedMsg = document.getElementById('booked-msg');
+    var btn = document.getElementById('add-to-cart-btn');
     if (bookMsg) bookMsg.style.display = 'none';
-    if (cartWrapper) {
-      cartWrapper.style.display = 'flex';
-      cartWrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (bookedMsg) bookedMsg.style.display = 'block';
+    if (btn) {
+      btn.style.opacity = '1';
+      btn.style.pointerEvents = 'auto';
+      btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }
 
-  // Triggered when Calendly booking is completed
-  window.addEventListener('message', function(e) {
-    if (e.data.event && e.data.event === 'calendly.event_scheduled') {
-      showCheckout();
-    }
-  });
-
-  // Show checkout if returned from Calendly redirect (detects Calendly UTM params)
-  if (window.location.search.indexOf('event_type_uuid') !== -1 || 
+  // TidyCal redirects to the same page with ?booked=1 after booking completion.
+  // Configure this in TidyCal: Booking Type → Settings → Redirect after booking
+  // Set redirect URL to: https://trustysailandpaddle.com{{ request.path }}?booked=1
+  if (window.location.search.indexOf('booked=1') !== -1 ||
       window.location.search.indexOf('booked=true') !== -1) {
     showCheckout();
   }
