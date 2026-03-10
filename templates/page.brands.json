@@ -64,9 +64,10 @@
         "brand-bonafide": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/BonaFide.webp",
             "brand_name": "Bonafide Kayaks",
-            "brand_description": "Stable, feature-rich fishing kayaks",
-            "brand_link": "/collections/bonafide-kayaks"
+            "brand_description": "Stable, feature-rich fishing kayaks. Made in Fletcher, NC.",
+            "brand_link": "shopify://collections/bonafide"
           }
         },
         "brand-liquid-logic": {
