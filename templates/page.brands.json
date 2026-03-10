@@ -168,9 +168,10 @@
         "brand-kavu": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/kavu.webp",
             "brand_name": "Kavu",
             "brand_description": "Outdoor lifestyle apparel",
-            "brand_link": "/collections/kavu"
+            "brand_link": "shopify://collections/kavu"
           }
         },
         "brand-nrs": {
