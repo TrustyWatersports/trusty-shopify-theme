@@ -12,6 +12,14 @@
     "photo-gallery": {
       "type": "photo-gallery",
       "blocks": {
+        "photo_nTDax4": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/IMG_6637_b6c4ca59-c0dd-4ba6-a0f2-6760a43f964b.jpg",
+            "caption": "",
+            "category": "Our Team"
+          }
+        },
         "photo_AgtaaW": {
           "type": "photo",
           "settings": {
@@ -174,6 +182,7 @@
         }
       },
       "block_order": [
+        "photo_nTDax4",
         "photo_AgtaaW",
         "photo_cQpLj9",
         "photo_c3FaQD",
