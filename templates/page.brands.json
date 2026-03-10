@@ -177,9 +177,10 @@
         "brand-nrs": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/NRS_Marketing_Logo_Black.webp",
             "brand_name": "NRS",
             "brand_description": "Paddling apparel and safety gear",
-            "brand_link": "/collections/nrs"
+            "brand_link": "shopify://collections/nrs"
           }
         },
         "brand-sunbum": {
