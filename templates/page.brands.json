@@ -55,9 +55,10 @@
         "brand-native": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/Native_Watercraft.webp",
             "brand_name": "Native Watercraft",
-            "brand_description": "Innovative pedal-drive fishing kayaks",
-            "brand_link": "/collections/native-watercraft"
+            "brand_description": "Innovative pedal-drive fishing kayaks. Made in Fletcher, NC.",
+            "brand_link": "shopify://collections/native-watercraft"
           }
         },
         "brand-bonafide": {
