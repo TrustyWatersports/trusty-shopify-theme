@@ -250,23 +250,6 @@
             "brand_link": "shopify://collections/berleypro"
           }
         },
-        "brand-powerpole": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/PowerPole.webp",
-            "brand_name": "Power-Pole",
-            "brand_description": "Shallow water anchors",
-            "brand_link": "shopify://collections/power-pole"
-          }
-        },
-        "brand-minnkota": {
-          "type": "brand",
-          "settings": {
-            "brand_name": "Minn Kota",
-            "brand_description": "Trolling motors",
-            "brand_link": "/collections/minn-kota"
-          }
-        },
         "category-ropes": {
           "type": "category",
           "settings": {
@@ -352,6 +335,24 @@
             "brand_link": "/collections/garmin"
           }
         },
+        "brand-powerpole": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/PowerPole.webp",
+            "brand_name": "Power-Pole",
+            "brand_description": "Shallow water anchors",
+            "brand_link": "shopify://collections/power-pole"
+          }
+        },
+        "brand-minnkota": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/minn_kota.webp",
+            "brand_name": "Minn Kota",
+            "brand_description": "Trolling motors",
+            "brand_link": "shopify://collections/minn-kota"
+          }
+        },
         "brand-yamaha": {
           "type": "brand",
           "settings": {
@@ -427,8 +428,6 @@
         "brand-ronstan",
         "brand-allen",
         "brand-berlypro",
-        "brand-powerpole",
-        "brand-minnkota",
         "category-ropes",
         "brand-ner",
         "brand-marlow",
@@ -440,6 +439,8 @@
         "brand-malone",
         "category-electronics",
         "brand-garmin",
+        "brand-powerpole",
+        "brand-minnkota",
         "brand-yamaha",
         "category-outdoor",
         "brand-ketch",
