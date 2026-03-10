@@ -14,8 +14,9 @@
       "settings": {
         "hero_title": "Used Boats & Consignment",
         "hero_subtitle": "Quality pre-owned kayaks and sailboats at great prices",
-        "image_opacity": 70,
-        "overlay_opacity": 55,
+        "hero_image": "shopify://shop_images/download_c793ff28-46e3-4603-9505-016c3e408e2b.png",
+        "image_opacity": 100,
+        "overlay_opacity": 20,
         "background_color": "#0a4b78"
       }
     },
