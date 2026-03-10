@@ -134,9 +134,10 @@
         "brand-weta": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/weta-logo.webp",
             "brand_name": "Weta Trimarans",
-            "brand_description": "Fast, stable trimarans for all conditions",
-            "brand_link": "/collections/weta"
+            "brand_description": "Fast, stable trimarans for all conditions.",
+            "brand_link": "shopify://collections/weta"
           }
         },
         "category-apparel": {
