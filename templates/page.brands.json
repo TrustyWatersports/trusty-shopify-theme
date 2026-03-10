@@ -330,9 +330,10 @@
         "brand-garmin": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/garmin.webp",
             "brand_name": "Garmin",
             "brand_description": "Marine electronics and fish finders",
-            "brand_link": "/collections/garmin"
+            "brand_link": "shopify://collections/garmin-1"
           }
         },
         "brand-powerpole": {
@@ -356,9 +357,10 @@
         "brand-yamaha": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/Torqeedo.webp",
             "brand_name": "Yamaha / Torqeedo",
             "brand_description": "Electric outboard motors",
-            "brand_link": "/collections/motors"
+            "brand_link": "shopify://collections/torqeedo"
           }
         },
         "category-outdoor": {
