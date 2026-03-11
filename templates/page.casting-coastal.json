@@ -12,6 +12,13 @@
     "casting-coastal": {
       "type": "casting-coastal",
       "blocks": {
+        "member_photo_wDFNmP": {
+          "type": "member_photo",
+          "settings": {
+            "photo": "shopify://shop_images/20240414_152704.jpg",
+            "caption": ""
+          }
+        },
         "member_photo_nXGQFe": {
           "type": "member_photo",
           "settings": {
@@ -85,6 +92,7 @@
         }
       },
       "block_order": [
+        "member_photo_wDFNmP",
         "member_photo_nXGQFe",
         "t1",
         "t2",
