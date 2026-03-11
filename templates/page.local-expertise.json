@@ -14,7 +14,7 @@
       "name": "Casting Coastal Community",
       "settings": {
         "sponsor_logo": "shopify://shop_images/unnamed_1.png",
-        "rigging_url": "",
+        "rigging_url": "shopify://pages/custom-rigging",
         "contact_url": ""
       }
     },
