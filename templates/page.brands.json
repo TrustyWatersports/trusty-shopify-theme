@@ -333,9 +333,10 @@
         "brand-loadrite": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/LoadRite.webp",
             "brand_name": "LoadRite Trailers",
-            "brand_description": "Boat trailers",
-            "brand_link": "/collections/loadrite"
+            "brand_description": "Top quality boat and kayak trailers made in North Carolina.",
+            "brand_link": "shopify://collections/loadrite"
           }
         },
         "brand-malone": {
