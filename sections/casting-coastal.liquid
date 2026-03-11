@@ -1,0 +1,839 @@
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+
+{% style %}
+  .cc-wrap *, .cc-wrap *::before, .cc-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  .cc-wrap {
+    --salt:       #f4f0e8;
+    --deep:       #0d1f2d;
+    --navy:       #1a3a52;
+    --tide:       #2e6b8a;
+    --horizon:    #4fa3c0;
+    --copper:     #c8622a;
+    --copper-lt:  #e07840;
+    --sand:       #d9c9a8;
+    --foam:       #e8f4f8;
+    background: var(--deep);
+    font-family: 'Crimson Pro', Georgia, serif;
+    color: var(--salt);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO BANNER ─────────────────────────────── */
+  .cc-hero {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background: var(--navy);
+  }
+
+  .cc-hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(
+        170deg,
+        transparent 0px,
+        transparent 18px,
+        rgba(79,163,192,0.07) 18px,
+        rgba(79,163,192,0.07) 19px
+      ),
+      repeating-linear-gradient(
+        -10deg,
+        transparent 0px,
+        transparent 28px,
+        rgba(46,107,138,0.08) 28px,
+        rgba(46,107,138,0.08) 29px
+      ),
+      radial-gradient(ellipse 120% 60% at 80% 110%, rgba(79,163,192,0.25) 0%, transparent 60%),
+      radial-gradient(ellipse 80% 80% at -10% 50%, rgba(200,98,42,0.12) 0%, transparent 50%),
+      linear-gradient(180deg, #0d1f2d 0%, #1a3a52 60%, #12303f 100%);
+    animation: cc-shimmer 8s ease-in-out infinite alternate;
+  }
+
+  @keyframes cc-shimmer {
+    0%   { filter: brightness(1) hue-rotate(0deg); }
+    100% { filter: brightness(1.07) hue-rotate(4deg); }
+  }
+
+  .cc-hero-glare {
+    position: absolute;
+    top: -60px;
+    right: 8%;
+    width: 3px;
+    height: 140%;
+    background: linear-gradient(180deg, transparent, rgba(255,220,140,0.18), rgba(200,98,42,0.10), transparent);
+    transform: rotate(-18deg);
+    pointer-events: none;
+  }
+
+  .cc-hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 60px 5% 56px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: flex-end;
+    gap: 40px;
+  }
+
+  .cc-hero-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--copper-lt);
+    margin-bottom: 14px;
+    opacity: 0;
+    animation: cc-fadeUp 0.7s 0.1s forwards;
+  }
+
+  .cc-hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.5rem, 9vw, 8rem);
+    line-height: 0.92;
+    color: var(--salt);
+    letter-spacing: 0.02em;
+    opacity: 0;
+    animation: cc-fadeUp 0.7s 0.25s forwards;
+  }
+
+  .cc-hero-title em {
+    color: var(--copper-lt);
+    font-style: normal;
+  }
+
+  .cc-hero-rule {
+    width: 64px;
+    height: 3px;
+    background: var(--copper);
+    margin: 24px 0 20px;
+    opacity: 0;
+    animation: cc-fadeUp 0.7s 0.4s forwards;
+  }
+
+  .cc-hero-tagline {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--sand);
+    max-width: 520px;
+    line-height: 1.5;
+    opacity: 0;
+    animation: cc-fadeUp 0.7s 0.5s forwards;
+  }
+
+  .cc-hero-badge {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    opacity: 0;
+    animation: cc-fadeUp 0.7s 0.6s forwards;
+  }
+
+  .cc-badge-ring {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 2px solid var(--copper);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(13,31,45,0.7);
+    backdrop-filter: blur(6px);
+    padding: 16px;
+    text-align: center;
+    position: relative;
+  }
+
+  .cc-badge-ring::before {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border-radius: 50%;
+    border: 1px solid rgba(200,98,42,0.25);
+  }
+
+  .cc-badge-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.4rem;
+    color: var(--copper-lt);
+    line-height: 1;
+  }
+
+  .cc-badge-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.52rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sand);
+    line-height: 1.3;
+    margin-top: 2px;
+  }
+
+  @keyframes cc-fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── STAT BAR ────────────────────────────────── */
+  .cc-stat-bar {
+    background: var(--copper);
+    padding: 0 5%;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .cc-stat-item {
+    flex: 1;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border-right: 1px solid rgba(255,255,255,0.18);
+  }
+
+  .cc-stat-item:last-child { border-right: none; }
+
+  .cc-stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--salt);
+    line-height: 1;
+  }
+
+  .cc-stat-desc {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(244,240,232,0.75);
+  }
+
+  /* ── BODY SECTIONS ───────────────────────────── */
+  .cc-page-body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 72px 5% 80px;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .cc-section-kicker {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.63rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--copper-lt);
+    margin-bottom: 12px;
+  }
+
+  .cc-section-heading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    color: var(--salt);
+    letter-spacing: 0.03em;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .cc-body-text {
+    font-size: 1.12rem;
+    line-height: 1.72;
+    color: var(--sand);
+    margin-bottom: 20px;
+  }
+
+  .cc-body-text strong {
+    color: var(--salt);
+    font-weight: 600;
+  }
+
+  .cc-hashtags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 28px 0;
+  }
+
+  .cc-hashtag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    color: var(--horizon);
+    border: 1px solid var(--tide);
+    border-radius: 3px;
+    padding: 5px 12px;
+    transition: all 0.2s;
+  }
+
+  .cc-hashtag:hover {
+    background: var(--tide);
+    color: var(--salt);
+  }
+
+  .cc-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+  }
+
+  .cc-btn-primary {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: var(--copper);
+    color: var(--salt);
+    padding: 14px 28px;
+    border: 2px solid var(--copper);
+    transition: all 0.22s;
+  }
+
+  .cc-btn-primary:hover {
+    background: transparent;
+    color: var(--copper-lt);
+  }
+
+  .cc-btn-secondary {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: transparent;
+    color: var(--horizon);
+    padding: 14px 28px;
+    border: 2px solid var(--tide);
+    transition: all 0.22s;
+  }
+
+  .cc-btn-secondary:hover {
+    border-color: var(--horizon);
+    color: var(--salt);
+  }
+
+  /* ── SIDEBAR ─────────────────────────────────── */
+  .cc-sidebar { display: flex; flex-direction: column; gap: 28px; }
+
+  .cc-card {
+    background: rgba(26,58,82,0.5);
+    border: 1px solid rgba(79,163,192,0.18);
+    border-left: 3px solid var(--copper);
+    padding: 28px 26px;
+  }
+
+  .cc-card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.35rem;
+    color: var(--salt);
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+  }
+
+  .cc-tourney-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cc-tourney-item {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+
+  .cc-tourney-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: var(--copper-lt);
+    line-height: 1;
+  }
+
+  .cc-tourney-name {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--salt);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .cc-tourney-loc {
+    font-size: 0.85rem;
+    color: var(--sand);
+    font-style: italic;
+    margin-top: 1px;
+  }
+
+  .cc-social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cc-social-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--horizon);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    transition: color 0.2s;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(79,163,192,0.12);
+  }
+
+  .cc-social-link:last-child { border-bottom: none; }
+  .cc-social-link:hover { color: var(--salt); }
+
+  .cc-social-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(79,163,192,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .cc-social-icon svg {
+    width: 15px;
+    height: 15px;
+    fill: var(--copper-lt);
+  }
+
+  .cc-sponsor-card {
+    background: linear-gradient(135deg, rgba(200,98,42,0.15), rgba(26,58,82,0.6));
+    border: 1px solid rgba(200,98,42,0.35);
+    padding: 28px 26px;
+    text-align: center;
+  }
+
+  .cc-sponsor-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    color: var(--copper-lt);
+    margin-bottom: 8px;
+  }
+
+  .cc-sponsor-body {
+    font-size: 0.92rem;
+    color: var(--sand);
+    line-height: 1.55;
+    font-style: italic;
+  }
+
+  .cc-sponsor-logo-area {
+    margin: 18px auto 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid var(--copper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(13,31,45,0.6);
+    overflow: hidden;
+  }
+
+  .cc-sponsor-logo-area svg {
+    width: 36px;
+    height: 36px;
+    fill: var(--copper-lt);
+  }
+
+  .cc-sponsor-logo-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* ── KNOW STRIP ──────────────────────────────── */
+  .cc-know-strip {
+    background: rgba(13,31,45,0.7);
+    border-top: 1px solid rgba(79,163,192,0.14);
+    border-bottom: 1px solid rgba(79,163,192,0.14);
+    padding: 52px 5%;
+    max-width: 100%;
+  }
+
+  .cc-know-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .cc-know-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 36px;
+    margin-top: 36px;
+  }
+
+  .cc-know-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cc-know-icon { font-size: 1.6rem; line-height: 1; }
+
+  .cc-know-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--copper-lt);
+  }
+
+  .cc-know-value {
+    font-size: 1.05rem;
+    color: var(--salt);
+    line-height: 1.5;
+  }
+
+  /* ── FOOTER CTA ──────────────────────────────── */
+  .cc-footer-cta {
+    background: linear-gradient(135deg, var(--navy) 0%, #0f2535 100%);
+    padding: 64px 5%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cc-footer-cta::before {
+    content: 'CAST';
+    position: absolute;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28vw;
+    color: rgba(255,255,255,0.02);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  .cc-footer-cta-inner { position: relative; z-index: 1; }
+
+  .cc-footer-cta h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: var(--salt);
+    letter-spacing: 0.04em;
+    margin-bottom: 14px;
+  }
+
+  .cc-footer-cta p {
+    font-size: 1.1rem;
+    color: var(--sand);
+    font-style: italic;
+    max-width: 520px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+  }
+
+  .cc-divider {
+    border: none;
+    border-top: 1px solid rgba(79,163,192,0.18);
+    margin: 32px 0;
+  }
+
+  /* ── RESPONSIVE ──────────────────────────────── */
+  @media (max-width: 860px) {
+    .cc-hero-content { grid-template-columns: 1fr; }
+    .cc-hero-badge { display: none; }
+    .cc-stat-bar { flex-wrap: wrap; }
+    .cc-stat-item {
+      flex: 1 1 45%;
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+    .cc-page-body {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+{% endstyle %}
+
+<div class="cc-wrap">
+
+  {%- comment -%} ═══ HERO ═══ {%- endcomment -%}
+  <section class="cc-hero">
+    <div class="cc-hero-bg"></div>
+    <div class="cc-hero-glare"></div>
+    <div class="cc-hero-content">
+      <div class="cc-hero-left">
+        <p class="cc-hero-eyebrow">Local Expertise &middot; Crystal Coast Community</p>
+        <h1 class="cc-hero-title">Casting<br/><em>Coastal</em><br/>Kayak<br/>Fishing</h1>
+        <div class="cc-hero-rule"></div>
+        <p class="cc-hero-tagline">Eastern NC's largest active kayak fishing community &mdash; tight lines, big tournaments, and a crew that keeps it coastal.</p>
+      </div>
+      <div class="cc-hero-badge">
+        <div class="cc-badge-ring">
+          <span class="cc-badge-num">2500+</span>
+          <span class="cc-badge-label">Active<br/>Members<br/>Monthly</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} ═══ STAT BAR ═══ {%- endcomment -%}
+  <div class="cc-stat-bar">
+    <div class="cc-stat-item">
+      <span class="cc-stat-num">8</span>
+      <span class="cc-stat-desc">Tournaments / Year</span>
+    </div>
+    <div class="cc-stat-item">
+      <span class="cc-stat-num">2500+</span>
+      <span class="cc-stat-desc">Active Members Monthly</span>
+    </div>
+    <div class="cc-stat-item">
+      <span class="cc-stat-num">140+</span>
+      <span class="cc-stat-desc">Posts Per Month</span>
+    </div>
+    <div class="cc-stat-item">
+      <span class="cc-stat-num">EST. 2020</span>
+      <span class="cc-stat-desc">Serving Eastern NC</span>
+    </div>
+  </div>
+
+  {%- comment -%} ═══ BODY ═══ {%- endcomment -%}
+  <div class="cc-page-body">
+
+    <div class="cc-main-col">
+      <p class="cc-section-kicker">About the Group</p>
+      <h2 class="cc-section-heading">Keep It Coastal</h2>
+
+      <p class="cc-body-text">
+        Casting Coastal Kayak Fishing is one of the largest and most active kayak fishing communities in Eastern North Carolina &mdash; and we're proud to be their <strong>headlining sponsor</strong>. What started as a grassroots Facebook group has grown into a full tournament trail, a trout series, monthly group fishing days, pop-up giveaways, and a genuine tight-knit crew that lives for time on the water.
+      </p>
+      <p class="cc-body-text">
+        Their 2026 season runs <strong>8 tournaments</strong> across Beaufort, Jacksonville, Aurora, Belhaven, Dawson Creek, and Vandemere &mdash; covering the best kayak fishing waters the Crystal Coast and inner coastal plain have to offer. Trout, redfish, sheepshead, and black drum are all on the menu depending on the stop. And yes, <strong>PFDs are required</strong> &mdash; our kind of crowd.
+      </p>
+      <p class="cc-body-text">
+        Beyond the tournaments, the community gives back. In 2025 alone they donated over $800 to Western North Carolina disaster relief. That's the spirit of the Crystal Coast in action &mdash; fish hard, take care of your people.
+      </p>
+
+      <div class="cc-hashtags">
+        <span class="cc-hashtag">#KeepCasting</span>
+        <span class="cc-hashtag">#CastLikeItsYourLast</span>
+        <span class="cc-hashtag">#KeepItCoastal</span>
+        <span class="cc-hashtag">#KayakFishing</span>
+        <span class="cc-hashtag">#EasternNC</span>
+      </div>
+
+      <hr class="cc-divider"/>
+
+      <p class="cc-section-kicker">Gear Up for the Tournament Trail</p>
+      <h2 class="cc-section-heading">Ready to Compete?</h2>
+      <p class="cc-body-text">
+        Tournament kayak fishing demands a seriously rigged boat. Whether you're chasing your first podium finish or gunning for the Trout Series points title, our <strong>custom rigging packages</strong> are built for exactly this &mdash; rod holders, electronics mounts, anchor trolleys, fish finders, battery systems, and everything in between. We know these waters, we know this community, and we'll put together a rig that's ready when the captain's meeting wraps up.
+      </p>
+
+      <div class="cc-cta-row">
+        <a href="{{ section.settings.rigging_url }}" class="cc-btn-primary">Explore Custom Rigging</a>
+        <a href="https://www.castingcoastalkayakfishing.com" target="_blank" rel="noopener" class="cc-btn-secondary">Visit Their Site &rarr;</a>
+      </div>
+    </div>
+
+    <aside class="cc-sidebar">
+
+      {%- comment -%} Tournament Schedule Card {%- endcomment -%}
+      <div class="cc-card">
+        <div class="cc-card-title">2026 Tournament Schedule</div>
+        <ul class="cc-tourney-list">
+          <li class="cc-tourney-item">
+            <span class="cc-tourney-num">1</span>
+            <div>
+              <div class="cc-tourney-name">Blounts Creek</div>
+              <div class="cc-tourney-loc">Chocowinity, NC &middot; Trout Series</div>
+            </div>
+          </li>
+          <li class="cc-tourney-item">
+            <span class="cc-tourney-num">2</span>
+            <div>
+              <div class="cc-tourney-name">Jacksonville</div>
+              <div class="cc-tourney-loc">New River &middot; Trout Series</div>
+            </div>
+          </li>
+          <li class="cc-tourney-item">
+            <span class="cc-tourney-num">3</span>
+            <div>
+              <div class="cc-tourney-name">Aurora</div>
+              <div class="cc-tourney-loc">Trout Series</div>
+            </div>
+          </li>
+          <li class="cc-tourney-item">
+            <span class="cc-tourney-num">4&ndash;5</span>
+            <div>
+              <div class="cc-tourney-name">Beaufort (&times;2)</div>
+              <div class="cc-tourney-loc">Redfish &middot; Sheepshead &middot; Black Drum</div>
+            </div>
+          </li>
+          <li class="cc-tourney-item">
+            <span class="cc-tourney-num">6</span>
+            <div>
+              <div class="cc-tourney-name">Belhaven</div>
+              <div class="cc-tourney-loc">Trout Series</div>
+            </div>
+          </li>
+          <li class="cc-tourney-item">
+            <span class="cc-tourney-num">7</span>
+            <div>
+              <div class="cc-tourney-name">Dawson Creek</div>
+              <div class="cc-tourney-loc">Trout Series</div>
+            </div>
+          </li>
+          <li class="cc-tourney-item">
+            <span class="cc-tourney-num">8</span>
+            <div>
+              <div class="cc-tourney-name">Vandemere</div>
+              <div class="cc-tourney-loc">Trout Series &mdash; Mandatory Finale</div>
+            </div>
+          </li>
+        </ul>
+        <p style="font-size:0.78rem; color:var(--sand); font-family:'Space Mono',monospace; margin-top:16px; line-height:1.5;">
+          Confirm attendance on the Facebook group before each event.
+        </p>
+      </div>
+
+      {%- comment -%} Social / Follow Card {%- endcomment -%}
+      <div class="cc-card">
+        <div class="cc-card-title">Follow the Community</div>
+        <div class="cc-social-links">
+          <a href="https://www.facebook.com/groups/555764118544006" target="_blank" rel="noopener" class="cc-social-link">
+            <span class="cc-social-icon">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </span>
+            FACEBOOK GROUP
+          </a>
+          <a href="https://www.instagram.com/castingcoastalkayakfishing/" target="_blank" rel="noopener" class="cc-social-link">
+            <span class="cc-social-icon">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke-width="2" style="fill:none;stroke:#c8622a;stroke-width:2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#c8622a" stroke-width="2"/></svg>
+            </span>
+            INSTAGRAM
+          </a>
+          <a href="https://www.castingcoastalkayakfishing.com" target="_blank" rel="noopener" class="cc-social-link">
+            <span class="cc-social-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" style="fill:none;stroke:#c8622a;stroke-width:1.5"/></svg>
+            </span>
+            WEBSITE
+          </a>
+        </div>
+      </div>
+
+      {%- comment -%} Sponsor Callout Card {%- endcomment -%}
+      <div class="cc-sponsor-card">
+        <div class="cc-sponsor-logo-area">
+          {%- if section.settings.sponsor_logo != blank -%}
+            <img src="{{ section.settings.sponsor_logo | image_url: width: 140 }}" alt="Trusty Sail &amp; Paddle" width="70" height="70">
+          {%- else -%}
+            <svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 6v14M5 9c0 0 1 4 7 4s7-4 7-4"/></svg>
+          {%- endif -%}
+        </div>
+        <div class="cc-sponsor-headline" style="margin-top:14px;">Headlining Sponsor</div>
+        <p class="cc-sponsor-body">Trusty Sail &amp; Paddle is proud to back Casting Coastal's mission &mdash; because the best kayak fishing community on the Crystal Coast deserves the best gear behind it.</p>
+      </div>
+
+    </aside>
+  </div>
+
+  {%- comment -%} ═══ TOURNAMENT QUICK REFERENCE ═══ {%- endcomment -%}
+  <section class="cc-know-strip">
+    <div class="cc-know-inner">
+      <p class="cc-section-kicker" style="text-align:center;">Tournament Quick Reference</p>
+      <h2 class="cc-section-heading" style="text-align:center; font-size:clamp(1.6rem,3.5vw,2.6rem);">What Every Competitor Needs to Know</h2>
+      <div class="cc-know-grid">
+        <div class="cc-know-item">
+          <span class="cc-know-icon">🦺</span>
+          <span class="cc-know-label">PFD Rule</span>
+          <span class="cc-know-value">Life jacket worn at all times on the water &mdash; no exceptions, no second chances.</span>
+        </div>
+        <div class="cc-know-item">
+          <span class="cc-know-icon">📏</span>
+          <span class="cc-know-label">Measuring Boards</span>
+          <span class="cc-know-value">Solid fixed or single-fold board only. No sliding boards. 30&quot;+ recommended.</span>
+        </div>
+        <div class="cc-know-item">
+          <span class="cc-know-icon">⏰</span>
+          <span class="cc-know-label">Schedule</span>
+          <span class="cc-know-value">Launch 30 min before sunrise. Lines out 2:00 PM. Weigh-in opens 12:00 PM.</span>
+        </div>
+        <div class="cc-know-item">
+          <span class="cc-know-icon">🚣</span>
+          <span class="cc-know-label">Craft Rules</span>
+          <span class="cc-know-value">Kayaks and SUPs only. Trolling motors allowed. No outboards, jon boats, or row boats.</span>
+        </div>
+        <div class="cc-know-item">
+          <span class="cc-know-icon">🐟</span>
+          <span class="cc-know-label">Min. Size</span>
+          <span class="cc-know-value">Fish must be 12&quot; or longer. Length rounded down to nearest &frac14;&quot;. Mouth must close.</span>
+        </div>
+        <div class="cc-know-item">
+          <span class="cc-know-icon">🏆</span>
+          <span class="cc-know-label">Points Trail</span>
+          <span class="cc-know-value">6-tournament Trout Series. 5 pts just for showing. Lowest score dropped at end.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} ═══ FOOTER CTA ═══ {%- endcomment -%}
+  <section class="cc-footer-cta">
+    <div class="cc-footer-cta-inner">
+      <h2>Get Rigged. Get Competitive.</h2>
+      <p>Stop into the shop or browse our custom rigging packages built for tournament-level kayak fishing on Crystal Coast waters.</p>
+      <div class="cc-cta-row" style="justify-content:center;">
+        <a href="{{ section.settings.rigging_url }}" class="cc-btn-primary">View Rigging Packages</a>
+        <a href="{{ section.settings.contact_url }}" class="cc-btn-secondary">Talk to the Team</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{% schema %}
+{
+  "name": "Casting Coastal Community",
+  "tag": "section",
+  "class": "casting-coastal-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "sponsor_logo",
+      "label": "Trusty Sail & Paddle Logo",
+      "info": "Displayed in the sponsor callout card. Recommended: square PNG with transparent background."
+    },
+    {
+      "type": "url",
+      "id": "rigging_url",
+      "label": "Custom Rigging Page URL"
+    },
+    {
+      "type": "url",
+      "id": "contact_url",
+      "label": "Contact Page URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Casting Coastal Community"
+    }
+  ]
+}
+{% endschema %}
