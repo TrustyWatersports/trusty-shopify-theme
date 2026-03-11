@@ -18,6 +18,15 @@
     "brands-directory": {
       "type": "brands-directory",
       "blocks": {
+        "brand_DAQpE7": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/Logo-2-1.svg",
+            "brand_name": "Gill Marine",
+            "brand_description": "Sailing and lifestyle apparell. From PFDs to yach-wear.",
+            "brand_link": "shopify://collections/gill-marine"
+          }
+        },
         "category-kayaks": {
           "type": "category",
           "settings": {
@@ -387,6 +396,7 @@
         }
       },
       "block_order": [
+        "brand_DAQpE7",
         "category-kayaks",
         "brand-jackson",
         "brand-perception",
