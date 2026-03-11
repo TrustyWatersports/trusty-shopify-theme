@@ -220,9 +220,10 @@
         "brand-harken": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/harken.webp",
             "brand_name": "Harken",
             "brand_description": "Premium sailing hardware",
-            "brand_link": "/collections/harken"
+            "brand_link": "shopify://collections/harken"
           }
         },
         "brand-ronstan": {
