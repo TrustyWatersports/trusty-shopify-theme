@@ -9,6 +9,15 @@
  */
 {
   "sections": {
+    "casting_coastal_P3wi7b": {
+      "type": "casting-coastal",
+      "name": "Casting Coastal Community",
+      "settings": {
+        "sponsor_logo": "shopify://shop_images/unnamed_1.png",
+        "rigging_url": "shopify://pages/custom-rigging",
+        "contact_url": "https://www.castingcoastalkayakfishing.com/"
+      }
+    },
     "local-expertise": {
       "type": "local-expertise",
       "settings": {
@@ -33,6 +42,7 @@
     }
   },
   "order": [
+    "casting_coastal_P3wi7b",
     "local-expertise"
   ]
 }
