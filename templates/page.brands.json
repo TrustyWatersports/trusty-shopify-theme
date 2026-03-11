@@ -247,6 +247,7 @@
         "brand-berlypro": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/BerleyPro.webp",
             "brand_name": "BerleyPro",
             "brand_description": "Kayak accessories and electronics mounts",
             "brand_link": "/collections/berlypro"
@@ -255,9 +256,10 @@
         "brand-powerpole": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/PowerPole.webp",
             "brand_name": "Power-Pole",
             "brand_description": "Shallow water anchors",
-            "brand_link": "/collections/power-pole"
+            "brand_link": "shopify://collections/power-pole"
           }
         },
         "brand-minnkota": {
