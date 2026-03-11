@@ -238,9 +238,10 @@
         "brand-allen": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/allen.webp",
             "brand_name": "Allen Sailing",
             "brand_description": "Sailing hardware and rigging",
-            "brand_link": "/collections/allen"
+            "brand_link": "shopify://collections/allen"
           }
         },
         "brand-berlypro": {
