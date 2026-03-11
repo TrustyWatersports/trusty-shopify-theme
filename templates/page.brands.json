@@ -46,9 +46,10 @@
         "brand-wilderness": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/Wilderness_Systems.webp",
             "brand_name": "Wilderness Systems",
-            "brand_description": "Touring and fishing kayaks built for performance",
-            "brand_link": "/collections/wilderness-systems"
+            "brand_description": "Touring and fishing kayaks built for performance. Made in Greenville, SC.",
+            "brand_link": "shopify://collections/wilderness-systems"
           }
         },
         "brand-native": {
