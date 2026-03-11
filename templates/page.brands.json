@@ -125,9 +125,10 @@
         "brand-nacra": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/nacra.webp",
             "brand_name": "Nacra Sailboats",
-            "brand_description": "High-performance racing catamarans",
-            "brand_link": "/collections/nacra"
+            "brand_description": "High-performance racing catamarans made in the Netherlands.",
+            "brand_link": "shopify://collections/nacra-sailboats"
           }
         },
         "brand-weta": {
