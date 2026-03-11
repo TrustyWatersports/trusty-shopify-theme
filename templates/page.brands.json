@@ -159,17 +159,19 @@
         "brand-zhik": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/zhik.webp",
             "brand_name": "Zhik",
             "brand_description": "Technical sailing apparel",
-            "brand_link": "/collections/zhik"
+            "brand_link": "shopify://collections/zhik"
           }
         },
         "brand-kavu": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/kavu.webp",
             "brand_name": "Kavu",
             "brand_description": "Outdoor lifestyle apparel",
-            "brand_link": "/collections/kavu"
+            "brand_link": "shopify://collections/kavu"
           }
         },
         "brand-nrs": {
