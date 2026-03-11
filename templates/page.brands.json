@@ -265,9 +265,10 @@
         "brand-minnkota": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/minn_kota.webp",
             "brand_name": "Minn Kota",
             "brand_description": "Trolling motors",
-            "brand_link": "/collections/minn-kota"
+            "brand_link": "shopify://collections/minn-kota"
           }
         },
         "category-ropes": {
@@ -280,17 +281,19 @@
         "brand-ner": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/New-England-Ropes.webp",
             "brand_name": "New England Ropes",
             "brand_description": "Premium sailing and marine rope",
-            "brand_link": "/collections/new-england-ropes"
+            "brand_link": "shopify://collections/new-england-ropes"
           }
         },
         "brand-marlow": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/marlow.webp",
             "brand_name": "Marlow Ropes",
             "brand_description": "High-performance sailing lines",
-            "brand_link": "/collections/marlow-ropes"
+            "brand_link": "shopify://collections/marlow-ropes"
           }
         },
         "category-transport": {
@@ -303,9 +306,10 @@
         "brand-dynamic": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/dynamic-dollies.webp",
             "brand_name": "Dynamic Dollies",
             "brand_description": "Boat dollies and launching systems",
-            "brand_link": "/collections/dynamic-dollies"
+            "brand_link": "shopify://collections/dynamic-dollies"
           }
         },
         "brand-yakima": {
