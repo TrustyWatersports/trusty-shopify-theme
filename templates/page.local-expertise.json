@@ -30,9 +30,18 @@
         "cta_secondary_text": "Find Our Locations",
         "cta_secondary_link": "/pages/locations"
       }
+    },
+    "casting_coastal_cQgVRD": {
+      "type": "casting-coastal",
+      "name": "Casting Coastal Community",
+      "settings": {
+        "rigging_url": "",
+        "contact_url": ""
+      }
     }
   },
   "order": [
+    "casting_coastal_cQgVRD",
     "local-expertise"
   ]
 }
