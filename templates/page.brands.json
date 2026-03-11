@@ -150,9 +150,10 @@
         "brand-astral": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/Astral.webp",
             "brand_name": "Astral",
             "brand_description": "PFDs and water sports footwear",
-            "brand_link": "/collections/astral"
+            "brand_link": "shopify://collections/astral"
           }
         },
         "brand-zhik": {
