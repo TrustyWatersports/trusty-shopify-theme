@@ -218,6 +218,15 @@
             "brand_link": "shopify://collections/yakattack"
           }
         },
+        "brand-ketch": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/ketch.webp",
+            "brand_name": "Ketch Outdoors",
+            "brand_description": "Premium kayak accessories. Made in USA.",
+            "brand_link": "shopify://collections/ketch"
+          }
+        },
         "brand-harken": {
           "type": "brand",
           "settings": {
@@ -381,21 +390,13 @@
             "category_color": "#2e7d32"
           }
         },
-        "brand-ketch": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/ketch.webp",
-            "brand_name": "Ketch Outdoors",
-            "brand_description": "Premium kayak accessories. Made in USA.",
-            "brand_link": "shopify://collections/ketch"
-          }
-        },
         "brand-ikamper": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/Screenshot_2026-03-04_103450.png",
             "brand_name": "iKamper",
-            "brand_description": "Rooftop tents",
-            "brand_link": "/collections/ikamper"
+            "brand_description": "Premium rooftop tents",
+            "brand_link": "shopify://collections/ikamper"
           }
         },
         "category-other": {
@@ -438,6 +439,7 @@
         "brand-sunbum",
         "category-accessories",
         "brand-yakattack",
+        "brand-ketch",
         "brand-harken",
         "brand-ronstan",
         "brand-allen",
@@ -457,7 +459,6 @@
         "brand-minnkota",
         "brand-yamaha",
         "category-outdoor",
-        "brand-ketch",
         "brand-ikamper",
         "category-other",
         "brand-seadek"
