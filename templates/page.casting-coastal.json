@@ -1,0 +1,31 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "casting-coastal": {
+      "type": "casting-coastal",
+      "blocks": {
+        "t1": { "type": "tournament", "settings": { "name": "Blounts Creek", "location": "Chocowinity, NC \u00b7 Trout Series", "date": "Rescheduled \u2014 TBD" } },
+        "t2": { "type": "tournament", "settings": { "name": "Jacksonville", "location": "New River \u00b7 Trout Series", "date": "March 8, 2026" } },
+        "t3": { "type": "tournament", "settings": { "name": "Aurora", "location": "Trout Series", "date": "Date TBA" } },
+        "t4": { "type": "tournament", "settings": { "name": "Beaufort", "location": "Redfish \u00b7 Sheepshead \u00b7 Black Drum", "date": "Date TBA" } },
+        "t5": { "type": "tournament", "settings": { "name": "Beaufort (Anywhere)", "location": "Redfish \u00b7 Sheepshead \u00b7 Black Drum", "date": "Date TBA" } },
+        "t6": { "type": "tournament", "settings": { "name": "Belhaven", "location": "Trout Series", "date": "Date TBA" } },
+        "t7": { "type": "tournament", "settings": { "name": "Dawson Creek", "location": "Trout Series", "date": "Date TBA" } },
+        "t8": { "type": "tournament", "settings": { "name": "Vandemere", "location": "Trout Series \u2014 Mandatory Finale", "date": "Date TBA" } }
+      },
+      "block_order": ["t1", "t2", "t3", "t4", "t5", "t6", "t7", "t8"],
+      "settings": {}
+    }
+  },
+  "order": [
+    "casting-coastal"
+  ]
+}
