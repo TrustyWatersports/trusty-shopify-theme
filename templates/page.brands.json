@@ -12,6 +12,7 @@
     "brands-hero": {
       "type": "blog-hero",
       "settings": {
+        "hero_image": "shopify://shop_images/IMG_5520.webp",
         "hero_height": 400
       }
     },
@@ -358,9 +359,10 @@
         "brand-garmin": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/garmin.webp",
             "brand_name": "Garmin",
             "brand_description": "Marine electronics and fish finders",
-            "brand_link": "/collections/garmin"
+            "brand_link": "shopify://collections/garmin-1"
           }
         },
         "brand-yamaha": {
