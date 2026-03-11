@@ -100,9 +100,10 @@
         "brand-oldtown": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/logo.png",
             "brand_name": "Old Town",
-            "brand_description": "Classic canoes and kayaks since 1898",
-            "brand_link": "/collections/old-town"
+            "brand_description": "Classic canoes and kayaks since 1898. Made in Old Town, ME.",
+            "brand_link": "shopify://collections/old-town"
           }
         },
         "category-sailboats": {
