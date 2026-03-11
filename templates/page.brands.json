@@ -265,9 +265,10 @@
         "brand-minnkota": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/minn_kota.webp",
             "brand_name": "Minn Kota",
             "brand_description": "Trolling motors",
-            "brand_link": "/collections/minn-kota"
+            "brand_link": "shopify://collections/minn-kota"
           }
         },
         "category-ropes": {
@@ -280,9 +281,10 @@
         "brand-ner": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/New-England-Ropes.webp",
             "brand_name": "New England Ropes",
             "brand_description": "Premium sailing and marine rope",
-            "brand_link": "/collections/new-england-ropes"
+            "brand_link": "shopify://collections/new-england-ropes"
           }
         },
         "brand-marlow": {
