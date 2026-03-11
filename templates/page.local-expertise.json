@@ -9,6 +9,15 @@
  */
 {
   "sections": {
+    "casting_coastal_cQgVRD": {
+      "type": "casting-coastal",
+      "name": "Casting Coastal Community",
+      "settings": {
+        "sponsor_logo": "shopify://shop_images/unnamed_3.png",
+        "rigging_url": "",
+        "contact_url": ""
+      }
+    },
     "local-expertise": {
       "type": "local-expertise",
       "settings": {
@@ -29,14 +38,6 @@
         "cta_primary_link": "/collections/fishing-kayaks",
         "cta_secondary_text": "Find Our Locations",
         "cta_secondary_link": "/pages/locations"
-      }
-    },
-    "casting_coastal_cQgVRD": {
-      "type": "casting-coastal",
-      "name": "Casting Coastal Community",
-      "settings": {
-        "rigging_url": "",
-        "contact_url": ""
       }
     }
   },
