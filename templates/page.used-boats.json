@@ -14,13 +14,39 @@
       "settings": {
         "hero_title": "Used Boats & Consignment",
         "hero_subtitle": "Quality pre-owned kayaks and sailboats at great prices",
-        "background_color": "#0A4B78"
+        "hero_image": "shopify://shop_images/download_2fddcd18-f839-43c8-b96b-ad99e00dfc8a.png",
+        "image_opacity": 100,
+        "overlay_opacity": 10,
+        "background_color": "#0a4b78"
       }
     },
     "used-boats-grid": {
       "type": "used-boats-grid",
+      "blocks": {
+        "boat_9HtNkE": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_6555.jpg",
+            "boat_image_2": "shopify://shop_images/IMG_6556_fd0b3faf-340f-4158-952f-b527e2ac29ea.jpg",
+            "boat_image_3": "shopify://shop_images/IMG_6560_970a583b-ac1d-4b82-b08e-96aac5bd79dd.jpg",
+            "boat_image_4": "shopify://shop_images/IMG_6554.jpg",
+            "boat_image_5": "shopify://shop_images/IMG_6559.jpg",
+            "boat_name": "Jackson Knarr Package",
+            "boat_brand": "Jackson/Malone/YakAttack",
+            "boat_year": "2022",
+            "boat_condition": "excellent",
+            "boat_description": "Very lightly used, if at all, pedal kayak set from Jackson Kayak. These two Knarr's are ready to fish with all needed accessories- paddles, storage, dolly, anchor trolly- you've got it all! These are some of the best fishing kayaks on the market complete with a  Malone Trailer and two sets of saddle-up-pro's for easy storage. Make an offer and take these great boats home today.",
+            "boat_price": "$7500.00",
+            "contact_info": "",
+            "is_sold": false
+          }
+        }
+      },
+      "block_order": [
+        "boat_9HtNkE"
+      ],
       "settings": {
-        "background_color": "#F5F7FA"
+        "background_color": "#f5f7fa"
       }
     }
   },
