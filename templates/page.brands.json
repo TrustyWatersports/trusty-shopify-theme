@@ -19,6 +19,15 @@
     "brands-directory": {
       "type": "brands-directory",
       "blocks": {
+        "brand_DQht8H": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/NKF_Logo.avif",
+            "brand_name": "Navarre Kayak Fishing",
+            "brand_description": "Bespoke kayak fishing solutions. Unique products.",
+            "brand_link": ""
+          }
+        },
         "category-kayaks": {
           "type": "category",
           "settings": {
@@ -416,6 +425,7 @@
         }
       },
       "block_order": [
+        "brand_DQht8H",
         "category-kayaks",
         "brand-jackson",
         "brand-perception",
