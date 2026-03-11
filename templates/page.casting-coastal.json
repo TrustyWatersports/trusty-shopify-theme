@@ -12,17 +12,86 @@
     "casting-coastal": {
       "type": "casting-coastal",
       "blocks": {
-        "t1": { "type": "tournament", "settings": { "name": "Blounts Creek", "location": "Chocowinity, NC \u00b7 Trout Series", "date": "Rescheduled \u2014 TBD" } },
-        "t2": { "type": "tournament", "settings": { "name": "Jacksonville", "location": "New River \u00b7 Trout Series", "date": "March 8, 2026" } },
-        "t3": { "type": "tournament", "settings": { "name": "Aurora", "location": "Trout Series", "date": "Date TBA" } },
-        "t4": { "type": "tournament", "settings": { "name": "Beaufort", "location": "Redfish \u00b7 Sheepshead \u00b7 Black Drum", "date": "Date TBA" } },
-        "t5": { "type": "tournament", "settings": { "name": "Beaufort (Anywhere)", "location": "Redfish \u00b7 Sheepshead \u00b7 Black Drum", "date": "Date TBA" } },
-        "t6": { "type": "tournament", "settings": { "name": "Belhaven", "location": "Trout Series", "date": "Date TBA" } },
-        "t7": { "type": "tournament", "settings": { "name": "Dawson Creek", "location": "Trout Series", "date": "Date TBA" } },
-        "t8": { "type": "tournament", "settings": { "name": "Vandemere", "location": "Trout Series \u2014 Mandatory Finale", "date": "Date TBA" } }
+        "t1": {
+          "type": "tournament",
+          "settings": {
+            "name": "Blounts Creek",
+            "location": "Chocowinity, NC · Trout Series",
+            "date": "Rescheduled — TBD"
+          }
+        },
+        "t2": {
+          "type": "tournament",
+          "settings": {
+            "name": "Jacksonville",
+            "location": "New River · Trout Series",
+            "date": "March 8, 2026"
+          }
+        },
+        "t3": {
+          "type": "tournament",
+          "settings": {
+            "name": "Aurora",
+            "location": "Trout Series",
+            "date": "Date TBA"
+          }
+        },
+        "t4": {
+          "type": "tournament",
+          "settings": {
+            "name": "Beaufort",
+            "location": "Redfish · Sheepshead · Black Drum",
+            "date": "Date TBA"
+          }
+        },
+        "t5": {
+          "type": "tournament",
+          "settings": {
+            "name": "Beaufort (Anywhere)",
+            "location": "Redfish · Sheepshead · Black Drum",
+            "date": "Date TBA"
+          }
+        },
+        "t6": {
+          "type": "tournament",
+          "settings": {
+            "name": "Belhaven",
+            "location": "Trout Series",
+            "date": "Date TBA"
+          }
+        },
+        "t7": {
+          "type": "tournament",
+          "settings": {
+            "name": "Dawson Creek",
+            "location": "Trout Series",
+            "date": "Date TBA"
+          }
+        },
+        "t8": {
+          "type": "tournament",
+          "settings": {
+            "name": "Vandemere",
+            "location": "Trout Series — Mandatory Finale",
+            "date": "Date TBA"
+          }
+        }
       },
-      "block_order": ["t1", "t2", "t3", "t4", "t5", "t6", "t7", "t8"],
-      "settings": {}
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7",
+        "t8"
+      ],
+      "settings": {
+        "sponsor_logo": "shopify://shop_images/unnamed_1.png",
+        "rigging_url": "shopify://pages/custom-rigging",
+        "contact_url": "https://www.castingcoastalkayakfishing.com/"
+      }
     }
   },
   "order": [
