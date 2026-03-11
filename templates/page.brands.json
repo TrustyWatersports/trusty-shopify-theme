@@ -19,15 +19,6 @@
     "brands-directory": {
       "type": "brands-directory",
       "blocks": {
-        "brand_DQht8H": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/NKF_Logo.avif",
-            "brand_name": "Navarre Kayak Fishing",
-            "brand_description": "Bespoke kayak fishing solutions. Unique products.",
-            "brand_link": ""
-          }
-        },
         "category-kayaks": {
           "type": "category",
           "settings": {
@@ -225,6 +216,15 @@
             "brand_name": "YakAttack",
             "brand_description": "Kayak fishing accessories and mounts. Made in USA, lifetime warranties.",
             "brand_link": "shopify://collections/yakattack"
+          }
+        },
+        "brand_DQht8H": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/NKF_Logo.avif",
+            "brand_name": "Navarre Kayak Fishing",
+            "brand_description": "Bespoke kayak fishing solutions. Unique products.",
+            "brand_link": "shopify://collections/navarre-kayak-fishing"
           }
         },
         "brand-ketch": {
@@ -425,7 +425,6 @@
         }
       },
       "block_order": [
-        "brand_DQht8H",
         "category-kayaks",
         "brand-jackson",
         "brand-perception",
@@ -449,6 +448,7 @@
         "brand-sunbum",
         "category-accessories",
         "brand-yakattack",
+        "brand_DQht8H",
         "brand-ketch",
         "brand-harken",
         "brand-ronstan",
