@@ -229,8 +229,14 @@
   }
 
   function updatePrice(select) {
-    var price = select.options[select.selectedIndex].getAttribute('data-price');
+    var opt = select.options[select.selectedIndex];
+    var price = opt.getAttribute('data-price');
     if (price) document.getElementById('product-price').textContent = price;
+    var img = opt.getAttribute('data-image');
+    if (img) {
+      document.getElementById('main-img').src = img;
+      document.querySelectorAll('.product-thumb').forEach(function(t) { t.classList.remove('active'); });
+    }
   }
 
   // Show Add to Cart after Calendly booking is complete
