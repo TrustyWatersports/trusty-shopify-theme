@@ -315,9 +315,10 @@
         "brand-yakima": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/yakima.webp",
             "brand_name": "Yakima",
             "brand_description": "Roof racks and cargo systems",
-            "brand_link": "/collections/yakima"
+            "brand_link": "shopify://collections/yakima"
           }
         },
         "brand-suspenz": {
