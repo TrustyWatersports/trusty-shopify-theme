@@ -12,8 +12,7 @@
     "brands-hero": {
       "type": "blog-hero",
       "settings": {
-        "hero_image": "shopify://shop_images/download_a3a71d48-782e-4972-acf9-a6050f251162.png",
-        "hero_height": 300
+        "hero_height": 400
       }
     },
     "brands-directory": {
@@ -23,199 +22,172 @@
           "type": "category",
           "settings": {
             "category_name": "Kayaks",
-            "category_color": "#0a4b78"
+            "category_color": "#0A4B78"
           }
         },
         "brand-jackson": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/Screenshot_2026-03-04_153344.png",
             "brand_name": "Jackson Kayak",
-            "brand_description": "Premium whitewater and fishing kayaks. Made in Sparta, TN.",
-            "brand_link": "shopify://collections/jackson"
+            "brand_description": "Premium whitewater and fishing kayaks",
+            "brand_link": "/collections/jackson-kayak"
           }
         },
         "brand-perception": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/Perception.webp",
             "brand_name": "Perception Kayaks",
-            "brand_description": "Recreational and fishing kayaks for all skill levels. Made in Greenville, SC",
-            "brand_link": "shopify://collections/perception"
+            "brand_description": "Recreational and fishing kayaks for all skill levels",
+            "brand_link": "/collections/perception-kayaks"
           }
         },
         "brand-wilderness": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/Wilderness_Systems.webp",
             "brand_name": "Wilderness Systems",
-            "brand_description": "Touring and fishing kayaks built for performance. Made in Greenville, SC.",
-            "brand_link": "shopify://collections/wilderness-systems"
+            "brand_description": "Touring and fishing kayaks built for performance",
+            "brand_link": "/collections/wilderness-systems"
           }
         },
         "brand-native": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/Native_Watercraft.webp",
             "brand_name": "Native Watercraft",
-            "brand_description": "Innovative pedal-drive fishing kayaks. Made in Fletcher, NC.",
-            "brand_link": "shopify://collections/native-watercraft"
+            "brand_description": "Innovative pedal-drive fishing kayaks",
+            "brand_link": "/collections/native-watercraft"
           }
         },
         "brand-bonafide": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/BonaFide.webp",
             "brand_name": "Bonafide Kayaks",
-            "brand_description": "Stable, feature-rich fishing kayaks. Made in Fletcher, NC.",
-            "brand_link": "shopify://collections/bonafide"
+            "brand_description": "Stable, feature-rich fishing kayaks",
+            "brand_link": "/collections/bonafide-kayaks"
           }
         },
         "brand-liquid-logic": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/Screenshot_19-2-2026_213427_liquidlogickayaks.com.jpg",
             "brand_name": "Liquid Logic Kayaks",
-            "brand_description": "Whitewater and recreational kayaks. Made in Fletcher, NC.",
-            "brand_link": "shopify://collections/liquid-logic"
+            "brand_description": "Whitewater and recreational kayaks",
+            "brand_link": "/collections/liquid-logic"
           }
         },
         "brand-nucanoe": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/NuCanoe.webp",
             "brand_name": "NuCanoe",
-            "brand_description": "Hybrid kayak-canoe fishing platforms. Easy motorization. Made in Fletcher, NC.",
-            "brand_link": "shopify://collections/nucanoe"
+            "brand_description": "Hybrid kayak-canoe fishing platforms",
+            "brand_link": "/collections/nucanoe"
           }
         },
         "brand-eddyline": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/eddylineLogo_2_410x_5a7692d7-b996-4cd0-b9e0-3e7aa97fc91b.webp",
             "brand_name": "Eddyline Kayaks",
-            "brand_description": "Lightweight touring kayaks. Smooth paddling boats. Made in Sparta, TN.",
-            "brand_link": "shopify://collections/eddyline"
+            "brand_description": "Lightweight touring kayaks",
+            "brand_link": "/collections/eddyline"
           }
         },
         "brand-oldtown": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/logo.png",
             "brand_name": "Old Town",
-            "brand_description": "Classic canoes and kayaks since 1898. Made in Old Town, Maine.",
-            "brand_link": "shopify://collections/old-town"
+            "brand_description": "Classic canoes and kayaks since 1898",
+            "brand_link": "/collections/old-town"
           }
         },
         "category-sailboats": {
           "type": "category",
           "settings": {
             "category_name": "Sailboats",
-            "category_color": "#d32f2f"
+            "category_color": "#D32F2F"
           }
         },
         "brand-topaz": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/Topaz.webp",
             "brand_name": "Topaz Sailboats",
             "brand_description": "Small dinghies and catamarans from the UK",
-            "brand_link": "shopify://collections/topaz-sailboats"
+            "brand_link": "/collections/topaz-sailboats"
           }
         },
         "brand-nacra": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/nacra.webp",
             "brand_name": "Nacra Sailboats",
-            "brand_description": "High-performance racing catamarans from the Netherlands.",
-            "brand_link": "shopify://collections/nacra-sailboats"
+            "brand_description": "High-performance racing catamarans",
+            "brand_link": "/collections/nacra"
           }
         },
         "brand-weta": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/weta-logo.webp",
             "brand_name": "Weta Trimarans",
-            "brand_description": "Fast, stable trimarans for all conditions.",
-            "brand_link": "shopify://collections/weta"
+            "brand_description": "Fast, stable trimarans for all conditions",
+            "brand_link": "/collections/weta"
           }
         },
         "category-apparel": {
           "type": "category",
           "settings": {
             "category_name": "Apparel & Safety Gear",
-            "category_color": "#00a86b"
+            "category_color": "#00A86B"
           }
         },
         "brand-astral": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/Astral.webp",
             "brand_name": "Astral",
             "brand_description": "PFDs and water sports footwear",
-            "brand_link": "shopify://collections/astral"
+            "brand_link": "/collections/astral"
           }
         },
         "brand-zhik": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/zhik.webp",
             "brand_name": "Zhik",
             "brand_description": "Technical sailing apparel",
-            "brand_link": "shopify://collections/zhik"
-          }
-        },
-        "brand_XH3aMG": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/Logo-2-1.svg",
-            "brand_name": "Gill Marine",
-            "brand_description": "Sailing and lifestyle apparel. PFD's to yacht-wear.",
-            "brand_link": "shopify://collections/gill-marine"
+            "brand_link": "/collections/zhik"
           }
         },
         "brand-kavu": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/kavu.webp",
             "brand_name": "Kavu",
             "brand_description": "Outdoor lifestyle apparel",
-            "brand_link": "shopify://collections/kavu"
+            "brand_link": "/collections/kavu"
           }
         },
         "brand-nrs": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/NRS_Marketing_Logo_Black.webp",
             "brand_name": "NRS",
             "brand_description": "Paddling apparel and safety gear",
-            "brand_link": "shopify://collections/nrs"
+            "brand_link": "/collections/nrs"
           }
         },
         "brand-sunbum": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/sunbum.webp",
             "brand_name": "Sun Bum",
             "brand_description": "Sun protection and skincare",
-            "brand_link": "shopify://collections/sunbum"
+            "brand_link": "/collections/sunbum"
           }
         },
         "category-accessories": {
           "type": "category",
           "settings": {
             "category_name": "Kayak & Sailing Accessories",
-            "category_color": "#ff6b35"
+            "category_color": "#FF6B35"
           }
         },
         "brand-yakattack": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/YakAttack.webp",
             "brand_name": "YakAttack",
             "brand_description": "Kayak fishing accessories and mounts",
-            "brand_link": "shopify://collections/yakattack"
+            "brand_link": "/collections/yakattack"
           }
         },
         "brand-harken": {
@@ -245,17 +217,32 @@
         "brand-berlypro": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/BerleyPro.webp",
             "brand_name": "BerleyPro",
             "brand_description": "Kayak accessories and electronics mounts",
-            "brand_link": "shopify://collections/berleypro"
+            "brand_link": "/collections/berlypro"
+          }
+        },
+        "brand-powerpole": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Power-Pole",
+            "brand_description": "Shallow water anchors",
+            "brand_link": "/collections/power-pole"
+          }
+        },
+        "brand-minnkota": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "Minn Kota",
+            "brand_description": "Trolling motors",
+            "brand_link": "/collections/minn-kota"
           }
         },
         "category-ropes": {
           "type": "category",
           "settings": {
             "category_name": "Ropes & Lines",
-            "category_color": "#8b4513"
+            "category_color": "#8B4513"
           }
         },
         "brand-ner": {
@@ -278,7 +265,7 @@
           "type": "category",
           "settings": {
             "category_name": "Racks, Trailers & Storage",
-            "category_color": "#4a9cd6"
+            "category_color": "#4A9CD6"
           }
         },
         "brand-dynamic": {
@@ -325,50 +312,30 @@
           "type": "category",
           "settings": {
             "category_name": "Electronics & Motors",
-            "category_color": "#1e6fa8"
+            "category_color": "#1E6FA8"
           }
         },
         "brand-garmin": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/garmin.webp",
             "brand_name": "Garmin",
             "brand_description": "Marine electronics and fish finders",
-            "brand_link": "shopify://collections/garmin-1"
-          }
-        },
-        "brand-powerpole": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/PowerPole.webp",
-            "brand_name": "Power-Pole",
-            "brand_description": "Shallow water anchors",
-            "brand_link": "shopify://collections/power-pole"
-          }
-        },
-        "brand-minnkota": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/minn_kota.webp",
-            "brand_name": "Minn Kota",
-            "brand_description": "Trolling motors",
-            "brand_link": "shopify://collections/minn-kota"
+            "brand_link": "/collections/garmin"
           }
         },
         "brand-yamaha": {
           "type": "brand",
           "settings": {
-            "brand_logo": "shopify://shop_images/Torqeedo.webp",
             "brand_name": "Yamaha / Torqeedo",
             "brand_description": "Electric outboard motors",
-            "brand_link": "shopify://collections/torqeedo"
+            "brand_link": "/collections/motors"
           }
         },
         "category-outdoor": {
           "type": "category",
           "settings": {
             "category_name": "Camping & Outdoor",
-            "category_color": "#2e7d32"
+            "category_color": "#2E7D32"
           }
         },
         "brand-ketch": {
@@ -421,7 +388,6 @@
         "category-apparel",
         "brand-astral",
         "brand-zhik",
-        "brand_XH3aMG",
         "brand-kavu",
         "brand-nrs",
         "brand-sunbum",
@@ -431,6 +397,8 @@
         "brand-ronstan",
         "brand-allen",
         "brand-berlypro",
+        "brand-powerpole",
+        "brand-minnkota",
         "category-ropes",
         "brand-ner",
         "brand-marlow",
@@ -442,8 +410,6 @@
         "brand-malone",
         "category-electronics",
         "brand-garmin",
-        "brand-powerpole",
-        "brand-minnkota",
         "brand-yamaha",
         "category-outdoor",
         "brand-ketch",
@@ -457,8 +423,5 @@
       }
     }
   },
-  "order": [
-    "brands-hero",
-    "brands-directory"
-  ]
+  "order": ["brands-hero", "brands-directory"]
 }

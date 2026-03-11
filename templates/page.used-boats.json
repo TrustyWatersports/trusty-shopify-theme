@@ -14,39 +14,13 @@
       "settings": {
         "hero_title": "Used Boats & Consignment",
         "hero_subtitle": "Quality pre-owned kayaks and sailboats at great prices",
-        "hero_image": "shopify://shop_images/download_c793ff28-46e3-4603-9505-016c3e408e2b.png",
-        "image_opacity": 100,
-        "overlay_opacity": 20,
-        "background_color": "#0a4b78"
+        "background_color": "#0A4B78"
       }
     },
     "used-boats-grid": {
       "type": "used-boats-grid",
-      "blocks": {
-        "boat_7AYU6Y": {
-          "type": "boat",
-          "settings": {
-            "boat_image": "shopify://shop_images/IMG_6555.jpg",
-            "boat_image_2": "shopify://shop_images/IMG_6560_970a583b-ac1d-4b82-b08e-96aac5bd79dd.jpg",
-            "boat_image_3": "shopify://shop_images/IMG_6554.jpg",
-            "boat_image_4": "shopify://shop_images/IMG_6557.jpg",
-            "boat_image_5": "shopify://shop_images/IMG_6558_e4201ec9-5f63-4106-9405-d767ed2d6b03.jpg",
-            "boat_name": "Jackson Knarr Package",
-            "boat_brand": "Jackson/Malone",
-            "boat_year": "2022",
-            "boat_condition": "excellent",
-            "boat_description": "Like new Jackson Knarr package! Two boats on a Malone kayak trailer with two saddle-up pro kayak carriers. Paddles, storage boxes, kayak cart- this set up is ready to fish! Great opportuntiy to own a fantastic boat at an awesome price. Feel free to make an offer.",
-            "boat_price": "7500.00 Or Best Offer",
-            "contact_info": "",
-            "is_sold": false
-          }
-        }
-      },
-      "block_order": [
-        "boat_7AYU6Y"
-      ],
       "settings": {
-        "background_color": "#f5f7fa"
+        "background_color": "#F5F7FA"
       }
     }
   },
