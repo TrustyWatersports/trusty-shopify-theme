@@ -44,19 +44,21 @@
         <span id="product-price" style="font-size: 42px; font-weight: 700; color: var(--text-dark);">{{ product.selected_or_first_available_variant.price | money }}</span>
       </div>
 
-      {% assign first_variant = product.selected_or_first_available_variant %}
-      {% if product.available %}
-        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 25px; color: var(--rigging-accent); font-weight: 600;">
-          <span>&#10003;</span><span>In Stock - Ready to Ship or Rig</span>
-        </div>
-      {% elsif first_variant.inventory_policy == 'continue' %}
-        <div style="background: #fff8e6; border: 2px solid #f0a500; border-radius: 8px; padding: 14px 18px; margin-bottom: 25px;">
-          <div style="font-weight: 700; color: #7a5200; font-size: 15px; margin-bottom: 4px;">&#x1F4E6; Available to Order &mdash; Ships in Approx. 3 Weeks</div>
-          <div style="font-size: 13px; color: #7a5200; opacity: 0.85;">We'll order directly from the manufacturer and have it ready for you at our Morehead City shop or ship it your way.</div>
-        </div>
-      {% else %}
-        <div style="margin-bottom: 25px; color: var(--sunrise); font-weight: 600;">Out of Stock - Contact Us for ETA</div>
-      {% endif %}
+      <!-- Availability badge — rendered by JS based on selected variant -->
+      <div id="availability-badge" style="margin-bottom: 25px;"></div>
+
+      <!-- Variant data for JS -->
+      <script>
+        window.__variants = {
+          {% for variant in product.variants %}
+          "{{ variant.id }}": {
+            "available": {{ variant.available }},
+            "inventory_quantity": {{ variant.inventory_quantity }},
+            "inventory_policy": "{{ variant.inventory_policy }}"
+          }{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        };
+      </script>
 
       <div style="font-size: 16px; line-height: 1.8; color: var(--gray-medium); margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px solid var(--gray-light);">
         {{ product.description | strip_html | truncate: 250 }}
@@ -133,8 +135,6 @@
     <h2 style="font-size: 28px; margin-bottom: 25px; color: var(--ocean-deep);">Description</h2>
     <div style="font-size: 16px; line-height: 1.8; color: var(--text-dark);">{{ product.description }}</div>
   </div>
-
-
 
 </div>
 
@@ -228,6 +228,25 @@
     el.classList.add('active');
   }
 
+  function updateAvailabilityBadge(variantId) {
+    var badge = document.getElementById('availability-badge');
+    if (!badge || !window.__variants) return;
+    var v = window.__variants[variantId];
+    if (!v) return;
+
+    if (v.available) {
+      badge.innerHTML = '<div style="display:flex;align-items:center;gap:8px;color:var(--rigging-accent);font-weight:600;">'+
+        '<span>&#10003;</span><span>In Stock - Ready to Ship or Rig</span></div>';
+    } else if (v.inventory_policy === 'continue') {
+      badge.innerHTML = '<div style="background:#fff8e6;border:2px solid #f0a500;border-radius:8px;padding:14px 18px;">'+
+        '<div style="font-weight:700;color:#7a5200;font-size:15px;margin-bottom:4px;">&#x1F4E6; Available to Order &mdash; Ships in Approx. 3 Weeks</div>'+
+        '<div style="font-size:13px;color:#7a5200;opacity:0.85;">We\'ll order directly from the manufacturer and have it ready for you at our Morehead City shop or ship it your way.</div>'+
+        '</div>';
+    } else {
+      badge.innerHTML = '<div style="color:var(--sunrise);font-weight:600;">Out of Stock - Contact Us for ETA</div>';
+    }
+  }
+
   function updatePrice(select) {
     var opt = select.options[select.selectedIndex];
     var price = opt.getAttribute('data-price');
@@ -237,7 +256,20 @@
       document.getElementById('main-img').src = img;
       document.querySelectorAll('.product-thumb').forEach(function(t) { t.classList.remove('active'); });
     }
+    updateAvailabilityBadge(opt.value);
   }
+
+  // Set correct badge on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    var sel = document.getElementById('product-select');
+    if (sel) {
+      updateAvailabilityBadge(sel.value);
+    } else {
+      // Single-variant product — find the hidden input
+      var hidden = document.querySelector('input[name="id"]');
+      if (hidden) updateAvailabilityBadge(hidden.value);
+    }
+  });
 
   // Show Add to Cart after Calendly booking is complete
   function showCheckout() {
