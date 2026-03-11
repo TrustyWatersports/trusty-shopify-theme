@@ -116,9 +116,10 @@
         "brand-topaz": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/Topaz.webp",
             "brand_name": "Topaz Sailboats",
             "brand_description": "Small dinghies and catamarans from the UK",
-            "brand_link": "/collections/topaz-sailboats"
+            "brand_link": "shopify://collections/topaz-sailboats"
           }
         },
         "brand-nacra": {
