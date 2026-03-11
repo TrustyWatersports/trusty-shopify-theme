@@ -213,6 +213,7 @@
         "sailing-series": {
           "type": "event",
           "settings": {
+            "event_image": "shopify://shop_images/IMG_4110.jpg",
             "event_icon": "🏆",
             "event_name": "Small Boat Sailing Series",
             "event_badge": "Registering Now",
