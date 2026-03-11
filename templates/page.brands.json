@@ -73,9 +73,10 @@
         "brand-liquid-logic": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/Screenshot_19-2-2026_213427_liquidlogickayaks.com.jpg",
             "brand_name": "Liquid Logic Kayaks",
-            "brand_description": "Whitewater and recreational kayaks",
-            "brand_link": "/collections/liquid-logic"
+            "brand_description": "Whitewater and recreational kayaks. Made in Fletcher, NC.",
+            "brand_link": "shopify://collections/liquid-logic"
           }
         },
         "brand-nucanoe": {
