@@ -234,7 +234,7 @@
     var v = window.__variants[variantId];
     if (!v) return;
 
-    if (v.available) {
+    if (v.inventory_quantity > 0) {
       badge.innerHTML = '<div style="display:flex;align-items:center;gap:8px;color:var(--rigging-accent);font-weight:600;">'+
         '<span>&#10003;</span><span>In Stock - Ready to Ship or Rig</span></div>';
     } else if (v.inventory_policy === 'continue') {
