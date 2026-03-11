@@ -418,9 +418,10 @@
         "brand-seadek": {
           "type": "brand",
           "settings": {
+            "brand_logo": "shopify://shop_images/seadek.webp",
             "brand_name": "SeaDek Mid-Atlantic",
             "brand_description": "Custom marine flooring",
-            "brand_link": "/collections/seadek"
+            "brand_link": "shopify://collections/seadek"
           }
         }
       },
