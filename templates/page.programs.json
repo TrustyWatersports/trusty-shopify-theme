@@ -213,7 +213,7 @@
         "sailing-series": {
           "type": "event",
           "settings": {
-            "event_image": "shopify://shop_images/IMG_4110.jpg",
+            "event_image": "shopify://shop_images/351306360_2045710379094196_1898962804206968508_n.jpg",
             "event_icon": "🏆",
             "event_name": "Small Boat Sailing Series",
             "event_badge": "Registering Now",
@@ -258,6 +258,7 @@
         "demo-days": {
           "type": "event",
           "settings": {
+            "event_image": "shopify://shop_images/IMG_0015.jpg",
             "event_icon": "🌊",
             "event_name": "Demo Days - Try It for Free!",
             "event_badge": "Registering Now",
@@ -280,6 +281,7 @@
         "lookout-campout": {
           "type": "event",
           "settings": {
+            "event_image": "shopify://shop_images/IMG_2052.jpg",
             "event_icon": "🏕️",
             "event_name": "Lookout Campout",
             "event_badge": "Registering Now",
