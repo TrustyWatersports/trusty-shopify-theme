@@ -236,6 +236,7 @@
         "portside-meetup": {
           "type": "event",
           "settings": {
+            "event_image": "shopify://shop_images/IMG_1816.jpg",
             "event_icon": "🎯",
             "event_name": "Portside Kayak Fishing Meetup",
             "event_badge": "Registering Now",
