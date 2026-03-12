@@ -148,7 +148,8 @@
             "gear_icon": "🦺",
             "gear_name": "Sun & Heat Protection",
             "gear_reason": "The Crystal Coast sun off flat water is brutal from May through October. You're on reflective water all day with no shade. Sunburn, heat exhaustion, and dehydration are real risks on a full-day paddle. Treat sun protection as seriously as you treat your tackle.",
-            "gear_recommendation": "Buff face shield, UPF 50 long sleeves, wide brim hat, and bring at least 3L of water per person"
+            "gear_recommendation": "Buff face shield, UPF 50 long sleeves, wide brim hat, and bring at least 3L of water per person",
+            "gear_link": ""
           }
         },
         "gear_5": {
@@ -163,9 +164,21 @@
         }
       },
       "block_order": [
-        "spot_1", "spot_2", "spot_3", "spot_4", "spot_5",
-        "water_1", "water_2", "water_3", "water_4", "water_5",
-        "gear_1", "gear_2", "gear_3", "gear_4", "gear_5"
+        "spot_1",
+        "spot_2",
+        "spot_3",
+        "spot_4",
+        "spot_5",
+        "water_1",
+        "water_2",
+        "water_3",
+        "water_4",
+        "water_5",
+        "gear_1",
+        "gear_2",
+        "gear_3",
+        "gear_4",
+        "gear_5"
       ],
       "settings": {
         "hero_title": "Crystal Coast Local Expertise",
@@ -181,15 +194,6 @@
         "gear_subtitle": "What works here and why — straight from the people who paddle it every week"
       }
     },
-    "prostaff_roster_J848HF": {
-      "type": "prostaff-roster",
-      "settings": {
-        "heading": "Meet Our Pro Staff",
-        "subhead": "Local anglers, watermen, and ambassadors who keep us connected to the Crystal Coast fishing community.",
-        "cta_text": "Interested in joining our Pro Staff? Reach out and introduce yourself.",
-        "cta_email": "info@trustysailandpaddle.com"
-      }
-    },
     "local-expertise-cta": {
       "type": "local-expertise-cta",
       "settings": {
@@ -200,11 +204,58 @@
         "cta_secondary_text": "Find Our Locations",
         "cta_secondary_link": "/pages/locations"
       }
+    },
+    "prostaff_roster_hFg7rx": {
+      "type": "prostaff-roster",
+      "blocks": {
+        "member_fxPhYT": {
+          "type": "member",
+          "settings": {
+            "name": "Lee Cox",
+            "title": "Kayak Angler · Down East NC",
+            "bio": "A lifelong waterman who grew up fishing Cape Point and Hatteras Island, Lee fishes an Old Town Salty PDL 120 and covers up to 20 miles a day patterning fish in the sacred grounds of Down East.",
+            "instagram": "lee4996",
+            "story_url": ""
+          }
+        },
+        "member_CJ8qTq": {
+          "type": "member",
+          "settings": {
+            "name": "Toad Fish Mafia",
+            "title": "Kayak Fishing Crew · Crystal Coast",
+            "bio": "Rod Olsen, Johnnie Gray, and Casey Grobelny — founders of Anti-Douche Bag Fishing and Eastern NC's most entertaining kayak crew. Old Town Autopilot and PDL devotees.",
+            "instagram": "",
+            "story_url": ""
+          }
+        },
+        "member_QNxTkB": {
+          "type": "member",
+          "settings": {
+            "name": "Scotty Wasson",
+            "title": "Charter Captain · Photographer · Marine Veteran",
+            "bio": "Marine Corps veteran, charter captain, and faith-driven photographer. Scotty runs STW Outdoors guiding fishing trips and eco tours across Eastern NC — and captures every moment through his lens.",
+            "instagram": "STW_OUTDOORS",
+            "story_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "member_fxPhYT",
+        "member_CJ8qTq",
+        "member_QNxTkB"
+      ],
+      "name": "Pro Staff Roster",
+      "settings": {
+        "heading": "Meet Our Pro Staff",
+        "subhead": "Local anglers, watermen, and ambassadors who keep us connected to the Crystal Coast fishing community.",
+        "cta_text": "Interested in joining our Pro Staff? Reach out and introduce yourself.",
+        "cta_email": "info@trustysailandpaddle.com"
+      }
     }
   },
   "order": [
     "local-expertise",
-    "prostaff_roster_J848HF",
+    "prostaff_roster_hFg7rx",
     "local-expertise-cta"
   ]
 }
