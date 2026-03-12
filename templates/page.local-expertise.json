@@ -194,17 +194,6 @@
         "gear_subtitle": "What works here and why — straight from the people who paddle it every week"
       }
     },
-    "local-expertise-cta": {
-      "type": "local-expertise-cta",
-      "settings": {
-        "cta_heading": "Come Talk to Us",
-        "cta_text": "Stop by either location. We will match you to the right kayak for these waters, rig it up, and point you toward the fish.",
-        "cta_primary_text": "Shop Kayaks & Gear",
-        "cta_primary_link": "/collections/fishing-kayaks",
-        "cta_secondary_text": "Find Our Locations",
-        "cta_secondary_link": "/pages/locations"
-      }
-    },
     "prostaff_roster_hFg7rx": {
       "type": "prostaff-roster",
       "blocks": {
@@ -231,11 +220,12 @@
         "member_QNxTkB": {
           "type": "member",
           "settings": {
+            "photo": "shopify://shop_images/IMG_2694.png",
             "name": "Scotty Wasson",
             "title": "Charter Captain · Photographer · Marine Veteran",
             "bio": "Marine Corps veteran, charter captain, and faith-driven photographer. Scotty runs STW Outdoors guiding fishing trips and eco tours across Eastern NC — and captures every moment through his lens.",
             "instagram": "STW_OUTDOORS",
-            "story_url": ""
+            "story_url": "shopify://pages/scotty-wasson"
           }
         }
       },
@@ -250,6 +240,17 @@
         "subhead": "Local anglers, watermen, and ambassadors who keep us connected to the Crystal Coast fishing community.",
         "cta_text": "Interested in joining our Pro Staff? Reach out and introduce yourself.",
         "cta_email": "info@trustysailandpaddle.com"
+      }
+    },
+    "local-expertise-cta": {
+      "type": "local-expertise-cta",
+      "settings": {
+        "cta_heading": "Come Talk to Us",
+        "cta_text": "Stop by either location. We will match you to the right kayak for these waters, rig it up, and point you toward the fish.",
+        "cta_primary_text": "Shop Kayaks & Gear",
+        "cta_primary_link": "/collections/fishing-kayaks",
+        "cta_secondary_text": "Find Our Locations",
+        "cta_secondary_link": "/pages/locations"
       }
     }
   },
