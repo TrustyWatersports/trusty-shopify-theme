@@ -11,16 +11,29 @@
   "sections": {
     "prostaff-article": {
       "type": "prostaff-article",
+      "blocks": {
+        "photo_M4gcGU": {
+          "type": "photo",
+          "settings": {
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "photo_M4gcGU"
+      ],
       "settings": {
         "series_label": "Trusty Sail & Paddle · Pro Staff Highlight Series",
         "member_name": "Scotty Wasson",
         "tagline": "Charter captain, combat veteran, and faith-driven photographer — capturing Eastern NC’s waters through a lens and a fishing rod.",
         "author": "Trusty Sail & Paddle",
         "article_content": "<p>Some people fish to catch fish. Scotty Wasson fishes to <em>witness</em> something — the stillness before a topwater explosion, the golden hour light breaking across the Neuse, a father and son sharing the moment a rod bends for the first time. As a charter captain <em>and</em> a professional photographer, Scotty has a rare gift: he understands that what happens on the water deserves to be remembered.</p><p>Scotty served in the United States Marine Corps from 2005 to 2018 as an Aviation Ordnanceman. After leaving active duty, he spent time as a machinist and in home improvement — but something was missing. <strong>“I felt caged in, disconnected,”</strong> he reflects. So he stepped out in faith and launched STW Charter Service LLC, now known as STW Outdoors, offering guided fishing trips, eco tours, and coastal duck hunts across Eastern North Carolina.</p><p>But Scotty didn’t stop there. Wanting to capture not just the action but the testimony, he enrolled in photography classes and launched <em>Faith in Focus by STW</em> — a photography practice built around family portraits, sports photography, wildlife, and the kind of outdoor moments that define life on the Crystal Coast. <strong>Every shoot, he says, is a chance to honor something greater.</strong></p><p>Guided by Proverbs 3:6 — <em>“In all your ways acknowledge Him, and He will make straight your paths”</em> — Scotty brings his faith into everything he does on the water and behind the lens. Whether he’s guiding a charter at sunrise or documenting a family’s day on the sound, his mission is the same: slow down, breathe deep, and truly see the blessings around you.</p><p>The Neuse River has been Scotty’s proving ground. July 2025 brought scorching temperatures — and a red drum bite on fire to match. Big blues bent rods. Topwater explosions lit up sunrises. Scotty guided families, veterans, and first-timers through it all, chasing the feeling only fishing can give. August shifted the focus to Old Drum — the Neuse River giants that are, in Scotty’s words, <strong>“mean, powerful, and unforgettable once you hook into one.”</strong></p><p>As a Trusty Sail & Paddle Pro Staff member, Scotty bridges two worlds that rarely overlap: the technical rigor of a working charter captain and the artist’s eye of someone who sees every outing as a composition. He keeps his kayak rigged for fishing but always has a lens within reach. The Crystal Coast, after all, doesn’t wait for you to get ready.</p><p>Follow Scotty’s work and adventures at <strong>stwoutdoors.com</strong> or on Instagram <strong>@STW_OUTDOORS</strong> — and if you want to get on the water with one of the most versatile outdoorsmen on the Eastern NC coast, reach out and book a trip.</p>",
-        "kayak": "Ask Scotty what he’s running — and bring a camera.",
+        "sidebar_photo": "shopify://shop_images/Capture_20562162-051e-448f-a7ae-373cc6451afa.jpg",
+        "kayak": "NuCanoe Unlimited — and bring a camera.",
         "target_species": "Red Drum, Speckled Trout, Bluefish · Neuse River · Coastal Duck Hunts",
         "home_waters": "Neuse River · Eastern North Carolina Coast · Core Sound",
-        "instagram": "STW_OUTDOORS"
+        "instagram": "STW_OUTDOORS",
+        "back_url": "shopify://pages/local-expertise"
       }
     }
   },
