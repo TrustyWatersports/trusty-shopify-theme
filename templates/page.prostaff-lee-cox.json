@@ -11,6 +11,18 @@
   "sections": {
     "prostaff-article": {
       "type": "prostaff-article",
+      "blocks": {
+        "photo_JkpFDV": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/490372595_2718071918583552_5609066120474464208_n.jpg",
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "photo_JkpFDV"
+      ],
       "settings": {
         "hero_photo": "shopify://shop_images/490372595_2718071918583552_5609066120474464208_n.jpg",
         "series_label": "Trusty Sail & Paddle · Pro Staff Highlight Series",
