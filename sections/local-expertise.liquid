@@ -107,18 +107,6 @@
 </section>
 {% endif %}
 
-<!-- CTA -->
-<section style="padding: 60px 20px; background: linear-gradient(135deg, #0A4B78, #1E6FA8); color: white; text-align: center;">
-  <div style="max-width: 700px; margin: 0 auto;">
-    <h2 style="font-size: 2rem; margin-bottom: 16px;">{{ section.settings.cta_heading }}</h2>
-    <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px;">{{ section.settings.cta_text }}</p>
-    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-      <a href="{{ section.settings.cta_primary_link }}" style="background: #FF6B35; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700;">{{ section.settings.cta_primary_text }}</a>
-      <a href="{{ section.settings.cta_secondary_link }}" style="background: transparent; color: white; border: 2px solid white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700;">{{ section.settings.cta_secondary_text }}</a>
-    </div>
-  </div>
-</section>
-
 {% schema %}
 {
   "name": "Local Expertise",
@@ -137,14 +125,7 @@
     { "type": "text", "id": "water_title", "label": "Water & Weather Title", "default": "Know Your Water" },
     { "type": "text", "id": "water_subtitle", "label": "Water & Weather Subtitle" },
     { "type": "text", "id": "gear_title", "label": "Gear Title", "default": "Gear Built for These Waters" },
-    { "type": "text", "id": "gear_subtitle", "label": "Gear Subtitle" },
-    { "type": "header", "content": "Bottom CTA" },
-    { "type": "text", "id": "cta_heading", "label": "CTA Heading", "default": "Come Talk to Us" },
-    { "type": "textarea", "id": "cta_text", "label": "CTA Text" },
-    { "type": "text", "id": "cta_primary_text", "label": "Primary Button", "default": "Shop Kayaks & Gear" },
-    { "type": "url", "id": "cta_primary_link", "label": "Primary Button Link" },
-    { "type": "text", "id": "cta_secondary_text", "label": "Secondary Button", "default": "Find Our Locations" },
-    { "type": "url", "id": "cta_secondary_link", "label": "Secondary Button Link" }
+    { "type": "text", "id": "gear_subtitle", "label": "Gear Subtitle" }
   ],
   "blocks": [
     {

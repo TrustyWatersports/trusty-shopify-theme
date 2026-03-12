@@ -12,113 +12,199 @@
     "local-expertise": {
       "type": "local-expertise",
       "blocks": {
-        "gear_rec_epWFtX": {
-          "type": "gear_rec",
-          "settings": {
-            "gear_icon": "🛶",
-            "gear_name": "",
-            "gear_reason": "",
-            "gear_recommendation": "",
-            "gear_link": ""
-          }
-        },
-        "water_condition_U6d6Hz": {
-          "type": "water_condition",
-          "settings": {
-            "condition_icon": "🌊",
-            "condition_title": "",
-            "condition_content": ""
-          }
-        },
-        "fishing_spot_NKmCHi": {
+        "spot_1": {
           "type": "fishing_spot",
           "settings": {
             "spot_icon": "🎣",
-            "spot_name": "",
-            "spot_type": "",
-            "spot_description": "",
-            "target_species": "",
-            "best_season": "",
-            "pro_tip": ""
+            "spot_name": "Bogue Sound Flats",
+            "spot_type": "Flats / Estuary",
+            "spot_description": "The shallow grass flats running along the southern edge of Bogue Sound are some of the most productive inshore kayak fishing in Eastern NC. Sight-cast to tailing redfish and speckled trout from spring through fall. Easy launch from multiple points along Hwy 24.",
+            "target_species": "Red Drum, Speckled Trout, Flounder",
+            "best_season": "April – November, peak May–June and September–October",
+            "pro_tip": "Fish the first two hours of an incoming tide on the flats nearest the marsh grass edges. Reds will push up onto the grass and give themselves away with wakes and tails."
+          }
+        },
+        "spot_2": {
+          "type": "fishing_spot",
+          "settings": {
+            "spot_icon": "🎣",
+            "spot_name": "Radio Island Marsh",
+            "spot_type": "Tidal Marsh / Creek",
+            "spot_description": "The marsh complex just off Radio Island at the Morehead City port entrance is a short paddle from our waterfront location on Shepard St. Winding tidal creeks hold flounder, trout, and small reds year-round. Beginner-friendly in calm conditions.",
+            "target_species": "Flounder, Speckled Trout, Red Drum",
+            "best_season": "Year-round, best spring and fall",
+            "pro_tip": "Work the creek mouths on a falling tide. Baitfish flush out and predators stack up at the transitions between grass and open water."
+          }
+        },
+        "spot_3": {
+          "type": "fishing_spot",
+          "settings": {
+            "spot_icon": "🎣",
+            "spot_name": "Cape Lookout Bight",
+            "spot_type": "Barrier Island / Shoals",
+            "spot_description": "One of the most iconic kayak fishing destinations on the East Coast. The calm, protected waters inside the bight hold massive redfish schools in the fall. Accessed by ferry from Harkers Island or by paddling from the Power Squadron Spit. For experienced paddlers only — the crossing and shoals require reading conditions carefully.",
+            "target_species": "Red Drum (trophy class), Bluefish, Flounder, Spanish Mackerel",
+            "best_season": "September – November for big drum; May–August for other species",
+            "pro_tip": "The drum schools at the Bight in October can number in the thousands. Use cut mullet or a large swim bait near the beach wash. Get there early — word travels fast."
+          }
+        },
+        "spot_4": {
+          "type": "fishing_spot",
+          "settings": {
+            "spot_icon": "🎣",
+            "spot_name": "ICW — Gales Creek to Spoil Islands",
+            "spot_type": "Intracoastal / Spoil Islands",
+            "spot_description": "The Intracoastal Waterway between Morehead City and Swansboro offers miles of protected paddling with consistent fishing. The spoil islands created by dredging hold structure that attracts sheepshead, drum, and flounder. Watch for boat traffic and always stay to the margins.",
+            "target_species": "Sheepshead, Flounder, Red Drum, Speckled Trout",
+            "best_season": "Year-round",
+            "pro_tip": "Sheepshead absolutely love the barnacle-covered pilings and riprap along the spoil islands. Use fiddler crabs or live shrimp and fish tight to the structure."
+          }
+        },
+        "spot_5": {
+          "type": "fishing_spot",
+          "settings": {
+            "spot_icon": "🎣",
+            "spot_name": "Core Sound — Down East",
+            "spot_type": "Open Sound / Grass Flats",
+            "spot_description": "The vast shallow flats of Core Sound stretching from Smyrna down toward Harkers Island are what our Pro Staff member Lee Cox calls home. Miles of undisturbed grass flats, ancient oyster rocks, and tidal creeks that rarely see pressure. Rewards anglers willing to put in the miles on a pedal drive.",
+            "target_species": "Red Drum, Speckled Trout, Black Drum, Flounder",
+            "best_season": "March – December, exceptional in fall",
+            "pro_tip": "This is big-water kayak territory. Bring a chartplotter, check the forecast for wind direction (NE winds can make it nasty fast), and file a float plan. The fish are worth it."
+          }
+        },
+        "water_1": {
+          "type": "water_condition",
+          "settings": {
+            "condition_icon": "🌊",
+            "condition_title": "Tidal Flow on the Crystal Coast",
+            "condition_content": "Bogue Sound and Core Sound experience semidiurnal tides — two highs and two lows per day. Tidal swings are typically 2–3 feet. Most fishing action happens in the two hours before and after tide changes, especially on outgoing tides when baitfish flush from the marsh. Always check NOAA tide tables for Beaufort Inlet before launching."
+          }
+        },
+        "water_2": {
+          "type": "water_condition",
+          "settings": {
+            "condition_icon": "💨",
+            "condition_title": "Wind — The Variable That Rules Everything",
+            "condition_content": "Southwest winds in summer are your friend — they lay the sound down flat and make for ideal paddling. Northeast winds above 10 knots can make Bogue Sound and Core Sound choppy and dangerous for kayaks. Always check the forecast before heading to open water. Our rule: if small craft advisories are posted, stay in the creeks and marsh."
+          }
+        },
+        "water_3": {
+          "type": "water_condition",
+          "settings": {
+            "condition_icon": "🌡️",
+            "condition_title": "Water Temperature & the Bite",
+            "condition_content": "Speckled trout bite best when water temps are between 60–72°F — typically spring and fall. Red drum are more temperature-tolerant but become sluggish below 50°F. In the heat of summer (80°F+), fish early morning or evening and target deeper creek channels where water stays cooler. Winter brings black drum into the sound in good numbers."
+          }
+        },
+        "water_4": {
+          "type": "water_condition",
+          "settings": {
+            "condition_icon": "⚡",
+            "condition_title": "Afternoon Thunderstorms — Summer Hazard",
+            "condition_content": "From June through September, convective thunderstorms can build rapidly over the Carolina coast in the afternoon. On open water in a kayak, lightning is an extreme hazard. Plan your trips to be off the water or back in the marsh by 2pm. Morning paddles during summer are almost always safer and the fishing is better anyway."
+          }
+        },
+        "water_5": {
+          "type": "water_condition",
+          "settings": {
+            "condition_icon": "🌀",
+            "condition_title": "Hurricane Season Awareness",
+            "condition_content": "June through November is Atlantic hurricane season, with peak activity in August and September. Even tropical storms well offshore can generate significant swell and surge into the sounds. Monitor the NHC forecast and be aware that conditions can deteriorate rapidly. The Crystal Coast takes a direct hit more often than people realize."
+          }
+        },
+        "gear_1": {
+          "type": "gear_rec",
+          "settings": {
+            "gear_icon": "🚣",
+            "gear_name": "Kayak Drive Systems",
+            "gear_reason": "Bogue Sound and Core Sound have significant fetch — you can cover a lot of water in a day. Pedal drives let you move efficiently against wind and current while keeping your hands free to cast, rig, or work a bait. On the Crystal Coast, a pedal kayak isn't a luxury, it's a serious tactical advantage.",
+            "gear_recommendation": "Old Town Autopilot 136, Native Slayer Propel, NuCanoe Unlimited 14.5",
+            "gear_link": "/collections/fishing-kayaks"
+          }
+        },
+        "gear_2": {
+          "type": "gear_rec",
+          "settings": {
+            "gear_icon": "🎯",
+            "gear_name": "Rod Holders & Rigging",
+            "gear_reason": "These waters demand versatility. You might be casting topwater at reds on the flats at 7am and drifting cut bait for flounder by 10am. Having multiple rod holders positioned correctly — and a layout that lets you switch rigs without chaos — is the difference between a good day and a frustrating one.",
+            "gear_recommendation": "YakAttack GearTrac + LockNLoad, Scotty flush mounts for secondary rods",
+            "gear_link": "/collections/fishing-accessories"
+          }
+        },
+        "gear_3": {
+          "type": "gear_rec",
+          "settings": {
+            "gear_icon": "🧭",
+            "gear_name": "Navigation & Safety",
+            "gear_reason": "Core Sound and the Cape Lookout area especially can be disorienting in fog or if conditions change fast. A chartplotter or GPS is not optional for open-water fishing here. Combine with a VHF radio, a good PFD, and a whistle — Beaufort Inlet sees commercial and recreational boat traffic year-round.",
+            "gear_recommendation": "Garmin STRIKER or Echomap for fishfinder/GPS combo; Astral PFD for all-day comfort",
+            "gear_link": "/collections/safety-gear"
+          }
+        },
+        "gear_4": {
+          "type": "gear_rec",
+          "settings": {
+            "gear_icon": "🦺",
+            "gear_name": "Sun & Heat Protection",
+            "gear_reason": "The Crystal Coast sun off flat water is brutal from May through October. You're on reflective water all day with no shade. Sunburn, heat exhaustion, and dehydration are real risks on a full-day paddle. Treat sun protection as seriously as you treat your tackle.",
+            "gear_recommendation": "Buff face shield, UPF 50 long sleeves, wide brim hat, and bring at least 3L of water per person"
+          }
+        },
+        "gear_5": {
+          "type": "gear_rec",
+          "settings": {
+            "gear_icon": "🔧",
+            "gear_name": "Custom Kayak Rigging",
+            "gear_reason": "An off-the-shelf kayak can fish these waters. A properly rigged kayak will outperform it every single time. Transducer placement, power systems, anchor trolleys, crate setups, lights for pre-dawn launches — every detail matters when you're spending 8 hours on Bogue Sound chasing drum.",
+            "gear_recommendation": "Our Custom Rigging packages start at $1,499 and are built specifically for how you fish Crystal Coast waters.",
+            "gear_link": "/pages/custom-rigging"
           }
         }
       },
       "block_order": [
-        "gear_rec_epWFtX",
-        "water_condition_U6d6Hz",
-        "fishing_spot_NKmCHi"
+        "spot_1", "spot_2", "spot_3", "spot_4", "spot_5",
+        "water_1", "water_2", "water_3", "water_4", "water_5",
+        "gear_1", "gear_2", "gear_3", "gear_4", "gear_5"
       ],
       "settings": {
         "hero_title": "Crystal Coast Local Expertise",
         "hero_subtitle": "We live and fish these waters every week. Here is what we know.",
         "image_opacity": 70,
         "overlay_opacity": 55,
-        "intro_text": "We have been paddling, fishing, and sailing the Crystal Coast for years. Bogue Sound, the ICW, Radio Island marsh, Cape Lookout - we know the tides, the fish, the wind patterns, and the gear that actually performs here. This page is our way of sharing that local knowledge so you can make the most of your time on the water.",
+        "intro_text": "We have been paddling, fishing, and sailing the Crystal Coast for years. Bogue Sound, the ICW, Radio Island marsh, Cape Lookout — we know the tides, the fish, the wind patterns, and the gear that actually performs here. This page is our way of sharing that local knowledge so you can make the most of your time on the water.",
         "fishing_title": "Our Favorite Fishing Spots",
-        "fishing_subtitle": "All reachable by kayak - from beginner-friendly flats to expert-level crossings",
+        "fishing_subtitle": "All reachable by kayak — from beginner-friendly flats to expert-level crossings",
         "water_title": "Know Your Water",
         "water_subtitle": "Crystal Coast conditions every paddler and angler should understand before launching",
         "gear_title": "Gear Built for These Waters",
-        "gear_subtitle": "What works here and why - straight from the people who paddle it every week",
-        "cta_heading": "Come Talk to Us",
-        "cta_text": "Stop by either location. We will match you to the right kayak for these waters, rig it up, and point you toward the fish.",
-        "cta_primary_text": "Shop Kayaks and Gear",
-        "cta_primary_link": "/collections/fishing-kayaks",
-        "cta_secondary_text": "Find Our Locations",
-        "cta_secondary_link": "/pages/locations"
+        "gear_subtitle": "What works here and why — straight from the people who paddle it every week"
       }
     },
     "prostaff_roster_J848HF": {
       "type": "prostaff-roster",
-      "blocks": {
-        "member_pPGCim": {
-          "type": "member",
-          "settings": {
-            "name": "Lee Cox",
-            "title": "Kayak Angler · Down East NC",
-            "bio": "A lifelong waterman who grew up fishing Cape Point and Hatteras Island, Lee fishes an Old Town Salty PDL 120 and covers up to 20 miles a day patterning fish in the sacred grounds of Down East.",
-            "instagram": "lee4996",
-            "story_url": "shopify://pages/lee-cox"
-          }
-        },
-        "member_kfM4fP": {
-          "type": "member",
-          "settings": {
-            "name": "Toad Fish Mafia",
-            "title": "Kayak Fishing Crew · Crystal Coast",
-            "bio": "Rod Olsen, Johnnie Gray, and Casey Grobelny — founders of Anti-Douche Bag Fishing and Eastern NC's most entertaining kayak crew. Old Town Autopilot and PDL devotees.",
-            "instagram": "",
-            "story_url": "shopify://pages/toadfish-mafia"
-          }
-        },
-        "member_pqAzLe": {
-          "type": "member",
-          "settings": {
-            "photo": "shopify://shop_images/IMG_2694.png",
-            "name": "Scotty Wasson",
-            "title": "Charter Captain · Photographer · Marine Veteran",
-            "bio": "Marine Corps veteran, charter captain, and faith-driven photographer. Scotty runs STW Outdoors guiding fishing trips and eco tours across Eastern NC — and captures every moment through his lens.",
-            "instagram": "STW_OUTDOORS",
-            "story_url": "shopify://pages/scotty-wasson"
-          }
-        }
-      },
-      "block_order": [
-        "member_pPGCim",
-        "member_kfM4fP",
-        "member_pqAzLe"
-      ],
-      "name": "Pro Staff Roster",
       "settings": {
         "heading": "Meet Our Pro Staff",
         "subhead": "Local anglers, watermen, and ambassadors who keep us connected to the Crystal Coast fishing community.",
         "cta_text": "Interested in joining our Pro Staff? Reach out and introduce yourself.",
-        "cta_email": "trustywatersports@gmail.com"
+        "cta_email": "info@trustysailandpaddle.com"
+      }
+    },
+    "local-expertise-cta": {
+      "type": "local-expertise-cta",
+      "settings": {
+        "cta_heading": "Come Talk to Us",
+        "cta_text": "Stop by either location. We will match you to the right kayak for these waters, rig it up, and point you toward the fish.",
+        "cta_primary_text": "Shop Kayaks & Gear",
+        "cta_primary_link": "/collections/fishing-kayaks",
+        "cta_secondary_text": "Find Our Locations",
+        "cta_secondary_link": "/pages/locations"
       }
     }
   },
   "order": [
     "local-expertise",
-    "prostaff_roster_J848HF"
+    "prostaff_roster_J848HF",
+    "local-expertise-cta"
   ]
 }
