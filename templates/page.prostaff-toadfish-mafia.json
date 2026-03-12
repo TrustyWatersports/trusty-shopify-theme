@@ -50,6 +50,7 @@
         "photo_MReUja": {
           "type": "photo",
           "settings": {
+            "photo": "shopify://shop_images/rs_w_1160_h_1160_2.webp",
             "caption": ""
           }
         }
