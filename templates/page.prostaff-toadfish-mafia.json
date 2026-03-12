@@ -22,24 +22,28 @@
         "photo_TzXMmM": {
           "type": "photo",
           "settings": {
+            "photo": "shopify://shop_images/rs_w_984_h_984.webp",
             "caption": ""
           }
         },
         "photo_VxCDpA": {
           "type": "photo",
           "settings": {
+            "photo": "shopify://shop_images/rs_w_1280_h_960.webp",
             "caption": ""
           }
         },
         "photo_MaEiGG": {
           "type": "photo",
           "settings": {
+            "photo": "shopify://shop_images/rs_w_1160_h_1160_3.webp",
             "caption": ""
           }
         },
         "photo_a8ACGn": {
           "type": "photo",
           "settings": {
+            "photo": "shopify://shop_images/rs_w_1280_h_720.webp",
             "caption": ""
           }
         },
