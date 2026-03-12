@@ -11,6 +11,43 @@
   "sections": {
     "local-expertise": {
       "type": "local-expertise",
+      "blocks": {
+        "gear_rec_epWFtX": {
+          "type": "gear_rec",
+          "settings": {
+            "gear_icon": "🛶",
+            "gear_name": "",
+            "gear_reason": "",
+            "gear_recommendation": "",
+            "gear_link": ""
+          }
+        },
+        "water_condition_U6d6Hz": {
+          "type": "water_condition",
+          "settings": {
+            "condition_icon": "🌊",
+            "condition_title": "",
+            "condition_content": ""
+          }
+        },
+        "fishing_spot_NKmCHi": {
+          "type": "fishing_spot",
+          "settings": {
+            "spot_icon": "🎣",
+            "spot_name": "",
+            "spot_type": "",
+            "spot_description": "",
+            "target_species": "",
+            "best_season": "",
+            "pro_tip": ""
+          }
+        }
+      },
+      "block_order": [
+        "gear_rec_epWFtX",
+        "water_condition_U6d6Hz",
+        "fishing_spot_NKmCHi"
+      ],
       "settings": {
         "hero_title": "Crystal Coast Local Expertise",
         "hero_subtitle": "We live and fish these waters every week. Here is what we know.",
@@ -30,9 +67,57 @@
         "cta_secondary_text": "Find Our Locations",
         "cta_secondary_link": "/pages/locations"
       }
+    },
+    "prostaff_roster_J848HF": {
+      "type": "prostaff-roster",
+      "blocks": {
+        "member_pPGCim": {
+          "type": "member",
+          "settings": {
+            "name": "Lee Cox",
+            "title": "Kayak Angler · Down East NC",
+            "bio": "A lifelong waterman who grew up fishing Cape Point and Hatteras Island, Lee fishes an Old Town Salty PDL 120 and covers up to 20 miles a day patterning fish in the sacred grounds of Down East.",
+            "instagram": "lee4996",
+            "story_url": ""
+          }
+        },
+        "member_kfM4fP": {
+          "type": "member",
+          "settings": {
+            "name": "Toad Fish Mafia",
+            "title": "Kayak Fishing Crew · Crystal Coast",
+            "bio": "Rod Olsen, Johnnie Gray, and Casey Grobelny — founders of Anti-Douche Bag Fishing and Eastern NC's most entertaining kayak crew. Old Town Autopilot and PDL devotees.",
+            "instagram": "",
+            "story_url": ""
+          }
+        },
+        "member_pqAzLe": {
+          "type": "member",
+          "settings": {
+            "name": "Scotty Wasson",
+            "title": "Charter Captain · Photographer · Marine Veteran",
+            "bio": "Marine Corps veteran, charter captain, and faith-driven photographer. Scotty runs STW Outdoors guiding fishing trips and eco tours across Eastern NC — and captures every moment through his lens.",
+            "instagram": "STW_OUTDOORS",
+            "story_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "member_pPGCim",
+        "member_kfM4fP",
+        "member_pqAzLe"
+      ],
+      "name": "Pro Staff Roster",
+      "settings": {
+        "heading": "Meet Our Pro Staff",
+        "subhead": "Local anglers, watermen, and ambassadors who keep us connected to the Crystal Coast fishing community.",
+        "cta_text": "Interested in joining our Pro Staff? Reach out and introduce yourself.",
+        "cta_email": "trustywatersports@gmail.com"
+      }
     }
   },
   "order": [
-    "local-expertise"
+    "local-expertise",
+    "prostaff_roster_J848HF"
   ]
 }
