@@ -22,6 +22,7 @@
         "photo_yRCaXj": {
           "type": "photo",
           "settings": {
+            "photo": "shopify://shop_images/Capture2.jpg",
             "caption": ""
           }
         },
