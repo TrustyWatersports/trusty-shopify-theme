@@ -11,6 +11,53 @@
   "sections": {
     "prostaff-article": {
       "type": "prostaff-article",
+      "blocks": {
+        "photo_MHwEct": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/rs_w_1160_h_1160.webp",
+            "caption": ""
+          }
+        },
+        "photo_TzXMmM": {
+          "type": "photo",
+          "settings": {
+            "caption": ""
+          }
+        },
+        "photo_VxCDpA": {
+          "type": "photo",
+          "settings": {
+            "caption": ""
+          }
+        },
+        "photo_MaEiGG": {
+          "type": "photo",
+          "settings": {
+            "caption": ""
+          }
+        },
+        "photo_a8ACGn": {
+          "type": "photo",
+          "settings": {
+            "caption": ""
+          }
+        },
+        "photo_MReUja": {
+          "type": "photo",
+          "settings": {
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "photo_MHwEct",
+        "photo_TzXMmM",
+        "photo_VxCDpA",
+        "photo_MaEiGG",
+        "photo_a8ACGn",
+        "photo_MReUja"
+      ],
       "settings": {
         "series_label": "Trusty Sail & Paddle · Pro Staff Highlight Series",
         "member_name": "Toad Fish Mafia",
