@@ -29,6 +29,7 @@
         "photo_M4gcGU": {
           "type": "photo",
           "settings": {
+            "photo": "shopify://shop_images/IMG_7352.jpg",
             "caption": ""
           }
         }
