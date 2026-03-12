@@ -12,6 +12,19 @@
     "prostaff-article": {
       "type": "prostaff-article",
       "blocks": {
+        "photo_pn76yk": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/unnamed1.jpg",
+            "caption": ""
+          }
+        },
+        "photo_yRCaXj": {
+          "type": "photo",
+          "settings": {
+            "caption": ""
+          }
+        },
         "photo_M4gcGU": {
           "type": "photo",
           "settings": {
@@ -20,6 +33,8 @@
         }
       },
       "block_order": [
+        "photo_pn76yk",
+        "photo_yRCaXj",
         "photo_M4gcGU"
       ],
       "settings": {
