@@ -1,0 +1,361 @@
+{% style %}
+  .ps-roster-wrap {
+    background: #0d1f2d;
+    padding: 72px 5%;
+    font-family: 'Crimson Pro', Georgia, serif;
+  }
+
+  .ps-roster-inner { max-width: 1200px; margin: 0 auto; }
+
+  .ps-roster-header { text-align: center; margin-bottom: 52px; }
+
+  .ps-roster-kicker {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #e07840;
+    margin-bottom: 12px;
+  }
+
+  .ps-roster-heading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    color: #f4f0e8;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .ps-roster-subhead {
+    font-size: 1.1rem;
+    color: #d9c9a8;
+    font-style: italic;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .ps-roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 28px;
+  }
+
+  .ps-card {
+    background: rgba(26,58,82,0.5);
+    border: 1px solid rgba(79,163,192,0.18);
+    border-top: 3px solid #c8622a;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .ps-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  }
+
+  .ps-card-photo {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: rgba(13,31,45,0.8);
+    position: relative;
+  }
+
+  .ps-card-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+    display: block;
+  }
+
+  .ps-card:hover .ps-card-photo img { transform: scale(1.04); }
+
+  .ps-card-photo-placeholder {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(79,163,192,0.2);
+  }
+
+  .ps-card-photo-placeholder svg { width: 48px; height: 48px; stroke: currentColor; fill: none; }
+
+  .ps-card-tag {
+    position: absolute;
+    top: 14px; left: 14px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: #c8622a;
+    color: #f4f0e8;
+    padding: 4px 10px;
+  }
+
+  .ps-card-body { padding: 24px 24px 28px; flex: 1; display: flex; flex-direction: column; }
+
+  .ps-card-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.7rem;
+    color: #f4f0e8;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .ps-card-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #e07840;
+    margin-bottom: 14px;
+  }
+
+  .ps-card-bio {
+    font-size: 1rem;
+    color: #d9c9a8;
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: 20px;
+  }
+
+  .ps-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid rgba(79,163,192,0.14);
+  }
+
+  .ps-card-social {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: #4fa3c0;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .ps-card-social:hover { color: #f4f0e8; }
+
+  .ps-card-link {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #f4f0e8;
+    background: #c8622a;
+    padding: 8px 16px;
+    border: 2px solid #c8622a;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .ps-card-link:hover { background: transparent; color: #e07840; }
+
+  .ps-roster-cta {
+    text-align: center;
+    margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(79,163,192,0.14);
+  }
+
+  .ps-roster-cta p {
+    font-size: 1.05rem;
+    color: #d9c9a8;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  .ps-roster-cta a {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #4fa3c0;
+    border-bottom: 1px solid #2e6b8a;
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .ps-roster-cta a:hover { color: #f4f0e8; border-color: #4fa3c0; }
+
+  @media (max-width: 600px) {
+    .ps-roster-grid { grid-template-columns: 1fr; }
+  }
+{% endstyle %}
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+
+<div class="ps-roster-wrap">
+  <div class="ps-roster-inner">
+
+    <div class="ps-roster-header">
+      <p class="ps-roster-kicker">Crystal Coast Ambassadors</p>
+      <h2 class="ps-roster-heading">{{ section.settings.heading }}</h2>
+      <p class="ps-roster-subhead">{{ section.settings.subhead }}</p>
+    </div>
+
+    <div class="ps-roster-grid">
+      {%- for block in section.blocks -%}
+        {%- if block.type == "member" -%}
+          <div class="ps-card" {{ block.shopify_attributes }}>
+            <div class="ps-card-photo">
+              {%- if block.settings.photo != blank -%}
+                <img src="{{ block.settings.photo | image_url: width: 600 }}" alt="{{ block.settings.name }}" loading="lazy" width="600" height="450"/>
+              {%- else -%}
+                <div class="ps-card-photo-placeholder">
+                  <svg viewBox="0 0 24 24" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                </div>
+              {%- endif -%}
+              <span class="ps-card-tag">PRO Staff</span>
+            </div>
+            <div class="ps-card-body">
+              <div class="ps-card-name">{{ block.settings.name }}</div>
+              <div class="ps-card-title">{{ block.settings.title }}</div>
+              <p class="ps-card-bio">{{ block.settings.bio }}</p>
+              <div class="ps-card-footer">
+                {%- if block.settings.instagram != blank -%}
+                  <a href="https://instagram.com/{{ block.settings.instagram | remove: '@' }}" target="_blank" rel="noopener" class="ps-card-social">@{{ block.settings.instagram | remove: '@' }}</a>
+                {%- else -%}
+                  <span></span>
+                {%- endif -%}
+                {%- if block.settings.story_url != blank -%}
+                  <a href="{{ block.settings.story_url }}" class="ps-card-link">Read Their Story &rarr;</a>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.cta_text != blank -%}
+      <div class="ps-roster-cta">
+        <p>{{ section.settings.cta_text }}</p>
+        {%- if section.settings.cta_email != blank -%}
+          <a href="mailto:{{ section.settings.cta_email }}">{{ section.settings.cta_email }}</a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Pro Staff Roster",
+  "tag": "section",
+  "class": "prostaff-roster-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Meet Our Pro Staff"
+    },
+    {
+      "type": "textarea",
+      "id": "subhead",
+      "label": "Subheading",
+      "default": "Local anglers, watermen, and ambassadors who keep us connected to the Crystal Coast fishing community."
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Bottom CTA Text",
+      "default": "Interested in joining our Pro Staff? Reach out and introduce yourself."
+    },
+    {
+      "type": "text",
+      "id": "cta_email",
+      "label": "CTA Email Address",
+      "default": "info@trustysailandpaddle.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "member",
+      "name": "Pro Staff Member",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "photo",
+          "label": "Photo"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Staff Member Name"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title / Specialty",
+          "default": "Kayak Angler · Crystal Coast"
+        },
+        {
+          "type": "textarea",
+          "id": "bio",
+          "label": "Short Bio",
+          "default": "A brief description of this pro staff member and what makes them a great ambassador for Trusty Sail & Paddle."
+        },
+        {
+          "type": "text",
+          "id": "instagram",
+          "label": "Instagram Handle",
+          "info": "With or without the @ symbol"
+        },
+        {
+          "type": "url",
+          "id": "story_url",
+          "label": "Full Story Page URL",
+          "info": "Link to their individual feature page"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pro Staff Roster",
+      "blocks": [
+        {
+          "type": "member",
+          "settings": {
+            "name": "Lee Cox",
+            "title": "Kayak Angler · Down East NC",
+            "bio": "A lifelong waterman who grew up fishing Cape Point and Hatteras Island, Lee fishes an Old Town Salty PDL 120 and covers up to 20 miles a day patterning fish in the sacred grounds of Down East.",
+            "instagram": "lee4996"
+          }
+        },
+        {
+          "type": "member",
+          "settings": {
+            "name": "Toad Fish Mafia",
+            "title": "Kayak Fishing Crew · Crystal Coast",
+            "bio": "Rod Olsen, Johnnie Gray, and Casey Grobelny — founders of Anti-Douche Bag Fishing and Eastern NC's most entertaining kayak crew. Old Town Autopilot and PDL devotees.",
+            "instagram": ""
+          }
+        },
+        {
+          "type": "member",
+          "settings": {
+            "name": "Scotty Wasson",
+            "title": "Charter Captain · Photographer · Marine Veteran",
+            "bio": "Marine Corps veteran, charter captain, and faith-driven photographer. Scotty runs STW Outdoors guiding fishing trips and eco tours across Eastern NC — and captures every moment through his lens.",
+            "instagram": "STW_OUTDOORS"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

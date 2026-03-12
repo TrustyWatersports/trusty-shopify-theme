@@ -1,0 +1,461 @@
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+
+{% style %}
+  .ps-article-wrap {
+    background: #0d1f2d;
+    font-family: 'Crimson Pro', Georgia, serif;
+    color: #f4f0e8;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ─────────────────────────────────────── */
+  .ps-article-hero {
+    position: relative;
+    min-height: 480px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background: #1a3a52;
+  }
+
+  .ps-article-hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 100% 60% at 70% 110%, rgba(79,163,192,0.2) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at -5% 50%, rgba(200,98,42,0.1) 0%, transparent 50%),
+      linear-gradient(180deg, #0d1f2d 0%, #1a3a52 55%, #0f2838 100%);
+  }
+
+  .ps-article-hero-photo {
+    position: absolute; inset: 0;
+    overflow: hidden;
+  }
+
+  .ps-article-hero-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    opacity: 0.35;
+    display: block;
+  }
+
+  .ps-article-hero-content {
+    position: relative; z-index: 2;
+    width: 100%; max-width: 860px;
+    margin: 0 auto;
+    padding: 60px 5% 56px;
+  }
+
+  .ps-article-series {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #e07840;
+    margin-bottom: 14px;
+  }
+
+  .ps-article-hero-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 0.9;
+    color: #f4f0e8;
+    letter-spacing: 0.02em;
+    margin-bottom: 20px;
+  }
+
+  .ps-article-hero-name em { color: #e07840; font-style: normal; }
+
+  .ps-article-rule { width: 56px; height: 3px; background: #c8622a; margin-bottom: 20px; }
+
+  .ps-article-hero-tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #d9c9a8;
+    max-width: 560px;
+    line-height: 1.55;
+  }
+
+  .ps-article-hero-meta {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .ps-article-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: #c8622a;
+    color: #f4f0e8;
+    padding: 5px 12px;
+  }
+
+  .ps-article-author {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    color: #4fa3c0;
+  }
+
+  /* ── ARTICLE BODY ─────────────────────────────── */
+  .ps-article-body {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 64px 5% 80px;
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 56px;
+    align-items: start;
+  }
+
+  .ps-article-prose p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #d9c9a8;
+    margin-bottom: 24px;
+  }
+
+  .ps-article-prose p strong { color: #f4f0e8; font-weight: 600; }
+
+  .ps-article-prose blockquote {
+    border-left: 3px solid #c8622a;
+    margin: 32px 0;
+    padding: 4px 0 4px 24px;
+  }
+
+  .ps-article-prose blockquote p {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #f4f0e8;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .ps-article-prose blockquote cite {
+    display: block;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #e07840;
+    margin-top: 10px;
+    font-style: normal;
+  }
+
+  .ps-article-prose h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: #f4f0e8;
+    letter-spacing: 0.04em;
+    margin: 40px 0 16px;
+  }
+
+  /* ── SIDEBAR ──────────────────────────────────── */
+  .ps-article-sidebar { display: flex; flex-direction: column; gap: 24px; }
+
+  .ps-sidebar-card {
+    background: rgba(26,58,82,0.5);
+    border: 1px solid rgba(79,163,192,0.18);
+    border-left: 3px solid #c8622a;
+    padding: 22px 20px;
+  }
+
+  .ps-sidebar-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #e07840;
+    margin-bottom: 10px;
+  }
+
+  .ps-sidebar-value {
+    font-size: 1rem;
+    color: #f4f0e8;
+    line-height: 1.55;
+  }
+
+  .ps-sidebar-value a {
+    color: #4fa3c0;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .ps-sidebar-value a:hover { color: #f4f0e8; }
+
+  .ps-sidebar-photo {
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background: rgba(13,31,45,0.6);
+  }
+
+  .ps-sidebar-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  /* ── PHOTO STRIP ──────────────────────────────── */
+  .ps-photo-strip {
+    background: rgba(13,31,45,0.6);
+    border-top: 1px solid rgba(79,163,192,0.12);
+    padding: 48px 5%;
+  }
+
+  .ps-photo-strip-inner { max-width: 860px; margin: 0 auto; }
+
+  .ps-photo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+
+  .ps-photo-grid-item { aspect-ratio: 4/3; overflow: hidden; background: rgba(26,58,82,0.4); }
+  .ps-photo-grid-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+  .ps-photo-grid-item:hover img { transform: scale(1.04); }
+
+  .ps-photo-placeholder {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(79,163,192,0.2);
+  }
+
+  .ps-photo-placeholder svg { width: 32px; height: 32px; stroke: currentColor; fill: none; }
+
+  /* ── BACK LINK ────────────────────────────────── */
+  .ps-back-bar {
+    background: #0d1f2d;
+    border-top: 1px solid rgba(79,163,192,0.14);
+    padding: 28px 5%;
+    text-align: center;
+  }
+
+  .ps-back-link {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #4fa3c0;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .ps-back-link:hover { color: #f4f0e8; }
+
+  /* ── RESPONSIVE ───────────────────────────────── */
+  @media (max-width: 720px) {
+    .ps-article-body { grid-template-columns: 1fr; }
+    .ps-article-sidebar { order: -1; }
+    .ps-sidebar-photo { aspect-ratio: 16/9; }
+  }
+{% endstyle %}
+
+<div class="ps-article-wrap">
+
+  {%- comment -%} HERO {%- endcomment -%}
+  <section class="ps-article-hero">
+    <div class="ps-article-hero-bg"></div>
+    {%- if section.settings.hero_photo != blank -%}
+      <div class="ps-article-hero-photo">
+        <img src="{{ section.settings.hero_photo | image_url: width: 1400 }}" alt="{{ section.settings.member_name }}"/>
+      </div>
+    {%- endif -%}
+    <div class="ps-article-hero-content">
+      <p class="ps-article-series">{{ section.settings.series_label }}</p>
+      <h1 class="ps-article-hero-name">{{ section.settings.member_name | replace: ' ', '<br/>' }}</h1>
+      <div class="ps-article-rule"></div>
+      <p class="ps-article-hero-tagline">{{ section.settings.tagline }}</p>
+      <div class="ps-article-hero-meta">
+        <span class="ps-article-tag">PRO Staff</span>
+        {%- if section.settings.author != blank -%}
+          <span class="ps-article-author">Written by {{ section.settings.author }}</span>
+        {%- endif -%}
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} ARTICLE BODY {%- endcomment -%}
+  <div class="ps-article-body">
+    <div class="ps-article-prose">
+      {{ section.settings.article_content }}
+    </div>
+
+    <aside class="ps-article-sidebar">
+
+      {%- if section.settings.sidebar_photo != blank -%}
+        <div class="ps-sidebar-photo">
+          <img src="{{ section.settings.sidebar_photo | image_url: width: 520 }}" alt="{{ section.settings.member_name }}" loading="lazy"/>
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.kayak != blank -%}
+        <div class="ps-sidebar-card">
+          <div class="ps-sidebar-label">Kayak</div>
+          <div class="ps-sidebar-value">{{ section.settings.kayak }}</div>
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.target_species != blank -%}
+        <div class="ps-sidebar-card">
+          <div class="ps-sidebar-label">Target Species</div>
+          <div class="ps-sidebar-value">{{ section.settings.target_species }}</div>
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.home_waters != blank -%}
+        <div class="ps-sidebar-card">
+          <div class="ps-sidebar-label">Home Waters</div>
+          <div class="ps-sidebar-value">{{ section.settings.home_waters }}</div>
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.instagram != blank -%}
+        <div class="ps-sidebar-card">
+          <div class="ps-sidebar-label">Follow Along</div>
+          <div class="ps-sidebar-value">
+            <a href="https://instagram.com/{{ section.settings.instagram | remove: '@' }}" target="_blank" rel="noopener">@{{ section.settings.instagram | remove: '@' }}</a>
+          </div>
+        </div>
+      {%- endif -%}
+
+    </aside>
+  </div>
+
+  {%- comment -%} PHOTO STRIP {%- endcomment -%}
+  {%- assign photo_blocks = section.blocks | where: "type", "photo" -%}
+  {%- if photo_blocks.size > 0 -%}
+    <section class="ps-photo-strip">
+      <div class="ps-photo-strip-inner">
+        <div class="ps-photo-grid">
+          {%- for block in photo_blocks -%}
+            <div class="ps-photo-grid-item" {{ block.shopify_attributes }}>
+              {%- if block.settings.photo != blank -%}
+                <img src="{{ block.settings.photo | image_url: width: 500 }}" alt="{{ block.settings.caption | default: section.settings.member_name }}" loading="lazy"/>
+              {%- else -%}
+                <div class="ps-photo-placeholder">
+                  <svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </section>
+  {%- endif -%}
+
+  {%- comment -%} BACK LINK {%- endcomment -%}
+  <div class="ps-back-bar">
+    <a href="{{ section.settings.back_url }}" class="ps-back-link">&larr; Back to Pro Staff</a>
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Pro Staff Article",
+  "tag": "section",
+  "class": "prostaff-article-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_photo",
+      "label": "Hero Background Photo"
+    },
+    {
+      "type": "text",
+      "id": "series_label",
+      "label": "Series Label",
+      "default": "Trusty Sail & Paddle · Pro Staff Highlight Series"
+    },
+    {
+      "type": "text",
+      "id": "member_name",
+      "label": "Member Name",
+      "default": "Staff Member Name"
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline / Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "author",
+      "label": "Author",
+      "default": "Heather Fournel"
+    },
+    {
+      "type": "header",
+      "content": "Article"
+    },
+    {
+      "type": "richtext",
+      "id": "article_content",
+      "label": "Article Content",
+      "info": "Full article text. Use bold for pull quotes and emphasis."
+    },
+    {
+      "type": "header",
+      "content": "Sidebar"
+    },
+    {
+      "type": "image_picker",
+      "id": "sidebar_photo",
+      "label": "Sidebar Portrait Photo"
+    },
+    {
+      "type": "text",
+      "id": "kayak",
+      "label": "Kayak"
+    },
+    {
+      "type": "text",
+      "id": "target_species",
+      "label": "Target Species"
+    },
+    {
+      "type": "text",
+      "id": "home_waters",
+      "label": "Home Waters"
+    },
+    {
+      "type": "text",
+      "id": "instagram",
+      "label": "Instagram Handle"
+    },
+    {
+      "type": "header",
+      "content": "Navigation"
+    },
+    {
+      "type": "url",
+      "id": "back_url",
+      "label": "Back Link URL",
+      "info": "Where the 'Back to Pro Staff' link goes"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "photo",
+      "name": "Photo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "photo",
+          "label": "Photo"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Caption (optional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pro Staff Article"
+    }
+  ]
+}
+{% endschema %}

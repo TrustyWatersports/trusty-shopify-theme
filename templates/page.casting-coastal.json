@@ -12,118 +12,17 @@
     "casting-coastal": {
       "type": "casting-coastal",
       "blocks": {
-        "member_photo_DgeNnC": {
-          "type": "member_photo",
-          "settings": {
-            "photo": "shopify://shop_images/DSC_7422_-_Large_8a93e6e3-9bfe-4038-8003-7f74d3892a36.jpg",
-            "caption": ""
-          }
-        },
-        "member_photo_CK6aj6": {
-          "type": "member_photo",
-          "settings": {
-            "photo": "shopify://shop_images/20240414_152916.jpg",
-            "caption": ""
-          }
-        },
-        "member_photo_wDFNmP": {
-          "type": "member_photo",
-          "settings": {
-            "photo": "shopify://shop_images/20240414_152704.jpg",
-            "caption": ""
-          }
-        },
-        "member_photo_nXGQFe": {
-          "type": "member_photo",
-          "settings": {
-            "photo": "shopify://shop_images/Resized_IMG_20240524_135821_635_1716575254068_4cfdb997-c0e2-47c6-9938-7fb2a05a69c5.jpg",
-            "caption": ""
-          }
-        },
-        "t1": {
-          "type": "tournament",
-          "settings": {
-            "name": "Blounts Creek",
-            "location": "Chocowinity, NC · Trout Series",
-            "date": "Rescheduled — TBD"
-          }
-        },
-        "t2": {
-          "type": "tournament",
-          "settings": {
-            "name": "Jacksonville",
-            "location": "New River · Trout Series",
-            "date": "March 8, 2026"
-          }
-        },
-        "t3": {
-          "type": "tournament",
-          "settings": {
-            "name": "Aurora",
-            "location": "Trout Series",
-            "date": "Date TBA"
-          }
-        },
-        "t4": {
-          "type": "tournament",
-          "settings": {
-            "name": "Beaufort",
-            "location": "Redfish · Sheepshead · Black Drum",
-            "date": "Date TBA"
-          }
-        },
-        "t5": {
-          "type": "tournament",
-          "settings": {
-            "name": "Beaufort (Anywhere)",
-            "location": "Redfish · Sheepshead · Black Drum",
-            "date": "Date TBA"
-          }
-        },
-        "t6": {
-          "type": "tournament",
-          "settings": {
-            "name": "Belhaven",
-            "location": "Trout Series",
-            "date": "Date TBA"
-          }
-        },
-        "t7": {
-          "type": "tournament",
-          "settings": {
-            "name": "Dawson Creek",
-            "location": "Trout Series",
-            "date": "Date TBA"
-          }
-        },
-        "t8": {
-          "type": "tournament",
-          "settings": {
-            "name": "Vandemere",
-            "location": "Trout Series — Mandatory Finale",
-            "date": "Date TBA"
-          }
-        }
+        "t1": { "type": "tournament", "settings": { "name": "Blounts Creek", "location": "Chocowinity, NC \u00b7 Trout Series", "date": "Rescheduled \u2014 TBD" } },
+        "t2": { "type": "tournament", "settings": { "name": "Jacksonville", "location": "New River \u00b7 Trout Series", "date": "March 8, 2026" } },
+        "t3": { "type": "tournament", "settings": { "name": "Aurora", "location": "Trout Series", "date": "Date TBA" } },
+        "t4": { "type": "tournament", "settings": { "name": "Beaufort", "location": "Redfish \u00b7 Sheepshead \u00b7 Black Drum", "date": "Date TBA" } },
+        "t5": { "type": "tournament", "settings": { "name": "Beaufort (Anywhere)", "location": "Redfish \u00b7 Sheepshead \u00b7 Black Drum", "date": "Date TBA" } },
+        "t6": { "type": "tournament", "settings": { "name": "Belhaven", "location": "Trout Series", "date": "Date TBA" } },
+        "t7": { "type": "tournament", "settings": { "name": "Dawson Creek", "location": "Trout Series", "date": "Date TBA" } },
+        "t8": { "type": "tournament", "settings": { "name": "Vandemere", "location": "Trout Series \u2014 Mandatory Finale", "date": "Date TBA" } }
       },
-      "block_order": [
-        "member_photo_DgeNnC",
-        "member_photo_CK6aj6",
-        "member_photo_wDFNmP",
-        "member_photo_nXGQFe",
-        "t1",
-        "t2",
-        "t3",
-        "t4",
-        "t5",
-        "t6",
-        "t7",
-        "t8"
-      ],
-      "settings": {
-        "sponsor_logo": "shopify://shop_images/unnamed_1.png",
-        "rigging_url": "shopify://pages/custom-rigging",
-        "contact_url": "https://www.castingcoastalkayakfishing.com/"
-      }
+      "block_order": ["t1", "t2", "t3", "t4", "t5", "t6", "t7", "t8"],
+      "settings": {}
     }
   },
   "order": [
