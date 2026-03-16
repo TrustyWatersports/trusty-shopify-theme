@@ -41,34 +41,16 @@
             <div style="font-size:14px; font-weight:600; color:#bbb;">Select a kayak to begin</div>
           </div>
 
-          <!--
-            Pin positions as % of image (top-down view, bow at top, stern at bottom)
-            Image is portrait ~635×2500 native, rendered narrow & tall
-
-            Bow    = top   ~5%  of height
-            Stern  = bottom ~95% of height
-            Center width = 50%
-
-            Zone mapping (top = bow, bottom = stern):
-            motor      : bow tip          — top:4%,  left:50%
-            fishfinder : forward deck     — top:22%, left:50%
-            rod        : mid-rail right   — top:38%, left:72%
-            storage    : tankwell         — top:62%, left:50%
-            lighting   : mid-rail left    — top:38%, left:28%
-            anchoring  : stern center     — top:82%, left:50%
-            safety     : cockpit          — top:48%, left:50%
-            accessories: front hatch      — top:14%, left:50%
-            powerpole  : stern tip        — top:93%, left:50%
-          -->
-          <div id="krc-pin-motor"       class="krc-pin" style="top:4%;  left:50%;"><div class="krc-pin-bubble"><img id="krc-pin-img-motor"       src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/></div><div class="krc-pin-label" id="krc-pin-lbl-motor">Motor</div></div>
-          <div id="krc-pin-accessories" class="krc-pin" style="top:13%; left:72%;"><div class="krc-pin-bubble"><img id="krc-pin-img-accessories" src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/></div><div class="krc-pin-label" id="krc-pin-lbl-accessories">Accessory</div></div>
-          <div id="krc-pin-ff"          class="krc-pin" style="top:22%; left:50%;"><div class="krc-pin-bubble"><img id="krc-pin-img-ff"          src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/></div><div class="krc-pin-label" id="krc-pin-lbl-ff">Fish finder</div></div>
-          <div id="krc-pin-lighting"    class="krc-pin" style="top:35%; left:22%;"><div class="krc-pin-bubble"><img id="krc-pin-img-lighting"    src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/></div><div class="krc-pin-label" id="krc-pin-lbl-lighting">Lighting</div></div>
-          <div id="krc-pin-rod"         class="krc-pin" style="top:35%; left:78%;"><div class="krc-pin-bubble"><img id="krc-pin-img-rod"         src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/></div><div class="krc-pin-label" id="krc-pin-lbl-rod">Rod holder</div></div>
-          <div id="krc-pin-safety"      class="krc-pin" style="top:48%; left:28%;"><div class="krc-pin-bubble"><img id="krc-pin-img-safety"      src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/></div><div class="krc-pin-label" id="krc-pin-lbl-safety">Safety</div></div>
-          <div id="krc-pin-storage"     class="krc-pin" style="top:62%; left:50%;"><div class="krc-pin-bubble"><img id="krc-pin-img-storage"     src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/></div><div class="krc-pin-label" id="krc-pin-lbl-storage">Storage</div></div>
-          <div id="krc-pin-anchoring"   class="krc-pin" style="top:76%; left:72%;"><div class="krc-pin-bubble"><img id="krc-pin-img-anchoring"   src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/></div><div class="krc-pin-label" id="krc-pin-lbl-anchoring">Anchor</div></div>
-          <div id="krc-pin-powerpole"   class="krc-pin" style="top:90%; left:50%;"><div class="krc-pin-bubble"><img id="krc-pin-img-powerpole"   src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/></div><div class="krc-pin-label" id="krc-pin-lbl-powerpole">Power-Pole</div></div>
+          <!-- Pins — top-down portrait, bow at top, stern at bottom -->
+          <div id="krc-pin-motor"       class="krc-pin" style="top:4%;  left:50%;"><div class="krc-pin-bubble"><img id="krc-pin-img-motor"       src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/><span class="krc-pin-count" id="krc-cnt-motor"       style="display:none;"></span></div><div class="krc-pin-label" id="krc-pin-lbl-motor">Motor</div></div>
+          <div id="krc-pin-accessories" class="krc-pin" style="top:13%; left:72%;"><div class="krc-pin-bubble"><img id="krc-pin-img-accessories" src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/><span class="krc-pin-count" id="krc-cnt-accessories" style="display:none;"></span></div><div class="krc-pin-label" id="krc-pin-lbl-accessories">Accessory</div></div>
+          <div id="krc-pin-ff"          class="krc-pin" style="top:22%; left:50%;"><div class="krc-pin-bubble"><img id="krc-pin-img-ff"          src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/><span class="krc-pin-count" id="krc-cnt-ff"          style="display:none;"></span></div><div class="krc-pin-label" id="krc-pin-lbl-ff">Fish finder</div></div>
+          <div id="krc-pin-lighting"    class="krc-pin" style="top:35%; left:22%;"><div class="krc-pin-bubble"><img id="krc-pin-img-lighting"    src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/><span class="krc-pin-count" id="krc-cnt-lighting"    style="display:none;"></span></div><div class="krc-pin-label" id="krc-pin-lbl-lighting">Lighting</div></div>
+          <div id="krc-pin-rod"         class="krc-pin" style="top:35%; left:78%;"><div class="krc-pin-bubble"><img id="krc-pin-img-rod"         src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/><span class="krc-pin-count" id="krc-cnt-rod"         style="display:none;"></span></div><div class="krc-pin-label" id="krc-pin-lbl-rod">Rod holder</div></div>
+          <div id="krc-pin-safety"      class="krc-pin" style="top:48%; left:28%;"><div class="krc-pin-bubble"><img id="krc-pin-img-safety"      src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/><span class="krc-pin-count" id="krc-cnt-safety"      style="display:none;"></span></div><div class="krc-pin-label" id="krc-pin-lbl-safety">Safety</div></div>
+          <div id="krc-pin-storage"     class="krc-pin" style="top:62%; left:50%;"><div class="krc-pin-bubble"><img id="krc-pin-img-storage"     src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/><span class="krc-pin-count" id="krc-cnt-storage"     style="display:none;"></span></div><div class="krc-pin-label" id="krc-pin-lbl-storage">Storage</div></div>
+          <div id="krc-pin-anchoring"   class="krc-pin" style="top:76%; left:72%;"><div class="krc-pin-bubble"><img id="krc-pin-img-anchoring"   src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/><span class="krc-pin-count" id="krc-cnt-anchoring"   style="display:none;"></span></div><div class="krc-pin-label" id="krc-pin-lbl-anchoring">Anchor</div></div>
+          <div id="krc-pin-powerpole"   class="krc-pin" style="top:90%; left:50%;"><div class="krc-pin-bubble"><img id="krc-pin-img-powerpole"   src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/><span class="krc-pin-count" id="krc-cnt-powerpole"   style="display:none;"></span></div><div class="krc-pin-label" id="krc-pin-lbl-powerpole">Power-Pole</div></div>
 
         </div>
 
@@ -101,7 +83,6 @@
                 <option value="{{ p.id }}"
                   data-price="{{ p.price_min | divided_by:100.0 }}"
                   data-title="{{ p.title | escape }}"
-                  data-img="{{ p.images[1].src | default: p.featured_image | img_url: 'master' }}"
                   data-img-topdown="{{ p.images[1].src | img_url: 'master' }}"
                   data-img-side="{{ p.featured_image | img_url: 'master' }}">{{ p.title }} — {{ p.price_min | money }}</option>
               {% endfor %}
@@ -160,8 +141,9 @@
   #krc-canvas { user-select:none; }
   .krc-pin { position:absolute; z-index:10; display:flex; flex-direction:column; align-items:center; opacity:0; transform:translate(-50%,-50%) scale(0.7); transition:opacity .25s, transform .25s; pointer-events:none; }
   .krc-pin.on { opacity:1; transform:translate(-50%,-50%) scale(1); }
-  .krc-pin-bubble { background:white; border-radius:10px; border:2px solid #1d9e75; padding:4px; box-shadow:0 2px 8px rgba(0,0,0,0.18); }
+  .krc-pin-bubble { position:relative; background:white; border-radius:10px; border:2px solid #1d9e75; padding:4px; box-shadow:0 2px 8px rgba(0,0,0,0.18); }
   .krc-pin-label { font-size:10px; color:#333; background:white; padding:2px 7px; border-radius:8px; margin-top:3px; border:1px solid #ddd; white-space:nowrap; max-width:100px; overflow:hidden; text-overflow:ellipsis; text-align:center; box-shadow:0 1px 3px rgba(0,0,0,0.08); }
+  .krc-pin-count { position:absolute; top:-7px; right:-7px; background:#e8451e; color:white; font-size:10px; font-weight:700; min-width:18px; height:18px; border-radius:9px; display:flex; align-items:center; justify-content:center; padding:0 4px; border:2px solid white; line-height:1; }
   .krc-group { background:white; border:1px solid #e0e4e0; border-radius:14px; padding:12px 14px; }
   .krc-group-label { font-size:12px; font-weight:700; color:#0a3d5c; text-transform:uppercase; letter-spacing:.05em; margin-bottom:8px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
   .krc-zone-pill { font-size:10px; font-weight:600; background:#e8f5f0; color:#0f6e56; padding:2px 8px; border-radius:8px; text-transform:none; letter-spacing:0; }
@@ -205,9 +187,8 @@
       cta.style.pointerEvents='none';
       document.getElementById('krc-base-label').textContent='Select a kayak to start';
     } else {
-      // Prefer top-down image (index 1) if available, fall back to featured
       var topDown = opt.dataset.imgTopdown;
-      img.src = (topDown && topDown !== 'undefined' && topDown.length > 10) ? topDown : opt.dataset.imgSide;
+      img.src = (topDown && topDown.length > 10 && topDown.indexOf('undefined') === -1) ? topDown : opt.dataset.imgSide;
       img.style.display='block';
       ph.style.display='none';
       kayakPrice = parseFloat(opt.dataset.price)||0;
@@ -258,18 +239,39 @@
   };
 
   function updatePin(key){
-    var pin  = document.getElementById('krc-pin-'+key);
-    var pImg = document.getElementById('krc-pin-img-'+key);
-    var pLbl = document.getElementById('krc-pin-lbl-'+key);
+    var pin   = document.getElementById('krc-pin-'+key);
+    var pImg  = document.getElementById('krc-pin-img-'+key);
+    var pLbl  = document.getElementById('krc-pin-lbl-'+key);
+    var pCnt  = document.getElementById('krc-cnt-'+key);
     if(!pin) return;
-    var first = (accData[key]||[]).find(function(d){ return d!=null; });
-    if(first){
-      pImg.src = first.img;
-      pLbl.textContent = first.title;
-      pin.classList.add('on');
-    } else {
+
+    // All selected items in this category
+    var selected = (accData[key]||[]).filter(function(d){ return d != null; });
+    var count = selected.length;
+
+    if(count === 0){
       pin.classList.remove('on');
+      return;
     }
+
+    // Show first item's image on the pin
+    pImg.src = selected[0].img;
+
+    // Label: if all same product show title, if mixed show count + "items"
+    var allSame = selected.every(function(d){ return d.title === selected[0].title; });
+    pLbl.textContent = allSame ? selected[0].title : count + ' items';
+
+    // Count badge — show if more than 1
+    if(pCnt){
+      if(count > 1){
+        pCnt.textContent = '\u00d7' + count; // ×N
+        pCnt.style.display = 'flex';
+      } else {
+        pCnt.style.display = 'none';
+      }
+    }
+
+    pin.classList.add('on');
   }
 
   function updatePrice(){
