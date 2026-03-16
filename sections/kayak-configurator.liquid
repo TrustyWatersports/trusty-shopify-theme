@@ -1,0 +1,284 @@
+{% comment %} Kayak Rig Configurator — Native Watercraft Hammer 1210 {% endcomment %}
+
+<section id="kayak-configurator" style="padding: {{ section.settings.padding_top }}px 20px {{ section.settings.padding_bottom }}px; background: {{ section.settings.bg_color }};">
+  <div style="max-width: 1100px; margin: 0 auto;">
+
+    {% if section.settings.heading != blank %}
+      <div style="text-align: center; margin-bottom: 36px;">
+        <div style="display: inline-block; background: #e8f5f0; color: #0f6e56; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; letter-spacing: 1px; margin-bottom: 12px; text-transform: uppercase;">{{ section.settings.eyebrow }}</div>
+        <h2 style="font-size: 36px; font-weight: 800; color: #0a3d5c; margin: 0 0 10px;">{{ section.settings.heading }}</h2>
+        <p style="font-size: 17px; color: #555; max-width: 600px; margin: 0 auto;">{{ section.settings.subheading }}</p>
+      </div>
+    {% endif %}
+
+    <div id="krc-wrap" style="display: grid; grid-template-columns: 1fr 340px; gap: 24px; align-items: start;">
+
+      <!-- Canvas Panel -->
+      <div style="background: #f4f6f4; border-radius: 16px; border: 1px solid #e0e4e0; position: relative; overflow: hidden; min-height: 420px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
+
+        <!-- Kayak image -->
+        <div style="position: relative; width: 100%;">
+          <img
+            id="krc-kayak-img"
+            src="{{ section.settings.color_1_image | img_url: 'master' }}"
+            alt="Native Watercraft Hammer 1210"
+            style="width: 100%; max-height: 360px; object-fit: contain; display: block; position: relative; z-index: 1;"
+          />
+
+          <!-- Accessory pins — positioned as % of image container -->
+          <div id="krc-pin-rod" style="position:absolute; top:20%; left:61%; transform:translate(-50%,-50%); z-index:10; display:flex; flex-direction:column; align-items:center; opacity:0; transition:opacity .25s,transform .25s; transform:translate(-50%,-50%) scale(0.7); pointer-events:none;">
+            <div style="background:white; border-radius:10px; border:2px solid #1d9e75; padding:4px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+              <img id="krc-img-rod" src="{{ section.settings.rod_image | img_url: '100x100' }}" width="56" height="56" style="border-radius:6px; object-fit:contain; display:block;" alt="rod holder" />
+            </div>
+            <div style="font-size:10px; color:#444; background:white; padding:2px 8px; border-radius:8px; margin-top:4px; border:1px solid #e0e0e0; white-space:nowrap;">Rod holder</div>
+          </div>
+
+          <div id="krc-pin-ff" style="position:absolute; top:10%; left:43%; transform:translate(-50%,-50%); z-index:10; display:flex; flex-direction:column; align-items:center; opacity:0; transition:opacity .25s,transform .25s; transform:translate(-50%,-50%) scale(0.7); pointer-events:none;">
+            <div style="background:white; border-radius:10px; border:2px solid #1d9e75; padding:4px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+              <img id="krc-img-ff" src="{{ section.settings.ff_image | img_url: '100x100' }}" width="56" height="56" style="border-radius:6px; object-fit:contain; display:block;" alt="fish finder" />
+            </div>
+            <div style="font-size:10px; color:#444; background:white; padding:2px 8px; border-radius:8px; margin-top:4px; border:1px solid #e0e0e0; white-space:nowrap;">Fish finder</div>
+          </div>
+
+          <div id="krc-pin-motor" style="position:absolute; top:48%; left:8%; transform:translate(-50%,-50%); z-index:10; display:flex; flex-direction:column; align-items:center; opacity:0; transition:opacity .25s,transform .25s; transform:translate(-50%,-50%) scale(0.7); pointer-events:none;">
+            <div style="background:white; border-radius:10px; border:2px solid #1d9e75; padding:4px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+              <img id="krc-img-motor" src="{{ section.settings.motor_image | img_url: '100x100' }}" width="56" height="56" style="border-radius:6px; object-fit:contain; display:block;" alt="motor" />
+            </div>
+            <div style="font-size:10px; color:#444; background:white; padding:2px 8px; border-radius:8px; margin-top:4px; border:1px solid #e0e0e0; white-space:nowrap;">Motor</div>
+          </div>
+        </div>
+
+        <div style="font-size:11px; color:#999; margin-top:12px; text-align:center;">Accessories shown at actual mounting positions</div>
+      </div>
+
+      <!-- Side Panel -->
+      <div style="display:flex; flex-direction:column; gap:12px;">
+
+        <!-- Price bar -->
+        <div style="background:#0a3d5c; color:white; border-radius:14px; padding:16px 18px; display:flex; justify-content:space-between; align-items:center;">
+          <div>
+            <div style="font-size:11px; opacity:0.6; margin-bottom:3px;">Rig total</div>
+            <div id="krc-total" style="font-size:24px; font-weight:800;">${{ section.settings.base_price }}</div>
+            <div style="font-size:11px; opacity:0.45; margin-top:2px;">Base kayak: ${{ section.settings.base_price }}</div>
+          </div>
+          <div style="text-align:right;">
+            <div style="font-size:11px; opacity:0.6; margin-bottom:3px;">Add-ons</div>
+            <div id="krc-addons" style="font-size:20px; font-weight:700;">+$0</div>
+          </div>
+        </div>
+
+        <!-- Color picker -->
+        <div style="background:white; border:1px solid #e0e4e0; border-radius:14px; padding:14px;">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:#888; margin-bottom:8px;">Kayak color</div>
+          <div id="krc-color-name" style="font-size:14px; font-weight:600; color:#0a3d5c; margin-bottom:10px;">{{ section.settings.color_1_name }}</div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;" id="krc-swatches">
+            {% if section.settings.color_1_image != blank %}
+              <div class="krc-swatch krc-swatch-active" data-idx="0"
+                data-name="{{ section.settings.color_1_name }}"
+                data-img="{{ section.settings.color_1_image | img_url: 'master' }}"
+                style="width:28px; height:28px; border-radius:50%; background:{{ section.settings.color_1_hex }}; cursor:pointer; border:3px solid #0a3d5c; transition:transform .15s;"
+                title="{{ section.settings.color_1_name }}"></div>
+            {% endif %}
+            {% if section.settings.color_2_image != blank %}
+              <div class="krc-swatch" data-idx="1"
+                data-name="{{ section.settings.color_2_name }}"
+                data-img="{{ section.settings.color_2_image | img_url: 'master' }}"
+                style="width:28px; height:28px; border-radius:50%; background:{{ section.settings.color_2_hex }}; cursor:pointer; border:3px solid transparent; transition:transform .15s;"
+                title="{{ section.settings.color_2_name }}"></div>
+            {% endif %}
+            {% if section.settings.color_3_image != blank %}
+              <div class="krc-swatch" data-idx="2"
+                data-name="{{ section.settings.color_3_name }}"
+                data-img="{{ section.settings.color_3_image | img_url: 'master' }}"
+                style="width:28px; height:28px; border-radius:50%; background:{{ section.settings.color_3_hex }}; cursor:pointer; border:3px solid transparent; transition:transform .15s;"
+                title="{{ section.settings.color_3_name }}"></div>
+            {% endif %}
+            {% if section.settings.color_4_image != blank %}
+              <div class="krc-swatch" data-idx="3"
+                data-name="{{ section.settings.color_4_name }}"
+                data-img="{{ section.settings.color_4_image | img_url: 'master' }}"
+                style="width:28px; height:28px; border-radius:50%; background:{{ section.settings.color_4_hex }}; cursor:pointer; border:3px solid transparent; transition:transform .15s;"
+                title="{{ section.settings.color_4_name }}"></div>
+            {% endif %}
+          </div>
+        </div>
+
+        <!-- Accessory cards -->
+        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:#888;">Add accessories</div>
+
+        <!-- Rod holder -->
+        <div id="krc-card-rod" class="krc-acc-card" data-key="rod" data-price="{{ section.settings.rod_price }}"
+          style="background:white; border:1.5px solid #e0e4e0; border-radius:14px; padding:12px; cursor:pointer; transition:border-color .15s; position:relative;">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <img src="{{ section.settings.rod_image | img_url: '100x100' }}" width="52" height="52" style="border-radius:8px; object-fit:contain; background:#f4f6f4; border:1px solid #e0e0e0; flex-shrink:0;" alt="{{ section.settings.rod_name }}" />
+            <div style="flex:1; min-width:0;">
+              <div style="font-size:13px; font-weight:700; color:#0a3d5c; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ section.settings.rod_name }}</div>
+              <div style="font-size:11px; color:#888; margin-top:2px;">{{ section.settings.rod_sub }}</div>
+              <div style="display:inline-block; font-size:10px; padding:2px 8px; border-radius:8px; margin-top:4px; background:#f0f8f5; color:#0f6e56; border:1px solid #b8e0d0;">Stern zone</div>
+            </div>
+            <div style="font-size:14px; font-weight:700; color:#0a3d5c; flex-shrink:0;">+${{ section.settings.rod_price }}</div>
+          </div>
+        </div>
+
+        <!-- Fish finder -->
+        <div id="krc-card-ff" class="krc-acc-card" data-key="ff" data-price="{{ section.settings.ff_price }}"
+          style="background:white; border:1.5px solid #e0e4e0; border-radius:14px; padding:12px; cursor:pointer; transition:border-color .15s; position:relative;">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <img src="{{ section.settings.ff_image | img_url: '100x100' }}" width="52" height="52" style="border-radius:8px; object-fit:contain; background:#f4f6f4; border:1px solid #e0e0e0; flex-shrink:0;" alt="{{ section.settings.ff_name }}" />
+            <div style="flex:1; min-width:0;">
+              <div style="font-size:13px; font-weight:700; color:#0a3d5c; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ section.settings.ff_name }}</div>
+              <div style="font-size:11px; color:#888; margin-top:2px;">{{ section.settings.ff_sub }}</div>
+              <div style="display:inline-block; font-size:10px; padding:2px 8px; border-radius:8px; margin-top:4px; background:#f0f8f5; color:#0f6e56; border:1px solid #b8e0d0;">Console zone</div>
+            </div>
+            <div style="font-size:14px; font-weight:700; color:#0a3d5c; flex-shrink:0;">+${{ section.settings.ff_price }}</div>
+          </div>
+        </div>
+
+        <!-- Motor -->
+        <div id="krc-card-motor" class="krc-acc-card" data-key="motor" data-price="{{ section.settings.motor_price }}"
+          style="background:white; border:1.5px solid #e0e4e0; border-radius:14px; padding:12px; cursor:pointer; transition:border-color .15s; position:relative;">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <img src="{{ section.settings.motor_image | img_url: '100x100' }}" width="52" height="52" style="border-radius:8px; object-fit:contain; background:#f4f6f4; border:1px solid #e0e0e0; flex-shrink:0;" alt="{{ section.settings.motor_name }}" />
+            <div style="flex:1; min-width:0;">
+              <div style="font-size:13px; font-weight:700; color:#0a3d5c; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ section.settings.motor_name }}</div>
+              <div style="font-size:11px; color:#888; margin-top:2px;">{{ section.settings.motor_sub }}</div>
+              <div style="display:inline-block; font-size:10px; padding:2px 8px; border-radius:8px; margin-top:4px; background:#f0f8f5; color:#0f6e56; border:1px solid #b8e0d0;">Bow zone</div>
+            </div>
+            <div style="font-size:14px; font-weight:700; color:#0a3d5c; flex-shrink:0;">+${{ section.settings.motor_price }}</div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <a href="{{ section.settings.quote_url }}" style="display:block; background:#e8451e; color:white; border-radius:14px; padding:16px; font-size:15px; font-weight:700; text-align:center; text-decoration:none; transition:opacity .15s; letter-spacing:0.01em;" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'" id="krc-cta">
+          {{ section.settings.cta_text }} →
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .krc-acc-card:hover { border-color: #aaa !important; }
+  .krc-acc-card.krc-selected { border-color: #1d9e75 !important; background: #f7fdfa !important; }
+  .krc-acc-card.krc-selected::after {
+    content: '';
+    position: absolute;
+    top: 10px; right: 10px;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: #1d9e75 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='white' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/12px no-repeat;
+  }
+  #krc-pin-rod.krc-pin-on,
+  #krc-pin-ff.krc-pin-on,
+  #krc-pin-motor.krc-pin-on {
+    opacity: 1 !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+  }
+  @media (max-width: 680px) {
+    #krc-wrap { grid-template-columns: 1fr !important; }
+  }
+</style>
+
+<script>
+(function(){
+  const BASE = {{ section.settings.base_price }};
+  const sel = { rod: false, ff: false, motor: false };
+
+  document.querySelectorAll('.krc-acc-card').forEach(function(card) {
+    card.addEventListener('click', function() {
+      var key = card.dataset.key;
+      sel[key] = !sel[key];
+      card.classList.toggle('krc-selected', sel[key]);
+      var pin = document.getElementById('krc-pin-' + key);
+      if (pin) pin.classList.toggle('krc-pin-on', sel[key]);
+      updatePrice();
+      updateCTA();
+    });
+  });
+
+  document.querySelectorAll('.krc-swatch').forEach(function(sw) {
+    sw.addEventListener('click', function() {
+      document.querySelectorAll('.krc-swatch').forEach(function(s) {
+        s.style.border = '3px solid transparent';
+      });
+      sw.style.border = '3px solid #0a3d5c';
+      document.getElementById('krc-color-name').textContent = sw.dataset.name;
+      document.getElementById('krc-kayak-img').src = sw.dataset.img;
+    });
+  });
+
+  function updatePrice() {
+    var addons = 0;
+    document.querySelectorAll('.krc-acc-card').forEach(function(card) {
+      if (card.classList.contains('krc-selected')) {
+        addons += parseInt(card.dataset.price, 10) || 0;
+      }
+    });
+    document.getElementById('krc-total').textContent = '$' + (BASE + addons).toLocaleString();
+    document.getElementById('krc-addons').textContent = '+$' + addons.toLocaleString();
+  }
+
+  function updateCTA() {
+    var items = [];
+    if (sel.rod) items.push('{{ section.settings.rod_name }}');
+    if (sel.ff) items.push('{{ section.settings.ff_name }}');
+    if (sel.motor) items.push('{{ section.settings.motor_name }}');
+    var color = document.getElementById('krc-color-name').textContent;
+    var base = '{{ section.settings.quote_url }}';
+    var params = '?kayak=Native+Watercraft+Hammer+1210&color=' + encodeURIComponent(color);
+    if (items.length) params += '&accessories=' + encodeURIComponent(items.join(', '));
+    document.getElementById('krc-cta').href = base + params;
+  }
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Kayak Configurator",
+  "settings": [
+    { "type": "text",    "id": "eyebrow",    "label": "Eyebrow",    "default": "Custom Rigging" },
+    { "type": "text",    "id": "heading",    "label": "Heading",    "default": "Build Your Perfect Rig" },
+    { "type": "textarea","id": "subheading", "label": "Subheading", "default": "Pick your color and add accessories. We'll rig it before it ships." },
+    { "type": "number",  "id": "base_price", "label": "Base kayak price", "default": 3699 },
+    { "type": "range",   "id": "padding_top","label": "Padding top",  "min": 0, "max": 120, "step": 4, "default": 60 },
+    { "type": "range",   "id": "padding_bottom","label": "Padding bottom","min": 0, "max": 120, "step": 4, "default": 60 },
+    { "type": "color",   "id": "bg_color",   "label": "Background color", "default": "#ffffff" },
+    { "type": "header",  "content": "Color 1" },
+    { "type": "text",    "id": "color_1_name","label": "Name",  "default": "Gator Green" },
+    { "type": "color",   "id": "color_1_hex", "label": "Swatch color", "default": "#4a6741" },
+    { "type": "image_picker","id": "color_1_image","label": "Kayak image" },
+    { "type": "header",  "content": "Color 2" },
+    { "type": "text",    "id": "color_2_name","label": "Name",  "default": "Grey Goose" },
+    { "type": "color",   "id": "color_2_hex", "label": "Swatch color", "default": "#7a7a72" },
+    { "type": "image_picker","id": "color_2_image","label": "Kayak image" },
+    { "type": "header",  "content": "Color 3" },
+    { "type": "text",    "id": "color_3_name","label": "Name",  "default": "Wavestrike" },
+    { "type": "color",   "id": "color_3_hex", "label": "Swatch color", "default": "#2a6080" },
+    { "type": "image_picker","id": "color_3_image","label": "Kayak image" },
+    { "type": "header",  "content": "Color 4" },
+    { "type": "text",    "id": "color_4_name","label": "Name",  "default": "Hidden Oak" },
+    { "type": "color",   "id": "color_4_hex", "label": "Swatch color", "default": "#6b5a3e" },
+    { "type": "image_picker","id": "color_4_image","label": "Kayak image" },
+    { "type": "header",  "content": "Rod Holder" },
+    { "type": "text",    "id": "rod_name",   "label": "Product name",  "default": "YakAttack Omega Pro Rod Holder" },
+    { "type": "text",    "id": "rod_sub",    "label": "Subtitle",      "default": "Track mount · stern zone" },
+    { "type": "number",  "id": "rod_price",  "label": "Price",         "default": 89 },
+    { "type": "image_picker","id": "rod_image","label": "Product image" },
+    { "type": "header",  "content": "Fish Finder" },
+    { "type": "text",    "id": "ff_name",    "label": "Product name",  "default": "Garmin Striker Vivid 5CV" },
+    { "type": "text",    "id": "ff_sub",     "label": "Subtitle",      "default": "Console mount + transducer" },
+    { "type": "number",  "id": "ff_price",   "label": "Price",         "default": 249 },
+    { "type": "image_picker","id": "ff_image","label": "Product image" },
+    { "type": "header",  "content": "Motor" },
+    { "type": "text",    "id": "motor_name", "label": "Product name",  "default": "Torqeedo Ultralight 403" },
+    { "type": "text",    "id": "motor_sub",  "label": "Subtitle",      "default": "Bow mount · 80 lb thrust" },
+    { "type": "number",  "id": "motor_price","label": "Price",         "default": 1499 },
+    { "type": "image_picker","id": "motor_image","label": "Product image" },
+    { "type": "header",  "content": "CTA" },
+    { "type": "text",    "id": "cta_text",   "label": "Button text",   "default": "Get Your Custom Rigging Quote" },
+    { "type": "url",     "id": "quote_url",  "label": "Quote page URL" }
+  ],
+  "presets": [{ "name": "Kayak Configurator" }]
+}
+{% endschema %}
