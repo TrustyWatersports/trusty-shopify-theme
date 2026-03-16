@@ -1,0 +1,47 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "kayak_configurator": {
+      "type": "kayak-configurator",
+      "settings": {
+        "eyebrow": "Custom Rigging",
+        "heading": "Build Your Perfect Rig",
+        "subheading": "Pick your color and add accessories. We'll rig it before it ships.",
+        "base_price": 3699,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "bg_color": "#ffffff",
+        "color_1_name": "Gator Green",
+        "color_1_hex": "#4a6741",
+        "color_2_name": "Grey Goose",
+        "color_2_hex": "#7a7a72",
+        "color_3_name": "Wavestrike",
+        "color_3_hex": "#2a6080",
+        "color_4_name": "Hidden Oak",
+        "color_4_hex": "#6b5a3e",
+        "rod_name": "YakAttack Omega Pro Rod Holder",
+        "rod_sub": "Track mount · stern zone",
+        "rod_price": 89,
+        "ff_name": "Garmin Striker Vivid 5CV",
+        "ff_sub": "Console mount + transducer",
+        "ff_price": 249,
+        "motor_name": "Torqeedo Ultralight 403",
+        "motor_sub": "Bow mount · 80 lb thrust",
+        "motor_price": 1499,
+        "cta_text": "Get Your Custom Rigging Quote",
+        "quote_url": "/pages/start-your-build"
+      }
+    }
+  },
+  "order": [
+    "kayak_configurator"
+  ]
+}
