@@ -24,8 +24,8 @@
 
     <div id="krc-wrap" style="display:grid; grid-template-columns:1fr 400px; gap:32px; align-items:start;">
 
-      <!-- ── Canvas Panel ── -->
-      <div style="background:#f4f6f4; border-radius:16px; border:1px solid #e0e4e0; position:sticky; top:20px; min-height:500px; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:24px;">
+      <!-- ── Canvas Panel (sticky) ── -->
+      <div id="krc-sticky-canvas" style="position:sticky; top:20px; background:#f4f6f4; border-radius:16px; border:1px solid #e0e4e0; min-height:500px; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:24px;">
 
         <div id="krc-canvas" style="position:relative; width:100%; max-width:340px; margin:0 auto;">
 
@@ -61,7 +61,7 @@
       <div style="display:flex; flex-direction:column; gap:12px;">
 
         <!-- Price bar -->
-        <div style="background:#0a3d5c; color:white; border-radius:14px; padding:16px 20px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:20px; z-index:20;">
+        <div style="background:#0a3d5c; color:white; border-radius:14px; padding:16px 20px; display:flex; justify-content:space-between; align-items:center;">
           <div>
             <div style="font-size:11px; opacity:0.6; margin-bottom:3px;">Rig total</div>
             <div id="krc-total" style="font-size:26px; font-weight:800;">$0</div>
@@ -157,7 +157,11 @@
   .krc-preview-price { font-size:12px; color:#1d9e75; margin-top:2px; }
   .krc-add-btn { margin-top:8px; background:none; border:1.5px dashed #c0d8cc; color:#0f6e56; font-size:12px; font-weight:600; padding:6px 12px; border-radius:8px; cursor:pointer; width:100%; transition:background .15s, border-color .15s; }
   .krc-add-btn:hover { background:#f0fbf6; border-color:#1d9e75; }
-  @media(max-width:800px) { #krc-wrap { grid-template-columns:1fr !important; } #krc-canvas { position:static !important; } }
+  /* Sticky canvas — collapses to static on mobile */
+  @media(max-width:800px) {
+    #krc-wrap { grid-template-columns:1fr !important; }
+    #krc-sticky-canvas { position:static !important; top:auto !important; }
+  }
 </style>
 
 <script>
@@ -245,32 +249,23 @@
     var pCnt  = document.getElementById('krc-cnt-'+key);
     if(!pin) return;
 
-    // All selected items in this category
     var selected = (accData[key]||[]).filter(function(d){ return d != null; });
     var count = selected.length;
 
-    if(count === 0){
-      pin.classList.remove('on');
-      return;
-    }
+    if(count === 0){ pin.classList.remove('on'); return; }
 
-    // Show first item's image on the pin
     pImg.src = selected[0].img;
-
-    // Label: if all same product show title, if mixed show count + "items"
     var allSame = selected.every(function(d){ return d.title === selected[0].title; });
     pLbl.textContent = allSame ? selected[0].title : count + ' items';
 
-    // Count badge — show if more than 1
     if(pCnt){
       if(count > 1){
-        pCnt.textContent = '\u00d7' + count; // ×N
+        pCnt.textContent = '\u00d7' + count;
         pCnt.style.display = 'flex';
       } else {
         pCnt.style.display = 'none';
       }
     }
-
     pin.classList.add('on');
   }
 

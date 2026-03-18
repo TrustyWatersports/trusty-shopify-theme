@@ -35,11 +35,17 @@
         </div>
       {% endif %}
 
-      <h1 style="margin:16px 0 10px;color:#fff;font-size:52px;line-height:1.05;font-weight:800;">
-        {{ section.settings.heading_1 }}
-        <span style="color:#ff6a2a;">{{ section.settings.heading_2 }}</span>
-        {{ section.settings.heading_3 }}
-      </h1>
+      {% if section.settings.h1_override != blank %}
+        <h1 style="margin:16px 0 10px;color:#fff;font-size:52px;line-height:1.05;font-weight:800;">
+          {{ section.settings.h1_override }}
+        </h1>
+      {% else %}
+        <h1 style="margin:16px 0 10px;color:#fff;font-size:52px;line-height:1.05;font-weight:800;">
+          {{ section.settings.heading_1 }}
+          <span style="color:#ff6a2a;">{{ section.settings.heading_2 }}</span>
+          {{ section.settings.heading_3 }}
+        </h1>
+      {% endif %}
 
       {% if section.settings.description != blank %}
         <p style="margin:0 0 18px;color:#e6f0ff;max-width:720px;font-size:16px;">
@@ -88,17 +94,18 @@
 {
   "name": "Rigging Carousel",
   "settings": [
-    { "type": "range", "id": "height", "label": "Height", "min": 320, "max": 760, "step": 10, "default": 520 },
-    { "type": "range", "id": "overlay_opacity", "label": "Overlay %", "min": 0, "max": 85, "step": 5, "default": 55 },
-    { "type": "text", "id": "badge_text", "label": "Badge text", "default": "Custom Rigging Experts" },
-    { "type": "text", "id": "heading_1", "label": "Heading 1", "default": "Tournament-Ready" },
-    { "type": "text", "id": "heading_2", "label": "Heading 2", "default": "Fishing Kayaks" },
-    { "type": "text", "id": "heading_3", "label": "Heading 3", "default": "Shipped Nationwide" },
-    { "type": "textarea", "id": "description", "label": "Description", "default": "Professional rigging by Crystal Coast experts. Turnkey builds from $3k to $13k+ delivered to your door." },
-    { "type": "text", "id": "primary_button_text", "label": "Primary button text", "default": "Browse Rigging Packages" },
-    { "type": "url", "id": "primary_button_link", "label": "Primary button link" },
-    { "type": "text", "id": "secondary_button_text", "label": "Secondary button text", "default": "Build Custom Rig" },
-    { "type": "url", "id": "secondary_button_link", "label": "Secondary button link" }
+    { "type": "text",     "id": "h1_override",           "label": "H1 override (SEO) — leave blank to use split heading below", "info": "Set a full H1 for this page. Example: Custom Kayak Rigging — Tournament-Ready Builds Shipped Nationwide" },
+    { "type": "range",    "id": "height",                "label": "Height",         "min": 320, "max": 760, "step": 10, "default": 520 },
+    { "type": "range",    "id": "overlay_opacity",       "label": "Overlay %",      "min": 0,   "max": 85,  "step": 5,  "default": 55 },
+    { "type": "text",     "id": "badge_text",            "label": "Badge text",     "default": "Custom Rigging Experts" },
+    { "type": "text",     "id": "heading_1",             "label": "Heading 1",      "default": "Tournament-Ready" },
+    { "type": "text",     "id": "heading_2",             "label": "Heading 2 (highlight color)", "default": "Fishing Kayaks" },
+    { "type": "text",     "id": "heading_3",             "label": "Heading 3",      "default": "Shipped Nationwide" },
+    { "type": "textarea", "id": "description",           "label": "Description",    "default": "Professional rigging by Crystal Coast experts. Turnkey builds from $3k to $13k+ delivered to your door." },
+    { "type": "text",     "id": "primary_button_text",   "label": "Primary button text",   "default": "Browse Rigging Packages" },
+    { "type": "url",      "id": "primary_button_link",   "label": "Primary button link" },
+    { "type": "text",     "id": "secondary_button_text", "label": "Secondary button text", "default": "Build Custom Rig" },
+    { "type": "url",      "id": "secondary_button_link", "label": "Secondary button link" }
   ],
   "blocks": [
     {
