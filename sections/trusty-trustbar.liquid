@@ -1,9 +1,31 @@
-<div class="trusty-trustbar">
-  <div class="trusty-trustbar__content">
+{% comment %} trusty-trustbar.liquid — SVG icons, no emoji {% endcomment %}
+
+{% assign svg_icons = "lightning,checkmark,location,paddle,sailboat" | split: "," %}
+
+<div style="background: white; border-top: 1px solid #e8eef4; border-bottom: 1px solid #e8eef4; padding: 14px 20px;">
+  <div style="max-width: 1100px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 0; flex-wrap: wrap;">
     {% for block in section.blocks %}
-      <div class="trusty-trustbar__item" {{ block.shopify_attributes }}>
-        <div class="trusty-trustbar__icon">{{ block.settings.icon }}</div>
-        <div class="trusty-trustbar__text">{{ block.settings.text }}</div>
+      {% assign loop_index = forloop.index0 %}
+      <div {{ block.shopify_attributes }}
+        style="display: flex; align-items: center; gap: 8px; padding: 8px 24px; {% unless forloop.last %}border-right: 1px solid #e8eef4;{% endunless %}">
+
+        <!-- Inline SVG icon based on position -->
+        {% case loop_index %}
+          {% when 0 %}
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1d9e75" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          {% when 1 %}
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1d9e75" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          {% when 2 %}
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1d9e75" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          {% when 3 %}
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1d9e75" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l4-8 4 4 3-6 4 10"></path><path d="M3 20h18"></path></svg>
+          {% when 4 %}
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1d9e75" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+          {% else %}
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1d9e75" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        {% endcase %}
+
+        <span style="font-size: 13px; font-weight: 600; color: #0a3d5c; white-space: nowrap;">{{ block.settings.text }}</span>
       </div>
     {% endfor %}
   </div>
@@ -21,7 +43,7 @@
         {
           "type": "text",
           "id": "icon",
-          "label": "Icon (emoji)",
+          "label": "Icon (emoji — replaced by SVG, kept for reference)",
           "default": "⚡"
         },
         {
@@ -37,41 +59,11 @@
     {
       "name": "Trust Bar",
       "blocks": [
-        {
-          "type": "trust_item",
-          "settings": {
-            "icon": "⚡",
-            "text": "Custom Rigging Experts"
-          }
-        },
-        {
-          "type": "trust_item",
-          "settings": {
-            "icon": "✓",
-            "text": "60+ Boats In Stock"
-          }
-        },
-        {
-          "type": "trust_item",
-          "settings": {
-            "icon": "📍",
-            "text": "Two Morehead Locations"
-          }
-        },
-        {
-          "type": "trust_item",
-          "settings": {
-            "icon": "🚣",
-            "text": "Try Before You Buy"
-          }
-        },
-        {
-          "type": "trust_item",
-          "settings": {
-            "icon": "⛵",
-            "text": "US Sailboat Distributor"
-          }
-        }
+        { "type": "trust_item", "settings": { "icon": "⚡", "text": "Custom Rigging Experts" } },
+        { "type": "trust_item", "settings": { "icon": "✓", "text": "60+ Boats In Stock" } },
+        { "type": "trust_item", "settings": { "icon": "📍", "text": "Two Morehead Locations" } },
+        { "type": "trust_item", "settings": { "icon": "🚣", "text": "Try Before You Buy" } },
+        { "type": "trust_item", "settings": { "icon": "⛵", "text": "US Sailboat Distributor" } }
       ]
     }
   ]

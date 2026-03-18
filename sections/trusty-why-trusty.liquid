@@ -1,18 +1,48 @@
-<section class="trusty-why">
-  <div class="trusty-why__container">
-    <div class="trusty-why__header">
-      <h2>{{ section.settings.heading }}</h2>
-      <p class="trusty-why__subtitle">{{ section.settings.subtitle }}</p>
+{% comment %} trusty-why-trusty.liquid — proof/stats layout, all content from schema {% endcomment %}
+<section style="padding: 72px 20px; background: white;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+
+    <div style="text-align: center; margin-bottom: 56px;">
+      <h2 style="font-size: 36px; font-weight: 800; color: #0a3d5c; margin: 0 0 12px;">{{ section.settings.heading }}</h2>
+      <p style="font-size: 17px; color: #666; max-width: 520px; margin: 0 auto; line-height: 1.6;">{{ section.settings.subtitle }}</p>
     </div>
-    <div class="trusty-why__grid">
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2px; background: #e8eef4; border-radius: 16px; overflow: hidden; margin-bottom: 56px;">
       {% for block in section.blocks %}
-        <div class="trusty-why__item" {{ block.shopify_attributes }}>
-          <div class="trusty-why__item-icon">{{ block.settings.icon }}</div>
-          <h3>{{ block.settings.title }}</h3>
-          <p>{{ block.settings.description }}</p>
+        <div {{ block.shopify_attributes }}
+          style="background: white; padding: 32px 24px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+          <!-- SVG accent line instead of emoji -->
+          <div style="width: 32px; height: 4px; border-radius: 2px; background: #1d9e75;"></div>
+          <h3 style="font-size: 18px; font-weight: 700; color: #0a3d5c; margin: 0; line-height: 1.2;">{{ block.settings.title }}</h3>
+          <p style="font-size: 14px; color: #666; line-height: 1.65; margin: 0;">{{ block.settings.description }}</p>
         </div>
       {% endfor %}
     </div>
+
+    <!-- Stat row -->
+    <div style="display: flex; gap: 0; background: #0a3d5c; border-radius: 16px; overflow: hidden; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 150px; padding: 28px 24px; text-align: center; border-right: 1px solid rgba(255,255,255,0.1);">
+        <div style="font-size: 36px; font-weight: 800; color: #1d9e75; line-height: 1;">500+</div>
+        <div style="font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 6px; font-weight: 500;">Rigs Built</div>
+      </div>
+      <div style="flex: 1; min-width: 150px; padding: 28px 24px; text-align: center; border-right: 1px solid rgba(255,255,255,0.1);">
+        <div style="font-size: 36px; font-weight: 800; color: #1d9e75; line-height: 1;">60+</div>
+        <div style="font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 6px; font-weight: 500;">Boats In Stock</div>
+      </div>
+      <div style="flex: 1; min-width: 150px; padding: 28px 24px; text-align: center; border-right: 1px solid rgba(255,255,255,0.1);">
+        <div style="font-size: 36px; font-weight: 800; color: #1d9e75; line-height: 1;">50</div>
+        <div style="font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 6px; font-weight: 500;">States Shipped To</div>
+      </div>
+      <div style="flex: 1; min-width: 150px; padding: 28px 24px; text-align: center; border-right: 1px solid rgba(255,255,255,0.1);">
+        <div style="font-size: 36px; font-weight: 800; color: #1d9e75; line-height: 1;">24hr</div>
+        <div style="font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 6px; font-weight: 500;">Quote Turnaround</div>
+      </div>
+      <div style="flex: 1; min-width: 150px; padding: 28px 24px; text-align: center;">
+        <div style="font-size: 36px; font-weight: 800; color: #1d9e75; line-height: 1;">2</div>
+        <div style="font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 6px; font-weight: 500;">Crystal Coast Locations</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -41,7 +71,7 @@
         {
           "type": "text",
           "id": "icon",
-          "label": "Icon (emoji)",
+          "label": "Icon (emoji — no longer displayed)",
           "default": "⚡"
         },
         {

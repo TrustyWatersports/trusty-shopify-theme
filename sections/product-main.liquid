@@ -61,7 +61,8 @@
       </script>
 
       <div style="font-size: 16px; line-height: 1.8; color: var(--gray-medium); margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px solid var(--gray-light);">
-        {{ product.description | strip_html | truncate: 250 }}
+        <div id="prod-desc-short">{{ product.description | strip_html | truncate: 250 }} <button onclick="document.getElementById('prod-desc-short').style.display='none';document.getElementById('prod-desc-full').style.display='block';" style="background:none;border:none;color:var(--ocean-medium);font-weight:600;font-size:15px;cursor:pointer;padding:0;">Read more</button></div>
+        <div id="prod-desc-full" style="display:none;">{{ product.description | strip_html }} <button onclick="document.getElementById('prod-desc-full').style.display='none';document.getElementById('prod-desc-short').style.display='block';" style="background:none;border:none;color:var(--ocean-medium);font-weight:600;font-size:15px;cursor:pointer;padding:0;">Show less</button></div>
       </div>
 
       {% form 'product', product %}
