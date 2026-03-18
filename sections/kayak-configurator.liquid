@@ -81,19 +81,28 @@
             <option value="">— Choose a kayak —</option>
             {% if kayak_collection != blank %}
               {% for p in kayak_collection.products limit:60 %}
-                {% comment %} Smart top-down image selection: scan all images for top-view keywords {% endcomment %}
+        {% comment %} Check block overrides first {% endcomment %}
                 {% assign best_img = p.featured_image %}
                 {% assign topdown_found = false %}
-                {% for img in p.images %}
-                  {% unless topdown_found %}
-                    {% assign fn = img.src | split: '/' | last | split: '?' | first | downcase %}
-                    {% if fn contains 'top_view' or fn contains 'topview' or fn contains 'top-view' or fn contains '_top_' or fn contains '-top-' or fn contains 'overhead' or fn contains 'aerial' or fn contains '_26.' or fn contains '_26_' %}
-                      {% assign best_img = img %}
-                      {% assign topdown_found = true %}
-                    {% endif %}
-                  {% endunless %}
+                {% for block in section.blocks %}
+                  {% if block.type == 'kayak_image_override' and block.settings.product_handle == p.handle and block.settings.top_down_image != blank %}
+                    {% assign best_img = block.settings.top_down_image %}
+                    {% assign topdown_found = true %}
+                  {% endif %}
                 {% endfor %}
-                {% comment %} If no keyword match, try images[1] only if it looks portrait (filename hint) {% endcomment %}
+                {% comment %} Auto-detect: scan all images for top-view keywords {% endcomment %}
+                {% unless topdown_found %}
+                  {% for img in p.images %}
+                    {% unless topdown_found %}
+                      {% assign fn = img.src | split: '/' | last | split: '?' | first | downcase %}
+                      {% if fn contains 'top_view' or fn contains 'topview' or fn contains 'top-view' or fn contains '_top_' or fn contains '-top-' or fn contains 'overhead' or fn contains 'aerial' or fn contains '_26.' or fn contains '_26_' or fn contains 'column' %}
+                        {% assign best_img = img %}
+                        {% assign topdown_found = true %}
+                      {% endif %}
+                    {% endunless %}
+                  {% endfor %}
+                {% endunless %}
+                {% comment %} Fallback: try images[1] if filename hints at top-down {% endcomment %}
                 {% unless topdown_found %}
                   {% if p.images.size > 1 %}
                     {% assign img1_fn = p.images[1].src | split: '/' | last | split: '?' | first | downcase %}
@@ -415,6 +424,16 @@
     { "type": "range",      "id": "padding_top",           "label": "Padding top",    "min": 0, "max": 120, "step": 4, "default": 60 },
     { "type": "range",      "id": "padding_bottom",        "label": "Padding bottom", "min": 0, "max": 120, "step": 4, "default": 60 },
     { "type": "color",      "id": "bg_color",              "label": "Background color",                 "default": "#ffffff" }
+  ],
+  "blocks": [
+    {
+      "type": "kayak_image_override",
+      "name": "Kayak image override",
+      "settings": [
+        { "type": "text",         "id": "product_handle", "label": "Product handle", "info": "Exact Shopify product handle e.g. bonafide-pwr-129-paddle-kayak" },
+        { "type": "image_picker", "id": "top_down_image", "label": "Top-down image", "info": "Upload or select the top-down photo for this kayak" }
+      ]
+    }
   ],
   "presets": [{ "name": "Kayak Configurator" }]
 }
