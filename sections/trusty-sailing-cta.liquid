@@ -1,15 +1,13 @@
-<section class="trusty-sailing">
-  <div class="trusty-sailing__container">
-    <div class="trusty-sailing__badge">{{ section.settings.badge }}</div>
-    <h2>{{ section.settings.heading }}</h2>
-    <p class="trusty-sailing__description">{{ section.settings.description }}</p>
-    <div class="trusty-sailing__ctas">
-      <a href="{{ section.settings.primary_button_link }}" class="btn-primary">
-        {{ section.settings.primary_button_text }}
-      </a>
-      <a href="{{ section.settings.secondary_button_link }}" class="btn-secondary">
-        {{ section.settings.secondary_button_text }}
-      </a>
+<section style="background: linear-gradient(135deg, #0a3d5c 0%, #0d5278 60%, #0f6e56 100%); padding: 80px 20px; text-align: center; position: relative; overflow: hidden;">
+  <!-- Subtle wave texture overlay -->
+  <div style="position:absolute;inset:0;opacity:0.04;background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:12px 12px;"></div>
+  <div style="position:relative;z-index:1;max-width:800px;margin:0 auto;">
+    <div style="display:inline-block;background:rgba(255,255,255,0.15);color:white;padding:6px 18px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px;border:1px solid rgba(255,255,255,0.25);">{{ section.settings.badge }}</div>
+    <h2 style="font-size:clamp(28px,4vw,44px);font-weight:800;color:white;margin:0 0 16px;line-height:1.1;">{{ section.settings.heading }}</h2>
+    <p style="font-size:17px;color:rgba(255,255,255,0.85);max-width:620px;margin:0 auto 32px;line-height:1.65;">{{ section.settings.description }}</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="{{ section.settings.primary_button_link }}" style="display:inline-block;background:white;color:#0a3d5c;padding:14px 28px;border-radius:8px;font-weight:700;text-decoration:none;font-size:15px;transition:all 0.2s;" onmouseover="this.style.background='#f0f4f8'" onmouseout="this.style.background='white'">{{ section.settings.primary_button_text }}</a>
+      <a href="{{ section.settings.secondary_button_link }}" style="display:inline-block;background:transparent;color:white;padding:14px 28px;border-radius:8px;font-weight:700;text-decoration:none;font-size:15px;border:2px solid rgba(255,255,255,0.5);transition:all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">{{ section.settings.secondary_button_text }}</a>
     </div>
   </div>
 </section>
