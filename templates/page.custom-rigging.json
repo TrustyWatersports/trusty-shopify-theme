@@ -50,8 +50,10 @@
         "slide_gxdeei",
         "slide_JazQWw"
       ],
+      "custom_css": [],
       "name": "Rigging Carousel",
       "settings": {
+        "h1_override": "Custom Kayak Rigging — Tournament-Ready Builds Shipped Nationwide",
         "height": 520,
         "overlay_opacity": 15,
         "badge_text": "Custom Rigging Experts",
