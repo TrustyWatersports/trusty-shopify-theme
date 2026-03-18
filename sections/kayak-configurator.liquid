@@ -41,16 +41,17 @@
             <div style="font-size:14px; font-weight:600; color:#bbb;">Select a kayak to begin</div>
           </div>
 
-          <!-- Pins — top-down portrait, bow at top, stern at bottom -->
-          <div id="krc-pin-motor"       class="krc-pin" style="top:4%;  left:50%;"><div class="krc-pin-bubble"><img id="krc-pin-img-motor"       src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/><span class="krc-pin-count" id="krc-cnt-motor"       style="display:none;"></span></div><div class="krc-pin-label" id="krc-pin-lbl-motor">Motor</div></div>
-          <div id="krc-pin-accessories" class="krc-pin" style="top:13%; left:72%;"><div class="krc-pin-bubble"><img id="krc-pin-img-accessories" src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/><span class="krc-pin-count" id="krc-cnt-accessories" style="display:none;"></span></div><div class="krc-pin-label" id="krc-pin-lbl-accessories">Accessory</div></div>
-          <div id="krc-pin-ff"          class="krc-pin" style="top:22%; left:50%;"><div class="krc-pin-bubble"><img id="krc-pin-img-ff"          src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/><span class="krc-pin-count" id="krc-cnt-ff"          style="display:none;"></span></div><div class="krc-pin-label" id="krc-pin-lbl-ff">Fish finder</div></div>
-          <div id="krc-pin-lighting"    class="krc-pin" style="top:35%; left:22%;"><div class="krc-pin-bubble"><img id="krc-pin-img-lighting"    src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/><span class="krc-pin-count" id="krc-cnt-lighting"    style="display:none;"></span></div><div class="krc-pin-label" id="krc-pin-lbl-lighting">Lighting</div></div>
-          <div id="krc-pin-rod"         class="krc-pin" style="top:35%; left:78%;"><div class="krc-pin-bubble"><img id="krc-pin-img-rod"         src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/><span class="krc-pin-count" id="krc-cnt-rod"         style="display:none;"></span></div><div class="krc-pin-label" id="krc-pin-lbl-rod">Rod holder</div></div>
-          <div id="krc-pin-safety"      class="krc-pin" style="top:48%; left:28%;"><div class="krc-pin-bubble"><img id="krc-pin-img-safety"      src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/><span class="krc-pin-count" id="krc-cnt-safety"      style="display:none;"></span></div><div class="krc-pin-label" id="krc-pin-lbl-safety">Safety</div></div>
-          <div id="krc-pin-storage"     class="krc-pin" style="top:62%; left:50%;"><div class="krc-pin-bubble"><img id="krc-pin-img-storage"     src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/><span class="krc-pin-count" id="krc-cnt-storage"     style="display:none;"></span></div><div class="krc-pin-label" id="krc-pin-lbl-storage">Storage</div></div>
-          <div id="krc-pin-anchoring"   class="krc-pin" style="top:76%; left:72%;"><div class="krc-pin-bubble"><img id="krc-pin-img-anchoring"   src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/><span class="krc-pin-count" id="krc-cnt-anchoring"   style="display:none;"></span></div><div class="krc-pin-label" id="krc-pin-lbl-anchoring">Anchor</div></div>
-          <div id="krc-pin-powerpole"   class="krc-pin" style="top:90%; left:50%;"><div class="krc-pin-bubble"><img id="krc-pin-img-powerpole"   src="" width="44" height="44" style="border-radius:5px;object-fit:contain;display:block;"/><span class="krc-pin-count" id="krc-cnt-powerpole"   style="display:none;"></span></div><div class="krc-pin-label" id="krc-pin-lbl-powerpole">Power-Pole</div></div>
+          <!-- Pin anchor zones — top-down portrait, bow=top, stern=bottom -->
+          <!-- Each zone has a container div; JS populates it with pin elements -->
+          <div id="krc-zone-motor"       style="position:absolute; top:4%;  left:50%; transform:translate(-50%,-50%); z-index:10;"></div>
+          <div id="krc-zone-accessories" style="position:absolute; top:13%; left:72%; transform:translate(-50%,-50%); z-index:10;"></div>
+          <div id="krc-zone-ff"          style="position:absolute; top:22%; left:50%; transform:translate(-50%,-50%); z-index:10;"></div>
+          <div id="krc-zone-lighting"    style="position:absolute; top:35%; left:22%; transform:translate(-50%,-50%); z-index:10;"></div>
+          <div id="krc-zone-rod"         style="position:absolute; top:35%; left:78%; transform:translate(-50%,-50%); z-index:10;"></div>
+          <div id="krc-zone-safety"      style="position:absolute; top:48%; left:28%; transform:translate(-50%,-50%); z-index:10;"></div>
+          <div id="krc-zone-storage"     style="position:absolute; top:62%; left:50%; transform:translate(-50%,-50%); z-index:10;"></div>
+          <div id="krc-zone-anchoring"   style="position:absolute; top:76%; left:72%; transform:translate(-50%,-50%); z-index:10;"></div>
+          <div id="krc-zone-powerpole"   style="position:absolute; top:90%; left:50%; transform:translate(-50%,-50%); z-index:10;"></div>
 
         </div>
 
@@ -73,17 +74,38 @@
           </div>
         </div>
 
-        <!-- Kayak selector -->
+        <!-- Kayak selector — with smart top-down image selection baked in via data attributes -->
         <div class="krc-group">
           <div class="krc-group-label">Kayak model</div>
           <select id="krc-sel-kayak" class="krc-select" onchange="krcSelectKayak(this)">
             <option value="">— Choose a kayak —</option>
             {% if kayak_collection != blank %}
               {% for p in kayak_collection.products limit:60 %}
+                {% comment %} Smart top-down image selection: scan all images for top-view keywords {% endcomment %}
+                {% assign best_img = p.featured_image %}
+                {% assign topdown_found = false %}
+                {% for img in p.images %}
+                  {% unless topdown_found %}
+                    {% assign fn = img.src | split: '/' | last | split: '?' | first | downcase %}
+                    {% if fn contains 'top_view' or fn contains 'topview' or fn contains 'top-view' or fn contains '_top_' or fn contains '-top-' or fn contains 'overhead' or fn contains 'aerial' or fn contains '_26.' or fn contains '_26_' %}
+                      {% assign best_img = img %}
+                      {% assign topdown_found = true %}
+                    {% endif %}
+                  {% endunless %}
+                {% endfor %}
+                {% comment %} If no keyword match, try images[1] only if it looks portrait (filename hint) {% endcomment %}
+                {% unless topdown_found %}
+                  {% if p.images.size > 1 %}
+                    {% assign img1_fn = p.images[1].src | split: '/' | last | split: '?' | first | downcase %}
+                    {% if img1_fn contains 'top' or img1_fn contains 'propdown' or img1_fn contains 'prop_down' %}
+                      {% assign best_img = p.images[1] %}
+                    {% endif %}
+                  {% endif %}
+                {% endunless %}
                 <option value="{{ p.id }}"
                   data-price="{{ p.price_min | divided_by:100.0 }}"
                   data-title="{{ p.title | escape }}"
-                  data-img-topdown="{{ p.images[1].src | img_url: 'master' }}"
+                  data-img="{{ best_img | img_url: 'master' }}"
                   data-img-side="{{ p.featured_image | img_url: 'master' }}">{{ p.title }} — {{ p.price_min | money }}</option>
               {% endfor %}
             {% endif %}
@@ -91,7 +113,7 @@
         </div>
 
         <!-- 9 accessory categories -->
-        {% assign cats = "rod|Rod Holders|Stern rail|rod_collection,ff|Fish Finders|Console|fishfinder_collection,motor|Motors|Bow|motor_collection,storage|Crates & Storage|Tankwell|storage_collection,lighting|Lighting|Hull rail|lighting_collection,anchoring|Anchoring|Stern|anchoring_collection,safety|Safety|Cockpit|safety_collection,accessories|Accessories|Any zone|accessories_collection,powerpole|Power-Pole / Shallow Anchors|Stern tip|powerpole_collection" | split: "," %}
+        {% assign cats = "rod|Rod Holders|Stern rail|rod_collection|48,ff|Fish Finders|Console|fishfinder_collection|60,motor|Motors|Bow|motor_collection|72,storage|Crates & Storage|Tankwell|storage_collection|52,lighting|Lighting|Hull rail|lighting_collection|44,anchoring|Anchoring|Stern|anchoring_collection|48,safety|Safety|Cockpit|safety_collection|44,accessories|Accessories|Any zone|accessories_collection|44,powerpole|Power-Pole / Shallow Anchors|Stern tip|powerpole_collection|68" | split: "," %}
 
         {% for cat in cats %}
           {% assign parts     = cat | split: "|" %}
@@ -99,6 +121,7 @@
           {% assign cat_label = parts[1] %}
           {% assign cat_zone  = parts[2] %}
           {% assign col_key   = parts[3] %}
+          {% assign pin_size  = parts[4] %}
           {% assign col_obj   = collections[section.settings[col_key]] %}
 
           <div class="krc-group">
@@ -108,21 +131,21 @@
             </div>
             <div id="krc-slots-{{ cat_key }}">
               <div class="krc-slot" data-key="{{ cat_key }}" data-index="0">
-                <select class="krc-select krc-acc-select" data-key="{{ cat_key }}" onchange="krcSelectAcc('{{ cat_key }}', this)">
+                <select class="krc-select krc-acc-select" data-key="{{ cat_key }}" data-pinsize="{{ pin_size }}" onchange="krcSelectAcc('{{ cat_key }}', this)">
                   <option value="">— None —</option>
                   {% if col_obj != blank %}
                     {% for p in col_obj.products limit:60 %}
                       <option value="{{ p.id }}"
                         data-price="{{ p.price_min | divided_by:100.0 }}"
                         data-title="{{ p.title | escape }}"
-                        data-img="{{ p.featured_image | img_url: '160x160' }}">{{ p.title }} — {{ p.price_min | money }}</option>
+                        data-img="{{ p.featured_image | img_url: '200x200' }}">{{ p.title }} — {{ p.price_min | money }}</option>
                     {% endfor %}
                   {% endif %}
                 </select>
                 <div class="krc-preview" style="display:none;"></div>
               </div>
             </div>
-            <button class="krc-add-btn" onclick="krcAddSlot('{{ cat_key }}')">+ Add another</button>
+            <button class="krc-add-btn" onclick="krcAddSlot('{{ cat_key }}', {{ pin_size }})">+ Add another</button>
           </div>
         {% endfor %}
 
@@ -138,12 +161,61 @@
 </section>
 
 <style>
-  #krc-canvas { user-select:none; }
-  .krc-pin { position:absolute; z-index:10; display:flex; flex-direction:column; align-items:center; opacity:0; transform:translate(-50%,-50%) scale(0.7); transition:opacity .25s, transform .25s; pointer-events:none; }
-  .krc-pin.on { opacity:1; transform:translate(-50%,-50%) scale(1); }
-  .krc-pin-bubble { position:relative; background:white; border-radius:10px; border:2px solid #1d9e75; padding:4px; box-shadow:0 2px 8px rgba(0,0,0,0.18); }
-  .krc-pin-label { font-size:10px; color:#333; background:white; padding:2px 7px; border-radius:8px; margin-top:3px; border:1px solid #ddd; white-space:nowrap; max-width:100px; overflow:hidden; text-overflow:ellipsis; text-align:center; box-shadow:0 1px 3px rgba(0,0,0,0.08); }
-  .krc-pin-count { position:absolute; top:-7px; right:-7px; background:#e8451e; color:white; font-size:10px; font-weight:700; min-width:18px; height:18px; border-radius:9px; display:flex; align-items:center; justify-content:center; padding:0 4px; border:2px solid white; line-height:1; }
+  /* Pin clusters — zone container holds multiple pins side by side */
+  .krc-zone-container {
+    display: flex;
+    gap: 6px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .krc-pin-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity .25s, transform .25s;
+    pointer-events: none;
+  }
+  .krc-pin-item.on {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .krc-pin-bubble {
+    background: white;
+    border-radius: 10px;
+    border: 2px solid #1d9e75;
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    position: relative;
+  }
+  .krc-pin-bubble img {
+    border-radius: 5px;
+    object-fit: contain;
+    display: block;
+  }
+  .krc-pin-label {
+    font-size: 9px;
+    color: #333;
+    background: white;
+    padding: 1px 5px;
+    border-radius: 6px;
+    margin-top: 2px;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    font-weight: 500;
+  }
+  /* Additional pins (2nd, 3rd...) slightly smaller to show they're duplicates */
+  .krc-pin-item.krc-pin-extra .krc-pin-bubble {
+    border-color: #0a3d5c;
+    opacity: 0.85;
+  }
   .krc-group { background:white; border:1px solid #e0e4e0; border-radius:14px; padding:12px 14px; }
   .krc-group-label { font-size:12px; font-weight:700; color:#0a3d5c; text-transform:uppercase; letter-spacing:.05em; margin-bottom:8px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
   .krc-zone-pill { font-size:10px; font-weight:600; background:#e8f5f0; color:#0f6e56; padding:2px 8px; border-radius:8px; text-transform:none; letter-spacing:0; }
@@ -157,7 +229,6 @@
   .krc-preview-price { font-size:12px; color:#1d9e75; margin-top:2px; }
   .krc-add-btn { margin-top:8px; background:none; border:1.5px dashed #c0d8cc; color:#0f6e56; font-size:12px; font-weight:600; padding:6px 12px; border-radius:8px; cursor:pointer; width:100%; transition:background .15s, border-color .15s; }
   .krc-add-btn:hover { background:#f0fbf6; border-color:#1d9e75; }
-  /* Sticky canvas — collapses to static on mobile */
   @media(max-width:800px) {
     #krc-wrap { grid-template-columns:1fr !important; }
     #krc-sticky-canvas { position:static !important; top:auto !important; }
@@ -169,12 +240,28 @@
   var kayakPrice = 0;
   var accData    = {};
   var optHTML    = {};
+  var pinSizes   = {};
   var KEYS = ['rod','ff','motor','storage','lighting','anchoring','safety','accessories','powerpole'];
+
+  // Default pin sizes per category (px)
+  var DEFAULT_SIZES = { rod:48, ff:60, motor:72, storage:52, lighting:44, anchoring:48, safety:44, accessories:44, powerpole:68 };
 
   KEYS.forEach(function(k){
     accData[k] = [];
+    pinSizes[k] = DEFAULT_SIZES[k] || 48;
     var s = document.querySelector('#krc-slots-' + k + ' .krc-acc-select');
-    if(s) optHTML[k] = s.innerHTML;
+    if(s){
+      optHTML[k] = s.innerHTML;
+      if(s.dataset.pinsize) pinSizes[k] = parseInt(s.dataset.pinsize, 10);
+    }
+    // Initialize zone container
+    var zone = document.getElementById('krc-zone-' + k);
+    if(zone){
+      var container = document.createElement('div');
+      container.className = 'krc-zone-container';
+      container.id = 'krc-container-' + k;
+      zone.appendChild(container);
+    }
   });
 
   window.krcSelectKayak = function(sel){
@@ -191,8 +278,7 @@
       cta.style.pointerEvents='none';
       document.getElementById('krc-base-label').textContent='Select a kayak to start';
     } else {
-      var topDown = opt.dataset.imgTopdown;
-      img.src = (topDown && topDown.length > 10 && topDown.indexOf('undefined') === -1) ? topDown : opt.dataset.imgSide;
+      img.src = opt.dataset.img || opt.dataset.imgSide;
       img.style.display='block';
       ph.style.display='none';
       kayakPrice = parseFloat(opt.dataset.price)||0;
@@ -223,10 +309,10 @@
         +'</div>';
       prev.style.display = 'flex';
     }
-    updatePin(key); updatePrice(); updateCTA();
+    renderPins(key); updatePrice(); updateCTA();
   };
 
-  window.krcAddSlot = function(key){
+  window.krcAddSlot = function(key, pinSize){
     var container = document.getElementById('krc-slots-'+key);
     var idx = container.querySelectorAll('.krc-slot').length;
     var div = document.createElement('div');
@@ -235,38 +321,51 @@
     div.dataset.index = idx;
     div.style.marginTop = '8px';
     div.innerHTML =
-      '<select class="krc-select krc-acc-select" data-key="'+key+'" onchange="krcSelectAcc(\''+key+'\',this)">'
+      '<select class="krc-select krc-acc-select" data-key="'+key+'" data-pinsize="'+(pinSize||48)+'" onchange="krcSelectAcc(\''+key+'\',this)">'
         +(optHTML[key]||'')
       +'</select>'
       +'<div class="krc-preview" style="display:none;"></div>';
     container.appendChild(div);
   };
 
-  function updatePin(key){
-    var pin   = document.getElementById('krc-pin-'+key);
-    var pImg  = document.getElementById('krc-pin-img-'+key);
-    var pLbl  = document.getElementById('krc-pin-lbl-'+key);
-    var pCnt  = document.getElementById('krc-cnt-'+key);
-    if(!pin) return;
+  function renderPins(key){
+    var container = document.getElementById('krc-container-' + key);
+    if(!container) return;
 
+    // Get all selected items for this category
     var selected = (accData[key]||[]).filter(function(d){ return d != null; });
-    var count = selected.length;
 
-    if(count === 0){ pin.classList.remove('on'); return; }
+    // Clear existing pins
+    container.innerHTML = '';
 
-    pImg.src = selected[0].img;
-    var allSame = selected.every(function(d){ return d.title === selected[0].title; });
-    pLbl.textContent = allSame ? selected[0].title : count + ' items';
+    if(selected.length === 0) return;
 
-    if(pCnt){
-      if(count > 1){
-        pCnt.textContent = '\u00d7' + count;
-        pCnt.style.display = 'flex';
-      } else {
-        pCnt.style.display = 'none';
-      }
-    }
-    pin.classList.add('on');
+    var sz = pinSizes[key];
+
+    selected.forEach(function(item, i){
+      var pinEl = document.createElement('div');
+      pinEl.className = 'krc-pin-item' + (i > 0 ? ' krc-pin-extra' : '');
+
+      // Slightly shrink extra pins so they look like "additional" items
+      var thisSz = i === 0 ? sz : Math.round(sz * 0.78);
+
+      pinEl.innerHTML =
+        '<div class="krc-pin-bubble">'
+          +'<img src="'+item.img+'" width="'+thisSz+'" height="'+thisSz+'" style="border-radius:5px;object-fit:contain;display:block;" alt="'+item.title+'" />'
+        +'</div>'
+        +'<div class="krc-pin-label">'+truncate(item.title, 16)+'</div>';
+
+      container.appendChild(pinEl);
+
+      // Animate in with slight delay per item
+      setTimeout(function(){
+        pinEl.classList.add('on');
+      }, i * 60);
+    });
+  }
+
+  function truncate(str, n){
+    return str.length > n ? str.substring(0, n) + '…' : str;
   }
 
   function updatePrice(){
