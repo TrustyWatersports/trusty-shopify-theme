@@ -21,47 +21,82 @@
 
   <!-- Structured Data: Local Business -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SportingGoodsStore",
-    "name": "Trusty Sail & Paddle",
-    "url": "https://www.trustysailandpaddle.com",
-    "logo": "https://www.trustysailandpaddle.com/cdn/shop/files/trusty-logo.png",
-    "description": "Custom kayak rigging experts and watersports outfitter on the Crystal Coast. Kayak sales, rentals, sailing lessons, and nationwide custom rigging.",
-    "telephone": "+12524999911",
-    "priceRange": "$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "4426 Arendell St",
-      "addressLocality": "Morehead City",
-      "addressRegion": "NC",
-      "postalCode": "28557",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 34.7229,
-      "longitude": -76.7305
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "09:00",
-        "closes": "18:00"
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": ["SportingGoodsStore","LocalBusiness","TouristAttraction"],
+      "name": "Trusty Sail & Paddle",
+      "url": "https://www.trustysailandpaddle.com",
+      "logo": "https://www.trustysailandpaddle.com/cdn/shop/files/trusty-logo.png",
+      "description": "Kayak rentals, sailboat rentals, sailing lessons, guided tours, and custom kayak rigging on the Crystal Coast. Waterfront location on Bogue Sound in Morehead City, NC.",
+      "telephone": "+12524999911",
+      "priceRange": "$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4426 Arendell St",
+        "addressLocality": "Morehead City",
+        "addressRegion": "NC",
+        "postalCode": "28557",
+        "addressCountry": "US"
       },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "09:00",
-        "closes": "17:00"
-      }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/TrustySailandPaddle",
-      "https://www.instagram.com/trustysailandpaddle"
-    ]
-  }
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 34.7229,
+        "longitude": -76.7305
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday","Sunday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Watersports Activities & Rentals",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kayak Rental — Single", "description": "Single kayak rental on Bogue Sound, Morehead City NC" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kayak Rental — Tandem", "description": "Tandem kayak rental for couples and families on Crystal Coast" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pedal Kayak Rental", "description": "Hands-free pedal kayak rental at our Morehead City waterfront location" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sailboat Rental", "description": "Topaz dinghy and catamaran rentals on Bogue Sound" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sailing Lessons", "description": "Certified sailing instruction on Bogue Sound near Morehead City NC" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Kayak Rigging", "description": "Professional tournament kayak rigging shipped nationwide" } }
+        ]
+      },
+      "sameAs": [
+        "https://www.facebook.com/TrustySailandPaddle",
+        "https://www.instagram.com/trustysailandpaddle"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Trusty Sail & Paddle — Waterfront Rentals",
+      "url": "https://www.trustysailandpaddle.com/pages/rentals",
+      "telephone": "+12525154866",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "815 Shepard St",
+        "addressLocality": "Morehead City",
+        "addressRegion": "NC",
+        "postalCode": "28557",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 34.7193,
+        "longitude": -76.7257
+      },
+      "description": "Kayak and sailboat rentals on Bogue Sound waterfront in downtown Morehead City. One of the top things to do on the Crystal Coast NC."
+    }
+  ]
   </script>
 
   <!-- Structured Data: Product (product pages only) -->
