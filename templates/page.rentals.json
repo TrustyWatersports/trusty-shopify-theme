@@ -12,13 +12,88 @@
     "rentals-hero": {
       "type": "rentals-hero",
       "settings": {
-        "heading": "Rentals",
+        "heading": "Kayak & Sailboat Rentals in Morehead City, NC",
         "subheading": "Kayaks & sailboats on the Crystal Coast. Try before you buy — rental fees credit toward purchase!",
         "hero_image": "shopify://shop_images/IMG_5387_faebdf15-35e3-426c-9eea-1206ac474e06.jpg",
         "image_opacity": 100,
         "overlay_opacity": 15,
         "gradient_start": "#0a4b78",
         "gradient_end": "#1e6fa8"
+      }
+    },
+    "local_seo_rentals_4emWVm": {
+      "type": "local-seo-rentals",
+      "blocks": {
+        "activity_mfRBgV": {
+          "type": "activity",
+          "settings": {
+            "title": "Kayak Rentals — Morehead City",
+            "description": "Single kayaks, tandems, and pedal kayaks launching from our Bogue Sound waterfront dock. Paddle to Sugarloaf Island or explore the Newport River.",
+            "link_text": "See pricing",
+            "link": "/pages/rentals#kayak-rentals"
+          }
+        },
+        "activity_YbMnNT": {
+          "type": "activity",
+          "settings": {
+            "title": "Sailboat Rentals & Lessons",
+            "description": "Rent a Topaz dinghy or catamaran and sail Bogue Sound. Add a certified instructor for $100/hr — perfect for beginners and families.",
+            "link_text": "See sailboats",
+            "link": "/pages/rentals#sailboat-rentals"
+          }
+        },
+        "activity_U3eiGk": {
+          "type": "activity",
+          "settings": {
+            "title": "Pedal Kayak Adventures",
+            "description": "No paddling required — hands-free pedal kayaks are perfect for fishing, photography, or just relaxing on the water. Great for all ages.",
+            "link_text": "Book hourly",
+            "link": "/pages/rentals"
+          }
+        },
+        "activity_bxnwak": {
+          "type": "activity",
+          "settings": {
+            "title": "Try Before You Buy",
+            "description": "Rent the exact kayak or sailboat you're considering. Your rental fee credits toward your purchase — test it on Crystal Coast waters first.",
+            "link_text": "Learn more",
+            "link": "/pages/rentals"
+          }
+        },
+        "activity_Xjcdpt": {
+          "type": "activity",
+          "settings": {
+            "title": "Guided Tours & Programs",
+            "description": "Join one of our guided tours of Bogue Sound, kayak fishing excursions, or sailing programs for families and youth.",
+            "link_text": "See programs",
+            "link": "/pages/programs"
+          }
+        },
+        "activity_tgQPck": {
+          "type": "activity",
+          "settings": {
+            "title": "Perfect for Families & Groups",
+            "description": "From toddlers to grandparents — our waterfront location on Shepard Street has something for everyone on the Crystal Coast.",
+            "link_text": "Contact us",
+            "link": "/pages/customer-info"
+          }
+        }
+      },
+      "block_order": [
+        "activity_mfRBgV",
+        "activity_YbMnNT",
+        "activity_U3eiGk",
+        "activity_bxnwak",
+        "activity_Xjcdpt",
+        "activity_tgQPck"
+      ],
+      "name": "Local SEO — Rentals",
+      "settings": {
+        "heading": "Things to Do on the Crystal Coast",
+        "intro": "Trusty Sail & Paddle sits right on the Bogue Sound waterfront in downtown Morehead City, NC. Whether you're a local looking for a weekend adventure or a visitor exploring the Crystal Coast, we've got the perfect water activity for you.",
+        "hours": "Open daily 9am–6pm (seasonal)",
+        "book_link": "",
+        "seo_text": "Located at 815 Shepard Street on Bogue Sound, Trusty Sail & Paddle is one of Morehead City's top waterfront activities. Paddle to Sugarloaf Island, explore the Newport River, or cruise the Morehead City waterfront by pedal kayak. We're minutes from Atlantic Beach, Beaufort, and Fort Macon State Park — the perfect base for a Crystal Coast water adventure."
       }
     },
     "rentals-pricing2": {
@@ -236,90 +311,15 @@
         "heading": "Rental FAQ",
         "background_color": "#f5f7fa"
       }
-    },
-    "local_seo_rentals_4emWVm": {
-      "type": "local-seo-rentals",
-      "blocks": {
-        "activity_mfRBgV": {
-          "type": "activity",
-          "settings": {
-            "title": "Kayak Rentals — Morehead City",
-            "description": "Single kayaks, tandems, and pedal kayaks launching from our Bogue Sound waterfront dock. Paddle to Sugarloaf Island or explore the Newport River.",
-            "link_text": "See pricing",
-            "link": "/pages/rentals#kayak-rentals"
-          }
-        },
-        "activity_YbMnNT": {
-          "type": "activity",
-          "settings": {
-            "title": "Sailboat Rentals & Lessons",
-            "description": "Rent a Topaz dinghy or catamaran and sail Bogue Sound. Add a certified instructor for $100/hr — perfect for beginners and families.",
-            "link_text": "See sailboats",
-            "link": "/pages/rentals#sailboat-rentals"
-          }
-        },
-        "activity_U3eiGk": {
-          "type": "activity",
-          "settings": {
-            "title": "Pedal Kayak Adventures",
-            "description": "No paddling required — hands-free pedal kayaks are perfect for fishing, photography, or just relaxing on the water. Great for all ages.",
-            "link_text": "Book hourly",
-            "link": "/pages/rentals"
-          }
-        },
-        "activity_bxnwak": {
-          "type": "activity",
-          "settings": {
-            "title": "Try Before You Buy",
-            "description": "Rent the exact kayak or sailboat you're considering. Your rental fee credits toward your purchase — test it on Crystal Coast waters first.",
-            "link_text": "Learn more",
-            "link": "/pages/rentals"
-          }
-        },
-        "activity_Xjcdpt": {
-          "type": "activity",
-          "settings": {
-            "title": "Guided Tours & Programs",
-            "description": "Join one of our guided tours of Bogue Sound, kayak fishing excursions, or sailing programs for families and youth.",
-            "link_text": "See programs",
-            "link": "/pages/programs"
-          }
-        },
-        "activity_tgQPck": {
-          "type": "activity",
-          "settings": {
-            "title": "Perfect for Families & Groups",
-            "description": "From toddlers to grandparents — our waterfront location on Shepard Street has something for everyone on the Crystal Coast.",
-            "link_text": "Contact us",
-            "link": "/pages/customer-info"
-          }
-        }
-      },
-      "block_order": [
-        "activity_mfRBgV",
-        "activity_YbMnNT",
-        "activity_U3eiGk",
-        "activity_bxnwak",
-        "activity_Xjcdpt",
-        "activity_tgQPck"
-      ],
-      "name": "Local SEO — Rentals",
-      "settings": {
-        "heading": "Things to Do on the Crystal Coast",
-        "intro": "Trusty Sail & Paddle sits right on the Bogue Sound waterfront in downtown Morehead City, NC. Whether you're a local looking for a weekend adventure or a visitor exploring the Crystal Coast, we've got the perfect water activity for you.",
-        "hours": "Open daily 9am–6pm (seasonal)",
-        "book_link": "",
-        "seo_text": "Located at 815 Shepard Street on Bogue Sound, Trusty Sail & Paddle is one of Morehead City's top waterfront activities. Paddle to Sugarloaf Island, explore the Newport River, or cruise the Morehead City waterfront by pedal kayak. We're minutes from Atlantic Beach, Beaufort, and Fort Macon State Park — the perfect base for a Crystal Coast water adventure."
-      }
     }
   },
   "order": [
     "rentals-hero",
+    "local_seo_rentals_4emWVm",
     "rentals-pricing2",
     "sailboat-rentals",
     "waiver_embed_e7hPpR",
     "rentals-booking",
-    "rentals-faq",
-    "local_seo_rentals_4emWVm"
+    "rentals-faq"
   ]
 }
