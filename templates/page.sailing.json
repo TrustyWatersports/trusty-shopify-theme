@@ -207,7 +207,7 @@
         "primary_text_color": "#d32f2f",
         "show_secondary_button": true,
         "secondary_text": "Book Sailing Lessons",
-        "secondary_link": "shopify://pages/programs-events",
+        "secondary_link": "shopify://pages/programs",
         "show_extra_info": true,
         "extra_info": "📞 Call us: (252) 499-9911 | 🏪 Visit: 5300 HWY 70W, Morehead City, NC"
       }
