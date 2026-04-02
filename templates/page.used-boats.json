@@ -23,6 +23,24 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
+        "boat_4KY3RW": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_6739.jpg",
+            "boat_image_2": "shopify://shop_images/IMG_6745_3a7ca8c7-7a54-4d98-9bc0-0a7db34cddcc.jpg",
+            "boat_image_3": "shopify://shop_images/IMG_6742.jpg",
+            "boat_image_4": "shopify://shop_images/IMG_6740_9c539a70-db06-4620-a850-44f0d4abd51b.jpg",
+            "boat_image_5": "shopify://shop_images/IMG_6743.jpg",
+            "boat_name": "2023 Perception Crank 10",
+            "boat_brand": "Perception",
+            "boat_year": "2023",
+            "boat_condition": "good",
+            "boat_description": "2023 Perception Crank pedal powered kayak. This 10' pedal powered kayak weighs in at only 87lbs with the drivetrain and seat installed! \n\nOne of the lightest boats in the pedal powered market, the Crank makes it easy to get out on the water. Extremely durable drivetrain, rotomolded hull for a lifetime of use. Seat is adjustable for comfortable pedaling, and the included steering system makes it easy to hold a course and turn quickly. Keeping one hand free makes it easy to hold a fishing rod and explore the shallows. \n\nThis Perception Crank has been modified with YakAttack aluminum gear  track, and two YakAttack Omega rod holders (over $100 in accessories that make it easy to fish). \n\nBoat was purchased for a child that has moved onto other craft- very lightly used in great shape. Boat is on consignment at Trusty Sail & Paddle in Morehead City, NC. $750 or best offer. Give us a call with any questions.",
+            "boat_price": "$750 OBO",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
         "boat_w7b3yG": {
           "type": "boat",
           "settings": {
@@ -61,6 +79,7 @@
         }
       },
       "block_order": [
+        "boat_4KY3RW",
         "boat_w7b3yG",
         "boat_9HtNkE"
       ],
