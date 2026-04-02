@@ -23,6 +23,24 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
+        "boat_Ppbrnm": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_6747.jpg",
+            "boat_image_2": "shopify://shop_images/IMG_6749.jpg",
+            "boat_image_3": "shopify://shop_images/IMG_6750.jpg",
+            "boat_image_4": "shopify://shop_images/IMG_6748.jpg",
+            "boat_image_5": "shopify://shop_images/IMG_6753.jpg",
+            "boat_name": "Vibe Sea Ghost 130",
+            "boat_brand": "Vibe",
+            "boat_year": "2020",
+            "boat_condition": "good",
+            "boat_description": "2020 Vibe Sea Ghost Kayak with foot controls and elevated seating system-13 feet long and 75 pounds unloaded, this power-packed fishing machine also boasts a 33-inch beam. \n\nGreat tracking, loads of stability to stand when fishing, and an elevated seat combine to make a smooth operating fishing machine. Paddle only, but moves through the water quickly. Plenty of gear track to add accessories for fishing. Internal storage and plenty of room in the tankwell for tackle or a cooler. \n\nGreat condition boat with very light use. On consignment at Trusty Sail & Paddle for $650 or best offer. Give us a call with any questions",
+            "boat_price": "$650 OBO",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
         "boat_4KY3RW": {
           "type": "boat",
           "settings": {
@@ -79,6 +97,7 @@
         }
       },
       "block_order": [
+        "boat_Ppbrnm",
         "boat_4KY3RW",
         "boat_w7b3yG",
         "boat_9HtNkE"
