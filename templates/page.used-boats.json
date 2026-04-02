@@ -23,18 +23,20 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
-        "boat_bC8Urj": {
+        "boat_w7b3yG": {
           "type": "boat",
           "settings": {
-            "boat_image": "shopify://shop_images/649861737_2347292935762073_2716375597573146538_n.jpg",
-            "boat_image_2": "shopify://shop_images/648818383_945256328001135_3627259888111930916_n.jpg",
-            "boat_image_3": "shopify://shop_images/647028711_4169188373411509_4834288966255997598_n.jpg",
-            "boat_name": "Topaz Taz +",
-            "boat_brand": "Topper Topaz",
+            "boat_image": "shopify://shop_images/IMG_6767_e2b6461e-8cee-4d1b-9f17-158fbe52ee3b.jpg",
+            "boat_image_2": "shopify://shop_images/IMG_6765.jpg",
+            "boat_image_3": "shopify://shop_images/IMG_6769.jpg",
+            "boat_image_4": "shopify://shop_images/Screenshot_2026-04-01_at_4.58.05_PM.png",
+            "boat_image_5": "shopify://shop_images/IMG_6770.jpg",
+            "boat_name": "Maverick Sailboat/SUP/Windsurfer",
+            "boat_brand": "Maverick",
             "boat_year": "2025",
             "boat_condition": "excellent",
-            "boat_description": "Buy some guaranteed summer fun for your kiddos!! \n\nThis boat is a DEMO from our shop stock.  Excellent condition, LIKE NEW\n\nTopaz TAZ sailboat complete\nIncludes:\nHull, Spars, Mainsail, rudder and tiller assembly, daggerboard, all lines, hardware and rigging\n\nLength overall: 9.5'\nWeight: 75lbs.\nCapacity: Well, it's marked as 150lbs.  but you can see from the photos how many kids can be piled on there!  Even if they were 60 lbs. each, you are looking at 420 lbs. and the boat is still floating and the sail is catching wind.\n\n\nTopaz sailboats are manufactured in England of hi-density polyethylene with a tri-laminated hull (two layers of HDPE sandwiching a foam layer).\nThey are self bailing and quite literally unsinkable. \n\nIf you'd like to arrange a test sail, please send us a message.  We are the US distributor of the brand and would be glad to answer any questions.",
-            "boat_price": "$3200.00 OBO",
+            "boat_description": "Maverick Sailboat- wait, stand-up-paddleboard, wait, windsurfer......have you dreamed of one craft that could cover all your interests? Make everything you want to try affordable and easy to store? The Maverick sailboat is the craft for you. Made to   be configured in various forms, the boat is made to be all things, from a stand up paddleboard, a sit down sailboat (with rudder and seating!), a windsurfer (with a proper rig!) and be lightweight and portable. This unit was made in the UK by Topper sailboats, and has never been used. All sails, windsurfing rig, sup fin and paddle, and seating are new in package and ready to begin your next adventure. Boat was used as a display, but has never seen water. Save thousands off of retail. Give us a call! Best offer!",
+            "boat_price": "$5995.00 OBO",
             "contact_info": "",
             "is_sold": false
           }
@@ -53,6 +55,76 @@
             "boat_condition": "excellent",
             "boat_description": "This is the boat you have been looking for. A brand new, never sailed, 2022 Topaz Cat 16 with an aluminum Trailex trailer. The boat is in nearly perfect condition, always stored at the client's home under cover. New, unused sails. This skeg design catamaran is fast, fun and ready for adventure. Durable rotomolded hulls, kick up rudders and no daggerboards makes this a true beach cat. Easy to launch and recover with the included cat-trax (launching trolly). Fiberglass EPX rudders, proper traveler system, powerful mainsheet system. Roller furling jib, double trapeze, and high quality Allen hardware. This boat has plenty of space for the whole family, and the boomless mainsail is powerful yet easily reefed. Very slick gennaker system can be added to the boat for only $1000 more, installed. Includes brand new, model specific cover, as well as used cover. \n\nThis package was over $15,000 new and was sold locally to a customer that due to a variety of circumstances was unable to sail the boat. Great opportunity to save over 1/3 off retail price for a brand new boat. Lessons offered. \n\nSend us a message, or give us a call at Trusty Sail & Paddle with any questions. Boat is on consignment for $9999 or best offer.",
             "boat_price": "$9500.00 OBO",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
+        "boat_bC8Urj": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/649861737_2347292935762073_2716375597573146538_n.jpg",
+            "boat_image_2": "shopify://shop_images/648818383_945256328001135_3627259888111930916_n.jpg",
+            "boat_image_3": "shopify://shop_images/647028711_4169188373411509_4834288966255997598_n.jpg",
+            "boat_name": "Topaz Taz +",
+            "boat_brand": "Topper Topaz",
+            "boat_year": "2025",
+            "boat_condition": "excellent",
+            "boat_description": "Buy some guaranteed summer fun for your kiddos!! \n\nThis boat is a DEMO from our shop stock.  Excellent condition, LIKE NEW\n\nTopaz TAZ sailboat complete\nIncludes:\nHull, Spars, Mainsail, rudder and tiller assembly, daggerboard, all lines, hardware and rigging\n\nLength overall: 9.5'\nWeight: 75lbs.\nCapacity: Well, it's marked as 150lbs.  but you can see from the photos how many kids can be piled on there!  Even if they were 60 lbs. each, you are looking at 420 lbs. and the boat is still floating and the sail is catching wind.\n\n\nTopaz sailboats are manufactured in England of hi-density polyethylene with a tri-laminated hull (two layers of HDPE sandwiching a foam layer).\nThey are self bailing and quite literally unsinkable. \n\nIf you'd like to arrange a test sail, please send us a message.  We are the US distributor of the brand and would be glad to answer any questions.",
+            "boat_price": "$3200.00 OBO",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
+        "boat_4KY3RW": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_6739.jpg",
+            "boat_image_2": "shopify://shop_images/IMG_6745_3a7ca8c7-7a54-4d98-9bc0-0a7db34cddcc.jpg",
+            "boat_image_3": "shopify://shop_images/IMG_6742.jpg",
+            "boat_image_4": "shopify://shop_images/IMG_6740_9c539a70-db06-4620-a850-44f0d4abd51b.jpg",
+            "boat_image_5": "shopify://shop_images/IMG_6743.jpg",
+            "boat_name": "2023 Perception Crank 10",
+            "boat_brand": "Perception",
+            "boat_year": "2023",
+            "boat_condition": "good",
+            "boat_description": "2023 Perception Crank pedal powered kayak. This 10' pedal powered kayak weighs in at only 87lbs with the drivetrain and seat installed! \n\nOne of the lightest boats in the pedal powered market, the Crank makes it easy to get out on the water. Extremely durable drivetrain, rotomolded hull for a lifetime of use. Seat is adjustable for comfortable pedaling, and the included steering system makes it easy to hold a course and turn quickly. Keeping one hand free makes it easy to hold a fishing rod and explore the shallows. \n\nThis Perception Crank has been modified with YakAttack aluminum gear  track, and two YakAttack Omega rod holders (over $100 in accessories that make it easy to fish). \n\nBoat was purchased for a child that has moved onto other craft- very lightly used in great shape. Boat is on consignment at Trusty Sail & Paddle in Morehead City, NC. $750 or best offer. Give us a call with any questions.",
+            "boat_price": "$750 OBO",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
+        "boat_9HtNkE": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_6555.jpg",
+            "boat_image_2": "shopify://shop_images/IMG_6556_fd0b3faf-340f-4158-952f-b527e2ac29ea.jpg",
+            "boat_image_3": "shopify://shop_images/IMG_6560_970a583b-ac1d-4b82-b08e-96aac5bd79dd.jpg",
+            "boat_image_4": "shopify://shop_images/IMG_6554.jpg",
+            "boat_image_5": "shopify://shop_images/IMG_6559.jpg",
+            "boat_name": "Jackson Knarr Package",
+            "boat_brand": "Jackson/Malone/YakAttack",
+            "boat_year": "2022",
+            "boat_condition": "excellent",
+            "boat_description": "Very lightly used, if at all, pedal kayak set from Jackson Kayak. These two Knarr's are ready to fish with all needed accessories- paddles, storage, dolly, anchor trolly- you've got it all! These are some of the best fishing kayaks on the market complete with a  Malone Trailer and two sets of saddle-up-pro's for easy storage. Make an offer and take these great boats home today.",
+            "boat_price": "$7500.00 OBO",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
+        "boat_Ppbrnm": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_6747.jpg",
+            "boat_image_2": "shopify://shop_images/IMG_6749.jpg",
+            "boat_image_3": "shopify://shop_images/IMG_6750.jpg",
+            "boat_image_4": "shopify://shop_images/IMG_6748.jpg",
+            "boat_image_5": "shopify://shop_images/IMG_6753.jpg",
+            "boat_name": "Vibe Sea Ghost 130",
+            "boat_brand": "Vibe",
+            "boat_year": "2020",
+            "boat_condition": "good",
+            "boat_description": "2020 Vibe Sea Ghost Kayak with foot controls and elevated seating system-13 feet long and 75 pounds unloaded, this power-packed fishing machine also boasts a 33-inch beam. \n\nGreat tracking, loads of stability to stand when fishing, and an elevated seat combine to make a smooth operating fishing machine. Paddle only, but moves through the water quickly. Plenty of gear track to add accessories for fishing. Internal storage and plenty of room in the tankwell for tackle or a cooler. \n\nGreat condition boat with very light use. On consignment at Trusty Sail & Paddle for $650 or best offer. Give us a call with any questions",
+            "boat_price": "$650 OBO",
             "contact_info": "",
             "is_sold": false
           }
@@ -92,89 +164,17 @@
             "contact_info": "",
             "is_sold": false
           }
-        },
-        "boat_Ppbrnm": {
-          "type": "boat",
-          "settings": {
-            "boat_image": "shopify://shop_images/IMG_6747.jpg",
-            "boat_image_2": "shopify://shop_images/IMG_6749.jpg",
-            "boat_image_3": "shopify://shop_images/IMG_6750.jpg",
-            "boat_image_4": "shopify://shop_images/IMG_6748.jpg",
-            "boat_image_5": "shopify://shop_images/IMG_6753.jpg",
-            "boat_name": "Vibe Sea Ghost 130",
-            "boat_brand": "Vibe",
-            "boat_year": "2020",
-            "boat_condition": "good",
-            "boat_description": "2020 Vibe Sea Ghost Kayak with foot controls and elevated seating system-13 feet long and 75 pounds unloaded, this power-packed fishing machine also boasts a 33-inch beam. \n\nGreat tracking, loads of stability to stand when fishing, and an elevated seat combine to make a smooth operating fishing machine. Paddle only, but moves through the water quickly. Plenty of gear track to add accessories for fishing. Internal storage and plenty of room in the tankwell for tackle or a cooler. \n\nGreat condition boat with very light use. On consignment at Trusty Sail & Paddle for $650 or best offer. Give us a call with any questions",
-            "boat_price": "$650 OBO",
-            "contact_info": "",
-            "is_sold": false
-          }
-        },
-        "boat_4KY3RW": {
-          "type": "boat",
-          "settings": {
-            "boat_image": "shopify://shop_images/IMG_6739.jpg",
-            "boat_image_2": "shopify://shop_images/IMG_6745_3a7ca8c7-7a54-4d98-9bc0-0a7db34cddcc.jpg",
-            "boat_image_3": "shopify://shop_images/IMG_6742.jpg",
-            "boat_image_4": "shopify://shop_images/IMG_6740_9c539a70-db06-4620-a850-44f0d4abd51b.jpg",
-            "boat_image_5": "shopify://shop_images/IMG_6743.jpg",
-            "boat_name": "2023 Perception Crank 10",
-            "boat_brand": "Perception",
-            "boat_year": "2023",
-            "boat_condition": "good",
-            "boat_description": "2023 Perception Crank pedal powered kayak. This 10' pedal powered kayak weighs in at only 87lbs with the drivetrain and seat installed! \n\nOne of the lightest boats in the pedal powered market, the Crank makes it easy to get out on the water. Extremely durable drivetrain, rotomolded hull for a lifetime of use. Seat is adjustable for comfortable pedaling, and the included steering system makes it easy to hold a course and turn quickly. Keeping one hand free makes it easy to hold a fishing rod and explore the shallows. \n\nThis Perception Crank has been modified with YakAttack aluminum gear  track, and two YakAttack Omega rod holders (over $100 in accessories that make it easy to fish). \n\nBoat was purchased for a child that has moved onto other craft- very lightly used in great shape. Boat is on consignment at Trusty Sail & Paddle in Morehead City, NC. $750 or best offer. Give us a call with any questions.",
-            "boat_price": "$750 OBO",
-            "contact_info": "",
-            "is_sold": false
-          }
-        },
-        "boat_w7b3yG": {
-          "type": "boat",
-          "settings": {
-            "boat_image": "shopify://shop_images/IMG_6767_e2b6461e-8cee-4d1b-9f17-158fbe52ee3b.jpg",
-            "boat_image_2": "shopify://shop_images/IMG_6765.jpg",
-            "boat_image_3": "shopify://shop_images/IMG_6769.jpg",
-            "boat_image_4": "shopify://shop_images/Screenshot_2026-04-01_at_4.58.05_PM.png",
-            "boat_image_5": "shopify://shop_images/IMG_6770.jpg",
-            "boat_name": "Maverick Sailboat/SUP/Windsurfer",
-            "boat_brand": "Maverick",
-            "boat_year": "2025",
-            "boat_condition": "excellent",
-            "boat_description": "Maverick Sailboat- wait, stand-up-paddleboard, wait, windsurfer......have you dreamed of one craft that could cover all your interests? Make everything you want to try affordable and easy to store? The Maverick sailboat is the craft for you. Made to   be configured in various forms, the boat is made to be all things, from a stand up paddleboard, a sit down sailboat (with rudder and seating!), a windsurfer (with a proper rig!) and be lightweight and portable. This unit was made in the UK by Topper sailboats, and has never been used. All sails, windsurfing rig, sup fin and paddle, and seating are new in package and ready to begin your next adventure. Boat was used as a display, but has never seen water. Save thousands off of retail. Give us a call! Best offer!",
-            "boat_price": "$5995.00 OBO",
-            "contact_info": "",
-            "is_sold": false
-          }
-        },
-        "boat_9HtNkE": {
-          "type": "boat",
-          "settings": {
-            "boat_image": "shopify://shop_images/IMG_6555.jpg",
-            "boat_image_2": "shopify://shop_images/IMG_6556_fd0b3faf-340f-4158-952f-b527e2ac29ea.jpg",
-            "boat_image_3": "shopify://shop_images/IMG_6560_970a583b-ac1d-4b82-b08e-96aac5bd79dd.jpg",
-            "boat_image_4": "shopify://shop_images/IMG_6554.jpg",
-            "boat_image_5": "shopify://shop_images/IMG_6559.jpg",
-            "boat_name": "Jackson Knarr Package",
-            "boat_brand": "Jackson/Malone/YakAttack",
-            "boat_year": "2022",
-            "boat_condition": "excellent",
-            "boat_description": "Very lightly used, if at all, pedal kayak set from Jackson Kayak. These two Knarr's are ready to fish with all needed accessories- paddles, storage, dolly, anchor trolly- you've got it all! These are some of the best fishing kayaks on the market complete with a  Malone Trailer and two sets of saddle-up-pro's for easy storage. Make an offer and take these great boats home today.",
-            "boat_price": "$7500.00 OBO",
-            "contact_info": "",
-            "is_sold": false
-          }
         }
       },
       "block_order": [
-        "boat_bC8Urj",
-        "boat_7WgbMV",
-        "boat_4NE4z8",
-        "boat_irDUWw",
-        "boat_Ppbrnm",
-        "boat_4KY3RW",
         "boat_w7b3yG",
-        "boat_9HtNkE"
+        "boat_7WgbMV",
+        "boat_bC8Urj",
+        "boat_4KY3RW",
+        "boat_9HtNkE",
+        "boat_Ppbrnm",
+        "boat_4NE4z8",
+        "boat_irDUWw"
       ],
       "settings": {
         "background_color": "#f5f7fa"
