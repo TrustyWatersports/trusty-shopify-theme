@@ -23,6 +23,22 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
+        "boat_bC8Urj": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/649861737_2347292935762073_2716375597573146538_n.jpg",
+            "boat_image_2": "shopify://shop_images/648818383_945256328001135_3627259888111930916_n.jpg",
+            "boat_image_3": "shopify://shop_images/647028711_4169188373411509_4834288966255997598_n.jpg",
+            "boat_name": "Topaz Taz +",
+            "boat_brand": "Topper Topaz",
+            "boat_year": "2025",
+            "boat_condition": "excellent",
+            "boat_description": "Buy some guaranteed summer fun for your kiddos!! \n\nThis boat is a DEMO from our shop stock.  Excellent condition, LIKE NEW\n\nTopaz TAZ sailboat complete\nIncludes:\nHull, Spars, Mainsail, rudder and tiller assembly, daggerboard, all lines, hardware and rigging\n\nLength overall: 9.5'\nWeight: 75lbs.\nCapacity: Well, it's marked as 150lbs.  but you can see from the photos how many kids can be piled on there!  Even if they were 60 lbs. each, you are looking at 420 lbs. and the boat is still floating and the sail is catching wind.\n\n\nTopaz sailboats are manufactured in England of hi-density polyethylene with a tri-laminated hull (two layers of HDPE sandwiching a foam layer).\nThey are self bailing and quite literally unsinkable. \n\nIf you'd like to arrange a test sail, please send us a message.  We are the US distributor of the brand and would be glad to answer any questions.",
+            "boat_price": "$3200.00 OBO",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
         "boat_7WgbMV": {
           "type": "boat",
           "settings": {
@@ -151,6 +167,7 @@
         }
       },
       "block_order": [
+        "boat_bC8Urj",
         "boat_7WgbMV",
         "boat_4NE4z8",
         "boat_irDUWw",
