@@ -23,6 +23,24 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
+        "boat_irDUWw": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_6777.jpg",
+            "boat_image_2": "shopify://shop_images/IMG_6779.jpg",
+            "boat_image_3": "shopify://shop_images/IMG_6780.jpg",
+            "boat_image_4": "shopify://shop_images/IMG_6783.jpg",
+            "boat_image_5": "shopify://shop_images/IMG_6778.jpg",
+            "boat_name": "Wilderness Systems Radar 11.5 Kayak with Helix Pedal Drive",
+            "boat_brand": "Wilderness Systems",
+            "boat_year": "2022",
+            "boat_condition": "excellent",
+            "boat_description": "2022 Wilderness Systems Radar 11.5 Kayak with Helix pedal drive installed. Includes rudder and drivetrain, super comfortable and adjustable seat with high and low and reclined seating position. Full traction pad package added to the boat. The boat is in like new condition with very little use. Drivetrain has been serviced with new spring and prop. This is a super fast boat on the water and a great opportunity to purchase a versatile platform that can be used as a paddling or pedaling boat. Plenty of gear track thought out the craft for customization of fishing accessories. Product was sold new in 2022 from Trusty. On consignment at Trusty Sail & Paddle in Morehead City, NC. $1695 or best offer- this nearly half off new. Give us a call with any questions. (252)499-9911.",
+            "boat_price": "$1695 OBO",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
         "boat_Ppbrnm": {
           "type": "boat",
           "settings": {
@@ -97,6 +115,7 @@
         }
       },
       "block_order": [
+        "boat_irDUWw",
         "boat_Ppbrnm",
         "boat_4KY3RW",
         "boat_w7b3yG",
