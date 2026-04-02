@@ -23,6 +23,24 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
+        "boat_4NE4z8": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_6754.jpg",
+            "boat_image_2": "shopify://shop_images/IMG_6759.jpg",
+            "boat_image_3": "shopify://shop_images/IMG_6756.jpg",
+            "boat_image_4": "shopify://shop_images/IMG_6758_a4959a9c-44c0-4f99-94b0-0a1b89ed39bc.jpg",
+            "boat_image_5": "shopify://shop_images/IMG_6760.jpg",
+            "boat_name": "Ocean Kayak Trident 4.7",
+            "boat_brand": "Ocean Kayak",
+            "boat_year": "2010",
+            "boat_condition": "good",
+            "boat_description": "2010 Ocean Kayak Trident Ultra 4.7 is a 15-foot-5-inch, single-person, sit-on-top fishing kayak designed for superior open-water performance. It has a 550 lb capacity. It is built for fishing AND paddling efficiency, being an extremely fast sit on top kayak. Also noted for its stability, it featuring a center console (\"Mod Pod\"), specialized fish finder mounting, and a large, secure \"click seal\" hatch. \n\nKey Features and 2010/2011 Specs:\nDimensions: Approximately 15' 5\" - 15' 7.5\" in length and 29\" - 29.5\" in width.\n\nWeight & Capacity: Weighs roughly 60 lbs (naked) to 83 lbs (fully rigged) and holds up to 550 lbs.\n\nMaterial: Single-layer polyethylene.\n\nStorage & Rigging: Included a \"Mod Pod\" for central storage/mounting, a specialized center hatch for tackle, large bow hatch, and a rear tank well.\n\nThe Trident Ultra 4.7 was highly regarded for its stability in rough, big water and its ability to hold a lot of gear for long fishing trips.\n\nThis is an extremely lightly used boat, in a condition much better than typical boats this age. Great for those getting into kayak fishing- plenty of space, superior storage, and lots of stability in an extremely efficient package. Includes foot controlled rudder assembly. Rare boat! Made in New Zealand. On consignment at Trusty Sail & Paddle in Morehead City, NC. Super deal at $695 or best offer. Give us a call with any questions (252)499-9911.",
+            "boat_price": "$695 OBO",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
         "boat_irDUWw": {
           "type": "boat",
           "settings": {
@@ -115,6 +133,7 @@
         }
       },
       "block_order": [
+        "boat_4NE4z8",
         "boat_irDUWw",
         "boat_Ppbrnm",
         "boat_4KY3RW",
