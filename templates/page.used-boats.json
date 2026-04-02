@@ -23,6 +23,24 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
+        "boat_w7b3yG": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_6767_e2b6461e-8cee-4d1b-9f17-158fbe52ee3b.jpg",
+            "boat_image_2": "shopify://shop_images/IMG_6765.jpg",
+            "boat_image_3": "shopify://shop_images/IMG_6769.jpg",
+            "boat_image_4": "shopify://shop_images/Screenshot_2026-04-01_at_4.58.05_PM.png",
+            "boat_image_5": "shopify://shop_images/IMG_6770.jpg",
+            "boat_name": "Maverick Sailboat/SUP/Windsurfer",
+            "boat_brand": "Maverick",
+            "boat_year": "2025",
+            "boat_condition": "excellent",
+            "boat_description": "Maverick Sailboat- wait, stand-up-paddleboard, wait, windsurfer......have you dreamed of one craft that could cover all your interests? Make everything you want to try affordable and easy to store? The Maverick sailboat is the craft for you. Made to   be configured in various forms, the boat is made to be all things, from a stand up paddleboard, a sit down sailboat (with rudder and seating!), a windsurfer (with a proper rig!) and be lightweight and portable. This unit was made in the UK by Topper sailboats, and has never been used. All sails, windsurfing rig, sup fin and paddle, and seating are new in package and ready to begin your next adventure. Boat was used as a display, but has never seen water. Save thousands off of retail. Give us a call! Best offer!",
+            "boat_price": "$5995.00",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
         "boat_9HtNkE": {
           "type": "boat",
           "settings": {
@@ -43,6 +61,7 @@
         }
       },
       "block_order": [
+        "boat_w7b3yG",
         "boat_9HtNkE"
       ],
       "settings": {
