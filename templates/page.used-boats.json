@@ -23,6 +23,24 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
+        "boat_NgryQL": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_6825_2.jpg",
+            "boat_image_2": "shopify://shop_images/IMG_6828_2.jpg",
+            "boat_image_3": "shopify://shop_images/IMG_6830_2.jpg",
+            "boat_image_4": "shopify://shop_images/IMG_6833_2.jpg",
+            "boat_image_5": "shopify://shop_images/IMG_6829_2.jpg",
+            "boat_name": "Hobie Mirage Oasis Tandem Kayak",
+            "boat_brand": "Hobie",
+            "boat_year": "2021",
+            "boat_condition": "excellent",
+            "boat_description": "If you have been looking for a tandem pedal drive kayak in amazing shape at a great deal- look no further. This boat is in like new condition, with all that you would expect from a modern Hobie Mirage Oasis. Raised removable seating with adjustability in both front and back. Kick up 180 mirage drives for both front and back passengers. Extremely comfortable, very fast and tons of fun! Used only once or twice, comes with a first aid kit, throw bags, brand new paddles, transport scupper dolly, stow bag and cover. Does not include stands- available separately. \n\nSo speedy yet boasting a robust carrying capacity suitable for a weekend camping trip or fishing with enough gear to stock a tackle shop—there are four convenient hatches and a generous on-deck storage area, as well as molded-in rod holders. Designed for two, the Oasis gets the job done in style and comfort with the ultra-adjustable Vantage CT seating. Hobie’s Twist and Stow Rudder is there when you need it and gone when you don’t. Easily transport the Oasis to and from the water with ergonomic, molded-in carrying handles.\n\nCREW:\t1-2\n\nDRIVE:\t(2) MD 180 W/ KICK-UP FIN TECHNOLOGY + ARC CRANKS\n\nLENGTH:\t14' 6\" / 4.42 M\n\nWIDTH:\t33\" / .84 M\n\nCAPACITY:\t550 LBS / 249 KG\n\nVANTAGE CT SEAT CAPACITY:\t275 LBS / 124.74 KG\n\nFITTED HULL WEIGHT:\t96 LBS / 42 KG\n\nFULLY RIGGED WEIGHT:\t130 LBS / 58 KG\n\nHULL CONSTRUCTION:\tROTOMOLDED POLYETHYLENE\n\nHEIGHT FROM FLOOR TO MIDDLE OF THE KAYAK:\t13\" / 33.02 CM\n\nHEIGHT FROM FLOOR TO TALLEST POINT ON THE KAYAK:\t16.75\" / 42.54 CM\n\nOver a $5000 package, being offered at only $3995 or best offer.",
+            "boat_price": "$3995 OBO",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
         "boat_w7b3yG": {
           "type": "boat",
           "settings": {
@@ -167,6 +185,7 @@
         }
       },
       "block_order": [
+        "boat_NgryQL",
         "boat_w7b3yG",
         "boat_7WgbMV",
         "boat_bC8Urj",
