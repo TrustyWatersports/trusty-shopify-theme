@@ -23,6 +23,24 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
+        "boat_cRLFFg": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_6846_8c251aba-3eeb-4801-883b-6547a8ae6a78.jpg",
+            "boat_image_2": "shopify://shop_images/IMG_6849.jpg",
+            "boat_image_3": "shopify://shop_images/IMG_6850.jpg",
+            "boat_image_4": "shopify://shop_images/IMG_6847.jpg",
+            "boat_image_5": "shopify://shop_images/IMG_6853.jpg",
+            "boat_name": "Hobie Tandem Island",
+            "boat_brand": "Hobie",
+            "boat_year": "2013",
+            "boat_condition": "good",
+            "boat_description": "2013 Hobie Tandem Island Sailboat/Kayak. Great condition Tandem island. Sail is in like new condition, nice vertical battens. Trampolines included for the amas. Seats in great shape. Rudder assembly and lines in great shape. Mainsheet also in good condition. Mirage drives are also in good shape, but one needs a new set of fins. Includes scupper dolly for easy transport. Can be carried in the back of a truck with a hitch extender. Easy set up at the launch. Boat is on consignment at Trusty Sail & Paddle for $3995 or best offer. Call or message with any questions (252)499-9911. www.trustysailandpaddle.com",
+            "boat_price": "$3995 OBO",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
         "boat_NgryQL": {
           "type": "boat",
           "settings": {
@@ -185,6 +203,7 @@
         }
       },
       "block_order": [
+        "boat_cRLFFg",
         "boat_NgryQL",
         "boat_w7b3yG",
         "boat_7WgbMV",
