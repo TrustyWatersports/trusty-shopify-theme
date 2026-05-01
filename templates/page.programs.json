@@ -214,7 +214,7 @@
           "type": "event",
           "settings": {
             "event_image": "shopify://shop_images/351306360_2045710379094196_1898962804206968508_n.jpg",
-            "event_icon": "🏆",
+            "event_icon": "",
             "event_name": "Small Boat Sailing Series",
             "event_badge": "Registering Now",
             "event_badge_color": "#2e7d32",
@@ -237,7 +237,7 @@
           "type": "event",
           "settings": {
             "event_image": "shopify://shop_images/IMG_1816.jpg",
-            "event_icon": "🎯",
+            "event_icon": "",
             "event_name": "Portside Kayak Fishing Meetup",
             "event_badge": "Registering Now",
             "event_badge_color": "#2e7d32",
@@ -260,7 +260,7 @@
           "type": "event",
           "settings": {
             "event_image": "shopify://shop_images/IMG_0015.jpg",
-            "event_icon": "🌊",
+            "event_icon": "",
             "event_name": "Demo Days - Try It for Free!",
             "event_badge": "Registering Now",
             "event_badge_color": "#2e7d32",
@@ -283,7 +283,7 @@
           "type": "event",
           "settings": {
             "event_image": "shopify://shop_images/Resized_20240820_195808_1724289656672.jpg",
-            "event_icon": "🏕️",
+            "event_icon": "",
             "event_name": "Lookout Campout",
             "event_badge": "Registering Now",
             "event_badge_color": "#2e7d32",
