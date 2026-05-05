@@ -23,6 +23,24 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
+        "boat_gWf6bC": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_3269.jpg",
+            "boat_image_2": "shopify://shop_images/IMG_3272.jpg",
+            "boat_image_3": "shopify://shop_images/IMG_3270_4a2bb13f-1af2-48ba-bf94-e9b7c79be065.jpg",
+            "boat_image_4": "shopify://shop_images/IMG_0432.jpg",
+            "boat_image_5": "shopify://shop_images/IMG_0435.jpg",
+            "boat_name": "Hunter 170 Sailboat and Trailer",
+            "boat_brand": "Hunter",
+            "boat_year": "2005",
+            "boat_condition": "fair",
+            "boat_description": "2005 Hunter 170 Sailboat and 2004 Trailer Package\n\nIncludes:\nComplete sailboat \n- mainsail\n- jib\n- all hardware, lines and rigging\n- mast and boom\n- cover for mainsail\n- centerboard\n- Rudder and tiller assemblies\n- mast head float included\n\n2.5hp Suzuki Motor (minimal use)\n\n2004 Venture sailboat trailer with stand stand and winch\n\n\nHull is in excellent condition. The top deck has numerous cracks in the gelcoat (Hunters are known for this issue).  The trailer is in good shape but the leaf springs are showing rust which you'd expect for a 2004. \n\nThe seller described infrequent use of the boat, maybe taking her out 3-4 times. The motor is practically new. \n\nWe have the boat listed on behalf of a private seller and you are welcome to come have a look at any time. All offers and questions are encouraged.",
+            "boat_price": "$5900 OBO",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
         "boat_cRLFFg": {
           "type": "boat",
           "settings": {
@@ -203,6 +221,7 @@
         }
       },
       "block_order": [
+        "boat_gWf6bC",
         "boat_cRLFFg",
         "boat_NgryQL",
         "boat_w7b3yG",
