@@ -194,6 +194,49 @@
         "hours": "Daily 9am–6pm (Seasonal)"
       }
     },
+    "rentals-faq": {
+      "type": "rentals-faq",
+      "blocks": {
+        "faq1": {
+          "type": "faq",
+          "settings": {
+            "question": "What should I bring?",
+            "answer": "Water bottle, sunscreen, hat, and appropriate clothing. We provide kayak, paddle, and PFD. Dry bags available for rent."
+          }
+        },
+        "faq2": {
+          "type": "faq",
+          "settings": {
+            "question": "Do I need experience?",
+            "answer": "No! We provide basic instruction before every rental. Protected waters perfect for beginners."
+          }
+        },
+        "faq3": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I rent for multiple days?",
+            "answer": "Yes! Multi-day rentals available at discounted rates. Contact us for pricing."
+          }
+        },
+        "faq4": {
+          "type": "faq",
+          "settings": {
+            "question": "What if I want to buy after renting?",
+            "answer": "Your rental fee credits toward the purchase! Test the exact kayak on actual Crystal Coast waters."
+          }
+        }
+      },
+      "block_order": [
+        "faq1",
+        "faq2",
+        "faq3",
+        "faq4"
+      ],
+      "settings": {
+        "heading": "Rental FAQ",
+        "background_color": "#f5f7fa"
+      }
+    },
     "local_seo_rentals_4emWVm": {
       "type": "local-seo-rentals",
       "blocks": {
@@ -264,52 +307,9 @@
       "settings": {
         "heading": "Things to Do on the Crystal Coast",
         "intro": "Trusty Sail & Paddle sits right on the Bogue Sound waterfront in downtown Morehead City, NC. Whether you're a local looking for a weekend adventure or a visitor exploring the Crystal Coast, we've got the perfect water activity for you.",
-        "hours": "Open daily 9am–6pm (seasonal)",
+        "hours": "Open daily 10am–5pm (seasonal)",
         "book_link": "",
         "seo_text": "Located at 815 Shepard Street on Bogue Sound, Trusty Sail & Paddle is one of Morehead City's top waterfront activities. Paddle to Sugarloaf Island, explore the Newport River, or cruise the Morehead City waterfront by pedal kayak. We're minutes from Atlantic Beach, Beaufort, and Fort Macon State Park — the perfect base for a Crystal Coast water adventure."
-      }
-    },
-    "rentals-faq": {
-      "type": "rentals-faq",
-      "blocks": {
-        "faq1": {
-          "type": "faq",
-          "settings": {
-            "question": "What should I bring?",
-            "answer": "Water bottle, sunscreen, hat, and appropriate clothing. We provide kayak, paddle, and PFD. Dry bags available for rent."
-          }
-        },
-        "faq2": {
-          "type": "faq",
-          "settings": {
-            "question": "Do I need experience?",
-            "answer": "No! We provide basic instruction before every rental. Protected waters perfect for beginners."
-          }
-        },
-        "faq3": {
-          "type": "faq",
-          "settings": {
-            "question": "Can I rent for multiple days?",
-            "answer": "Yes! Multi-day rentals available at discounted rates. Contact us for pricing."
-          }
-        },
-        "faq4": {
-          "type": "faq",
-          "settings": {
-            "question": "What if I want to buy after renting?",
-            "answer": "Your rental fee credits toward the purchase! Test the exact kayak on actual Crystal Coast waters."
-          }
-        }
-      },
-      "block_order": [
-        "faq1",
-        "faq2",
-        "faq3",
-        "faq4"
-      ],
-      "settings": {
-        "heading": "Rental FAQ",
-        "background_color": "#f5f7fa"
       }
     }
   },
