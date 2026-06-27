@@ -23,6 +23,24 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
+        "boat_4HhnXb": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/663792354_1568411064223500_4807939777342040831_n.jpg",
+            "boat_image_2": "shopify://shop_images/664327861_1628285285044530_4484257481875153122_n.jpg",
+            "boat_image_3": "shopify://shop_images/663798841_929192543355620_4549159882783117186_n.jpg",
+            "boat_image_4": "shopify://shop_images/664084261_847092358404542_8743768333024576562_n.jpg",
+            "boat_image_5": "shopify://shop_images/663805477_921756537350265_654096373627308829_n.jpg",
+            "boat_name": "Hobie Mirage Revolution 13 Pedal Fin Drive Sit on Top Kayak",
+            "boat_brand": "Hobie",
+            "boat_year": "2007",
+            "boat_condition": "fair",
+            "boat_description": "Used, in good condition, 2007 Hobie Mirage Drive Revolution Kayak\n\n13.5' in length\n70lb. hull weight\n325 lb. capacity\n\nv1 Mirage drive is in good condition; does not have turbo fins. \n\nRudder steering and up down lines are functional and in good shape.\n\nPlease feel encouraged to make an offer.\n\n*stands are not included, but available to purchase separately.",
+            "boat_price": "$695",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
         "boat_6ECVQA": {
           "type": "boat",
           "settings": {
@@ -129,6 +147,7 @@
         }
       },
       "block_order": [
+        "boat_4HhnXb",
         "boat_6ECVQA",
         "boat_zEaaVG",
         "boat_GzjwBY",
