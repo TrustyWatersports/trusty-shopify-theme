@@ -23,6 +23,24 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
+        "boat_zEaaVG": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_3762.heic",
+            "boat_image_2": "shopify://shop_images/IMG_3765.heic",
+            "boat_image_3": "shopify://shop_images/IMG_3764.heic",
+            "boat_image_4": "shopify://shop_images/IMG_3763.heic",
+            "boat_image_5": "shopify://shop_images/IMG_3766.heic",
+            "boat_name": "BonaFide SKF117 w/ Sidekick Wheels",
+            "boat_brand": "BonaFide",
+            "boat_year": "2026",
+            "boat_condition": "excellent",
+            "boat_description": "Used only a month before seller decided to upgrade to the JK Knarr - he wanted bigger. \n\n2026 Bonafide SKF117 with the Native Sidekick attached\n\nThis was a brand new model for Bonafide last year; this one is in the best color they make and is a 2026\n\nLightweight, super stable, designed to function as a mini flats boat.\n\nMade in NC - even the seat.\n\nWe have listed this kayak on behalf of a private seller.  Please come see it at the shop anytime and, as always, feel encouraged to submit your best offer!",
+            "boat_price": "$1200",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
         "boat_GzjwBY": {
           "type": "boat",
           "settings": {
@@ -95,6 +113,7 @@
         }
       },
       "block_order": [
+        "boat_zEaaVG",
         "boat_GzjwBY",
         "boat_gWf6bC",
         "boat_w7b3yG",
