@@ -23,6 +23,22 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
+        "boat_6ECVQA": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/723960946_1532301141953219_1180945146249084225_n-2.jpg",
+            "boat_image_2": "shopify://shop_images/724770182_1325287519135561_4417072439487181629_n-2.jpg",
+            "boat_image_3": "shopify://shop_images/724672799_1807059764008303_9067427914931187461_n-2.jpg",
+            "boat_name": "Malone Microsport 2-Kayak Trailer model MPG460G with Saddle Up Pro Carriers",
+            "boat_brand": "Malone Trailers",
+            "boat_year": "2022",
+            "boat_condition": "excellent",
+            "boat_description": "2022 Malone Microsports 2-Kayak trailer in like new condition.  Retail price is 2195\n\nIncludes 2 Saddle Up Pro kayak carrier kits, already installed.  Those retail for 220 each.\n\nMalone trailers don't come assembled and they are a PAIN to do, so consider the assembly cost in the asking price.  And, this one was assembled by us, so you know it was done right.\n\nTake a look at the leaf springs pic; seller claims to have used the trailer twice.  \n\n\nLike all of our listings, this trailer is being sold by us on behalf of a private seller.  You are welcome to come check it out at the shop anytime and please feel encouraged to submit your best offer!",
+            "boat_price": "$2000",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
         "boat_zEaaVG": {
           "type": "boat",
           "settings": {
@@ -113,6 +129,7 @@
         }
       },
       "block_order": [
+        "boat_6ECVQA",
         "boat_zEaaVG",
         "boat_GzjwBY",
         "boat_gWf6bC",
