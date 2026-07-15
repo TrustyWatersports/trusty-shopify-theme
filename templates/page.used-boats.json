@@ -23,38 +23,16 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
-        "boat_MiKWNV": {
+        "boat_mgBU8A": {
           "type": "boat",
           "settings": {
-            "boat_image": "shopify://shop_images/650034926_1412454033518013_2243366873595350487_n.jpg",
-            "boat_image_2": "shopify://shop_images/649682230_1622978108603417_2299961116677861568_n.jpg",
-            "boat_image_3": "shopify://shop_images/649972549_1676845446814161_5249152710047861237_n.jpg",
-            "boat_image_4": "shopify://shop_images/649698973_1235697832084452_7724915679285634366_n.jpg",
-            "boat_image_5": "shopify://shop_images/649592366_1898650034151727_4194738580603010909_n.jpg",
-            "boat_name": "Wilderness Systems Tsunami 145 w/ Rudder",
-            "boat_brand": "Wilderness Systems",
-            "boat_year": "2022",
-            "boat_condition": "excellent",
-            "boat_description": "Like new! 2022 Wilderness Systems Tsunami 145 with rudder upgrade. This gorgeous boat has been babied her whole life, stored indoors and rarely paddled. Includes cockpit cover and touring bags. Customer added a rudder kit with sliding foot pegs, as well as mighty mount track fore and aft on the boat for adding accessories and a flag. Fantastic boat at a great price- $1200 Or best offer. Nearly a $2400 package! On consignment at Trusty Sail & Paddle in Morehead City, NC. Give us a call (252)499-9911",
-            "boat_price": "$1200",
-            "contact_info": "",
-            "is_sold": false
-          }
-        },
-        "boat_4HhnXb": {
-          "type": "boat",
-          "settings": {
-            "boat_image": "shopify://shop_images/663792354_1568411064223500_4807939777342040831_n.jpg",
-            "boat_image_2": "shopify://shop_images/664327861_1628285285044530_4484257481875153122_n.jpg",
-            "boat_image_3": "shopify://shop_images/663798841_929192543355620_4549159882783117186_n.jpg",
-            "boat_image_4": "shopify://shop_images/664084261_847092358404542_8743768333024576562_n.jpg",
-            "boat_image_5": "shopify://shop_images/663805477_921756537350265_654096373627308829_n.jpg",
-            "boat_name": "Hobie Mirage Revolution 13 Pedal Fin Drive Sit on Top Kayak",
-            "boat_brand": "Hobie",
-            "boat_year": "2007",
-            "boat_condition": "fair",
-            "boat_description": "Used, in good condition, 2007 Hobie Mirage Drive Revolution Kayak\n\n13.5' in length\n70lb. hull weight\n325 lb. capacity\n\nv1 Mirage drive is in good condition; does not have turbo fins. \n\nRudder steering and up down lines are functional and in good shape.\n\nPlease feel encouraged to make an offer.\n\n*stands are not included, but available to purchase separately.",
-            "boat_price": "$695",
+            "boat_image": "shopify://shop_images/IMG_3929.heic",
+            "boat_name": "Slayer Max Propel 10",
+            "boat_brand": "Native",
+            "boat_year": "2023",
+            "boat_condition": "good",
+            "boat_description": "Very good condition, 2023 Native Slayer Max Propel 10 \n\n10' Pedal Driven kayak made in Fletcher, NC\n\nFeatures:\n\nFull functional pedal drive that has been well-maintained\n\nFully functional rudder steering.  \n\nRod tip slots on the bow\n\nFront hatch\n\nFully framed seat\n\nLots of track and molded in pockets for storage \n\nRecessed rod holders\n\nPretty straightforward kayak with nothing to disclose.  Seller kept it in good condition, just upgraded to a bigger model.  He did do some electronics additions, so the through hull fittings are in place if you want to add your own fish finder, etc. \n\nWe have this boat at the shop for you to view anytime.  And, as with all of our consignments, please feel encouraged to submit your best offer!",
+            "boat_price": "1200",
             "contact_info": "",
             "is_sold": false
           }
@@ -111,24 +89,6 @@
             "is_sold": false
           }
         },
-        "boat_gWf6bC": {
-          "type": "boat",
-          "settings": {
-            "boat_image": "shopify://shop_images/IMG_3269.jpg",
-            "boat_image_2": "shopify://shop_images/IMG_3272.jpg",
-            "boat_image_3": "shopify://shop_images/IMG_3270_4a2bb13f-1af2-48ba-bf94-e9b7c79be065.jpg",
-            "boat_image_4": "shopify://shop_images/IMG_0432.jpg",
-            "boat_image_5": "shopify://shop_images/IMG_0435.jpg",
-            "boat_name": "Hunter 170 Sailboat and Trailer",
-            "boat_brand": "Hunter",
-            "boat_year": "2005",
-            "boat_condition": "fair",
-            "boat_description": "2005 Hunter 170 Sailboat and 2004 Trailer Package\n\nIncludes:\nComplete sailboat \n- mainsail\n- jib\n- all hardware, lines and rigging\n- mast and boom\n- cover for mainsail\n- centerboard\n- Rudder and tiller assemblies\n- mast head float included\n\n2.5hp Suzuki Motor (minimal use)\n\n2004 Venture sailboat trailer with stand stand and winch\n\n\nHull is in excellent condition. The top deck has numerous surface cracks in the gelcoat (Hunters are known for this issue).  The trailer is in good shape but the leaf springs are showing rust which you'd expect for a 2004. \n\nThe seller described infrequent use of the boat, maybe taking her out 3-4 times. The motor is practically new. \n\nWe have the boat listed on behalf of a private seller and you are welcome to come have a look at any time. All offers and questions are encouraged.",
-            "boat_price": "$5900 OBO",
-            "contact_info": "",
-            "is_sold": false
-          }
-        },
         "boat_w7b3yG": {
           "type": "boat",
           "settings": {
@@ -165,12 +125,10 @@
         }
       },
       "block_order": [
-        "boat_MiKWNV",
-        "boat_4HhnXb",
+        "boat_mgBU8A",
         "boat_6ECVQA",
         "boat_zEaaVG",
         "boat_GzjwBY",
-        "boat_gWf6bC",
         "boat_w7b3yG",
         "boat_bC8Urj"
       ],
