@@ -44,13 +44,16 @@
         "boat_mgBU8A": {
           "type": "boat",
           "settings": {
-            "boat_image": "shopify://shop_images/IMG_3929.heic",
+            "boat_image": "shopify://shop_images/IMG_3928.heic",
+            "boat_image_2": "shopify://shop_images/IMG_3926.heic",
+            "boat_image_3": "shopify://shop_images/IMG_3927.heic",
+            "boat_image_4": "shopify://shop_images/IMG_3929.heic",
             "boat_name": "Slayer Max Propel 10",
             "boat_brand": "Native",
             "boat_year": "2023",
             "boat_condition": "good",
             "boat_description": "Very good condition, 2023 Native Slayer Max Propel 10 \n\n10' Pedal Driven kayak made in Fletcher, NC\n\nFeatures:\n\nFull functional pedal drive that has been well-maintained\n\nFully functional rudder steering.  \n\nRod tip slots on the bow\n\nFront hatch\n\nFully framed seat\n\nLots of track and molded in pockets for storage \n\nRecessed rod holders\n\nPretty straightforward kayak with nothing to disclose.  Seller kept it in good condition, just upgraded to a bigger model.  He did do some electronics additions, so the through hull fittings are in place if you want to add your own fish finder, etc. \n\nWe have this boat at the shop for you to view anytime.  And, as with all of our consignments, please feel encouraged to submit your best offer!",
-            "boat_price": "1200",
+            "boat_price": "$1200",
             "contact_info": "",
             "is_sold": false
           }
