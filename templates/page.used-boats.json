@@ -23,6 +23,24 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
+        "boat_qBzXh7": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_7461.jpg",
+            "boat_image_2": "shopify://shop_images/IMG_7467.jpg",
+            "boat_image_3": "shopify://shop_images/IMG_7460.jpg",
+            "boat_image_4": "shopify://shop_images/IMG_7465.jpg",
+            "boat_image_5": "shopify://shop_images/IMG_7473.jpg",
+            "boat_name": "Hobie Getaway Catamaran",
+            "boat_brand": "Hobie",
+            "boat_year": "2005",
+            "boat_condition": "excellent",
+            "boat_description": "If you've been looking to get out sailing with the family, on a safe, reliable and well maintained boat, here is the answer! A 2005 Hobie Getaway with wing seats makes for a spacious, comfortable and FAST ride out to the sandbars. The Hobie Getaway has a maximum weight capacity of 1,000 lbs and is designed to comfortably carry 1 to 6 people. The boat has a brand new mainsail, with only a couple uses- crispy Dacron. The jib has a recently replaced window for excellent visibility while sailing. Original mainsail also included and shown in pictures. New trampolines and wing seat covers, as well as a jib snorkel round out a fantastic package. Boat is sold with cat tracks for easy transport across the lot, down the ramp or across the sand. Trailer is solid, but does not have a title. Boat is on consignment at Trusty Sail & Paddle for viewing anytime. Asking $6900 or best offer. Give us a call or message with any questions or offers! (252)499-9911.",
+            "boat_price": "$6900",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
         "boat_mgBU8A": {
           "type": "boat",
           "settings": {
@@ -125,6 +143,7 @@
         }
       },
       "block_order": [
+        "boat_qBzXh7",
         "boat_mgBU8A",
         "boat_6ECVQA",
         "boat_zEaaVG",
