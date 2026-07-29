@@ -23,6 +23,24 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
+        "boat_68jVRi": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_7536.jpg",
+            "boat_image_2": "shopify://shop_images/IMG_7534.jpg",
+            "boat_image_3": "shopify://shop_images/IMG_7538_2.jpg",
+            "boat_image_4": "shopify://shop_images/IMG_7539_2.jpg",
+            "boat_image_5": "shopify://shop_images/IMG_7535.jpg",
+            "boat_name": "2024 Blue Sky Boatworks 360 Angler Pedal/Motor Kayak",
+            "boat_brand": "But Sky Boatworks/Jackson",
+            "boat_year": "2024",
+            "boat_condition": "excellent",
+            "boat_description": "2024 Blue Sky Boatworks 360 Angler in like new condition. Boat has only been on the water twice due to owner injury. This fast craft is built around stability and user comfort. Upright seating position makes for comfortable all day operation and a large tiller controlled with seat mounted handles makes for a very maneuverable craft. Floats in inches of water, and the drive pedal drive automatically retracts into the hull in shallow draft. Drive by Jackson Kayak, rotomolded by Jackson. Includes the pro bow-plate to mount included trolling motor. Motor has spot-lock capabilities and remote control operation. Power cable and quick release mount included. Seat and swivel are like new, drive and prop are in like new condition. Seat bag included. No battery. Trailer is not included, but available for purchase separately. \n\nIf you have been considering a BSB, this is a great option at a fantastic deal. Boat is in like new condition, includes a motor, and sold below retail with no taxes. Come check out this awesome boat. $4500 or best offer.",
+            "boat_price": "$4500 Or Best Offer",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
         "boat_qBzXh7": {
           "type": "boat",
           "settings": {
@@ -146,6 +164,7 @@
         }
       },
       "block_order": [
+        "boat_68jVRi",
         "boat_qBzXh7",
         "boat_mgBU8A",
         "boat_6ECVQA",
