@@ -23,6 +23,24 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
+        "boat_74xE7B": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_4532.heic",
+            "boat_image_2": "shopify://shop_images/IMG_4536.heic",
+            "boat_image_3": "shopify://shop_images/IMG_4534.heic",
+            "boat_image_4": "shopify://shop_images/IMG_4533.heic",
+            "boat_image_5": "shopify://shop_images/IMG_4535.heic",
+            "boat_name": "Tsunami 145",
+            "boat_brand": "Wilderness Systems",
+            "boat_year": "2013",
+            "boat_condition": "good",
+            "boat_description": "2013 Wilderness Systems Tsunami Kayak with Rudder\n\nGreat condition, particularly for its age\n\nall the handles, bungee, and hatches look good\n\ncomes with a seals brand cockpit cover\n\nwe did the rudder install, so that is solid\n\nRetail for a new 14'6 comparable boat is 1500\n\nPlease feel encourage to come to the shop any time to have a look and to submit your best offer!",
+            "boat_price": "650",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
         "boat_wQrgVB": {
           "type": "boat",
           "settings": {
@@ -164,6 +182,7 @@
         }
       },
       "block_order": [
+        "boat_74xE7B",
         "boat_wQrgVB",
         "boat_68jVRi",
         "boat_qBzXh7",
