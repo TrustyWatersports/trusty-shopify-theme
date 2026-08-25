@@ -23,6 +23,23 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
+        "boat_w8rCim": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/JOW_OT-Promos_Spring24_300Off-CarouselAds-OTPDL_4.jpg",
+            "boat_image_2": "shopify://shop_images/IMG_4537.heic",
+            "boat_image_3": "shopify://shop_images/IMG_4538.heic",
+            "boat_image_4": "shopify://shop_images/IMG_4539.heic",
+            "boat_name": "Sportsman Salty PDL 120",
+            "boat_brand": "Old Town",
+            "boat_year": "2023",
+            "boat_condition": "excellent",
+            "boat_description": "Impulse buy that she did not use -\n\nSold by us in 2023 to a lady who recently suffered a loss.  She thought she would start a new hobby and it just didn't pan out. \n\nNever even hit the water.\n\nThe first pic has the lowest price we ever saw on a Salty and she added some extras:\n\n- tow flag\n- astral life jacket (also current and retailed at $150)\n- we added a small piece of track at the stern so she could add her visibility flag (also included) \n- Cannon Escape E paddle (also made in USA)\n\nThis seller never registered the boat with Old Town, so the new owner would be able to get full warranty replacements.  That is lifetime on hull, 5 years on pedal drive starting from the date of your purchase, not hers.  We will act like that purchase never took place, as warranties do not transfer ownership.. \n\nPlease feel encouraged to ask questions or come by the shop anytime to have a look.",
+            "boat_price": "$2200 or Best Offer",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
         "boat_KHcQca": {
           "type": "boat",
           "settings": {
@@ -200,6 +217,7 @@
         }
       },
       "block_order": [
+        "boat_w8rCim",
         "boat_KHcQca",
         "boat_74xE7B",
         "boat_wQrgVB",
