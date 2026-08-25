@@ -23,6 +23,24 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
+        "boat_KHcQca": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_4527.heic",
+            "boat_image_2": "shopify://shop_images/IMG_4528.heic",
+            "boat_image_3": "shopify://shop_images/IMG_4529.heic",
+            "boat_image_4": "shopify://shop_images/IMG_4530.heic",
+            "boat_image_5": "shopify://shop_images/IMG_4531.heic",
+            "boat_name": "Big Fish 103",
+            "boat_brand": "3 Waters",
+            "boat_year": "2020",
+            "boat_condition": "as-is",
+            "boat_description": "2020 3 Waters Big Fish kayak model Big Fish 103\n\n10'3 long\n\nVERY stable\n\nframed aluminum seat\n\noperable pedal drive and rudder system\n\nSeller made some repair around the rudder pin, mostly to reinforce the area.  He upgraded his kayak and was actively using this one until he did.  \n\n2 recessed rod holders\n\nGood storage space bow and stern\n\n\nPlease feel encouraged to submit your best offer.",
+            "boat_price": "$800 or Best Offer",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
         "boat_74xE7B": {
           "type": "boat",
           "settings": {
@@ -182,6 +200,7 @@
         }
       },
       "block_order": [
+        "boat_KHcQca",
         "boat_74xE7B",
         "boat_wQrgVB",
         "boat_68jVRi",
