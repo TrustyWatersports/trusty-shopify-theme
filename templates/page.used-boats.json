@@ -23,6 +23,24 @@
     "used-boats-grid": {
       "type": "used-boats-grid",
       "blocks": {
+        "boat_zib9mi": {
+          "type": "boat",
+          "settings": {
+            "boat_image": "shopify://shop_images/IMG_4541.jpg",
+            "boat_image_2": "shopify://shop_images/IMG_4544.jpg",
+            "boat_image_3": "shopify://shop_images/IMG_4545.jpg",
+            "boat_image_4": "shopify://shop_images/IMG_4543.jpg",
+            "boat_image_5": "shopify://shop_images/IMG_4547.jpg",
+            "boat_name": "Kraken 15.5",
+            "boat_brand": "Jackson Kayak",
+            "boat_year": "2017",
+            "boat_condition": "good",
+            "boat_description": "2017 Jackson Kayak Kraken 15.5\n\nFeatures:\n-Functional rudder with foot controlled steering\n-straight and smooth ride\n-Good sized hatch at your feet that is pre-wired for a fish finder\n-Big covered front hatch\n-Framed aluminum seat with thermarest lumbar support and a Jackson waterproof seat bag\n- Battery box/tackles storage directly behind seat\n- functional live well (the big blue box behind the seat and battery box)\n- also includes a fish bag\n\nThe kraken is no longer made and has a cult following.  There is no comparable made by another company anymore - no one does the 14+' sit on top fishing kayak.  The Kraken moves fast through the water with space and stability to fish. \n\nWe are selling this item on behalf of a private seller.  Please feel encouraged to come to the shop to have a look or submit your best offer.",
+            "boat_price": "$850 or Best Offer",
+            "contact_info": "",
+            "is_sold": false
+          }
+        },
         "boat_w8rCim": {
           "type": "boat",
           "settings": {
@@ -217,6 +235,7 @@
         }
       },
       "block_order": [
+        "boat_zib9mi",
         "boat_w8rCim",
         "boat_KHcQca",
         "boat_74xE7B",
