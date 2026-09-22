@@ -12,6 +12,38 @@
     "photo-gallery": {
       "type": "photo-gallery",
       "blocks": {
+        "photo_LhhTky": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/IMG_8260.jpg",
+            "caption": "",
+            "category": "Sailing"
+          }
+        },
+        "photo_ckq4kt": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/IMG_8236.jpg",
+            "caption": "",
+            "category": "Sailing"
+          }
+        },
+        "photo_V4RKRL": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/IMG_7467-2.jpg",
+            "caption": "",
+            "category": "Crystal Coast"
+          }
+        },
+        "photo_Ft4gA9": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify://shop_images/IMG_7488_517e2bd1-b2fa-4c6a-8102-7be3871028b2.jpg",
+            "caption": "",
+            "category": "Crystal Coast"
+          }
+        },
         "photo_AgtaaW": {
           "type": "photo",
           "settings": {
@@ -174,6 +206,10 @@
         }
       },
       "block_order": [
+        "photo_LhhTky",
+        "photo_ckq4kt",
+        "photo_V4RKRL",
+        "photo_Ft4gA9",
         "photo_AgtaaW",
         "photo_cQpLj9",
         "photo_c3FaQD",
